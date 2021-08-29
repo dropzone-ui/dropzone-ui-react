@@ -1,0 +1,8 @@
+node_modules
+#build
+storybook-static
+#src
+process.md
+src_past1
+src_past2
+src_past3
