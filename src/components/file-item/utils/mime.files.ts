@@ -1,4 +1,4 @@
-import { getExt } from ".";
+import { getExt } from "./utils.files";
 
 import {
     aac, abw, accdb, avi, azw,

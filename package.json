@@ -36,13 +36,16 @@
   "homepage": "https://github.com/unlimited-react-components/dropzone#readme",
   "dependencies": {
     "@dynamicss/dynamicss": "^2.0.3",
+    "@rollup/plugin-image": "^2.1.1",
     "@unlimited-react-components/kernel": "^1.0.2",
     "@unlimited-react-components/material-button": "^1.2.5"
   },
-  "peerDependencies": {},
-  "devDependencies": {
+  "peerDependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+ 
     "@babel/core": "^7.11.6",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
