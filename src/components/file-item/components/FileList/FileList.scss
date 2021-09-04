@@ -1,0 +1,26 @@
+.file-item-list-container{
+  //background-color: rgba(255, 255, 255, 0.596);
+  background-color: transparent;
+  color: black;
+  min-height: 300px;
+  width: 100%;
+  //margin: 100px 0;
+  //width: inherit;
+
+  overflow: auto;
+  // padding: 2%;
+  align-items: center;
+  scrollbar-width: thin;
+  &.file-item-list-grid {
+   display: flex;
+   flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  &.file-item-list-list {
+    //flex-wrap: wrap;
+    align-items: center;
+    //justify-content: center;
+    display: inline-flex;
+  }
+}

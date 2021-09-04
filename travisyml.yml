@@ -7,4 +7,4 @@ script:
   - npm run test:coveralls
   - pwd
   - ls
-  - echo "SUCCESSSS"
+  - echo "Dropzone ui"
