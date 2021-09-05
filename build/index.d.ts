@@ -8,3 +8,5 @@ export { default as FileList } from "./components/file-item/components/FileList/
 export * from "./components/file-item/components/FileList/FileList";
 export { default as ImageFullScreen } from "./components/image-preview/ImageFullScreen";
 export * from "./components/image-preview/ImageFullScreen";
+export { default as InputButton } from "./components/input-button/InputButton";
+export * from "./components/input-button/InputButton";

@@ -51,6 +51,7 @@ export const textSelector = (tailMime: string): string => {
         case "html": return "html";
         case "calendar": return "icalendar";
         case "javascript": return "javascript";
+        case "x-javascript": return "javascript";
         case "plain": return "text";
         case "xml": return "xml";
         default: return DEF_GEN_MIME;
@@ -126,6 +127,7 @@ export const applicationSelector = (tailMime: string): string => {
         case "epub+zip": return "epub";
         case "gzip": return "gzip";
         case "java-archive": return "jar";
+        case "x-javascript": return "javascript";
         case "json": return "json";
         case "ld+json": return "jsonld";
         case "vnd.apple.installer+xml": return "mpkg";
@@ -171,6 +173,7 @@ export const mimeSelector = (mimeType?: string): string => {
      * Every mimetype that 
      * starts with: "application/...."
      */
+    console.log("salio:",headerMime,tailMime);
     switch (headerMime) {
         case "application": return applicationSelector(tailMime);
         case "audio": return audioSelector(tailMime);
@@ -239,7 +242,9 @@ export const checkIsCode = (extension?: string): string => {
         } else if (extension === "java") {
             genericMime = "java";
         } else if (extension === "ts") {
-            genericMime = "ts";
+            genericMime = "typescript";
+        }else if (extension === "js") {
+            genericMime = "javascript";
         }
     }
     return genericMime;
@@ -260,10 +265,15 @@ export const getURLFileIco = (file: File | undefined): ResultFileIco => {
     } else {
         result = mimeSelector(file.type);
     }
+    console.log("salio result:",result);
     //If plain text
     const extention: string = getExt(file.name);
+    console.log("salio extention:",extention);
+
     if (result === "text") {
         result = checkIsCode(extention);
+    console.log("salio checkIsCode:",result);
+
     }
     //If octet stream result, second chance: file extention
     if (result === DEF_GEN_MIME) {

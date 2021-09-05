@@ -34,6 +34,8 @@ const DropzoneUI: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     view,
     maxHeight,
     uploadOnDrop,
+    footer,
+    header,
   } = mergeProps(props, DropzonePropsDefault);
   console.log("color:", color);
   const [isDragging, setIsDragging] = useState<boolean>(false);
@@ -50,11 +52,12 @@ const DropzoneUI: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     evt.preventDefault();
     //  evt.dataTransfer.dropEffect = "link";
 
-    let files = evt.dataTransfer.files;
+    let files: FileList = evt.dataTransfer.files;
 
     const output: FileValidated[] = [];
     //const output: File[] = [];
-    let stillValid: number | undefined = maxFiles;
+    let stillValid: number | undefined = undefined;
+  
     for (let i = 0, f: File; (f = files[i]); i++) {
       let validatedFile: FileValidated = validator
         ? customValidateFile(f, validator)
@@ -118,18 +121,20 @@ const DropzoneUI: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       onClick={clickable ? handleClick : () => {}}
       // onDragLeave={handleDragLeave}
     >
-      <DropzoneHeader
-        maxFileSize={maxFileSize}
-        numberOfValidFiles={numberOfValidFiles}
-        onReset={onReset}
-        maxFiles={maxFiles}
-        handleReset={handleReset}
-        view={view}
-        onChangeView={onChangeView}
-      />
+      {header && (
+        <DropzoneHeader
+          maxFileSize={maxFileSize}
+          numberOfValidFiles={numberOfValidFiles}
+          onReset={onReset}
+          maxFiles={maxFiles}
+          handleReset={handleReset}
+          view={view}
+          onChangeView={onChangeView}
+        />
+      )}
 
       {children}
-      <DropzoneFooter accept={accept} />
+      {footer && <DropzoneFooter accept={accept} />}
       <div
         onDragLeave={handleDragLeave}
         onDrop={kamui}

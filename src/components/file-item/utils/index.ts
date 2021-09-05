@@ -10,8 +10,7 @@ import {
     mimeSelector,
     textSelector,
     videoSelector
-} from "./mime.files"; 
-import { readImage, resizeImage, readImagePromise } from "./reader.files";
+} from "./mime.files"; import { readImage, resizeImage, readImagePromise } from "./reader.files";
 export { createDPF, createListOfDPF, createWord, fileSizeFormater, getExt, shrinkWord };
 export {
     audioSelector,

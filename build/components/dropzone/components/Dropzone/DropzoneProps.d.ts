@@ -100,5 +100,13 @@ export interface DropzoneProps extends OverridableProps {
      *    "1rem"
      */
     maxHeight?: string;
+    /**
+     * if true, shows the dropzone footer
+     */
+    footer?: boolean;
+    /**
+      * if true, shows the dropzone footer
+      */
+    header?: boolean;
 }
 export declare const DropzonePropsDefault: DropzoneProps;

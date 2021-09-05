@@ -1,4 +1,4 @@
-.file-item-list-container{
+.file-item-list-container {
   //background-color: rgba(255, 255, 255, 0.596);
   background-color: transparent;
   color: black;
@@ -12,8 +12,8 @@
   align-items: center;
   scrollbar-width: thin;
   &.file-item-list-grid {
-   display: flex;
-   flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
   }

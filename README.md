@@ -1,29 +1,30 @@
 <p align="center">
-<img align="center" height="150" src="https://user-images.githubusercontent.com/43678736/118854376-49f1f480-b89a-11eb-91f6-a0f59c30c6c4.png" alt="Unlimited React components logologo">
+<img align="center" height="150" src="https://user-images.githubusercontent.com/43678736/132112022-0ca409ae-cca2-43c8-be89-110376260a3f.png" alt="dropone-ui-logo">
 
-<h1 align="center">  Dropzone</h1>
-
-![npm latest package](https://img.shields.io/badge/npm%40last-1.3.1-cyan)
-[![install size](https://packagephobia.com/badge?p=@unlimited-react-components/react-highlight)](https://packagephobia.com/result?p=@unlimited-react-components/react-highlight)
-[![dependencies Status](https://status.david-dm.org/gh/unlimited-react-components/react-highlight.svg)](https://david-dm.org/unlimited-react-components/react-highlight)
-[![Coverage Status](https://coveralls.io/repos/github/unlimited-react-components/react-highlight/badge.svg?branch=master)](https://coveralls.io/github/unlimited-react-components/react-highlight?branch=master)
-[![Build Status](https://travis-ci.org/unlimited-react-components/react-highlight.svg?branch=master)](https://travis-ci.org/unlimited-react-components/react-highlight)
-[![Known Vulnerabilities](https://snyk.io/test/github/unlimited-react-components/react-highlight/badge.svg)](https://snyk.io/test/github/unlimited-react-components/react-highlight)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/unlimited-react-components/react-highlight.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/unlimited-react-components/react-highlight/alerts/)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/unlimited-react-components/react-highlight.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/unlimited-react-components/react-highlight/context:javascript)
+<h1 align="center">  Dropzone UI </h1>
 
 </p>
 
-If you have any issue or suggestion, or wanna improve the repo adding other languages highlights, let me know it on the github section: "[issues](https://github.com/unlimited-react-components/react-highlight/issues)", or make a pull request.
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/dropzone-ui/blob/HEAD/LICENSE)
+[![npm latest package](https://img.shields.io/npm/v/dropzone-ui.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/dropzone-ui)
+[![npm latest package](https://img.shields.io/badge/npm%40LTS-1.0.5-magenta)](https://www.npmjs.com/package/dropzone-ui)
+[![dependencies Status](https://status.david-dm.org/gh/dropzone-ui/dropzone-ui.svg)](https://david-dm.org/dropzone-ui/dropzone-ui)
+[![Build Status](https://www.travis-ci.com/dropzone-ui/dropzone-ui.svg?branch=master)](https://www.travis-ci.com/dropzone-ui/dropzone-ui)
+[![install size](https://packagephobia.com/badge?p=dropzone-ui)](https://packagephobia.com/result?p=@unlimited-react-components/material-button)
+[![Coverage Status](https://coveralls.io/repos/github/dropzone-ui/dropzone-ui/badge.svg?branch=master)](https://coveralls.io/github/unlimited-react-components/material-button?branch=master)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/context:javascript)
+[![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/dropzone-ui/badge.svg)](https://snyk.io/test/github/unlimited-react-components/material-button)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Description
 
-Highlight your JSX code with a react Highlight component.
+Dropzone components for mamanging file uploads. Components were made folllowing some of google's Material design principles.
 
 Sample result:
 
 <p align="center">
-<img align="center" width="65%" src="https://user-images.githubusercontent.com/43678736/119084603-b74f7380-b9c7-11eb-8ea3-752cf72098e5.png" alt="Sample result image">
+<!-- <img align="center" width="65%" src="https://user-images.githubusercontent.com/43678736/119084603-b74f7380-b9c7-11eb-8ea3-752cf72098e5.png" alt="dropzone-uisamle-screenshot"> -->
 </p>
 
 ## Installation
@@ -43,35 +44,34 @@ Here is a quick example to get you started, **it's all you need**:
 
 # DropZone Components API
 
-- [\<Dropzone />](#dropzone-api)
-- [\<DropzoneBody />](#dropzonecontainer-api)
-- [\<DropzoneContainer />](#dropzonecontainer-api)
-- [\<DropZoneFooter />](#dropzonefooter-api)
-- [\<DropZoneLayer />](#dropzonelayer-api)
-- [\<DropZoneHeader />](#dropzoneheader-api)
-- [\<TablePagination />]()
+- [\<DropzoneUI />](#dropzoneui-api)
+- [\<DropzoneLabel />](#dropzonelabel-api)
+- [\<FileItem />](#fileitem-api)
+- [\<FileList />](#filelist-api)
+- [\<ImageFullScreen />](#imagefullscreen-api)
+- [\<InputButton />](#inputbutton-api)
 
-## DropZone API
-
-### Props
-
-## DropZoneContainer API
+## DropzoneUI API
 
 ### Props
 
-## DropZoneFooter API
+## DropzoneLabel API
 
 ### Props
 
-## DropZoneHeader API
+## FileItem API
 
 ### Props
 
-## DropZoneLayer API
+## FileList API
 
 ### Props
 
-## DropZoneLayer API
+## ImageFullScreen API
+
+### Props
+
+## InputButton API
 
 ### Props and Methods
 

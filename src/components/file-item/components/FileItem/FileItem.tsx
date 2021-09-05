@@ -1,4 +1,4 @@
-import React, { FC, Fragment, useEffect, useState } from "react";
+import React,{ FC, Fragment, useEffect, useState } from "react";
 
 import { FileItemProps, FileItemPropsDefault } from "./FileItemProps";
 import "./FileItem.scss";
@@ -70,10 +70,16 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
       onSee?.(imageSource);
     }
   };
+  function handleClick<T extends HTMLDivElement>(
+    e: React.MouseEvent<T, MouseEvent>
+  ): void {
+    //avoid children to triger oncClick ripple from parent
+    e.stopPropagation();
+  }
   return (
     <Fragment>
       {file && (
-        <div className="file-item-full-list">
+        <div className="dz-ui-file-item-container" onClick={handleClick}>
           <div className={`file-item-full-container-container`} style={style}>
             <Paper
               className={`file-item-icon-container ${showInfo ? " hide" : ""}`}

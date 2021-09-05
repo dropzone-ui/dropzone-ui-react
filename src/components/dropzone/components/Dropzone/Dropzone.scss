@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 .dropzone-ui {
   color: #646c7f;
   position: relative;
   min-height: 300px;
   border-radius: 4px;
-  margin: 4%;
+  //margin: 4%;
   width: calc(100% - 4px);
   //min-width: 500px;
   background-color: white;
@@ -19,30 +21,65 @@
   &.clickable {
     cursor: pointer;
   }
+  span.ripple {
+    // width: 100%;
+    //height: 100%;
+    // overflow: hidden;
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 500ms linear;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+  
   //verflow: hidden;
+  .dz-ui-header {
+    position: absolute;
+    cursor: text;
+    top: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    //height: 30px;
+    //font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    padding-right: 10px;
+    //border-bottom: 1px dotted #646c7f;
+    font-size: 1em;
+  }
+  .dz-ui-footer {
+    margin-left: 5px;
+    position: absolute;
+    cursor: text;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-top: 1px dotted grey;
+    background-color: #80808021;
+    //height: 30px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 10px;
+    font-size: 1em;
+
+
+  }
+
+
+
 }
-.dz-ui-header {
-  position: absolute;
-  cursor: text;
-  top: 0;
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-}
-.dz-ui-footer{
-  margin-left: 5px;
-  position: absolute;
-  cursor: text;
-  bottom: 0;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  border-top: 1px dotted grey;
-}
+
 .dropzone-ui-layer {
   width: 0%;
   height: 0%;
@@ -57,23 +94,18 @@
 }
 .dz-ui-label {
   text-rendering: optimizeLegibility;
-  font-size: 1.5em;
-}
-
-span.ripple {
-  // width: 100%;
-  //height: 100%;
-  // overflow: hidden;
-  position: absolute;
-  border-radius: 50%;
-  transform: scale(0);
-  animation: ripple 500ms linear;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-@keyframes ripple {
-  to {
-    transform: scale(4);
-    opacity: 0;
+  font-size: 1.5em; font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.02857em;
+  @media (max-width: 600px) {
+  font-size: 1.3em;
+ 
+    
+    
   }
+  word-break: normal;
+  //font-family: "Poppins", sans-serif;
+  //font-weight: 600;
 }
+

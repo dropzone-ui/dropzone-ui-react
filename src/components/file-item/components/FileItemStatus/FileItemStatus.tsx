@@ -1,4 +1,4 @@
-import React,  { FC, Fragment } from "react";
+import React,{ FC, Fragment } from "react";
 import { CheckCircle, DoDisturb } from "../../../icons";
 import { FileItemStatusProps } from "./FileItemStatusProps";
 
