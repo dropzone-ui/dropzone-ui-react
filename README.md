@@ -10,39 +10,49 @@
 [![npm latest package](https://img.shields.io/badge/npm%40LTS-1.0.5-magenta)](https://www.npmjs.com/package/dropzone-ui)
 [![dependencies Status](https://status.david-dm.org/gh/dropzone-ui/dropzone-ui.svg)](https://david-dm.org/dropzone-ui/dropzone-ui)
 [![Build Status](https://www.travis-ci.com/dropzone-ui/dropzone-ui.svg?branch=master)](https://www.travis-ci.com/dropzone-ui/dropzone-ui)
-[![install size](https://packagephobia.com/badge?p=dropzone-ui)](https://packagephobia.com/result?p=@unlimited-react-components/material-button)
+[![install size](https://packagephobia.com/badge?p=dropzone-ui)](https://packagephobia.com/result?p=dropzone-ui)
 [![Coverage Status](https://coveralls.io/repos/github/dropzone-ui/dropzone-ui/badge.svg?branch=master)](https://coveralls.io/github/unlimited-react-components/material-button?branch=master)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/context:javascript)
-[![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/dropzone-ui/badge.svg)](https://snyk.io/test/github/unlimited-react-components/material-button)
+[![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/dropzone-ui/badge.svg)](https://snyk.io/test/github/dropzone-ui/dropzone-ui)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Description
 
-Dropzone components for mamanging file uploads. Components were made folllowing some of google's Material design principles.
+React components for mamanging file uploads. Components were made folllowing some of google's Material design principles.
 
-Sample result:
+## Sample result:
+list view<p align="center">
 
+<img align="center" width="900" src="https://user-images.githubusercontent.com/43678736/132430385-587cb866-09bf-4366-ae39-fdfdf9f69b92.png" alt="dropone-ui-logo">
+
+
+</p>grid view
 <p align="center">
-<!-- <img align="center" width="65%" src="https://user-images.githubusercontent.com/43678736/119084603-b74f7380-b9c7-11eb-8ea3-752cf72098e5.png" alt="dropzone-uisamle-screenshot"> -->
+
+<img align="center" width="400px" src="https://user-images.githubusercontent.com/43678736/132430386-d71de2b8-36be-4b2a-838e-57ca0a7fa068.png" alt="dropone-ui-logo">
+
+
 </p>
+
+
 
 ## Installation
 
-react-highlight is available as an [npm package](https://www.npmjs.com/package/@unlimited-react-components/react-highlight).
+dropzone-ui is available as an [npm package](https://www.npmjs.com/package/dropzone-ui).
 
 ```sh
 // with npm
-npm i @unlimited-react-components/react-highlight
+npm i dropzone-ui
 ```
 
 ## Usage and examples
 
 Here is a quick example to get you started, **it's all you need**:
 
-[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-highlight-demo-7o9pq)
+[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/basic-3j01v?file=/src/App.js)
 
-# DropZone Components API
+# Dropzone UI Components API
 
 - [\<DropzoneUI />](#dropzoneui-api)
 - [\<DropzoneLabel />](#dropzonelabel-api)
