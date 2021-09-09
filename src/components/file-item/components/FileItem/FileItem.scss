@@ -137,7 +137,9 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-end;
-
+      &.hide {
+        display: none;
+      }
       .size-open-info {
         width: inherit;
         display: flex;
@@ -213,7 +215,7 @@
   //  text-justify: ;
   font-size: 0.8rem;
   margin: -5px 0;
-  background-color: rgba(255, 255, 255, 0.79);
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 4px;
   padding: 0 2px;
   .status-icon {
@@ -222,12 +224,23 @@
   .file-status-error {
     //|margin: -5px 0;
     //margin: -2px 0;
+
     color: #f44336;
   }
   .file-status-ok {
     //margin: -5px 0;
     //rgin: -2px 0;
+
     color: #5c7a1f;
+  }
+  .file-status-loading {
+    display: flex;
+    color: #8b6b10;
+    flex-direction: column;
+    background-color: transparent;
+    p {
+      margin-top: -25px;
+    }
   }
 }
 

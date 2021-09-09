@@ -1,19 +1,35 @@
-import React,{ FC, Fragment, useEffect, useState } from "react";
+import React, { FC, Fragment, useEffect, useState } from "react";
 
 import { FileItemProps, FileItemPropsDefault } from "./FileItemProps";
 import "./FileItem.scss";
 import { Paper } from "../../../paper";
 import { mergeProps } from "@unlimited-react-components/kernel";
-import {fileSizeFormater,getURLFileIco,readImagePromise,resizeImage,shrinkWord} from "../../utils";
+import {
+  fileSizeFormater,
+  getURLFileIco,
+  readImagePromise,
+  resizeImage,
+  shrinkWord,
+} from "../../utils";
 
 import FileItemFullInfoLayer from "../FileItemFullInfoLayer/FileItemFullInfoLayer";
 import FileItemImage from "../FileItemImage/FileItemImage";
 import FileItemMainLayer from "../FileItemMainLayer/FileItemMainLayer";
 
-
 const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
-  const { file, onDelete, onSee, style, preview, info, id, valid, fileName } =
-    mergeProps(props, FileItemPropsDefault);
+  const {
+    file,
+    onDelete,
+    onSee,
+    style,
+    preview,
+    info,
+    id,
+    valid,
+    uploadStatus,
+    uploadMessage,
+    hd,
+  } = mergeProps(props, FileItemPropsDefault);
 
   const sizeFormatted: string = file ? fileSizeFormater(file.size) : "0 KB";
 
@@ -21,7 +37,6 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
   const [url, setUrl] = useState<string>("");
   const [imageSource, setImageSource] = useState<string | undefined>(undefined);
   const [showInfo, setShowInfo] = useState<boolean>(false);
-
   useEffect(() => {
     init(file, valid || false, preview || false);
     return () => {
@@ -65,17 +80,23 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
   const handleCloseInfo = () => {
     setShowInfo(false);
   };
-  const handleOpenImage = () => {
-    if (imageSource) {
-      onSee?.(imageSource);
+  const handleOpenImage = async () => {
+    if (imageSource && file) {
+      if (hd) {
+        const response = await readImagePromise(file);
+        onSee?.(response);
+      } else {
+        onSee?.(imageSource);
+      }
     }
   };
   function handleClick<T extends HTMLDivElement>(
     e: React.MouseEvent<T, MouseEvent>
   ): void {
-    //avoid children to triger oncClick ripple from parent
+    //avoid children to trigger onClick ripple from parent
     e.stopPropagation();
   }
+
   return (
     <Fragment>
       {file && (
@@ -84,18 +105,24 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
             <Paper
               className={`file-item-icon-container ${showInfo ? " hide" : ""}`}
             >
-              <FileItemImage imageSource={imageSource} url={url} fileName={file.name}/>
+              <FileItemImage
+                imageSource={imageSource}
+                url={url}
+                fileName={file.name}
+              />
               <FileItemMainLayer
                 showInfo={showInfo}
-                fileNamePosition={fileName}
+                //fileNamePosition={fileName}
                 fileName={file.name}
                 onDelete={handleDelete}
-                onOpenImage={onSee? handleOpenImage:undefined}
+                onOpenImage={onSee && preview ? handleOpenImage : undefined}
                 onOpenInfo={handleOpenInfo}
                 info={info || false}
                 valid={valid || false}
                 isImage={isImage}
                 sizeFormatted={sizeFormatted}
+                //fileNamePosition={undefined}
+                uploadStatus={uploadStatus}
               />
 
               <FileItemFullInfoLayer
@@ -105,11 +132,12 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
                 fileType={file.type}
                 valid={valid || false}
                 onClose={handleCloseInfo}
+                uploadStatus={uploadStatus}
+                uploadMessage={uploadMessage}
               />
             </Paper>
-            {fileName === "bottom" && (
-              <div className="file-item-name">{shrinkWord(file.name)}</div>
-            )}
+
+            <div className="file-item-name">{shrinkWord(file.name)}</div>
           </div>
         </div>
       )}
@@ -117,3 +145,9 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
   );
 };
 export default FileItem;
+
+/**
+ * {fileName === "bottom" && (
+      <div className="file-item-name">{shrinkWord(file.name)}</div>
+    )}
+ */

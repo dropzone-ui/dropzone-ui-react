@@ -4,10 +4,14 @@ import { DropzoneFooterProps } from "./DropzoneFooterProps";
 const DropzoneFooter: FC<DropzoneFooterProps> = (
   props: DropzoneFooterProps
 ) => {
-  const { accept } = props;
+  const { accept, message } = props;
   return (
     <div className="dz-ui-footer" onClick={undefined}>
-      {!accept ? `All file types accepted` : `File types: ${accept}`}
+      {message
+        ? message
+        : !accept
+        ? `All file types accepted`
+        : `File types: ${accept}`}
     </div>
   );
 };

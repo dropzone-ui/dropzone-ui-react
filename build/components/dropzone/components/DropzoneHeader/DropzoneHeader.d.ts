@@ -1,13 +1,15 @@
 import { FC } from "react";
-import { FileListProps } from "../../../file-item/components/FileList/FileListProps";
+import { FileItemContainerProps } from "../../../file-item/components/FileItemContainer/FileItemContainerProps";
 export interface DropzoneHeaderProps {
-    maxFileSize: number | undefined;
-    numberOfValidFiles: number | undefined;
-    maxFiles: number | undefined;
-    onReset: Function | undefined;
+    maxFileSize?: number;
+    numberOfValidFiles?: number;
+    maxFiles?: number;
+    onReset?: Function;
     handleReset: Function;
-    view: FileListProps["view"];
-    onChangeView: Function | undefined;
+    view: FileItemContainerProps["view"];
+    onChangeView?: Function;
+    onUploadStart?: Function;
+    urlPresent?: boolean;
 }
 declare const DropzoneHeader: FC<DropzoneHeaderProps>;
 export default DropzoneHeader;

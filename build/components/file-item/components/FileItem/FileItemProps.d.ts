@@ -31,7 +31,7 @@ export interface FileItemProps extends PaperProps {
      */
     onDelete?: Function;
     /**
-     * A function of what to do when "see" label is pressed or clicked
+     * A function of what to do when "see" button is pressed or clicked
      */
     onSee?: Function;
     /**
@@ -40,22 +40,20 @@ export interface FileItemProps extends PaperProps {
     /**
      * individual validator for each file
      */
-    validator?: FileItemValidator;
     /**
      * identifier for the file
      */
     id?: string | number;
     /**
-     * Whether to see a preview when the file is an image
-     * Makes visible the "view" button that will give
-     * The image url
-     * Also it only will be visible when file is valid
+     * if true, and if the file is an image,
+     * makes visible the "view" button that will get the image url
+     * Also, it will be visible only when file is valid
      */
     preview?: boolean;
     /**
-    * whether to show a valid or rejected message
-    * by def. valid is false (if not present, is false too)
-    * This value wil affect image preview,
+    * whether to show a valid or rejected message ("ok", "rejected")
+    * by def. valid is false (if not present, it's false too)
+    * This value wil affect preview behaviour,
     * If not valid, the preview will not be shown, nor the view button
     */
     valid?: boolean;
@@ -64,6 +62,22 @@ export interface FileItemProps extends PaperProps {
      * also whether to make visible the info button or not
      */
     info?: boolean;
-    fileName?: "bottom" | "inside";
+    /**
+     * The message from server
+     */
+    uploadMessage?: string;
+    /**
+     * where to place the file name
+     * [in construction]
+     */
+    uploadStatus?: undefined | "uploading" | "success" | "error";
+    /**
+     * If present, preview on full screen will
+     * be presented in the real image resolution
+     */
+    hd?: boolean | undefined;
 }
+/**
+ * Base default props
+ */
 export declare const FileItemPropsDefault: FileItemProps;

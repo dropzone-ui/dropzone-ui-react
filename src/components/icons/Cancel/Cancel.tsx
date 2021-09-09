@@ -9,7 +9,7 @@ const Cancel: FC<CancelProps> = (props: CancelProps) => {
   return (
     <svg
       style={onClick ? { ...{ cursor: "pointer", ...finalStyle } } : finalStyle}
-      onClick={() => onClick?.()}
+      onClick={(e) => onClick?.(e)}
       xmlns="http://www.w3.org/2000/svg"
       height={`${finalSize}px`}
       viewBox="0 0 24 24"

@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 export interface IconProps {
-    size?: "micro" | "small" | "medium" | "large";
+    size?: "micro" | "small" | "semi-medium" | "medium" | "large";
     color?: string;
     colorFill?: string;
     onClick?: Function;

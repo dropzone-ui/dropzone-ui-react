@@ -1,4 +1,4 @@
-import {
+export {
     aac, abw, accdb, avi, azw,
     bmp, bz, bz2, cda,
     csh, css, csv,
@@ -18,3 +18,5 @@ import {
     xlsx, xml, xul,
     zip
 } from "./utils/IconFiles";
+export {default as FileItemContainer} from "./components/FileItemContainer/FileItemContainer";
+export * from "./components/FileItemContainer/FileItemContainer";

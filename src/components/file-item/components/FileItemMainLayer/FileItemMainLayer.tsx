@@ -1,36 +1,43 @@
-import React, { FC } from "react";
-import { FileItemProps } from "../FileItem/FileItemProps";
+import React, { FC, useEffect, useState } from "react";
+//import { FileItemProps } from "../FileItem/FileItemProps";
 import FileItemStatus from "../FileItemStatus/FileItemStatus";
-import { Cancel,Visibility,Info } from "../../../icons";
-import {shrinkWord} from "./../../utils";
+import {
+  Cancel,
+  Visibility,
+  Info,
+  CheckCircle,
+  UploadDone,
+} from "../../../icons";
+//import {shrinkWord} from "./../../utils";
 export interface FileItemMainLayerProps {
   showInfo: boolean;
   onOpenInfo: Function;
   onOpenImage: Function | undefined;
   onDelete: Function;
-  fileNamePosition: FileItemProps["fileName"];
+  //fileNamePosition: FileItemProps["fileName"];
   fileName: string;
   info: boolean;
   valid: boolean;
   isImage: boolean;
-
+  uploadStatus?: undefined | "uploading" | "success" | "error";
   sizeFormatted: string;
 }
 
 const FileItemMainLayer: FC<FileItemMainLayerProps> = (
-  props: FileItemMainLayerProps
+  props: FileItemMainLayerProps,
 ) => {
   const {
     showInfo,
     onDelete,
     info,
-    fileName,
-    fileNamePosition,
+    //fileName,
+    //fileNamePosition,
     valid,
     isImage,
     onOpenInfo,
     onOpenImage,
     sizeFormatted,
+    uploadStatus,
   } = props;
   const handleDelete = () => {
     onDelete?.();
@@ -41,6 +48,14 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
   const handleOpenImage = () => {
     onOpenImage?.();
   };
+  const [uploadComplete, setUploadComplete] = useState<boolean>(false);
+  useEffect(() => {
+    if (uploadStatus === "success") {
+      setTimeout(() => {
+        setUploadComplete(true);
+      }, 2000);
+    }
+  }, [uploadStatus]);
   return (
     <div className="info-container">
       <div className={showInfo ? "status-close hide" : "status-close"}>
@@ -50,13 +65,27 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
           colorFill="black"
         />
       </div>
-      {fileNamePosition === "inside" && (
+      {/*  {fileNamePosition === "inside" && (
         <div className="file-item-name">{shrinkWord(fileName)}</div>
-      )}
-      <div className="file-item-footer">
-        <div className={showInfo ? "file-status hide" : "file-status"}>
-          <FileItemStatus valid={valid} />
+      )} */}
+      {uploadStatus && (
+        <div className={uploadComplete ? "file-status hide" : "file-status"}>
+          <FileItemStatus uploadStatus={uploadStatus} />
         </div>
+      )}
+      <div className={showInfo ? "file-item-footer hide" : "file-item-footer"}>
+        {uploadStatus && uploadComplete ? (
+          <div className={"file-status"}>
+            <div className="file-status-ok">
+              <FileItemStatus uploadStatus={uploadStatus} message="uploaded" />
+            </div>
+          </div>
+        ) : (
+          <div className={showInfo ? "file-status hide" : "file-status"}>
+            <FileItemStatus valid={valid} />
+          </div>
+        )}
+
         <div className={showInfo ? "size-open-info hide" : "size-open-info"}>
           <div className={"file-item-size"}>{sizeFormatted}</div>
           {isImage && onOpenImage && valid && (

@@ -3,6 +3,8 @@ export interface FileValidated {
     valid: boolean;
     id: number;
     errors?: string[];
+    uploadMessage?: string;
+    uploadStatus?: undefined | "uploading" | "success" | "error";
 }
 export interface FileValidator {
     maxFileSize?: number;
@@ -36,8 +38,8 @@ export declare const validateFile: (file: File, validator: FileValidator) => Fil
  * @param validator
  * @returns
  */
-export declare const customValidateFile: (file: File, validator: Function) => FileValidated;
-export declare abstract class FileIdGen {
+export declare const customValidateFile: (file: File, validator: (f: File) => boolean) => FileValidated;
+export declare abstract class FileIdGenerator {
     static nextId: number;
     static getNextId(): number;
 }

@@ -3,14 +3,19 @@ import { asureColor, colourNameToHex, hexColorToRGB } from "@unlimited-react-com
 import { useEffect, useState } from "react";
 import { DropzoneProps } from "../Dropzone/DropzoneProps";
 
-
-const useDropzoneStyles = (color: string | undefined, backgroundColor: string | undefined,maxHeight:string |undefined): string => {
+/**
+ * 
+ * @param color The color theme
+ * @param backgroundColor the background Color
+ * @param maxHeight the max heith for dropzone container
+ * @returns a valid classnname for the component
+ */
+const useDropzoneStyles = (color: string | undefined, backgroundColor: string | undefined, maxHeight: string | undefined): string => {
     const [idStyles, setIdStyles] = useState<string>("");
     const [styleInjected, setStyleInjected] = useState<boolean>(false);
     const [classNameCreated, setClassNameCreated] = useState<string>("");
 
     useEffect(() => {
-        console.log("affected",color);
         const removeStyle = () => {
             if (styleInjected) {
                 DynamiCSS.removeStyleSheet(idStyles);
@@ -27,9 +32,12 @@ const useDropzoneStyles = (color: string | undefined, backgroundColor: string | 
                     {
                         className: `dropzone-ui-extra`,
                         rules: {
-                            border: `1px dashed ${color}`,
-                            backgroundColor:backgroundColor,
-                            maxHeight:maxHeight
+                            border: `1px dashed ${hexColorToRGB(
+                                asureColor(colourNameToHex(color)),
+                                1
+                            )}`,
+                            backgroundColor: backgroundColor,
+                            maxHeight: maxHeight
                         },
                     },
                     {
@@ -71,7 +79,7 @@ const useDropzoneStyles = (color: string | undefined, backgroundColor: string | 
             removeStyle();
         }
         // eslint-disable-next-line
-    }, [color,backgroundColor,maxHeight]);
+    }, [color, backgroundColor, maxHeight]);
 
     return classNameCreated;
 }

@@ -1,6 +1,5 @@
 import { mergeProps } from "@unlimited-react-components/kernel";
-import React, { useState } from "react";
-
+import React, { useEffect, useRef, useState } from "react";
 import "./Dropzone.scss";
 import useDropzoneStyles from "../hooks/useDropzoneStyles";
 import {
@@ -13,8 +12,12 @@ import { DropzoneProps, DropzonePropsDefault } from "./DropzoneProps";
 import { createRipple } from "../utils/dropzone-ui.utils";
 import DropzoneHeader from "../DropzoneHeader/DropzoneHeader";
 import DropzoneFooter from "../DropzoneFooter.tsx/DropzoneFooter";
+import { FileItemContainer } from "../../../../components/file-item";
+import { FileItemContainerProps } from "../../../file-item/components/FileItemContainer/FileItemContainerProps";
+import DropzoneLabel from "../DropzoneLabel/DropzoneLabel";
+import { uploadPromiseAxios } from "../utils/dropzone-ui.upload.utils";
 
-const DropzoneUI: React.FC<DropzoneProps> = (props: DropzoneProps) => {
+const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   const {
     onDrop,
     children,
@@ -27,7 +30,6 @@ const DropzoneUI: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     maxFileSize,
     maxFiles,
     accept,
-    numberOfValidFiles,
     disableRipple,
     clickable,
     onChangeView,
@@ -36,56 +38,235 @@ const DropzoneUI: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     uploadOnDrop,
     footer,
     header,
+    method,
+    url,
+    config,
+    value,
+    // onUploading,
+    uploadingMessage,
+    onChange,
+    behaviour,
+    label,
+    fakeUploading,
   } = mergeProps(props, DropzonePropsDefault);
-  console.log("color:", color);
+  //console.log("color:", color);
+  //ref to the hidden input tag
+  const inputRef = useRef<HTMLInputElement>(null);
+  // whether is draggin or not
   const [isDragging, setIsDragging] = useState<boolean>(false);
-  const classNameCreated = useDropzoneStyles(color, backgroundColor, maxHeight);
+  // list of files (local)
+  const [files, setFiles] = useState<FileValidated[]>([]);
+  const [localView, setLocalView] =
+    useState<FileItemContainerProps["view"]>("grid");
+  const [localMessage, setLocalMessage] = useState<string>("");
+  //const [filesUploading, setFilesUploading] = useState<FileValidated[]>([]);
+  //ClassName for dynamic style
+  const [onUploadStart, setOnUploadStart] = useState<boolean>(false);
+  // const [queueFiles, setQueueFiles] = useState<FileValidated[]>([]);
+  const classNameCreated: string = useDropzoneStyles(
+    color,
+    backgroundColor,
+    maxHeight,
+  );
+  const finalClassName: string = `dropzone-ui${classNameCreated}${
+    isDragging ? ` drag` : ``
+  }${clickable ? ` clickable` : ``}`;
+  // validator
   const localValidator: FileValidator = {
     accept: accept,
     maxFileSize: maxFileSize,
   };
-  const uploadFiles = (files: FileValidated[]) => {};
+  //number of files
+  const [numberOfValidFiles, setNumberOfValidFiles] = useState<number>(0);
+  useEffect(() => {
+    if (value) {
+      setFiles(value);
+      setNumberOfValidFiles(value.filter((x: FileValidated) => x.valid).length);
+    }
+  }, [value]);
+  useEffect(() => {
+    if (view) {
+      setLocalView(view);
+    }
+  }, [view]);
+  useEffect(() => {
+    if (uploadingMessage) {
+      setLocalMessage(uploadingMessage);
+    }
+  }, [uploadingMessage]);
+
+  /**
+   * Method for uploading FIles
+   * @param files
+   */
+  const fakeUpload = (file: FileValidated): Promise<FileValidated> => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (file.id % 2 === 0) {
+          resolve({
+            ...file,
+            uploadStatus: "success",
+            uploadMessage: "File was succesfully uploaded",
+          });
+        } else {
+          resolve({
+            ...file,
+            uploadStatus: "error",
+            uploadMessage: "Error on Uploading",
+          });
+        }
+      }, 1500);
+    });
+  };
+
+
+  /**
+   * UPLOAD FILES LIKE A PRO
+   */
+  const uploadFiles = async (files: FileValidated[]) => {
+    const totalNumber = files.length;
+    const missingUpload = files.filter(
+      (x) => x.valid && x.uploadStatus !== "success",
+    ).length;
+    let totalRejected: number = 0;
+    let currentCountUpload: number = 0;
+    setOnUploadStart(true);
+    if (missingUpload > 0 && url) {
+      setLocalMessage(`uploading ${missingUpload}/${totalNumber} files`);
+      let uploadStartFiles: FileValidated[] = files.map((f: FileValidated) => {
+        if (f.uploadStatus !== "success" && f.valid) {
+          return { ...f, uploadStatus: "uploading" };
+        } else return f;
+      });
+
+      //make all uploading
+      onChange?.(uploadStartFiles);
+      ///////
+      let updatedList: FileValidated[] = uploadStartFiles;
+      for (let i = 0; i < uploadStartFiles.length; i++) {
+        let currentFile: FileValidated = uploadStartFiles[i];
+        if (currentFile.uploadStatus === "uploading") {
+          setLocalMessage(
+            `Uploading ${++currentCountUpload}/${missingUpload} files...`,
+          );
+          //  const uploadedFile = await fakeUpload(currentFile);
+
+          const uploadedFile: FileValidated = fakeUploading
+            ? await fakeUpload(currentFile)
+            : await uploadPromiseAxios(currentFile, url, method, config);
+          if (uploadedFile.uploadStatus === "error") {
+            totalRejected++;
+          }
+          updatedList = updatedList.map((f) => {
+            if (f.id === currentFile.id) {
+              return uploadedFile;
+            } else {
+              return f;
+            }
+          });
+          onChange?.(updatedList);
+        }
+      }
+      // upload group finished :D
+      setLocalMessage(
+        `Uloaded files: ${
+          missingUpload - totalRejected
+        }, Rejected: ${totalRejected}`,
+      );
+      setTimeout(() => {
+        setOnUploadStart(false);
+      }, 2300);
+      //console.log("queueFiles files:", queueFiles);
+    } else {
+      setLocalMessage(
+        `There is not any missing valid file for uploading or no url endpoint provided`,
+      );
+      setTimeout(() => {
+        setOnUploadStart(false);
+      }, 2300);
+    }
+  };
+  const handleFilesChange = (output: FileValidated[]) => {
+    //setNumberOfValidFiles(output.filter((x:FileValidated) => x.valid).length);
+    onDrop?.(output);
+    onChange?.(behaviour === "replace" ? output : [...files, ...output]);
+
+    setFiles(output);
+
+    if (uploadOnDrop) {
+      uploadFiles(behaviour === "replace" ? output : [...files, ...output]);
+      //uploadFiles();
+    }
+  };
+  /**
+   *
+   * @param evt
+   */
   const kamui: React.DragEventHandler<HTMLDivElement> = async (
-    evt: React.DragEvent<HTMLDivElement>
+    evt: React.DragEvent<HTMLDivElement>,
   ): Promise<void> => {
     evt.stopPropagation();
     evt.preventDefault();
-    //  evt.dataTransfer.dropEffect = "link";
-
-    let files: FileList = evt.dataTransfer.files;
-
-    const output: FileValidated[] = [];
-    //const output: File[] = [];
-    let stillValid: number | undefined = undefined;
-  
-    for (let i = 0, f: File; (f = files[i]); i++) {
-      let validatedFile: FileValidated = validator
-        ? customValidateFile(f, validator)
-        : validateFile(f, localValidator);
-      // maxFiles Validation
-      //after validating, we check only between accpted files
-      // whether to reduce or keep same amount of valid files
-      if (stillValid && validatedFile.valid) {
-        validatedFile.valid = stillValid > 0;
-        stillValid--;
-      }
-
-      output.push(validatedFile);
-
-      //output.push(f);
+    if (onUploadStart) {
+      setIsDragging(false);
+      return;
     }
+    let fileList: FileList = evt.dataTransfer.files;
+    const remainingValids: number = (maxFiles || 7) - numberOfValidFiles;
+    const output: FileValidated[] = fileListvalidator(
+      fileList,
+      remainingValids,
+    );
     if (!disableRipple) {
       createRipple(evt, color as string);
     }
     setIsDragging(false);
-    // if ripple => ripple
-    onDrop?.(output);
-    if (uploadOnDrop) {
-      uploadFiles(output);
+    handleFilesChange(output);
+  };
+
+  const handleOnChangeInput: React.ChangeEventHandler<HTMLInputElement> = (
+    evt: React.ChangeEvent<HTMLInputElement>,
+  ): void => {
+    if (onUploadStart) {
+      return;
+    }
+    let fileList: FileList = evt.target.files as FileList;
+    const remainingValids: number = (maxFiles || 7) - numberOfValidFiles;
+    const output: FileValidated[] = fileListvalidator(
+      fileList,
+      remainingValids,
+    );
+    handleFilesChange(output);
+  };
+
+  //local function validator
+  const fileListvalidator = (
+    preValidatedFiles: FileList,
+    remainingValids: number,
+  ): FileValidated[] => {
+    const output: FileValidated[] = [];
+    let countdown: number = remainingValids;
+    for (let i = 0, f: File; (f = preValidatedFiles[i]); i++) {
+      let validatedFile: FileValidated = validator
+        ? customValidateFile(f, validator)
+        : validateFile(f, localValidator);
+
+      if (validatedFile.valid) {
+        validatedFile.valid = countdown > 0;
+        countdown--;
+      }
+      output.push(validatedFile);
+    }
+    return output;
+  };
+  const handleUploadStart = () => {
+    if (numberOfValidFiles > 0) {
+      //uploadFiles();
+      uploadFiles(files);
     }
   };
   const handleDragEnter: React.DragEventHandler<HTMLDivElement> = (
-    evt: React.DragEvent<HTMLDivElement>
+    evt: React.DragEvent<HTMLDivElement>,
   ): void => {
     evt.stopPropagation();
     evt.preventDefault();
@@ -93,7 +274,7 @@ const DropzoneUI: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     setIsDragging(true);
   };
   const handleDragLeave: React.DragEventHandler<HTMLDivElement> = (
-    evt: React.DragEvent<HTMLDivElement>
+    evt: React.DragEvent<HTMLDivElement>,
   ): void => {
     evt.stopPropagation();
     evt.preventDefault();
@@ -101,8 +282,10 @@ const DropzoneUI: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     setIsDragging(false);
   };
   function handleClick<T extends HTMLDivElement>(
-    e: React.MouseEvent<T, MouseEvent>
+    e: React.MouseEvent<T, MouseEvent>,
   ): void {
+    let referenceInput = inputRef.current;
+    referenceInput?.click();
     if (!disableRipple) {
       createRipple(e, color as string);
     }
@@ -110,12 +293,19 @@ const DropzoneUI: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   }
   const handleReset = () => {
     onReset?.();
+    setFiles([]);
+    onChange?.([]);
+    //onDrop?.([]);
   };
+  const handleChangeView = (newView: "grid" | "list") => {
+    console.log("new View", newView);
+    setLocalView(newView);
+    onChangeView?.(newView);
+  };
+
   return (
     <div
-      className={`dropzone-ui${classNameCreated}${isDragging ? ` drag` : ``}${
-        clickable ? ` clickable` : ``
-      }`}
+      className={finalClassName}
       style={style}
       onDragOver={handleDragEnter}
       onClick={clickable ? handleClick : () => {}}
@@ -124,24 +314,43 @@ const DropzoneUI: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       {header && (
         <DropzoneHeader
           maxFileSize={maxFileSize}
-          numberOfValidFiles={numberOfValidFiles}
-          onReset={onReset}
+          numberOfValidFiles={files.filter((x) => x.valid).length}
+          onReset={handleReset}
           maxFiles={maxFiles}
           handleReset={handleReset}
-          view={view}
-          onChangeView={onChangeView}
+          view={localView}
+          onChangeView={handleChangeView}
+          onUploadStart={!uploadOnDrop ? handleUploadStart : undefined}
+          urlPresent={url !== undefined}
         />
       )}
+      {value && files && files.length > 0 ? (
+        <FileItemContainer view={localView}>{children}</FileItemContainer>
+      ) : (
+        <DropzoneLabel>{label}</DropzoneLabel>
+      )}
 
-      {children}
-      {footer && <DropzoneFooter accept={accept} />}
+      {footer && (
+        <DropzoneFooter
+          accept={accept}
+          message={onUploadStart ? localMessage : undefined}
+        />
+      )}
       <div
         onDragLeave={handleDragLeave}
         onDrop={kamui}
         className={`dropzone-ui-layer${isDragging ? ` drag` : ``}`}
       ></div>
+      <input
+        ref={inputRef}
+        onChange={handleOnChangeInput}
+        type="file"
+        accept={accept}
+        style={{ display: "none" }}
+        multiple={(maxFiles && maxFiles > 1) || undefined}
+      />
     </div>
   );
 };
 
-export default DropzoneUI;
+export default Dropzone;

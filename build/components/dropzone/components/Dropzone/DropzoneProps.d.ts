@@ -1,5 +1,6 @@
 import { OverridableProps } from "@unlimited-react-components/kernel";
-import { FileListProps } from "../../../file-item/components/FileList/FileListProps";
+import { FileItemContainerProps } from "../../../file-item/components/FileItemContainer/FileItemContainerProps";
+import { FileValidated } from "../utils/validation.utils";
 export interface DropzoneProps extends OverridableProps {
     /**
      * What to do when Drop event is triggered
@@ -78,7 +79,6 @@ export interface DropzoneProps extends OverridableProps {
     /**
      * The current number of valid files
      */
-    numberOfValidFiles?: number;
     /**
      * If present will make change view visible
      * and also return the selected view mode
@@ -87,7 +87,7 @@ export interface DropzoneProps extends OverridableProps {
     /**
      * The current view
      */
-    view?: FileListProps["view"];
+    view?: FileItemContainerProps["view"];
     /**
      * The max height of the container
      * in string format
@@ -108,5 +108,36 @@ export interface DropzoneProps extends OverridableProps {
       * if true, shows the dropzone footer
       */
     header?: boolean;
+    /**
+     * Just like any other input component
+     * the value prop is the current value
+     */
+    value?: FileValidated[];
+    /**
+     * In both cases of uploading (onDropUpload, or with clicking upload button)
+     * This event is the result one by one of the uploading process
+     */
+    onUploading?: (files: FileValidated[]) => void;
+    /**
+     * A message to show in the footer when the uploading process happens
+     */
+    uploadingMessage?: string;
+    /**
+     * The onChange Event occurs when the value is changed
+     */
+    onChange?: (files: FileValidated[]) => void;
+    /**
+     * The behaviuor on drop files
+     */
+    behaviour?: "add" | "replace";
+    /**
+     * Label to place when no files selected
+     */
+    label?: string;
+    /**
+     * Use this prop only in development mode
+     * This will make dropzone to simulate a server upload
+     */
+    fakeUploading?: boolean;
 }
 export declare const DropzonePropsDefault: DropzoneProps;

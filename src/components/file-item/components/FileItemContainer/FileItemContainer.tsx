@@ -1,9 +1,9 @@
-import "./FileList.scss";
+import "./FileItemContainer.scss";
 
 import React, { FC } from "react";
-import { FileListProps } from "./FileListProps";
+import { FileItemContainerProps } from "./FileItemContainerProps";
 
-const FileList: FC<FileListProps> = (props: FileListProps) => {
+const FileItemContainer: FC<FileItemContainerProps> = (props: FileItemContainerProps) => {
   const { children, view } = props;
   const finalView = view || "list";
 
@@ -13,4 +13,4 @@ const FileList: FC<FileListProps> = (props: FileListProps) => {
     </div>
   );
 };
-export default FileList;
+export default FileItemContainer;

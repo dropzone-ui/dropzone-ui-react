@@ -1,12 +1,21 @@
 import React, { FC } from "react";
 import { Cancel } from "../../../icons";
 
-import FileItemStatus from "./../FileItemStatus/FileItemStatus";
+import FileItemStatus from "../FileItemStatus/FileItemStatus";
 
 const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps> = (
   props: FileItemFullInfoLayerProps
 ) => {
-  const { showInfo, valid, onClose, fileName, fileSize, fileType } = props;
+  const {
+    showInfo,
+    valid,
+    onClose,
+    fileName,
+    fileSize,
+    fileType,
+    uploadStatus,
+    uploadMessage,
+  } = props;
   const handleCloseInfo = () => {
     onClose?.();
   };
@@ -26,10 +35,17 @@ const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps> = (
           onClick={handleCloseInfo}
           colorFill="black"
         />
-        <div className="file-status">
-          <FileItemStatus valid={valid} />
-        </div>
+        {uploadStatus && uploadStatus !== "uploading" ? (
+          <div className={"file-status"}>
+            <FileItemStatus uploadStatus={uploadStatus} />
+          </div>
+        ) : (
+          <div className="file-status">
+            <FileItemStatus valid={valid} />
+          </div>
+        )}
       </span>
+      {uploadMessage && <div className="name">{uploadMessage}</div>}
       <div className="name">
         <span className="sub-label">{"Name: "}</span>
         {fileName}
@@ -53,4 +69,6 @@ export interface FileItemFullInfoLayerProps {
   fileType: string;
   valid: boolean;
   onClose: Function;
+  uploadMessage?: string;
+  uploadStatus?: undefined | "uploading" | "success" | "error";
 }

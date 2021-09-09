@@ -14,3 +14,7 @@ export { default as ViewList } from "./ViewList/ViewList";
 export * from "./ViewList/ViewList";
 export { default as ViewGrid } from "./ViewGrid/ViewGrid";
 export * from "./ViewGrid/ViewGrid";
+export { default as UploadDone } from "./UploadDone/UploadDone";
+export * from "./UploadDone/UploadDone";
+export { default as UploadError } from "./UploadError/UploadError";
+export * from "./UploadError/UploadError";

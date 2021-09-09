@@ -1,2 +1,3 @@
 import { createRipple } from "./dropzone-ui.utils";
-export { createRipple };
+import { uploadMultipleSecuential } from "./dropzone-ui.upload.utils";
+export { createRipple, uploadMultipleSecuential };

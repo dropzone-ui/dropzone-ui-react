@@ -4,7 +4,9 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import typescript from "rollup-plugin-typescript2";
 import sass from "rollup-plugin-sass";
 import packageJson from "./package.json";
-import { terser } from "rollup-plugin-terser";
+//import jsx from 'rollup-plugin-jsx'
+//import json from "rollup-plugin-json";
+//import { terser } from "rollup-plugin-terser";
 export default {
   input: "./src/index.ts",
   output: [
@@ -22,9 +24,13 @@ export default {
   plugins: [
     sass({ insert: true }),
     peerDepsExternal(),
-    resolve(),
+    resolve(
+     // { preferBuiltins: true, mainFields: ['browser'] }
+      ),
     commonjs(),
     typescript(),
-    terser(),
+   // terser(),
+    //json(),
+    // jsx( {factory: 'React.createElement'} ),
   ],
 };

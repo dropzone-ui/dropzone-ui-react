@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
 .dropzone-ui {
   color: #646c7f;
   position: relative;
-  min-height: 300px;
+  min-height: 280px;
   border-radius: 4px;
   //margin: 4%;
   width: calc(100% - 4px);
@@ -50,7 +52,7 @@
     align-items: center;
     justify-content: flex-end;
     //height: 30px;
-    //font-weight: 600;
+    //font-weight: 300;
     font-family: "Poppins", sans-serif;
     padding-right: 10px;
     //border-bottom: 1px dotted #646c7f;
@@ -61,9 +63,9 @@
     position: absolute;
     cursor: text;
     bottom: 0;
-    display: flex;
+    
     width: 100%;
-    flex-direction: column;
+    display: flex;flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     border-top: 1px dotted grey;
@@ -96,7 +98,7 @@
   text-rendering: optimizeLegibility;
   font-size: 1.5em; font-family: "Poppins", sans-serif;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.02857em;
   @media (max-width: 600px) {
   font-size: 1.3em;

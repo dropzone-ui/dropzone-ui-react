@@ -1,4 +1,4 @@
-export interface ImageFullScreenProps {
+export interface FullScreenPreviewProps {
     imgSource?: string;
     openImage?: boolean;
     onClose?: Function;

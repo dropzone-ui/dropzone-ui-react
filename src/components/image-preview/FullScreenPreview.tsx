@@ -1,14 +1,19 @@
 
 import { Cancel } from "../icons";
-import "./ImageFullScreen.scss";
+import "./FullScreenPreview.scss";
 import React, {FC} from "react";
-import { ImageFullScreenProps } from "./ImageFullScreenProps";
+import { FullScreenPreviewProps } from "./FullScreenPreviewProps";
 
-const ImageFullScreen:FC<ImageFullScreenProps> = (props:ImageFullScreenProps) =>{
+const FullScreenPreview:FC<FullScreenPreviewProps> = (props:FullScreenPreviewProps) =>{
   const { imgSource, openImage, onClose } = props;
-  const handleClose = () => {
+  
+  function handleClose<T extends HTMLDivElement>(
+    e: React.MouseEvent<T, MouseEvent>
+  ): void {
+    //avoid children to trigger onClick ripple from parent
+    e.stopPropagation();
     onClose?.();
-  };
+  }
   return (
     <div
       className={openImage ? "image-container show" : "image-container"}
@@ -39,4 +44,4 @@ const ImageFullScreen:FC<ImageFullScreenProps> = (props:ImageFullScreenProps) =>
     </div>
   );
 }
-export default ImageFullScreen;
+export default FullScreenPreview;

@@ -7,6 +7,9 @@ export interface FileValidated {
     valid: boolean;
     id: number;
     errors?: string[];
+    uploadMessage?: string;
+    uploadStatus?:undefined | "uploading" | "success" | "error";
+    // messageKey?:string | ""
 }
 export interface FileValidator {
     maxFileSize?: number;
@@ -52,12 +55,12 @@ export const validateAccept = (accept: string[], file: File): boolean => {
 
                 let headerMimeFile = type.split("/")[0];
                 let tailMimeFile = type.split("/")[1];
-                
+
                 if (headerMime === headerMimeFile) {
-                  //    image/*
-                    if (tailMime === "*" ) {
+                    //    image/*
+                    if (tailMime === "*") {
                         return true;
-                    }else if(tailMime === tailMimeFile){
+                    } else if (tailMime === tailMimeFile) {
                         return true;
                     }
                 }
@@ -74,7 +77,7 @@ export const validateAccept = (accept: string[], file: File): boolean => {
  * @returns a FileValidated object
  */
 export const validateFile = (file: File, validator: FileValidator): FileValidated => {
-    const idGenerated = FileIdGen.getNextId();
+    const idGenerated = FileIdGenerator.getNextId();
     let errors: string[] = [];
 
     const { maxFileSize, accept } = validator;
@@ -107,21 +110,21 @@ export const validateFile = (file: File, validator: FileValidator): FileValidate
  * @param validator 
  * @returns 
  */
-export const customValidateFile = (file: File, validator: Function): FileValidated => {
-    const idGenerated = FileIdGen.getNextId();
+export const customValidateFile = (file: File, validator: (f: File) => boolean): FileValidated => {
+    const idGenerated = FileIdGenerator.getNextId();
     let fileResult: FileValidated = {
         id: idGenerated,
         file: file,
-        valid: validator(file),
+        valid: validator(file)
     };
     // logic here
     return fileResult;
 };
-export abstract class FileIdGen {
+export abstract class FileIdGenerator {
     static nextId = 0;
     static getNextId(): number {
-        FileIdGen.nextId++;
-        return FileIdGen.nextId;
+        FileIdGenerator.nextId++;
+        return FileIdGenerator.nextId;
     }
 }
 

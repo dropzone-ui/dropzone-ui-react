@@ -173,7 +173,7 @@ export const mimeSelector = (mimeType?: string): string => {
      * Every mimetype that 
      * starts with: "application/...."
      */
-    console.log("salio:",headerMime,tailMime);
+    
     switch (headerMime) {
         case "application": return applicationSelector(tailMime);
         case "audio": return audioSelector(tailMime);
@@ -265,14 +265,14 @@ export const getURLFileIco = (file: File | undefined): ResultFileIco => {
     } else {
         result = mimeSelector(file.type);
     }
-    console.log("salio result:",result);
+    //console.log("got result:",result);
     //If plain text
     const extention: string = getExt(file.name);
-    console.log("salio extention:",extention);
+    //console.log("got extention:",extention);
 
     if (result === "text") {
         result = checkIsCode(extention);
-    console.log("salio checkIsCode:",result);
+    //console.log("got checkIsCode:",result);
 
     }
     //If octet stream result, second chance: file extention

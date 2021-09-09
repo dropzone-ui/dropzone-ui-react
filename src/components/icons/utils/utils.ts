@@ -6,6 +6,8 @@ export const parseSize = (sizeStr: IconProps["size"]): number => {
             return 8;
         case "small":
             return 15;
+        case "semi-medium":
+            return 18;
         case "medium":
             return 25;
         case "large":

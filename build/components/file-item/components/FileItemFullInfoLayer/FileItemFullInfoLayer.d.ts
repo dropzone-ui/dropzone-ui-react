@@ -8,4 +8,6 @@ export interface FileItemFullInfoLayerProps {
     fileType: string;
     valid: boolean;
     onClose: Function;
+    uploadMessage?: string;
+    uploadStatus?: undefined | "uploading" | "success" | "error";
 }
