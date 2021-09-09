@@ -36,7 +36,6 @@
   "homepage": "https://github.com/dropzone-ui/dropzone-ui#readme",
   "dependencies": {
     "@dynamicss/dynamicss": "^2.0.3",
-    "@rollup/plugin-image": "^2.1.1",
     "@unlimited-react-components/kernel": "^1.0.2",
     "@unlimited-react-components/material-button": "^1.2.5"
   },
