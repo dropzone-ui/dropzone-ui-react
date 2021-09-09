@@ -77,6 +77,7 @@ Yes, it's really all you need to get started as you can see in these live and in
 |Basic example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/basic-3j01v?file=/src/index.js)|
 |Complete example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/complete-946hz?file=/src/index.js)|
 |File item props|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/fileitem-props-o0w5x)|
+|Server side upload file | https://github.com/dropzone-ui/file-upload-server-side/tree/main/expressjs |
 
 # Dropzone UI Components API
 
