@@ -11,11 +11,8 @@ test
 
 postinstallSSJ.js
 process.md
-src_past1
-src_past2
-src_past3
 README.md
 CHANGELOG.md
 rollup.config.js
-.travis.yml
+./.travis.yml
 tempackage.json

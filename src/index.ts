@@ -1,3 +1,6 @@
+import { createPPF } from "./utils/files.utils";
+export { createPPF };
+
 export { default as Dropzone } from "./components/dropzone/components/Dropzone/Dropzone";
 export * from "./components/dropzone/components/Dropzone/Dropzone";
 
@@ -18,5 +21,4 @@ export * from "./components/image-preview/FullScreenPreview";
 
 export { default as InputButton } from "./components/input-button/InputButton";
 export * from "./components/input-button/InputButton";
-
 

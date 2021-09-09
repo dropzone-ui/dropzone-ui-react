@@ -1,3 +1,5 @@
+import { createPPF } from "./utils/files.utils";
+export { createPPF };
 export { default as Dropzone } from "./components/dropzone/components/Dropzone/Dropzone";
 export * from "./components/dropzone/components/Dropzone/Dropzone";
 export { default as DropzoneLabel } from "./components/dropzone/components/DropzoneLabel/DropzoneLabel";

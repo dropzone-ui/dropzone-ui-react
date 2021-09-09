@@ -8,7 +8,7 @@
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/dropzone-ui/blob/HEAD/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/dropzone-ui.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/dropzone-ui)
 [![dependencies Status](https://status.david-dm.org/gh/dropzone-ui/dropzone-ui.svg)](https://david-dm.org/dropzone-ui/dropzone-ui)
-[![Build Status](https://www.travis-ci.com/dropzone-ui/dropzone-ui.svg?branch=master)](https://www.travis-ci.com/dropzone-ui/dropzone-ui)
+[![Build Status](https://app.travis-ci.com/dropzone-ui/dropzone-ui.svg?branch=master)](https://app.travis-ci.com/dropzone-ui/dropzone-ui)
 [![install size](https://packagephobia.com/badge?p=dropzone-ui)](https://packagephobia.com/result?p=dropzone-ui)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/context:javascript)
@@ -17,11 +17,11 @@
 
 ## Description
 
-Dropzone UI is a mini set of [React](https://reactjs.org/) components for mamanging file uploads. Components were made following some of the good google's Material design principles.
+Dropzone UI is a mini set of [React](https://reactjs.org/) components for managing file uploads. Components were made following some of the good google's Material design principles.
 
 ## Sample result:
 
-On Dragging
+On `Drag`, `drop` and `upload`. (also changing view mode from `grid` to `list`)
 
 
 
@@ -76,6 +76,7 @@ Yes, it's really all you need to get started as you can see in these live and in
 |-|-|
 |Basic example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/basic-3j01v?file=/src/index.js)|
 |Complete example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/complete-946hz?file=/src/index.js)|
+|File item props|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/fileitem-props-o0w5x)|
 
 # Dropzone UI Components API
 

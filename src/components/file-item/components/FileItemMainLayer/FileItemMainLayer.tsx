@@ -5,8 +5,6 @@ import {
   Cancel,
   Visibility,
   Info,
-  CheckCircle,
-  UploadDone,
 } from "../../../icons";
 //import {shrinkWord} from "./../../utils";
 export interface FileItemMainLayerProps {
@@ -68,14 +66,16 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
       {/*  {fileNamePosition === "inside" && (
         <div className="file-item-name">{shrinkWord(fileName)}</div>
       )} */}
-      {uploadStatus && (
-        <div className={uploadComplete ? "file-status hide" : "file-status"}>
+
+      {uploadStatus && !showInfo &&(
+        <div className={(uploadComplete) ? "file-status hide" : "file-status"}>
           <FileItemStatus uploadStatus={uploadStatus} />
         </div>
       )}
-      <div className={showInfo ? "file-item-footer hide" : "file-item-footer"}>
+   
+      <div className={"file-item-footer"}>
         {uploadStatus && uploadComplete ? (
-          <div className={"file-status"}>
+          <div className={showInfo ? "file-status hide" : "file-status"}>
             <div className="file-status-ok">
               <FileItemStatus uploadStatus={uploadStatus} message="uploaded" />
             </div>

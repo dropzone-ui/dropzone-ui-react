@@ -52,7 +52,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
   ) => {
     if (!file) return;
     const { url } = getURLFileIco(file as File);
-    const headerMime = file && file.type ? file.type.split("/")[0] : "octet";
+    const headerMime =  file.type ? file.type.split("/")[0] : "octet";
     setIsImage(headerMime === "image");
 
     setUrl(url);

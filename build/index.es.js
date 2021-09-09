@@ -12,6 +12,19 @@ function ___$insertStyle(css) {
 import React, { useState, useEffect, useRef, Fragment } from 'react';
 import axios from 'axios';
 
+var createFile = function (name, size, type) {
+    var file = new File([], name, { type: type });
+    Object.defineProperty(file, "size", {
+        get: function () {
+            return size;
+        },
+    });
+    return file;
+};
+var createPPF = function () {
+    return createFile("test-file-with-large-name.pdf", 455005, "application/pdf");
+};
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -2137,7 +2150,7 @@ var FileItemImage = function (props) {
     var imageSource = props.imageSource, url = props.url, fileName = props.fileName;
     return (React.createElement(Fragment, null,
         imageSource && (React.createElement("div", { className: "img-container blur" },
-            React.createElement("img", { src: imageSource || url, alt: "blur " + fileName }))),
+            React.createElement("img", { src: url, alt: "blur " + fileName }))),
         React.createElement("div", { className: "img-container" },
             React.createElement("img", { src: imageSource || url, alt: "preview " + fileName }))));
 };
@@ -2167,10 +2180,10 @@ var FileItemMainLayer = function (props) {
     return (React.createElement("div", { className: "info-container" },
         React.createElement("div", { className: showInfo ? "status-close hide" : "status-close" },
             React.createElement(Cancel, { color: "rgba(255,255,255,0.8)", onClick: handleDelete, colorFill: "black" })),
-        uploadStatus && (React.createElement("div", { className: uploadComplete ? "file-status hide" : "file-status" },
+        uploadStatus && !showInfo && (React.createElement("div", { className: (uploadComplete) ? "file-status hide" : "file-status" },
             React.createElement(FileItemStatus, { uploadStatus: uploadStatus }))),
-        React.createElement("div", { className: showInfo ? "file-item-footer hide" : "file-item-footer" },
-            uploadStatus && uploadComplete ? (React.createElement("div", { className: "file-status" },
+        React.createElement("div", { className: "file-item-footer" },
+            uploadStatus && uploadComplete ? (React.createElement("div", { className: showInfo ? "file-status hide" : "file-status" },
                 React.createElement("div", { className: "file-status-ok" },
                     React.createElement(FileItemStatus, { uploadStatus: uploadStatus, message: "uploaded" })))) : (React.createElement("div", { className: showInfo ? "file-status hide" : "file-status" },
                 React.createElement(FileItemStatus, { valid: valid }))),
@@ -2202,7 +2215,7 @@ var FileItem = function (props) {
                     if (!file)
                         return [2 /*return*/];
                     url = getURLFileIco(file).url;
-                    headerMime = file && file.type ? file.type.split("/")[0] : "octet";
+                    headerMime = file.type ? file.type.split("/")[0] : "octet";
                     setIsImage(headerMime === "image");
                     setUrl(url);
                     if (!(preview && valid && headerMime === "image")) return [3 /*break*/, 4];
@@ -2284,7 +2297,7 @@ var FullScreenPreview = function (props) {
         onClose === null || onClose === void 0 ? void 0 : onClose();
     }
     return (React.createElement("div", { className: openImage ? "image-container show" : "image-container", onClick: handleClose }, imgSource && openImage && (React.createElement("div", { className: "img-rel-container" },
-        React.createElement("img", { width: "100%", height: "100%", src: imgSource || "", alt: "", className: openImage ? "image-full-screen show-image" : "image-full-screen" }),
+        React.createElement("img", { width: "100%", height: "100%", src: imgSource, alt: "", className: "image-full-screen show-image" }),
         React.createElement(Cancel, { color: "rgba(255,255,255,0.8)", onClick: handleClose, colorFill: "black", className: "button-full-screen" })))));
 };
 
@@ -3190,5 +3203,5 @@ var InputButton = function (props) {
         React.createElement("input", { id: id || "", ref: inputRef, onChange: handleOnChange, type: "file", accept: accept, style: { display: "none" }, multiple: multiple })));
 };
 
-export { Dropzone, DropzoneLabel, FileItem, FileItemContainer, FullScreenPreview, InputButton };
+export { Dropzone, DropzoneLabel, FileItem, FileItemContainer, FullScreenPreview, InputButton, createPPF };
 //# sourceMappingURL=index.es.js.map

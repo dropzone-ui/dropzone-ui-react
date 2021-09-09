@@ -25,10 +25,10 @@ const FullScreenPreview:FC<FullScreenPreviewProps> = (props:FullScreenPreviewPro
             <img
               width="100%"
               height="100%"
-              src={imgSource || ""}
+              src={imgSource}
               alt=""
               className={
-                openImage ? "image-full-screen show-image" : "image-full-screen"
+                "image-full-screen show-image"
               }
             />
              <Cancel

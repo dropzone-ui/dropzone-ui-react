@@ -7,8 +7,8 @@ const createFile = (name: string, size: number, type: string) => {
     });
     return file;
 };
-export const createDPF = (): File => {
-    return createFile("test-file-with-large-name.pdf", 4555, "application/pdf");
+export const createPPF = (): File => {
+    return createFile("test-file-with-large-name.pdf", 455005, "application/pdf");
 }
 export const createWord = (): File => {
     return createFile("test-file-with-large-name.pdf", 4555, "application/pdf");
@@ -17,7 +17,7 @@ export const createListOfDPF = (size?: number): File[] => {
     const quantity = size ? size : 15;
     let listFile: File[] = [];
     for (let i = 0; i < quantity; i++) {
-        listFile.push(createDPF());
+        listFile.push(createPPF());
     }
     return listFile;
 }
