@@ -6,7 +6,7 @@ import sass from "rollup-plugin-sass";
 import packageJson from "./package.json";
 //import jsx from 'rollup-plugin-jsx'
 //import json from "rollup-plugin-json";
-//import { terser } from "rollup-plugin-terser";
+import { terser } from "rollup-plugin-terser";
 export default {
   input: "./src/index.ts",
   output: [
@@ -29,7 +29,7 @@ export default {
       ),
     commonjs(),
     typescript(),
-   // terser(),
+    terser(),
     //json(),
     // jsx( {factory: 'React.createElement'} ),
   ],

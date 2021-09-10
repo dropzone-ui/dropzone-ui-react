@@ -8,6 +8,19 @@
 </p>
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+
+<a name="1.1.84"></a>
+
+## [1.1.56](https://github.com/glicht/npm-get-version/compare/v1.0.1...v1.0.2) (2021-09-12)
+
+### Features
+
+- Release Input File Button
+- Release Dropzone Label
+
+
+
 <a name="1.1.28"></a>
 
 ## [1.1.28](https://github.com/glicht/npm-get-version/compare/v1.0.1...v1.0.2) (2021-09-09)
