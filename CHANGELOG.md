@@ -12,12 +12,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 <a name="1.1.84"></a>
 
-## [1.1.56](https://github.com/glicht/npm-get-version/compare/v1.0.1...v1.0.2) (2021-09-12)
+## [1.1.84](https://github.com/glicht/npm-get-version/compare/v1.0.1...v1.0.2) (2021-09-12)
 
 ### Features
 
 - Release Input File Button
-- Release Dropzone Label
+- Release FileItemContainer Compnent
+- Improve API doc for all components (now arranged alphabetically)
 
 
 
@@ -36,12 +37,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-- added readme status badges ([5c25d8d](https://github.com/glicht/npm-get-version/commit/5c25d8d))
+- added readme status badges 
 
-- Add Travis ci and coveralls integration ([dd6b023](https://github.com/glicht/npm-get-version/commit/dd6b023))
+- Add Travis ci and coveralls integration 
 
-- update README description ([1e59cee](https://github.com/glicht/npm-get-version/commit/1e59cee))
-- Dropzone, FileItem components released
+- update README description 
+- Dropzone, FileItem and FullScreenImage components released
 
 <a name="1.0.1"></a>
 
@@ -49,7 +50,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-- README improvements ([37d57cc](https://github.com/glicht/npm-get-version/commit/37d57cc))
+- README improvements
 
 <a name="1.0.0"></a>
 

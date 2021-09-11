@@ -11,18 +11,18 @@ import {
 
 const InputButton: React.FC<InputButtonProps> = (props: InputButtonProps) => {
   let {
-    id,
-    disabled,
-    style,
-    variant,
-    color,
-    multiple,
     accept,
+    color,
+    disabled,
+    id,
     label,
+    maxFileSize,
+    multiple,
     onChange,
+    style,
     textColor,
     validator,
-    maxFileSize,
+    variant,
   } = mergeProps(props, InputButtonDefaultProps);
   const inputRef = useRef<HTMLInputElement>(null);
   const localValidator: FileValidator = {
@@ -32,22 +32,16 @@ const InputButton: React.FC<InputButtonProps> = (props: InputButtonProps) => {
   };
 
   const handleOnChange: React.ChangeEventHandler<HTMLInputElement> = (
-    evt: React.ChangeEvent<HTMLInputElement>
+    evt: React.ChangeEvent<HTMLInputElement>,
   ): void => {
     let files: FileList = evt.target.files as FileList;
     const output: FileValidated[] = [];
-
-    let stillValid: number | undefined = undefined;
 
     if (files && files.length > 0) {
       for (let i = 0, f: File; (f = files[i]); i++) {
         let validatedFile: FileValidated = validator
           ? customValidateFile(f, validator)
           : validateFile(f, localValidator);
-        if (stillValid && validatedFile.valid) {
-          validatedFile.valid = stillValid > 0;
-          stillValid--;
-        }
         output.push(validatedFile);
       }
     }
@@ -76,12 +70,12 @@ const InputButton: React.FC<InputButtonProps> = (props: InputButtonProps) => {
       </MaterialButton>
       <input
         id={id || ""}
+        style={{ display: "none" }}
         ref={inputRef}
         onChange={handleOnChange}
         type="file"
-        accept={accept}
-        style={{ display: "none" }}
         multiple={multiple}
+        accept={accept}
       />
     </Fragment>
   );

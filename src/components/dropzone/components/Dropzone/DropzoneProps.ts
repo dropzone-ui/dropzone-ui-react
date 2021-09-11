@@ -76,7 +76,7 @@ export interface DropzoneProps extends OverridableProps {
    * must be a function that recieves as first parameter a File Object
    * and must return a boolean value
    */
-  validator?: any;
+  validator?: (f: File) => boolean;
   /**
    * The current number of valid files
    */

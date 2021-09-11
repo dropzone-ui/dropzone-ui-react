@@ -37,7 +37,7 @@ const FileItemStatus: FC<FileItemStatusProps> = (
               size="semi-medium"
               className="status-icon"
             />
-            upload error
+            error
           </div>
         )
       ) : valid ? (
