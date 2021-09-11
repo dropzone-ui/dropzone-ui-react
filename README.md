@@ -149,7 +149,7 @@ Yes, it's really all you need to get started as you can see in these live and in
 | children | `node`               | `true`   | The content of he component. Normally a list of `FileItem`. By default `Dropzone` component already uses this component for containing the `FileItem` list children. |
 | view     | `"grid"` \| `"list"` | `"grid"` | `grid` will display files in a grid layout. `list` will display files in a horizontal list. Convenient for saving space in page.                                     |
 
-## FileItemContainer API
+## InputButton API
 
 ### Props
 
