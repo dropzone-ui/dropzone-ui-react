@@ -13,11 +13,12 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/context:javascript)
 [![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/dropzone-ui/badge.svg)](https://snyk.io/test/github/dropzone-ui/dropzone-ui)
+[![](https://data.jsdelivr.com/v1/package/npm/dropzone-ui/badge)](https://www.jsdelivr.com/package/npm/dropzone-ui)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Description
 
-Dropzone UI is a mini set of [React](https://reactjs.org/) components for managing file uploads, image previews and all with **little** code needed. Components were made inspired on other existing libraries like [react-dropzone](https://www.npmjs.com/package/react-dropzone) and [dropzonejs](https://www.npmjs.com/package/dropzone). Also, following some of the good google's Material design principles and icons.
+Dropzone UI is a mini set of [React](https://reactjs.org/) components for managing file uploads, image previews and all with **little** code needed. Components were made inspired on other existing libraries like [react-dropzone](https://www.npmjs.com/package/react-dropzone) and [dropzonejs](https://www.npmjs.com/package/dropzone) (however, both are **not** dependencies in order avoid increasing the package size and the idea is to **create** something **new** having many good existing libraries only as **reference**). Also, some componetes follows some of the good google's Material design principles. Actually, all the icons involved are google material design icons.
 
 ## Sample result:
 
@@ -164,9 +165,9 @@ Yes, it's really all you need to get started as you can see in these live and in
 | multiple    | `boolean`                                                    | `false`        | whether to accept multiple files or not                                                                                                                        |
 | onChange    | `Function`                                                   | `undefined`    | What to do after selecting the files. Returns the File[] to the parent component                                                                               |
 | style       | `React.CSSProperties`                                        | {}             | the in-line style object                                                                                                                                       |
-| text        | `"uppercase"` \| `"capitalize"` \| `"lowercase"` \| `"none"` | `"capitalize"` | the text transfor for the button label                                                                                                                         |
+| text        | `"uppercase"` \| `"capitalize"` \| `"lowercase"` \| `"none"` | `"capitalize"` | The text transform for the text inside the button label                                                                                                                         |
 | textColor   | `string`                                                     | "white"        | The font color in case variant is `"contained"`                                                                                                                |
-| validator   | (f: `File`) => `boolean`                                     | `undefined`    | must be a function that recieves as first parameter a File Object and must return a boolean value. This function will be used instead of the default validator |
+| validator   | (f: `File`) => `boolean`                                     | `undefined`    | Must be a function that recieves as first parameter a File Object and must return a boolean value. This function will be used instead of the default validator |
 | variant     | `"text"` \| `"outlined"` \| `"contained"`                    | `"contained"`  | The variant of the button                                                                                                                                      |
 
 ## License
