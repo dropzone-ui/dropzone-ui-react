@@ -20,7 +20,7 @@ const FileItemImage: FC<FileItemImageProps> = (props: FileItemImageProps) => {
     <Fragment>
       {imageSource && (
         <div className="img-container blur">
-          <img src={url} alt={`blur ${fileName}`} />
+          <img src={imageSource} alt={`blur ${fileName}`} />
         </div>
       )}
       <div className="img-container">
