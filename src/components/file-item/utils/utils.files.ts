@@ -26,7 +26,7 @@ export const createWord = (size?: number): File => {
  * @param amount the amount of items in the array of files
  * @returns a pdf file
  */
-export const createListOfDPF = (amount?: number): File[] => {
+export const createListOfPDF = (amount?: number): File[] => {
     const quantity = amount ? amount : 15;
     let listFile: File[] = [];
     for (let i = 0; i < quantity; i++) {

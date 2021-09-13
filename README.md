@@ -13,12 +13,11 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/context:javascript)
 [![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/dropzone-ui/badge.svg)](https://snyk.io/test/github/dropzone-ui/dropzone-ui)
-[![](https://data.jsdelivr.com/v1/package/npm/dropzone-ui/badge)](https://www.jsdelivr.com/package/npm/dropzone-ui)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Description
 
-Dropzone UI is a mini set of [React](https://reactjs.org/) components for managing file uploads, image previews and all with **little** code needed. Components were made inspired on other existing libraries like [react-dropzone](https://www.npmjs.com/package/react-dropzone) and [dropzonejs](https://www.npmjs.com/package/dropzone) (however, both are **not** dependencies in order avoid increasing the package size and the idea is to **create** something **new** having many good existing libraries only as **reference**). Also, some componetes follows some of the good google's Material design principles. Actually, all the icons involved are google material design icons.
+Dropzone UI is a mini set of [React](https://reactjs.org/) components for managing file uploads, image previews and all with **little** code needed. Components were made inspired on other existing libraries (however, those are **not** dependencies in order avoid increasing the package size and the idea is to **create** something **new** having many good existing libraries only as **reference**). Also, some componetes follows some of the good google's Material design principles. Indeed, all the icons involved are google material design icons.
 
 ## Sample result:
 
@@ -71,11 +70,13 @@ ReactDOM.render(<App />, document.querySelector("#app"));
 ```
 
 Yes, it's really all you need to get started as you can see in these live and interactive demos:
-| Name | Go |
+| Name | Codesandbox |
 |-|-|
-|Basic example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/basic-3j01v?file=/src/index.js)|
-|Complete example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/complete-946hz?file=/src/index.js)|
+|Dropzone Basic example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/basic-3j01v?file=/src/index.js)|
+|Dropzone Complete example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/complete-946hz?file=/src/index.js)|
 |File item props|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/fileitem-props-o0w5x)|
+|No preview FileItem|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/no-preview-14i2m) | 
+|InputFileButton|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/inputbutton-example-poqsn?file=/src/App.js)|
 |Server side upload file | https://github.com/dropzone-ui/file-upload-server-side/tree/main/expressjs |
 
 # Dropzone UI Components API

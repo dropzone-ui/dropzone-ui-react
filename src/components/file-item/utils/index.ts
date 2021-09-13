@@ -1,4 +1,4 @@
-import { createDPF, createListOfDPF, createWord, fileSizeFormater, getExt, shrinkWord } from "./utils.files";
+import { createDPF, createListOfPDF, createWord, fileSizeFormater, getExt, shrinkWord } from "./utils.files";
 import {
     audioSelector,
     applicationSelector,
@@ -11,7 +11,7 @@ import {
     textSelector,
     videoSelector
 } from "./mime.files"; import { readImage, resizeImage, readImagePromise } from "./reader.files";
-export { createDPF, createListOfDPF, createWord, fileSizeFormater, getExt, shrinkWord };
+export { createDPF, createListOfPDF, createWord, fileSizeFormater, getExt, shrinkWord };
 export {
     audioSelector,
     applicationSelector,
