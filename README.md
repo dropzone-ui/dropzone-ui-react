@@ -1,7 +1,7 @@
 <p align="center">
 <img align="center" height="150" src="https://user-images.githubusercontent.com/43678736/132112022-0ca409ae-cca2-43c8-be89-110376260a3f.png" alt="dropone-ui-logo">
 
-<h1 align="center">  Dropzone UI </h1>
+<h1 align="center">  dropzone-ui </h1>
 
 </p>
 
@@ -9,10 +9,11 @@
 [![npm latest package](https://img.shields.io/npm/v/dropzone-ui.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/dropzone-ui)
 [![dependencies Status](https://status.david-dm.org/gh/dropzone-ui/dropzone-ui.svg)](https://david-dm.org/dropzone-ui/dropzone-ui)
 [![Build Status](https://app.travis-ci.com/dropzone-ui/dropzone-ui.svg?branch=master)](https://app.travis-ci.com/dropzone-ui/dropzone-ui)
-[![install size](https://packagephobia.com/badge?p=dropzone-ui)](https://packagephobia.com/result?p=dropzone-ui)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/context:javascript)
 [![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/dropzone-ui/badge.svg)](https://snyk.io/test/github/dropzone-ui/dropzone-ui)
+[![Package Quality](https://packagequality.com/shield/dropzone-ui.svg)](https://packagequality.com/#?package=dropzone-ui)
+[![install size](https://packagephobia.com/badge?p=dropzone-ui)](https://packagephobia.com/result?p=dropzone-ui)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Description
@@ -21,7 +22,9 @@ Dropzone UI is a mini set of [React](https://reactjs.org/) components for managi
 
 ## Sample result:
 
-On `Drag`, `Drop` and `Upload`. (also changing view mode from `grid` to `list`)
+On `Drag`, `Drop` and `Upload`. (also changing view mode from `grid` to `list`).
+
+Did you like the package? Don't forget to give us a star on [github](https://github.com/dropzone-ui/dropzone-ui) :D
 
 <p align="center">
 <img align="center" width="35%" src="https://user-images.githubusercontent.com/43678736/132642335-dc7e7ceb-ae86-4f81-8625-4ee28dc5f593.png" alt="dropone-ui-logo"><img align="center" width="35%" src="https://user-images.githubusercontent.com/43678736/132642336-e295d84d-d950-43b2-b9fc-0529b4ecfe46.png" alt="dropone-ui-logo"><img align="center" width="35%" src="https://user-images.githubusercontent.com/43678736/132642339-2cd996a3-7754-46c9-89ed-56291972154f.png" alt="dropone-ui-logo"><img align="center" width="35%" src="https://user-images.githubusercontent.com/43678736/132642341-b1eb2bfe-8134-4cdf-a808-62b14058b4c1.png" alt="dropone-ui-logo">
@@ -76,7 +79,7 @@ Yes, it's really all you need to get started as you can see in these live and in
 |Dropzone Complete example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/complete-946hz?file=/src/index.js)|
 |File item props|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/fileitem-props-o0w5x)|
 |No preview FileItem|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/no-preview-14i2m) | 
-|InputFileButton|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/inputbutton-example-poqsn?file=/src/App.js)|
+|InputFileButton & FileItemContainer|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/inputbutton-example-poqsn?file=/src/App.js)|
 |Server side upload file | https://github.com/dropzone-ui/file-upload-server-side/tree/main/expressjs |
 
 # Dropzone UI Components API

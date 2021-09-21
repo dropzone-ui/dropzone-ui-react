@@ -1,6 +1,6 @@
 {
   "name": "dropzone-ui",
-  "version": "1.2.9",
+  "version": "1.2.10",
   "description": "Elegant React Library Component for drag’n’drop files. Simple to use with little code. Also follows material design guidelines.",
   "main": "./build/index.js",
   "module": "./build/index.es.js",
@@ -11,14 +11,15 @@
   },
   "keywords": [
     "dropzone",
-    "material-dropzone",
     "react-dropzone",
+    "material-dropzone",
     "dopzone-ui",
     "react",
     "material",
     "dragndrop",
     "drag and drop",
     "file upload",
+    "file",
     "upload",
     "react-component",
     "react",
@@ -26,7 +27,8 @@
     "drop",
     "typescript",
     "unlimited",
-    "unlimited-react-components"
+    "unlimited-react-components",
+    "kamui"
   ],
   "author": "JinSSJ3",
   "license": "MIT",
@@ -42,7 +44,8 @@
   "peerDependencies": {
     "axios": "^0.21.4",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"},
+    "react-dom": "^17.0.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@rollup/plugin-commonjs": "^20.0.0",
