@@ -109,8 +109,8 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
             uploadStatus: "success",
             uploadMessage:
               localization === "ES-es"
-                ? "File was succesfully uploaded"
-                : "EL archivo se subió correctamente",
+                ? "EL archivo se subió correctamente"
+                : "File was succesfully uploaded",
           });
         } else {
           resolve({
