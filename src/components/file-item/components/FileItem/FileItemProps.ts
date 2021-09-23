@@ -1,3 +1,4 @@
+import { Localization } from "../../../../localization/localization";
 import { PaperProps } from "../../../paper/components/PaperProps";
 
 
@@ -82,6 +83,12 @@ export interface FileItemProps extends PaperProps {
      * be presented in the real image resolution
      */
     hd?: boolean | undefined;
+    /**
+     * language to be used
+     * for now
+     * only English and Spanish is supported
+     */
+    localization?: Localization;
 }
 /**
  * Base default props
@@ -97,5 +104,6 @@ export const FileItemPropsDefault: FileItemProps = {
     valid: false,
     info: false,
     hd: undefined
+    , localization: "EN-en"
     //fileName: "bottom"
 }

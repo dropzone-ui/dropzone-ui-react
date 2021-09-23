@@ -1,4 +1,5 @@
 import { OverridableProps } from "@unlimited-react-components/kernel";
+import { Localization } from "../../../../localization/localization";
 import { FileItemContainerProps } from "../../../file-item/components/FileItemContainer/FileItemContainerProps";
 import { FileValidated } from "../utils/validation.utils";
 
@@ -135,12 +136,18 @@ export interface DropzoneProps extends OverridableProps {
   /**
    * Label to place when no files selected
    */
-  label?:string;
+  label?: string;
   /**
    * Use this prop only in development mode
    * This will make dropzone to simulate a server upload
    */
-   fakeUploading?:boolean;
+  fakeUploading?: boolean;
+  /**
+  * language to be used
+  * for now
+  * only English and Spanish is supported
+  */
+  localization?: Localization;
 }
 
 export const DropzonePropsDefault: DropzoneProps = {
@@ -165,8 +172,9 @@ export const DropzonePropsDefault: DropzoneProps = {
   value: undefined,
   onUploading: undefined,
   uploadingMessage: undefined,
-  behaviour:"add",
-  label:"Drop your files here"
+  behaviour: "add",
+  label: "Drop your files here",
+  localization: "EN-en"
 };
 
 

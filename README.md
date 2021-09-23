@@ -1,11 +1,14 @@
 :rocket: [Spanish](./README_ES.md)
 
 <p align="center">
-<img align="center" height="150" src="https://user-images.githubusercontent.com/43678736/132112022-0ca409ae-cca2-43c8-be89-110376260a3f.png" alt="dropone-ui-logo">
+<img align="center" height="128" src="https://user-images.githubusercontent.com/43678736/132112022-0ca409ae-cca2-43c8-be89-110376260a3f.png" alt="dropone-ui-logo">
 
 <h1 align="center">  Dropzone-UI </h1>
 
+[React](https://reactjs.org/) set of components for managing file uploads, image previews on user inteface. Components were made inspired on other existing libraries (however, those are **not** dependencies because the idea is to take many good related libraries only as **reference** and **create** something **new** ). Google's Material design principles were also considered in development. Indeed, icons come from [Material design icons](https://fonts.google.com/icons).
+
 </p>
+
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/dropzone-ui/blob/HEAD/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/dropzone-ui.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/dropzone-ui)
@@ -17,10 +20,6 @@
 [![Package Quality](https://packagequality.com/shield/dropzone-ui.svg)](https://packagequality.com/#?package=dropzone-ui)
 [![install size](https://packagephobia.com/badge?p=dropzone-ui)](https://packagephobia.com/result?p=dropzone-ui)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
-## Description
-
-Dropzone UI is a mini set of [React](https://reactjs.org/) components for managing file uploads, image previews and all with **little** code needed. Components were made inspired on other existing libraries (however, those are **not** dependencies in order avoid increasing the package size and the idea is to **create** something **new** having many good existing libraries only as **reference**). Also, google's Material design principles were considered in development. Indeed, all the icons involved are material design icons.
 
 ## Sample result:
 
@@ -37,7 +36,7 @@ Did you like the project? Don't forget to give us a :star: star on :octocat: [gi
 
 dropzone-ui is available as an [npm package](https://www.npmjs.com/package/dropzone-ui).
 
-For uploading files, peer dependency [axios](https://www.npmjs.com/package/axios) must be installed together
+For uploading files, peer dependency [axios](https://www.npmjs.com/package/axios) must be installed in conjuction with `dropzone-ui`.
 
 ```sh
 // with npm

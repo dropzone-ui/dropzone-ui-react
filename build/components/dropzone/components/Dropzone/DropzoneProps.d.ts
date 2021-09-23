@@ -1,4 +1,5 @@
 import { OverridableProps } from "@unlimited-react-components/kernel";
+import { Localization } from "../../../../localization/localization";
 import { FileItemContainerProps } from "../../../file-item/components/FileItemContainer/FileItemContainerProps";
 import { FileValidated } from "../utils/validation.utils";
 export interface DropzoneProps extends OverridableProps {
@@ -139,5 +140,11 @@ export interface DropzoneProps extends OverridableProps {
      * This will make dropzone to simulate a server upload
      */
     fakeUploading?: boolean;
+    /**
+    * language to be used
+    * for now
+    * only English and Spanish is supported
+    */
+    localization?: Localization;
 }
 export declare const DropzonePropsDefault: DropzoneProps;

@@ -6,6 +6,7 @@ import {
   Visibility,
   Info,
 } from "../../../icons";
+import { Localization } from "../../../../localization/localization";
 //import {shrinkWord} from "./../../utils";
 export interface FileItemMainLayerProps {
   showInfo: boolean;
@@ -19,6 +20,12 @@ export interface FileItemMainLayerProps {
   isImage: boolean;
   uploadStatus?: undefined | "uploading" | "success" | "error";
   sizeFormatted: string;
+  /**
+   * language to be used
+   * for now
+   * only English and Spanish is supported
+   */
+  localization: Localization;
 }
 
 const FileItemMainLayer: FC<FileItemMainLayerProps> = (
@@ -36,6 +43,7 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
     onOpenImage,
     sizeFormatted,
     uploadStatus,
+    localization
   } = props;
   const handleDelete = () => {
     onDelete?.();
@@ -69,7 +77,7 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
 
       {uploadStatus && !showInfo &&(
         <div className={(uploadComplete) ? "file-status hide" : "file-status"}>
-          <FileItemStatus uploadStatus={uploadStatus} />
+          <FileItemStatus uploadStatus={uploadStatus} localization={localization}/>
         </div>
       )}
    
@@ -77,12 +85,12 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
         {uploadStatus && uploadComplete ? (
           <div className={showInfo ? "file-status hide" : "file-status"}>
             <div className="file-status-ok">
-              <FileItemStatus uploadStatus={uploadStatus} message="uploaded" />
+              <FileItemStatus uploadStatus={uploadStatus} message={localization==="ES-es"?"subido":"uploaded"} localization={localization}/>
             </div>
           </div>
         ) : (
           <div className={showInfo ? "file-status hide" : "file-status"}>
-            <FileItemStatus valid={valid} />
+            <FileItemStatus valid={valid}  localization={localization}/>
           </div>
         )}
 

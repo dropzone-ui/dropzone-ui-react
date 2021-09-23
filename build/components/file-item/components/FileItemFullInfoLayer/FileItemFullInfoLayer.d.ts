@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Localization } from "../../../../localization/localization";
 declare const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps>;
 export default FileItemFullInfoLayer;
 export interface FileItemFullInfoLayerProps {
@@ -10,4 +11,10 @@ export interface FileItemFullInfoLayerProps {
     onClose: Function;
     uploadMessage?: string;
     uploadStatus?: undefined | "uploading" | "success" | "error";
+    /**
+     * language to be used
+     * for now
+     * only English and Spanish is supported
+     */
+    localization: Localization;
 }

@@ -1,4 +1,4 @@
-:rocket:[English](./README.md)
+:rocket:[English](https://github.com/dropzone-ui/dropzone-ui#readme)
 
 <p align="center">
 <img align="center" height="128" src="https://user-images.githubusercontent.com/43678736/132112022-0ca409ae-cca2-43c8-be89-110376260a3f.png" alt="dropone-ui-logo">
@@ -6,6 +6,8 @@
 <h1 align="center">  Dropzone-UI </h1>
 
 </p>
+
+Dropzone UI es un pequeño set de componentes [React](https://reactjs.org/) para manejar cargas de archivo, vista previa de imágenes en la interfaz gráfica. Componentes fueron hechos inspirados en otras librerias existentes (sin embargo, estas **no** son dependencias , ya que la idea es tomar como **referencia** varias librerias buenas y **crear** algo **nuevo**). Pricipios de Material Design de Google fueron considerados en el desarrollo. De hecho, todos los iconos son [Material design icons](https://fonts.google.com/icons).
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/dropzone-ui/blob/HEAD/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/dropzone-ui.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/dropzone-ui)
@@ -18,9 +20,6 @@
 [![install size](https://packagephobia.com/badge?p=dropzone-ui)](https://packagephobia.com/result?p=dropzone-ui)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-
-Dropzone UI es un pequeño set de componentes [React](https://reactjs.org/) para manejar cargas de archivo, vista previa de imágenes y todo con **poco** codigo requerido. Componentes fueron hechos inspirados en otras librerias existentes (sin embargo, estas **no** son dependencas para evitar el incremento del tamaño del paquete y la idea es **crear** algo **nuevo** teniendo solo como **referencia** varias librerias buenas ). Además, tambien se siguen los pricipios de Material Design de Google. De hecho, todos los iconos utilizados son iconos de material design.
-
 ## Ejemplo de resultado:
 
 En operaciones `Drag`, `Drop` y `Upload`. (también cambiando el modo de vista de `grid` a `list`).
@@ -32,19 +31,18 @@ En operaciones `Drag`, `Drop` y `Upload`. (también cambiando el modo de vista d
 
 </p>
 
-## Installacion
+## Installación
 
-dropzone-ui is available as an [npm package](https://www.npmjs.com/package/dropzone-ui).
-
-For uploading files, peer dependency [axios](https://www.npmjs.com/package/axios) must be installed together
+dropzone-ui está disponible como un [paquete npm](https://www.npmjs.com/package/dropzone-ui).
+Para subir archivos a un servidor, la dependencia peer [axios](https://www.npmjs.com/package/axios) debe ser instalada en conjunto con `dropzone-ui`
 
 ```sh
-// with npm
+// con npm
 npm i dropzone-ui axios
 ```
 
 ```sh
-// with yarn
+// con yarn
 yarn add dropzone-ui axios
 ```
 
@@ -73,7 +71,7 @@ Function App() {
 ReactDOM.render(<App />, document.querySelector("#app"));
 ```
 
-Si, esto es todo lo que necesitas para iniciarte en estos demos interactivos:
+Si, esto es todo lo que necesitas para iniciarte como puedes observar en estos demos interactivos:
 | Nombre | Enlace a Codesandbox |
 |-|-|
 |Dropzone Ejemplo básico|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/basic-3j01v?file=/src/index.js)|
@@ -83,10 +81,10 @@ Si, esto es todo lo que necesitas para iniciarte en estos demos interactivos:
 |InputFileButton & FileItemContainer|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/inputbutton-example-poqsn?file=/src/App.js)|
 |Ejemplo de servidor de carga de archivos | https://github.com/dropzone-ui/file-upload-server-side/tree/main/expressjs |
 
-# API de los Componentes de Dropzone UI
+# API de los Componentes Dropzone-UI
 
 - [\<Dropzone/>](#dropzone-api)
-- [\<FileItem />](#fileitem-api)
+- [\<FileItem />](#fileitem-api) 
 - [\<FullScreenPreview />](#fullscreenpreview-api)
 - [\<FileItemContainer />](#fileitemcontainer-api)
 - [\<InputButton />](#inputbutton-api)

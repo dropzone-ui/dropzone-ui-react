@@ -1,0 +1,1 @@
+export type Localization = "EN-en"| "ES-es";

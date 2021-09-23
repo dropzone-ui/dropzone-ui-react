@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Localization } from "../../../../localization/localization";
 import { FileItemContainerProps } from "../../../file-item/components/FileItemContainer/FileItemContainerProps";
 export interface DropzoneHeaderProps {
     maxFileSize?: number;
@@ -10,6 +11,12 @@ export interface DropzoneHeaderProps {
     onChangeView?: Function;
     onUploadStart?: Function;
     urlPresent?: boolean;
+    /**
+     * language to be used
+     * for now
+     * only English and Spanish is supported
+     */
+    localization?: Localization;
 }
 declare const DropzoneHeader: FC<DropzoneHeaderProps>;
 export default DropzoneHeader;

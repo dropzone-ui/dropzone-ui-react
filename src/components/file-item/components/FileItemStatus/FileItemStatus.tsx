@@ -9,16 +9,16 @@ import {
 import { FileItemStatusProps } from "./FileItemStatusProps";
 
 const FileItemStatus: FC<FileItemStatusProps> = (
-  props: FileItemStatusProps
+  props: FileItemStatusProps,
 ) => {
-  const { valid, uploadStatus, message } = props;
+  const { valid, uploadStatus, message, localization } = props;
   return (
     <Fragment>
       {uploadStatus ? (
         uploadStatus === "uploading" ? (
           <div className="file-status-loading">
             <Loader />
-            <p>uploading </p>
+            <p>{localization === "ES-es" ? "Subiendo" : "uploading"} </p>
           </div>
         ) : uploadStatus === "success" ? (
           <div className="file-status-ok upload">
@@ -28,7 +28,7 @@ const FileItemStatus: FC<FileItemStatusProps> = (
               //style={styles.icons}
               className="status-icon"
             />{" "}
-            {message || "success"}
+            {message || localization === "ES-es" ? "éxito" :"success"}
           </div>
         ) : (
           <div className="file-status-error upload">
@@ -49,7 +49,7 @@ const FileItemStatus: FC<FileItemStatusProps> = (
             //style={styles.icons}
             className="status-icon"
           />
-          valid
+          {localization === "ES-es" ? "válido" :"valid"}
         </div>
       ) : (
         <div className="file-status-error">
@@ -59,7 +59,7 @@ const FileItemStatus: FC<FileItemStatusProps> = (
             className="status-icon"
             //style={styles.icons}
           />
-          Denied
+          {localization === "ES-es" ? "No válido" :"Denied"}
         </div>
       )}
     </Fragment>

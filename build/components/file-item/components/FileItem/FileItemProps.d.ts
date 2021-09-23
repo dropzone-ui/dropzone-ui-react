@@ -1,3 +1,4 @@
+import { Localization } from "../../../../localization/localization";
 import { PaperProps } from "../../../paper/components/PaperProps";
 export interface FileItemValidator {
     /**
@@ -76,6 +77,12 @@ export interface FileItemProps extends PaperProps {
      * be presented in the real image resolution
      */
     hd?: boolean | undefined;
+    /**
+     * language to be used
+     * for now
+     * only English and Spanish is supported
+     */
+    localization?: Localization;
 }
 /**
  * Base default props

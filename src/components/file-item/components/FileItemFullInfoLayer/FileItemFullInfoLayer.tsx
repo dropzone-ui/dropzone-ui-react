@@ -1,10 +1,11 @@
 import React, { FC } from "react";
+import { Localization } from "../../../../localization/localization";
 import { Cancel } from "../../../icons";
 
 import FileItemStatus from "../FileItemStatus/FileItemStatus";
 
 const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps> = (
-  props: FileItemFullInfoLayerProps
+  props: FileItemFullInfoLayerProps,
 ) => {
   const {
     showInfo,
@@ -15,6 +16,7 @@ const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps> = (
     fileType,
     uploadStatus,
     uploadMessage,
+    localization,
   } = props;
   const handleCloseInfo = () => {
     onClose?.();
@@ -37,25 +39,36 @@ const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps> = (
         />
         {uploadStatus && uploadStatus !== "uploading" ? (
           <div className={"file-status"}>
-            <FileItemStatus uploadStatus={uploadStatus} />
+            <FileItemStatus
+              uploadStatus={uploadStatus}
+              localization={localization}
+            />
           </div>
         ) : (
           <div className="file-status">
-            <FileItemStatus valid={valid} />
+            <FileItemStatus valid={valid} localization={localization} />
           </div>
         )}
       </span>
       {uploadMessage && <div className="name">{uploadMessage}</div>}
       <div className="name">
-        <span className="sub-label">{"Name: "}</span>
+        <span className="sub-label">
+          {localization === "ES-es" ? "Nombre: " : "Name: "}
+        </span>
         {fileName}
       </div>
 
       <div className="size">
-        <span className="sub-label">{"Size: "}</span> {fileSize}
+        <span className="sub-label">
+          {localization === "ES-es" ? "Nombre: " : "Tamaño: "}
+        </span>{" "}
+        {fileSize}
       </div>
       <div className="mime">
-        <span className="sub-label">{"Type: "}</span> {fileType}
+        <span className="sub-label">
+          {localization === "ES-es" ? "Tipo: " : "Type: "}
+        </span>{" "}
+        {fileType}
       </div>
     </div>
   );
@@ -71,4 +84,10 @@ export interface FileItemFullInfoLayerProps {
   onClose: Function;
   uploadMessage?: string;
   uploadStatus?: undefined | "uploading" | "success" | "error";
+  /**
+   * language to be used
+   * for now
+   * only English and Spanish is supported
+   */
+  localization: Localization;
 }

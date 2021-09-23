@@ -29,6 +29,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     uploadStatus,
     uploadMessage,
     hd,
+    localization,
   } = mergeProps(props, FileItemPropsDefault);
 
   const sizeFormatted: string = file ? fileSizeFormater(file.size) : "0 KB";
@@ -48,11 +49,11 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
   const init = async (
     file: File | undefined,
     valid: boolean,
-    preview: boolean
+    preview: boolean,
   ) => {
     if (!file) return;
     const { url } = getURLFileIco(file as File);
-    const headerMime =  file.type ? file.type.split("/")[0] : "octet";
+    const headerMime = file.type ? file.type.split("/")[0] : "octet";
     setIsImage(headerMime === "image");
 
     setUrl(url);
@@ -91,7 +92,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     }
   };
   function handleClick<T extends HTMLDivElement>(
-    e: React.MouseEvent<T, MouseEvent>
+    e: React.MouseEvent<T, MouseEvent>,
   ): void {
     //avoid children to trigger onClick ripple from parent
     e.stopPropagation();
@@ -123,6 +124,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
                 sizeFormatted={sizeFormatted}
                 //fileNamePosition={undefined}
                 uploadStatus={uploadStatus}
+                localization={localization!=="ES-es"?"EN-en":"ES-es"}
               />
 
               <FileItemFullInfoLayer
@@ -134,6 +136,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
                 onClose={handleCloseInfo}
                 uploadStatus={uploadStatus}
                 uploadMessage={uploadMessage}
+                localization={localization!=="ES-es"?"EN-en":"ES-es"}
               />
             </Paper>
 

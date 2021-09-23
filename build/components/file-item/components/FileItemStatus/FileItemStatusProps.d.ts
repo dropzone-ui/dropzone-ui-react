@@ -1,3 +1,4 @@
+import { Localization } from "../../../../localization/localization";
 export interface FileItemStatusProps {
     /**
      * whether show a valid or rejected message
@@ -12,4 +13,10 @@ export interface FileItemStatusProps {
      * A message for the status item
      */
     message?: string;
+    /**
+    * language to be used
+    * for now
+    * only English and Spanish is supported
+    */
+    localization: Localization;
 }

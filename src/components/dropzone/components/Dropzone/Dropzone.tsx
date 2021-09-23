@@ -48,6 +48,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     behaviour,
     label,
     fakeUploading,
+    localization,
   } = mergeProps(props, DropzonePropsDefault);
   //console.log("color:", color);
   //ref to the hidden input tag
@@ -106,19 +107,24 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
           resolve({
             ...file,
             uploadStatus: "success",
-            uploadMessage: "File was succesfully uploaded",
+            uploadMessage:
+              localization === "ES-es"
+                ? "File was succesfully uploaded"
+                : "EL archivo se subió correctamente",
           });
         } else {
           resolve({
             ...file,
             uploadStatus: "error",
-            uploadMessage: "Error on Uploading",
+            uploadMessage:
+              localization === "ES-es"
+                ? "Erro al subir el archivo"
+                : "Error on Uploading",
           });
         }
       }, 1500);
     });
   };
-
 
   /**
    * UPLOAD FILES LIKE A PRO
@@ -132,7 +138,12 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     let currentCountUpload: number = 0;
     setOnUploadStart(true);
     if (missingUpload > 0 && url) {
-      setLocalMessage(`uploading ${missingUpload}/${totalNumber} files`);
+      setLocalMessage(
+        localization === "ES-es"
+          ? `Subiendo ${missingUpload}/${totalNumber} archivos`
+          : `uploading ${missingUpload}/${totalNumber} files`,
+      );
+
       let uploadStartFiles: FileValidated[] = files.map((f: FileValidated) => {
         if (f.uploadStatus !== "success" && f.valid) {
           return { ...f, uploadStatus: "uploading" };
@@ -147,7 +158,9 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
         let currentFile: FileValidated = uploadStartFiles[i];
         if (currentFile.uploadStatus === "uploading") {
           setLocalMessage(
-            `Uploading ${++currentCountUpload}/${missingUpload} files...`,
+            localization === "ES-es"
+              ? `Subiendo ${++currentCountUpload}/${missingUpload} archivos`
+              : `Uploading ${++currentCountUpload}/${missingUpload} files...`,
           );
           //  const uploadedFile = await fakeUpload(currentFile);
 
@@ -169,9 +182,13 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       }
       // upload group finished :D
       setLocalMessage(
-        `Uloaded files: ${
-          missingUpload - totalRejected
-        }, Rejected: ${totalRejected}`,
+        localization === "ES-es"
+          ? `Archivos subidos: ${
+              missingUpload - totalRejected
+            }, Rechazados: ${totalRejected}`
+          : `Uloaded files: ${
+              missingUpload - totalRejected
+            }, Rejected: ${totalRejected}`,
       );
       setTimeout(() => {
         setOnUploadStart(false);
@@ -179,7 +196,9 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       //console.log("queueFiles files:", queueFiles);
     } else {
       setLocalMessage(
-        `There is not any missing valid file for uploading or no url endpoint provided`,
+        localization === "ES-es"
+          ? `No hay archivos válidos pendientes por subir`
+          : `There is not any missing valid file for uploading`,
       );
       setTimeout(() => {
         setOnUploadStart(false);
@@ -298,7 +317,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     //onDrop?.([]);
   };
   const handleChangeView = (newView: "grid" | "list") => {
-    console.log("new View", newView);
+   // console.log("new View", newView);
     setLocalView(newView);
     onChangeView?.(newView);
   };
