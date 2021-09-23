@@ -1,4 +1,4 @@
-:rocket: [Spanish](./README)
+:rocket: [Spanish](./README_ES.md)
 
 <p align="center">
 <img align="center" height="150" src="https://user-images.githubusercontent.com/43678736/132112022-0ca409ae-cca2-43c8-be89-110376260a3f.png" alt="dropone-ui-logo">
