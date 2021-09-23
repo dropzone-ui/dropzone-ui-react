@@ -60,7 +60,7 @@ const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps> = (
 
       <div className="size">
         <span className="sub-label">
-          {localization === "ES-es" ? "Nombre: " : "Tamaño: "}
+          {localization === "ES-es" ? "Tamaño: " : "Size: "}
         </span>{" "}
         {fileSize}
       </div>

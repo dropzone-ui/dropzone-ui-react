@@ -341,6 +341,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
           onChangeView={handleChangeView}
           onUploadStart={!uploadOnDrop ? handleUploadStart : undefined}
           urlPresent={url !== undefined}
+          localization={localization!=="ES-es"?"EN-en":"ES-es"}
         />
       )}
       {value && files && files.length > 0 ? (
@@ -353,6 +354,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
         <DropzoneFooter
           accept={accept}
           message={onUploadStart ? localMessage : undefined}
+          localization={localization!=="ES-es"?"EN-en":"ES-es"}
         />
       )}
       <div
