@@ -16,7 +16,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 - Improve Readme.md
-- Add localization for spanish and english
+- Add localization for Spanish and English
 - Add Readme_es.md file
 
 <a name="1.2.10"></a>

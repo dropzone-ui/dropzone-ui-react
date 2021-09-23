@@ -7,7 +7,7 @@
 
 </p>
 
-Dropzone UI es un pequeño set de componentes [React](https://reactjs.org/) para manejar cargas de archivo, vista previa de imágenes en la interfaz gráfica. Componentes fueron hechos inspirados en otras librerias existentes (sin embargo, estas **no** son dependencias , ya que la idea es tomar como **referencia** varias librerias buenas y **crear** algo **nuevo**). Pricipios de Material Design de Google fueron considerados en el desarrollo. De hecho, todos los iconos son [Material design icons](https://fonts.google.com/icons).
+Dropzone UI es un pequeño set de componentes [React](https://reactjs.org/) para manejar cargas de archivo y vista previa de imágenes en la interfaz gráfica. Componentes fueron hechos inspirados en otras librerias existentes (sin embargo, estas **no** son dependencias , ya que la idea es tomar como **referencia** varias librerias buenas y **crear** algo **nuevo**). Pricipios de Material Design de Google fueron considerados en el desarrollo. De hecho, todos los iconos son [Material design icons](https://fonts.google.com/icons).
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/dropzone-ui/blob/HEAD/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/dropzone-ui.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/dropzone-ui)

@@ -5,7 +5,7 @@
 
 <h1 align="center">  Dropzone-UI </h1>
 
-[React](https://reactjs.org/) set of components for managing file uploads, image previews on user inteface. Components were made inspired on other existing libraries (however, those are **not** dependencies because the idea is to take many good related libraries only as **reference** and **create** something **new** ). Google's Material design principles were also considered in development. Indeed, icons come from [Material design icons](https://fonts.google.com/icons).
+[React](https://reactjs.org/) set of components for managing file uploads and image previews on user inteface. Components were made inspired on other existing libraries (however, those are **not** dependencies because the idea is to take many good related libraries only as **reference** and **create** something **new** ). Google's Material design principles were also considered in development. Indeed, icons come from [Material design icons](https://fonts.google.com/icons).
 
 </p>
 
