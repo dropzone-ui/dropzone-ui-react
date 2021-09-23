@@ -1,6 +1,6 @@
 {
   "name": "dropzone-ui",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Elegant React Library Component for drag’n’drop files. Simple to use with little code. Material design guidelines considered.",
   "main": "./build/index.js",
   "module": "./build/index.es.js",
