@@ -1,9 +1,9 @@
-[:rocket: Spanish](./README)
+:rocket: [Spanish](./README)
 
 <p align="center">
 <img align="center" height="150" src="https://user-images.githubusercontent.com/43678736/132112022-0ca409ae-cca2-43c8-be89-110376260a3f.png" alt="dropone-ui-logo">
 
-<h1 align="center">  dropzone-ui </h1>
+<h1 align="center">  Dropzone-UI </h1>
 
 </p>
 
