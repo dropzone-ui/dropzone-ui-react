@@ -22,7 +22,7 @@
 
 ## Sample result:
 
-On `Drag`, `Drop` and `Upload`. (also changing view mode from `grid` to `list`).
+On `Drag`, `Drop`, `Upload` and ful  screen preview. (also changing view mode from `grid` to `list`).
 
 Did you like the project? Don't forget to give us a :star: star on :octocat: [github](https://github.com/dropzone-ui/dropzone-ui) :D
 

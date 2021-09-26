@@ -22,7 +22,7 @@ Dropzone UI es un pequeño set de componentes [React](https://reactjs.org/) para
 
 ## Ejemplo de resultado:
 
-En operaciones `Drag`, `Drop` y `Upload`. (también cambiando el modo de vista de `grid` a `list`).
+En operaciones `Drag`, `Drop` ,`Upload`, y vista previa en pantalla completa. (también cambiando el modo de vista de `grid` a `list`).
 
 ¿Te gustó el proyecto? No olvides regalarnos una :star: estrella en :octocat: [github](https://github.com/dropzone-ui/dropzone-ui) :D
 
