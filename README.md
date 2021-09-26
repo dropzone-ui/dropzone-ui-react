@@ -5,7 +5,7 @@
 
 <h1 align="center">  Dropzone-UI </h1>
 
-[React](https://reactjs.org/) set of components for managing file uploads and image previews on user inteface. Components were made inspired on other existing libraries (however, those are **not** dependencies because the idea is to take many good related libraries only as **reference** and **create** something **new** ). Google's Material design principles were also considered in development. Indeed, icons come from [Material design icons](https://fonts.google.com/icons).
+[React](https://reactjs.org/) set of components for a complete file upload management awith image previews on user inteface. Components were made inspired on other existing libraries (however, those are **not** dependencies because the idea is to take many good related libraries only as **reference** and **create** something **new** ). Google's Material design principles were also considered in development. Indeed, icons come from [Material design icons](https://fonts.google.com/icons).
 
 </p>
 
@@ -29,6 +29,10 @@ Did you like the project? Don't forget to give us a :star: star on :octocat: [gi
 <p align="center">
 <img align="center" width="35%" src="https://user-images.githubusercontent.com/43678736/132642335-dc7e7ceb-ae86-4f81-8625-4ee28dc5f593.png" alt="dropone-ui-logo"><img align="center" width="35%" src="https://user-images.githubusercontent.com/43678736/132642336-e295d84d-d950-43b2-b9fc-0529b4ecfe46.png" alt="dropone-ui-logo"><img align="center" width="35%" src="https://user-images.githubusercontent.com/43678736/132642339-2cd996a3-7754-46c9-89ed-56291972154f.png" alt="dropone-ui-logo"><img align="center" width="35%" src="https://user-images.githubusercontent.com/43678736/132642341-b1eb2bfe-8134-4cdf-a808-62b14058b4c1.png" alt="dropone-ui-logo">
 
+</p>
+
+<p align="center">
+<img align="center" width="70%" src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5wxk14o6zhloz2z3zypy.png" alt="dropone-ui-logo">
 </p>
 
 ## Installation

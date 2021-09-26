@@ -31,6 +31,12 @@ En operaciones `Drag`, `Drop` y `Upload`. (también cambiando el modo de vista d
 
 </p>
 
+</p>
+
+<p align="center">
+<img align="center" width=70%" src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5wxk14o6zhloz2z3zypy.png" alt="dropone-ui-logo">
+</p>
+
 ## Installación
 
 dropzone-ui está disponible como un [paquete npm](https://www.npmjs.com/package/dropzone-ui).
