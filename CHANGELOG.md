@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
+- Add preventDefault function on InputButton component
 - Improve Readme.md
 - Add Openbase badge
 - Improve description
