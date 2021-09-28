@@ -50,6 +50,7 @@ const InputButton: React.FC<InputButtonProps> = (props: InputButtonProps) => {
   };
   function clickInput(e: React.MouseEvent<MouseEvent>): void {
     e.stopPropagation();
+    e.preventDefault();
     let referenceInput = inputRef.current;
     if (referenceInput) {
       referenceInput.click();
