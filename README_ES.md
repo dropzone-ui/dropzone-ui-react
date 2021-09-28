@@ -7,7 +7,7 @@
 
 </p>
 
-Dropzone UI es un pequeño set de componentes [React](https://reactjs.org/) para manejar cargas de archivo y vista previa de imágenes en la interfaz gráfica. Componentes fueron hechos inspirados en otras librerias existentes (sin embargo, estas **no** son dependencias , ya que la idea es tomar como **referencia** varias librerias buenas y **crear** algo **nuevo**). Principios de Google Material Design fueron considerados en el desarrollo. De hecho, todos los iconos son [Material design icons](https://fonts.google.com/icons).
+Dropzone UI es un pequeño set de componentes [React](https://reactjs.org/) para manejar cargas de archivo y vista previa de imágenes en la interfaz gráfica. Ya existen algunas buenas librerías; Sin embargo, **inspirados** en aquellas, hemos creado algo **nuevo** y más **potente**.  Los principios de Google Material Design fueron considerados en el desarrollo. De hecho, todos los iconos vienen de [Material design icons](https://fonts.google.com/icons).
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/dropzone-ui/blob/HEAD/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/dropzone-ui.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/dropzone-ui)
@@ -17,6 +17,7 @@ Dropzone UI es un pequeño set de componentes [React](https://reactjs.org/) para
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/context:javascript)
 [![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/dropzone-ui/badge.svg)](https://snyk.io/test/github/dropzone-ui/dropzone-ui)
 [![Package Quality](https://packagequality.com/shield/dropzone-ui.svg)](https://packagequality.com/#?package=dropzone-ui)
+[![Rate on Openbase](https://badges.openbase.com/js/rating/dropzone-ui.svg)](https://openbase.com/js/dropzone-ui?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
 [![install size](https://packagephobia.com/badge?p=dropzone-ui)](https://packagephobia.com/result?p=dropzone-ui)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 

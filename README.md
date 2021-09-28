@@ -5,7 +5,7 @@
 
 <h1 align="center">  Dropzone-UI </h1>
 
-[React](https://reactjs.org/) set of components for a complete file upload management awith image previews on user inteface. Components were made inspired on other existing libraries (however, those are **not** dependencies because the idea is to take many good related libraries only as **reference** and **create** something **new** ). Google's Material design principles were also considered in development. Indeed, icons come from [Material design icons](https://fonts.google.com/icons).
+[React](https://reactjs.org/) set of components for a complete file upload management awith image previews on user inteface. There already exists some very good libraries; However, **inspired** in those ones, there was created something **new** and **more powerful**. Google's Material design principles were also considered in development. Indeed, icons come from [Material design icons](https://fonts.google.com/icons).
 
 </p>
 
@@ -17,6 +17,7 @@
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/context:javascript)
 [![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/dropzone-ui/badge.svg)](https://snyk.io/test/github/dropzone-ui/dropzone-ui)
 [![Package Quality](https://packagequality.com/shield/dropzone-ui.svg)](https://packagequality.com/#?package=dropzone-ui)
+[![Rate on Openbase](https://badges.openbase.com/js/rating/dropzone-ui.svg)](https://openbase.com/js/dropzone-ui?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
 [![install size](https://packagephobia.com/badge?p=dropzone-ui)](https://packagephobia.com/result?p=dropzone-ui)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
