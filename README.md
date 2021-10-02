@@ -9,16 +9,16 @@
 
 </p>
 
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/dropzone-ui/blob/HEAD/LICENSE)
-[![npm latest package](https://img.shields.io/npm/v/dropzone-ui.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/dropzone-ui)
-[![dependencies Status](https://status.david-dm.org/gh/dropzone-ui/dropzone-ui.svg)](https://david-dm.org/dropzone-ui/dropzone-ui)
-[![Build Status](https://app.travis-ci.com/dropzone-ui/dropzone-ui.svg?branch=master)](https://app.travis-ci.com/dropzone-ui/dropzone-ui)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/react/blob/HEAD/LICENSE)
+[![npm latest package](https://img.shields.io/npm/v/@dropzone-ui/react.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/dropzone-ui/react)
+[![dependencies Status](https://status.david-dm.org/gh/dropzone-ui/react.svg)](https://david-dm.org/dropzone-ui/react)
+[![Build Status](https://app.travis-ci.com/dropzone-ui/react.svg?branch=master)](https://app.travis-ci.com/dropzone-ui/react)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/context:javascript)
-[![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/dropzone-ui/badge.svg)](https://snyk.io/test/github/dropzone-ui/dropzone-ui)
+[![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/react/badge.svg)](https://snyk.io/test/github/dropzone-ui/react)
 [![Package Quality](https://packagequality.com/shield/dropzone-ui.svg)](https://packagequality.com/#?package=dropzone-ui)
-[![Rate on Openbase](https://badges.openbase.com/js/rating/dropzone-ui.svg)](https://openbase.com/js/dropzone-ui?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
-[![install size](https://packagephobia.com/badge?p=dropzone-ui)](https://packagephobia.com/result?p=dropzone-ui)
+[![Rate on Openbase](https://badges.openbase.com/js/rating/@dropzone-ui/react.svg)](https://openbase.com/js/@dropzone-ui/react?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
+[![install size](https://packagephobia.com/badge?p=@dropzone-ui/react)](https://packagephobia.com/result?p=@dropzone-ui/react)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Sample result:
@@ -38,18 +38,18 @@ Did you like the project? Don't forget to give us a :star: star on :octocat: [gi
 
 ## Installation
 
-dropzone-ui is available as an [npm package](https://www.npmjs.com/package/dropzone-ui).
+@dropzone-ui/react is available as an [npm package](https://www.npmjs.com/package/@dropzone-ui/react).
 
 For uploading files, peer dependency [axios](https://www.npmjs.com/package/axios) must be installed in conjuction with `dropzone-ui`.
 
 ```sh
 // with npm
-npm i dropzone-ui axios
+npm i @dropzone-ui/react axios
 ```
 
 ```sh
 // with yarn
-yarn add dropzone-ui axios
+yarn add @dropzone-ui/react axios
 ```
 
 ## Usage and examples
@@ -59,7 +59,7 @@ Here is a quick example to get you started, **it's all you need**:
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom";
-import { Dropzone, FileItem } from "dropzone-ui";
+import { Dropzone, FileItem } from "@dropzone-ui/react";
 Function App() {
   const [files, setFiles] = useState([]);
   const updateFiles = (incommingFiles) => {
@@ -87,7 +87,7 @@ Yes, it's really all you need to get started as you can see in these live and in
 |InputFileButton & FileItemContainer|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/inputbutton-example-poqsn?file=/src/App.js)|
 |Server side example for upload a file | https://github.com/dropzone-ui/file-upload-server-side/tree/main/expressjs |
 
-# Dropzone UI Components API
+# Dropzone UI react Components API
 
 - [\<Dropzone/>](#dropzone-api)
 - [\<FileItem />](#fileitem-api)

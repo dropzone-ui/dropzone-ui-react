@@ -12,7 +12,7 @@ Dropzone UI es un pequeño set de componentes [React](https://reactjs.org/) para
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/dropzone-ui/blob/HEAD/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/dropzone-ui.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/dropzone-ui)
 [![dependencies Status](https://status.david-dm.org/gh/dropzone-ui/dropzone-ui.svg)](https://david-dm.org/dropzone-ui/dropzone-ui)
-[![Build Status](https://app.travis-ci.com/dropzone-ui/dropzone-ui.svg?branch=master)](https://app.travis-ci.com/dropzone-ui/dropzone-ui)
+[![Build Status](https://app.travis-ci.com/dropzone-ui/react.svg?branch=master)](https://app.travis-ci.com/dropzone-ui/react)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/context:javascript)
 [![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/dropzone-ui/badge.svg)](https://snyk.io/test/github/dropzone-ui/dropzone-ui)
@@ -40,17 +40,17 @@ En operaciones `Drag`, `Drop` ,`Upload`, y vista previa en pantalla completa. (t
 
 ## Installación
 
-dropzone-ui está disponible como un [paquete npm](https://www.npmjs.com/package/dropzone-ui).
+@dropzone-ui/react está disponible como un [paquete npm](https://www.npmjs.com/package/@dropzone-ui/react).
 Para subir archivos a un servidor, la dependencia peer [axios](https://www.npmjs.com/package/axios) debe ser instalada en conjunto con `dropzone-ui`
 
 ```sh
 // con npm
-npm i dropzone-ui axios
+npm i @dropzone-ui/react axios
 ```
 
 ```sh
 // con yarn
-yarn add dropzone-ui axios
+yarn add @dropzone-ui/react axios
 ```
 
 ## Uso y ejemplos
@@ -60,7 +60,7 @@ Aquí hay un ejemplo rápido para que te inicies, **es todo lo que necesitas**:
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom";
-import { Dropzone, FileItem } from "dropzone-ui";
+import { Dropzone, FileItem } from "@dropzone-ui/react";
 Function App() {
   const [files, setFiles] = useState([]);
   const updateFiles = (incommingFiles) => {

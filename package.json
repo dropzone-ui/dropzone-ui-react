@@ -1,5 +1,5 @@
 {
-  "name": "dropzone-ui",
+  "name": "@dropzone-ui/react",
   "version": "2.1.1",
   "description": "Elegant React Library Component for drag’n’drop files. Simple to use with little code. Material design guidelines considered.",
   "main": "./build/index.js",
@@ -7,7 +7,7 @@
   "types": "./build/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dropzone-ui/dropzone-ui.git"
+    "url": "git+https://github.com/dropzone-ui/react.git"
   },
   "keywords": [
     "dropzone",
@@ -35,9 +35,9 @@
   "author": "JinSSJ3",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dropzone-ui/dropzone-ui/issues"
+    "url": "https://github.com/dropzone-ui/react/issues"
   },
-  "homepage": "https://github.com/dropzone-ui/dropzone-ui#readme",
+  "homepage": "https://github.com/dropzone-ui/react#readme",
   "dependencies": {
     "@dynamicss/dynamicss": "^2.0.3",
     "@unlimited-react-components/kernel": "^1.0.2",
