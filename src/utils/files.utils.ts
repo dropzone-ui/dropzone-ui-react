@@ -7,12 +7,22 @@ const createFile = (name: string, size: number, type: string) => {
     });
     return file;
 };
-export const createPDF = (): File => {
-    return createFile("test-file-with-large-name.pdf", 455005, "application/pdf");
+export const createPDF = (
+    name = "pdf-file-with-large-name.pdf",
+    size = 455005,
+    type = "application/pdf"
+): File => {
+    return createFile(name, size, type);
 }
-export const createWord = (): File => {
-    return createFile("test-file-with-large-name.pdf", 4555, "application/pdf");
+
+export const createWord = (
+    name = "word-file-with-large-name.docx",
+    size = 4555,
+    type = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+): File => {
+    return createFile(name, size, type);
 }
+
 export const createListOfPDF = (size?: number): File[] => {
     const quantity = size ? size : 15;
     let listFile: File[] = [];

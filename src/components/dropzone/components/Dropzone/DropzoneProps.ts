@@ -145,7 +145,7 @@ export interface DropzoneProps extends OverridableProps {
   /**
   * language to be used
   * for now
-  * only English and Spanish is supported
+  * only English, French and Spanish are supported
   */
   localization?: Localization;
 }

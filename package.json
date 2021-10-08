@@ -1,7 +1,7 @@
 {
   "name": "@dropzone-ui/react",
-  "version": "2.1.1",
-  "description": "Elegant React Library Component for drag’n’drop files. Simple to use with little code. Material design guidelines considered.",
+  "version": "2.8.0",
+  "description": "Elegant React Library Component for drag’n’drop files. Simple to use with little code. Material design guidelines considered. Multilanguage support.",
   "main": "./build/index.js",
   "module": "./build/index.es.js",
   "types": "./build/index.d.ts",
@@ -30,6 +30,7 @@
     "unlimited-react-components",
     "front-end",
     "framework",
+    "localization",
     "kamui"
   ],
   "author": "JinSSJ3",

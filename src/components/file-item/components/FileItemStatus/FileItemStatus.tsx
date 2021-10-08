@@ -1,4 +1,6 @@
 import React, { FC, Fragment } from "react";
+import { FileItemLocalizerSelector } from "../../../../localization";
+import { LocalLabels } from "../../../../localization/localization";
 import Loader from "../../../../utils/loader";
 import {
   CheckCircle,
@@ -12,13 +14,19 @@ const FileItemStatus: FC<FileItemStatusProps> = (
   props: FileItemStatusProps,
 ) => {
   const { valid, uploadStatus, message, localization } = props;
+  const FileItemStatusLocalizer: LocalLabels = FileItemLocalizerSelector(
+    localization,
+  ).status as LocalLabels;
   return (
     <Fragment>
       {uploadStatus ? (
         uploadStatus === "uploading" ? (
           <div className="file-status-loading">
             <Loader />
-            <p>{localization === "ES-es" ? "Subiendo" : "uploading"} </p>
+            <p>
+              {FileItemStatusLocalizer.uploading as string}
+              {/* localization === "ES-es" ? "Subiendo" : "uploading" */}
+            </p>
           </div>
         ) : uploadStatus === "success" ? (
           <div className="file-status-ok upload">
@@ -27,8 +35,9 @@ const FileItemStatus: FC<FileItemStatusProps> = (
               size="small"
               //style={styles.icons}
               className="status-icon"
-            />{" "}
-            {message || localization === "ES-es" ? "éxito" :"success"}
+            />
+            {FileItemStatusLocalizer.success as string}
+            {/* message || localization === "ES-es" ? "éxito" : "success" */}
           </div>
         ) : (
           <div className="file-status-error upload">
@@ -37,19 +46,19 @@ const FileItemStatus: FC<FileItemStatusProps> = (
               size="semi-medium"
               className="status-icon"
             />
-            error
+            {FileItemStatusLocalizer.error as string}
           </div>
         )
       ) : valid ? (
         <div className="file-status-ok">
-          {" "}
           <CheckCircle
             color="#4caf50"
             size="small"
             //style={styles.icons}
             className="status-icon"
           />
-          {localization === "ES-es" ? "válido" :"valid"}
+          {FileItemStatusLocalizer.valid as string}
+          {/* localization === "ES-es" ? "válido" : "valid" */}
         </div>
       ) : (
         <div className="file-status-error">
@@ -59,7 +68,8 @@ const FileItemStatus: FC<FileItemStatusProps> = (
             className="status-icon"
             //style={styles.icons}
           />
-          {localization === "ES-es" ? "No válido" :"Denied"}
+          {FileItemStatusLocalizer.denied as string}
+          {/* localization === "ES-es" ? "No válido" : "Denied" */}
         </div>
       )}
     </Fragment>

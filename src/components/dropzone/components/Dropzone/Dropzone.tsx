@@ -16,6 +16,11 @@ import { FileItemContainer } from "../../../../components/file-item";
 import { FileItemContainerProps } from "../../../file-item/components/FileItemContainer/FileItemContainerProps";
 import DropzoneLabel from "../DropzoneLabel/DropzoneLabel";
 import { uploadPromiseAxios } from "../utils/dropzone-ui.upload.utils";
+import { DropzoneLocalizerSelector } from "../../../../localization";
+import {
+  FunctionLabel,
+  LocalLabels,
+} from "../../../../localization/localization";
 
 const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   const {
@@ -50,6 +55,9 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     fakeUploading,
     localization,
   } = mergeProps(props, DropzonePropsDefault);
+
+  const DropzoneLocalizer: LocalLabels =
+    DropzoneLocalizerSelector(localization);
   //console.log("color:", color);
   //ref to the hidden input tag
   const inputRef = useRef<HTMLInputElement>(null);
@@ -97,7 +105,8 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   }, [uploadingMessage]);
 
   /**
-   * Method for uploading FIles
+   * Method for uploading Files
+   * It will set all odd file id's as valid
    * @param files
    */
   const fakeUpload = (file: FileValidated): Promise<FileValidated> => {
@@ -107,19 +116,19 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
           resolve({
             ...file,
             uploadStatus: "success",
-            uploadMessage:
-              localization === "ES-es"
+            uploadMessage: DropzoneLocalizer.fakeuploadsuccess as string,
+            /*  localization === "ES-es"
                 ? "EL archivo se subió correctamente"
-                : "File was succesfully uploaded",
+                : "File was succesfully uploaded", */
           });
         } else {
           resolve({
             ...file,
             uploadStatus: "error",
-            uploadMessage:
-              localization === "ES-es"
+            uploadMessage: DropzoneLocalizer.fakeUploadError as string,
+            /* localization === "ES-es"
                 ? "Erro al subir el archivo"
-                : "Error on Uploading",
+                : "Error on Uploading", */
           });
         }
       }, 1500);
@@ -136,12 +145,16 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     ).length;
     let totalRejected: number = 0;
     let currentCountUpload: number = 0;
+    const uploadingMessenger: FunctionLabel =
+      DropzoneLocalizer.uploadingMessage as FunctionLabel;
+
     setOnUploadStart(true);
     if (missingUpload > 0 && url) {
       setLocalMessage(
-        localization === "ES-es"
+        uploadingMessenger(`${missingUpload}/${totalNumber}`),
+        /* localization === "ES-es"
           ? `Subiendo ${missingUpload}/${totalNumber} archivos`
-          : `uploading ${missingUpload}/${totalNumber} files`,
+          : `uploading ${missingUpload}/${totalNumber} files`, */
       );
 
       let uploadStartFiles: FileValidated[] = files.map((f: FileValidated) => {
@@ -158,9 +171,11 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
         let currentFile: FileValidated = uploadStartFiles[i];
         if (currentFile.uploadStatus === "uploading") {
           setLocalMessage(
-            localization === "ES-es"
+            uploadingMessenger(`${++currentCountUpload}/${missingUpload}`),
+
+            /*  localization === "ES-es"
               ? `Subiendo ${++currentCountUpload}/${missingUpload} archivos`
-              : `Uploading ${++currentCountUpload}/${missingUpload} files...`,
+              : `Uploading ${++currentCountUpload}/${missingUpload} files...`, */
           );
           //  const uploadedFile = await fakeUpload(currentFile);
 
@@ -181,14 +196,14 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
         }
       }
       // upload group finished :D
+      const finishUploadMessenger: FunctionLabel =
+        DropzoneLocalizer.uploadFinished as FunctionLabel;
       setLocalMessage(
-        localization === "ES-es"
-          ? `Archivos subidos: ${
-              missingUpload - totalRejected
-            }, Rechazados: ${totalRejected}`
-          : `Uloaded files: ${
-              missingUpload - totalRejected
-            }, Rejected: ${totalRejected}`,
+        finishUploadMessenger(missingUpload - totalRejected, totalRejected),
+        /*   localization === "ES-es"
+          ? `Archivos subidos: ${missingUpload - totalRejected}, Rechazados: ${totalRejected}`
+          : `Uloaded files: ${missingUpload - totalRejected}, Rejected: ${totalRejected}`,
+      */
       );
       setTimeout(() => {
         setOnUploadStart(false);
@@ -196,9 +211,10 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       //console.log("queueFiles files:", queueFiles);
     } else {
       setLocalMessage(
-        localization === "ES-es"
+        DropzoneLocalizer.noFilesMessage as string,
+        /* localization === "ES-es"
           ? `No hay archivos válidos pendientes por subir`
-          : `There is not any missing valid file for uploading`,
+          : `There is not any missing valid file for uploading`, */
       );
       setTimeout(() => {
         setOnUploadStart(false);
@@ -317,7 +333,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     //onDrop?.([]);
   };
   const handleChangeView = (newView: "grid" | "list") => {
-   // console.log("new View", newView);
+    // console.log("new View", newView);
     setLocalView(newView);
     onChangeView?.(newView);
   };
@@ -341,7 +357,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
           onChangeView={handleChangeView}
           onUploadStart={!uploadOnDrop ? handleUploadStart : undefined}
           urlPresent={url !== undefined}
-          localization={localization!=="ES-es"?"EN-en":"ES-es"}
+          localization={localization}
         />
       )}
       {value && files && files.length > 0 ? (
@@ -354,7 +370,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
         <DropzoneFooter
           accept={accept}
           message={onUploadStart ? localMessage : undefined}
-          localization={localization!=="ES-es"?"EN-en":"ES-es"}
+          localization={localization}
         />
       )}
       <div

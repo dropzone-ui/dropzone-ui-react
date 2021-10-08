@@ -124,7 +124,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
                 sizeFormatted={sizeFormatted}
                 //fileNamePosition={undefined}
                 uploadStatus={uploadStatus}
-                localization={localization!=="ES-es"?"EN-en":"ES-es"}
+                localization={localization}
               />
 
               <FileItemFullInfoLayer
@@ -136,7 +136,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
                 onClose={handleCloseInfo}
                 uploadStatus={uploadStatus}
                 uploadMessage={uploadMessage}
-                localization={localization!=="ES-es"?"EN-en":"ES-es"}
+                localization={localization}
               />
             </Paper>
 

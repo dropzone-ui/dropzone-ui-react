@@ -1,5 +1,10 @@
 import React, { FC } from "react";
-import { Localization } from "../../../../localization/localization";
+import { DropzoneLocalizerSelector } from "../../../../localization";
+import {
+  FunctionLabel,
+  Localization,
+  LocalLabels,
+} from "../../../../localization/localization";
 import { FileItemContainerProps } from "../../../file-item/components/FileItemContainer/FileItemContainerProps";
 import { fileSizeFormater } from "../../../file-item/utils";
 import { Cancel, ViewGrid, ViewList } from "../../../icons";
@@ -38,6 +43,10 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
     localization,
   } = props;
 
+  const DropzoneHeaderLocalizer: LocalLabels = DropzoneLocalizerSelector(
+    localization,
+  ).header as LocalLabels;
+
   const handleStartUploading = () => {
     onUploadStart?.();
   };
@@ -46,25 +55,34 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
     if (onUploadStart && urlPresent && numberOfValidFiles) {
       result.push(
         <>
-          {localization === "ES-es" ? `Subir archivos` : "Upload files"}
+          {DropzoneHeaderLocalizer.uploadFilesMessage}
+          {/* localization === "ES-es" ? `Subir archivos` : "Upload files" */}
           <Upload color="#646c7f" onClick={handleStartUploading} />
           {" | "}
         </>,
       );
     }
+
+    const maxFileSizeMessenger: FunctionLabel =
+      DropzoneHeaderLocalizer.maxSizeMessage as FunctionLabel;
     if (maxFileSize) {
       result.push(
-        localization === "ES-es"
+        maxFileSizeMessenger(fileSizeFormater(maxFileSize)),
+
+        /* localization === "ES-es"
           ? `Tam. máximo de archivo ${fileSizeFormater(maxFileSize)} | `
-          : `Max File size: ${fileSizeFormater(maxFileSize)} | `,
+          : `Max File size: ${fileSizeFormater(maxFileSize)} | `, */
       );
     }
+    const validFileSizeMessenger: FunctionLabel =
+      DropzoneHeaderLocalizer.validFilesMessage as FunctionLabel;
 
     if (maxFiles) {
       result.push(
-        localization === "ES-es"
+        validFileSizeMessenger(numberOfValidFiles, maxFiles),
+        /*  localization === "ES-es"
           ? `Archivos ${numberOfValidFiles}/${maxFiles} | Válidos: ${numberOfValidFiles} | `
-          : `Files ${numberOfValidFiles}/${maxFiles} | Valid: ${numberOfValidFiles} | `,
+          : `Files ${numberOfValidFiles}/${maxFiles} | Valid: ${numberOfValidFiles} | `, */
       );
     }
 

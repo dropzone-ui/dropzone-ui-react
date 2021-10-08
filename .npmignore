@@ -17,3 +17,5 @@ rollup.config.js
 ./.travis.yml
 tempackage.json
 Dropzone-ui.txt
+CODE_OF_CONDICT.md
+CONTRIBUTING.md

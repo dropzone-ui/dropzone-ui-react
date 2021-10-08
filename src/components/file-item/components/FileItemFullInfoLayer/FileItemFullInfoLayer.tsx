@@ -1,5 +1,9 @@
 import React, { FC } from "react";
-import { Localization } from "../../../../localization/localization";
+import { FileItemLocalizerSelector } from "../../../../localization";
+import {
+  Localization,
+  LocalLabels,
+} from "../../../../localization/localization";
 import { Cancel } from "../../../icons";
 
 import FileItemStatus from "../FileItemStatus/FileItemStatus";
@@ -18,6 +22,9 @@ const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps> = (
     uploadMessage,
     localization,
   } = props;
+  const FileItemFullInfoLocalizer: LocalLabels = FileItemLocalizerSelector(
+    localization,
+  ).fullInfoLayer as LocalLabels;
   const handleCloseInfo = () => {
     onClose?.();
   };
@@ -53,20 +60,25 @@ const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps> = (
       {uploadMessage && <div className="name">{uploadMessage}</div>}
       <div className="name">
         <span className="sub-label">
-          {localization === "ES-es" ? "Nombre: " : "Name: "}
+          {FileItemFullInfoLocalizer.name as string}
+          {/* localization === "ES-es" ? "Nombre: " : "Name: " */}
         </span>
         {fileName}
       </div>
 
       <div className="size">
         <span className="sub-label">
-          {localization === "ES-es" ? "Tamaño: " : "Size: "}
+          {FileItemFullInfoLocalizer.size as string}
+
+          {/* localization === "ES-es" ? "Tamaño: " : "Size: " */}
         </span>{" "}
         {fileSize}
       </div>
       <div className="mime">
         <span className="sub-label">
-          {localization === "ES-es" ? "Tipo: " : "Type: "}
+          {FileItemFullInfoLocalizer.type as string}
+
+          {/* localization === "ES-es" ? "Tipo: " : "Type: " */}
         </span>{" "}
         {fileType}
       </div>
