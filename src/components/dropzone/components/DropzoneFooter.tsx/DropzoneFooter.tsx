@@ -18,7 +18,7 @@ const DropzoneFooter: FC<DropzoneFooterProps> = (
     DropzoneFooterLocalizer.acceptCustom as FunctionLabel;
   return (
     <div className="dz-ui-footer" onClick={undefined}>
-      {message
+      {/* message
         ? message
         : !accept
         ? localization === "ES-es"
@@ -26,7 +26,7 @@ const DropzoneFooter: FC<DropzoneFooterProps> = (
           : `All file types accepted`
         : localization === "ES-es"
         ? `Archivos aceptados: ${accept}`
-        : `File types: ${accept}`}
+        : `File types: ${accept}` */}
       {message
         ? message
         : !accept

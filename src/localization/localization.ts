@@ -6,10 +6,9 @@ export type Components =
     "file-item" |
     "dropzone-footer" |
     "dropzone-header" |
-    "image-preview"
-    ;
+    "image-preview";
 
-    export type FunctionLabel =((s1: string | number, s2?: string | number, s3?: string) => string);
+export type FunctionLabel = ((s1: string | number, s2?: string | number, s3?: string) => string);
 export interface LocalLabels {
     [label: string]: string | FunctionLabel | LocalLabels;
 }
