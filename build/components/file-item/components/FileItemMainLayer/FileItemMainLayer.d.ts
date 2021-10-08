@@ -16,7 +16,7 @@ export interface FileItemMainLayerProps {
      * for now
      * only English and Spanish is supported
      */
-    localization: Localization;
+    localization?: Localization;
 }
 declare const FileItemMainLayer: FC<FileItemMainLayerProps>;
 export default FileItemMainLayer;
