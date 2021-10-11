@@ -173,7 +173,7 @@ export const DropzonePropsDefault: DropzoneProps = {
   onUploading: undefined,
   uploadingMessage: undefined,
   behaviour: "add",
-  label: "Drop your files here",
+  label: undefined,
   localization: "EN-en"
 };
 
