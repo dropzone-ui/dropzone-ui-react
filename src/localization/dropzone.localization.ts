@@ -4,24 +4,46 @@ import { ComponentLocalizer, LocalLabels, Localization } from "./localization";
  */
 
 export const DropzoneEnglish: LocalLabels = {
-    uploadingMessage: (cadena) => { return `Uploading ${cadena} files`; },
+    defaultLabel: "Drop your files here",
+    uploadingMessage: (amountOfFiles) => { return `Uploading ${amountOfFiles} files`; },
     uploadFinished: (uploaded, rejected) => `Uploaded files: ${uploaded}, Rejected files: ${rejected}`,
-    noFilesMessage: `There isn't any missing valid files for uploading`,
+    noFilesMessage: `No valid file is missing for uploading`,
     footer: {
         acceptAll: `All file types accepted`,
         acceptCustom: (accept) => `Allowed types: ${accept}`
     },
     header: {
         uploadFilesMessage: "Upload files",
-        maxSizeMessage: (maxFileSize) => `Max file size ${maxFileSize} | `,
+        maxSizeMessage: (maxFileSize) => `Max file size: ${maxFileSize} | `,
         validFilesMessage: (numberOfValidFiles, maxFiles) => `Files ${numberOfValidFiles}/${maxFiles} | Valid: ${numberOfValidFiles} | `
     },
     fakeuploadsuccess: "File was successfully uploaded",
     fakeUploadError: "Error on uploading",
 }
 
+export const DropzonePortuguese: LocalLabels = {
+    defaultLabel: "Solte seus arquivos aqui ",
+
+    uploadingMessage: (amountOfFiles) => { return `Enviando ${amountOfFiles} arquivos`; },
+    uploadFinished: (uploaded, rejected) => `Arquivos enviados: ${uploaded}, Arquivos rejeitados: ${rejected}`,
+    noFilesMessage: `Nenhum arquivo válido está faltando para enviar`,
+    footer: {
+        acceptAll: `Todos os tipos de arquivo são aceitos`,
+        acceptCustom: (accept) => `Tipos permitidos: ${accept}`
+    },
+    header: {
+        uploadFilesMessage: "Enviar arquivos",
+        maxSizeMessage: (maxFileSize) => `Tamanho máximo do arquivo: ${maxFileSize} | `,
+        validFilesMessage: (numberOfValidFiles, maxFiles) => `Arquivos ${numberOfValidFiles}/${maxFiles} | Válidos: ${numberOfValidFiles} | `
+    },
+    fakeuploadsuccess: "O arquivo foi enviado com sucesso",
+    fakeUploadError: "Erro ao enviar",
+}
+
 export const DropzoneSpanish: LocalLabels = {
-    uploadingMessage: (cadena) => { return `Subiendo ${cadena} archivos`; },
+    defaultLabel: "Suelta tus archivos aquí",
+
+    uploadingMessage: (amountOfFiles) => { return `Subiendo ${amountOfFiles} archivos`; },
     uploadFinished: (uploaded, rejected) => `Archivos subidos: ${uploaded}, Archivos rechazados: ${rejected}`,
     noFilesMessage: `No hay archivos válidos pendientes por subir`,
     footer: {
@@ -38,7 +60,9 @@ export const DropzoneSpanish: LocalLabels = {
 }
 
 export const DropzoneFrench: LocalLabels = {
-    uploadingMessage: (cadena: string) => { return `Télécharger ${cadena} fichiers`; },
+    defaultLabel: "Déposez vos fichiers ici",
+
+    uploadingMessage: (amountOfFiles: string) => { return `Envoi de ${amountOfFiles} fichiers`; },
     uploadFinished: (uploaded: string, rejected: string) => `Fichiers téléchargés : ${uploaded}, Fichiers rejetés: ${rejected}`,
     noFilesMessage: `Aucun fichier valide ne manque`,
     footer: {
@@ -46,7 +70,7 @@ export const DropzoneFrench: LocalLabels = {
         acceptCustom: (accept: string) => `Types de fichier: ${accept}`
     },
     header: {
-        uploadFilesMessage: "Télécharger des fichiers",
+        uploadFilesMessage: "Envoyer les fichiers",
         maxSizeMessage: (maxFileSize: number) => `Taille maximale du fichier  ${maxFileSize} | `,
         validFilesMessage: (numberOfValidFiles: number, maxFiles: number) => `Fichiers  ${numberOfValidFiles}/${maxFiles} | Valides: ${numberOfValidFiles} | `
     },
@@ -59,6 +83,7 @@ export const DropzoneLocalizer: ComponentLocalizer = {
     "ES-es": DropzoneSpanish,
     "EN-en": DropzoneEnglish,
     "FR-fr": DropzoneFrench,
+    "PT-pt": DropzonePortuguese
 }
 /**
  * Secure translation through a selector
@@ -70,6 +95,7 @@ export const DropzoneLocalizerSelector = (local: Localization): LocalLabels => {
         case "ES-es": return DropzoneLocalizer["ES-es"];
         case "EN-en": return DropzoneLocalizer["EN-en"];
         case "FR-fr": return DropzoneLocalizer["FR-fr"];
+        case "PT-pt": return DropzoneLocalizer["PT-pt"];
         default: return DropzoneLocalizer["EN-en"];
     }
 }

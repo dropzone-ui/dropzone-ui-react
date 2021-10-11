@@ -9,6 +9,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+
+## [3.0.0](https://github.com/dropzone-ui/dropzone-ui/compare/v2.8.1...v3.0.0) (2021-10-11)
+
+### Features
+
+- Translation support for `Portuguese`.
+<a name="2.8.1"></a>
+
+## [2.8.1](https://github.com/dropzone-ui/dropzone-ui/compare/v2.8.1...v2.1.1) (2021-10-08)
+
+### Features
+- Translation support for `French`.
+
 <a name="2.1.1"></a>
 
 ## [2.1.1](https://github.com/dropzone-ui/dropzone-ui/compare/v2.1.1...v2.0.0) (2021-10-01)
@@ -35,7 +49,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 - Improve Readme.md
-- Add localization for Spanish and English
+- Add localization for `Spanish` and `English`
 - Add Readme_es.md file
 
 <a name="1.2.10"></a>

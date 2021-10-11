@@ -1,11 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
 //import { FileItemProps } from "../FileItem/FileItemProps";
 import FileItemStatus from "../FileItemStatus/FileItemStatus";
-import {
-  Cancel,
-  Visibility,
-  Info,
-} from "../../../icons";
+import { Cancel, Visibility, Info } from "../../../icons";
 import { Localization } from "../../../../localization/localization";
 //import {shrinkWord} from "./../../utils";
 export interface FileItemMainLayerProps {
@@ -43,7 +39,7 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
     onOpenImage,
     sizeFormatted,
     uploadStatus,
-    localization
+    localization,
   } = props;
   const handleDelete = () => {
     onDelete?.();
@@ -75,22 +71,29 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
         <div className="file-item-name">{shrinkWord(fileName)}</div>
       )} */}
 
-      {uploadStatus && !showInfo &&(
-        <div className={(uploadComplete) ? "file-status hide" : "file-status"}>
-          <FileItemStatus uploadStatus={uploadStatus} localization={localization}/>
+      {uploadStatus && !showInfo && (
+        <div className={uploadComplete ? "file-status hide" : "file-status"}>
+          <FileItemStatus
+            uploadStatus={uploadStatus}
+            localization={localization}
+          />
         </div>
       )}
-   
+
       <div className={"file-item-footer"}>
         {uploadStatus && uploadComplete ? (
           <div className={showInfo ? "file-status hide" : "file-status"}>
             <div className="file-status-ok">
-              <FileItemStatus uploadStatus={uploadStatus} message={localization==="ES-es"?"subido":"uploaded"} localization={localization}/>
+              <FileItemStatus
+                uploadStatus={uploadStatus}
+                //message={localization==="ES-es"?"subido":"uploaded"}
+                localization={localization}
+              />
             </div>
           </div>
         ) : (
           <div className={showInfo ? "file-status hide" : "file-status"}>
-            <FileItemStatus valid={valid}  localization={localization}/>
+            <FileItemStatus valid={valid} localization={localization} />
           </div>
         )}
 

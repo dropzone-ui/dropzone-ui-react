@@ -363,7 +363,9 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       {value && files && files.length > 0 ? (
         <FileItemContainer view={localView}>{children}</FileItemContainer>
       ) : (
-        <DropzoneLabel>{label}</DropzoneLabel>
+        <DropzoneLabel>
+          {label || (DropzoneLocalizer.defaultLabel as string)}
+        </DropzoneLabel>
       )}
 
       {footer && (

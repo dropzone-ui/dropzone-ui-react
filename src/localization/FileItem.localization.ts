@@ -20,6 +20,24 @@ export const FileItemEnglish: LocalLabels = {
 }
 
 /**
+ * Portuguese translation for FileItem component
+ */
+export const FileItemPortuguese: LocalLabels = {
+    fullInfoLayer: {
+        name: `Nome: `,
+        size: "Tamanho: ",
+        type: "Tipo: "
+    },
+    status: {
+        uploading: "Enviando",
+        success: "êxito",
+        valid: "válido",
+        denied: "não válido",
+        error: "erro"
+    },
+}
+
+/**
  * French translation for FileItem component
  */
 export const FileItemFrench: LocalLabels = {
@@ -62,6 +80,7 @@ export const FileItemLocalizer: ComponentLocalizer = {
     "ES-es": FileItemSpanish,
     "EN-en": FileItemEnglish,
     "FR-fr": FileItemFrench,
+    "PT-pt": FileItemPortuguese
 }
 
 /**
@@ -74,6 +93,7 @@ export const FileItemLocalizerSelector = (local: Localization): LocalLabels => {
         case "ES-es": return FileItemLocalizer["ES-es"];
         case "EN-en": return FileItemLocalizer["EN-en"];
         case "FR-fr": return FileItemLocalizer["FR-fr"];
+        case "PT-pt": return FileItemLocalizer["PT-pt"];
         default: return FileItemLocalizer["EN-en"];
     }
 }

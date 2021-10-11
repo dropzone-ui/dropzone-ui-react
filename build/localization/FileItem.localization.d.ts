@@ -4,6 +4,10 @@ import { ComponentLocalizer, LocalLabels, Localization } from "./localization";
  */
 export declare const FileItemEnglish: LocalLabels;
 /**
+ * Portuguese translation for FileItem component
+ */
+export declare const FileItemPortuguese: LocalLabels;
+/**
  * French translation for FileItem component
  */
 export declare const FileItemFrench: LocalLabels;
