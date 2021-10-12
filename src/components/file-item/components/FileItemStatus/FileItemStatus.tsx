@@ -13,7 +13,12 @@ import { FileItemStatusProps } from "./FileItemStatusProps";
 const FileItemStatus: FC<FileItemStatusProps> = (
   props: FileItemStatusProps,
 ) => {
-  const { valid, uploadStatus, message, localization } = props;
+  const {
+    valid,
+    uploadStatus,
+    //message,
+    localization,
+  } = props;
   const FileItemStatusLocalizer: LocalLabels = FileItemLocalizerSelector(
     localization,
   ).status as LocalLabels;
