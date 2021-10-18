@@ -23,6 +23,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     onSee,
     style,
     preview,
+    onlyImage,
     info,
     id,
     valid,
@@ -125,6 +126,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
                 //fileNamePosition={undefined}
                 uploadStatus={uploadStatus}
                 localization={localization}
+                onlyImage={onlyImage}
               />
 
               <FileItemFullInfoLayer
@@ -139,8 +141,9 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
                 localization={localization}
               />
             </Paper>
-
-            <div className="file-item-name">{shrinkWord(file.name)}</div>
+            {!onlyImage && (
+              <div className="file-item-name">{shrinkWord(file.name)}</div>
+            )}
           </div>
         </div>
       )}

@@ -59,8 +59,18 @@ export interface FileItemProps extends PaperProps {
     */
     valid?: boolean;
     /**
+    * This feature is hidden, it is not present on documentation
+    * because is experimental. If you found this prop, you can test it
+    * and comment us if any issue is found. Thanks in advance.
+    *
+    * Make file name, info layer, size and "valid message"
+    * not visible
+    */
+    onlyImage?: boolean;
+    /**
      * whether to show the info layer or not
-     * also whether to make visible the info button or not
+     * also whether to make visible the info button or not ,
+     * Only works when given a image file
      */
     info?: boolean;
     /**

@@ -12,6 +12,15 @@ export interface FileItemMainLayerProps {
     uploadStatus?: undefined | "uploading" | "success" | "error";
     sizeFormatted: string;
     /**
+     * This feature is hidden, it is not present on documentation
+     * because is experimental. If you found this prop, you can test it
+     * and comment us if any issue is found. Thanks in advance.
+     *
+     * Make file name, info layer, size and "valid message"
+     * not visible
+     */
+    onlyImage?: boolean;
+    /**
      * language to be used
      * for now
      * only English and Spanish is supported

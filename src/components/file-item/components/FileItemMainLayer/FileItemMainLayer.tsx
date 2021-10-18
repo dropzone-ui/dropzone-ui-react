@@ -17,6 +17,15 @@ export interface FileItemMainLayerProps {
   uploadStatus?: undefined | "uploading" | "success" | "error";
   sizeFormatted: string;
   /**
+   * This feature is hidden, it is not present on documentation
+   * because is experimental. If you found this prop, you can test it
+   * and comment us if any issue is found. Thanks in advance.
+   *
+   * Make file name, info layer, size and "valid message"
+   * not visible
+   */
+  onlyImage?: boolean;
+  /**
    * language to be used
    * for now
    * only English and Spanish is supported
@@ -35,6 +44,7 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
     //fileNamePosition,
     valid,
     isImage,
+    onlyImage,
     onOpenInfo,
     onOpenImage,
     sizeFormatted,
@@ -81,7 +91,7 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
       )}
 
       <div className={"file-item-footer"}>
-        {uploadStatus && uploadComplete ? (
+        {!onlyImage && uploadStatus && uploadComplete ? (
           <div className={showInfo ? "file-status hide" : "file-status"}>
             <div className="file-status-ok">
               <FileItemStatus
@@ -98,7 +108,10 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
         )}
 
         <div className={showInfo ? "size-open-info hide" : "size-open-info"}>
-          <div className={"file-item-size"}>{sizeFormatted}</div>
+          {!onlyImage && (
+            <div className={"file-item-size"}>{sizeFormatted}</div>
+          )}
+
           {isImage && onOpenImage && valid && (
             <Visibility
               className="view-in-image-file-item"
@@ -107,7 +120,7 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
               size="small"
             />
           )}
-          {info && (
+          {!onlyImage && info && (
             <Info
               color="rgba(255,255,255,0.8)"
               onClick={handleOpenInfo}
