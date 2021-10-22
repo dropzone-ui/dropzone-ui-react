@@ -12,4 +12,4 @@ export declare const DropzoneLocalizer: ComponentLocalizer;
  * @param local the Localization
  * @returns a ComponentLocalizer object that contains the translation
  */
-export declare const DropzoneLocalizerSelector: (local: Localization) => LocalLabels;
+export declare const DropzoneLocalizerSelector: (local: Localization | undefined) => LocalLabels;

@@ -85,7 +85,7 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
         <div className={uploadComplete ? "file-status hide" : "file-status"}>
           <FileItemStatus
             uploadStatus={uploadStatus}
-            localization={localization}
+            localization={localization as Localization}
           />
         </div>
       )}
@@ -97,13 +97,13 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
               <FileItemStatus
                 uploadStatus={uploadStatus}
                 //message={localization==="ES-es"?"subido":"uploaded"}
-                localization={localization}
+                localization={localization as Localization}
               />
             </div>
           </div>
         ) : (
           <div className={showInfo ? "file-status hide" : "file-status"}>
-            <FileItemStatus valid={valid} localization={localization} />
+            <FileItemStatus valid={valid} localization={localization as Localization} />
           </div>
         )}
 

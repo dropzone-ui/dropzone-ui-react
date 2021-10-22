@@ -28,7 +28,7 @@ export interface DropzoneHeaderProps {
 }
 
 const DropzoneHeader: FC<DropzoneHeaderProps> = (
-  props: DropzoneHeaderProps,
+  props: DropzoneHeaderProps
 ) => {
   const {
     maxFileSize,
@@ -44,7 +44,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
   } = props;
 
   const DropzoneHeaderLocalizer: LocalLabels = DropzoneLocalizerSelector(
-    localization,
+    localization
   ).header as LocalLabels;
 
   const handleStartUploading = () => {
@@ -58,8 +58,8 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
           {DropzoneHeaderLocalizer.uploadFilesMessage}
           {/* localization === "ES-es" ? `Subir archivos` : "Upload files" */}
           <Upload color="#646c7f" onClick={handleStartUploading} />
-          {" | "}
-        </>,
+          {", "}
+        </>
       );
     }
 
@@ -67,7 +67,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
       DropzoneHeaderLocalizer.maxSizeMessage as FunctionLabel;
     if (maxFileSize) {
       result.push(
-        maxFileSizeMessenger(fileSizeFormater(maxFileSize)),
+        maxFileSizeMessenger(fileSizeFormater(maxFileSize))
 
         /* localization === "ES-es"
           ? `Tam. máximo de archivo ${fileSizeFormater(maxFileSize)} | `
@@ -79,7 +79,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
 
     if (maxFiles) {
       result.push(
-        validFileSizeMessenger(numberOfValidFiles, maxFiles),
+        validFileSizeMessenger(numberOfValidFiles as number, maxFiles)
         /*  localization === "ES-es"
           ? `Archivos ${numberOfValidFiles}/${maxFiles} | Válidos: ${numberOfValidFiles} | `
           : `Files ${numberOfValidFiles}/${maxFiles} | Valid: ${numberOfValidFiles} | `, */
@@ -104,7 +104,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
               color="#646c7f"
             />
           )}
-        </>,
+        </>
       );
     }
 
@@ -115,7 +115,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
           //color="rgba(255,255,255,0.8)"
           onClick={handleReset}
           colorFill="rgba(255,255,255,0.8)"
-        />,
+        />
       );
     }
     return result;
@@ -127,8 +127,12 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
         e.stopPropagation();
       }}
     >
-      {makeHeader().map((HeaderItem) => (
-        <>{HeaderItem}</>
+      {makeHeader().map((HeaderItem, index) => (
+        <span key={index} 
+        style={{ display: "flex" }}
+        >
+          {HeaderItem}
+        </span>
       ))}
     </div>
   );

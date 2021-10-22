@@ -4,7 +4,7 @@
 import {
     createRipple
 } from "./dropzone-ui.utils";
-import { uploadMultipleSecuential } from "./dropzone-ui.upload.utils";
+//import { uploadMultipleSecuential } from "./dropzone-ui.upload.utils";
 /* export {
 
     validateFile, createRipple, customValidateFile
@@ -14,5 +14,5 @@ export {
 
 }  */
 export {
-    createRipple, uploadMultipleSecuential
+    createRipple, //uploadMultipleSecuential
 }

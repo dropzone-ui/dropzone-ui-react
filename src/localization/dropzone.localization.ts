@@ -62,17 +62,17 @@ export const DropzoneSpanish: LocalLabels = {
 export const DropzoneFrench: LocalLabels = {
     defaultLabel: "Déposez vos fichiers ici",
 
-    uploadingMessage: (amountOfFiles: string) => { return `Envoi de ${amountOfFiles} fichiers`; },
-    uploadFinished: (uploaded: string, rejected: string) => `Fichiers téléchargés : ${uploaded}, Fichiers rejetés: ${rejected}`,
+    uploadingMessage: (amountOfFiles) => { return `Envoi de ${amountOfFiles} fichiers`; },
+    uploadFinished: (uploaded, rejected) => `Fichiers téléchargés : ${uploaded}, Fichiers rejetés: ${rejected}`,
     noFilesMessage: `Aucun fichier valide ne manque`,
     footer: {
         acceptAll: `Tous types de fichiers acceptés `,
-        acceptCustom: (accept: string) => `Types de fichier: ${accept}`
+        acceptCustom: (accept) => `Types de fichier: ${accept}`
     },
     header: {
         uploadFilesMessage: "Envoyer les fichiers",
-        maxSizeMessage: (maxFileSize: number) => `Taille maximale du fichier  ${maxFileSize} | `,
-        validFilesMessage: (numberOfValidFiles: number, maxFiles: number) => `Fichiers  ${numberOfValidFiles}/${maxFiles} | Valides: ${numberOfValidFiles} | `
+        maxSizeMessage: (maxFileSize) => `Taille maximale du fichier  ${maxFileSize} | `,
+        validFilesMessage: (numberOfValidFiles, maxFiles) => `Fichiers  ${numberOfValidFiles}/${maxFiles} | Valides: ${numberOfValidFiles} | `
     },
     fakeuploadsuccess: "Le fichier a été téléchargé avec succès",
     fakeUploadError: "Erreur lors du téléchargement ",
@@ -90,7 +90,7 @@ export const DropzoneLocalizer: ComponentLocalizer = {
  * @param local the Localization
  * @returns a ComponentLocalizer object that contains the translation
  */
-export const DropzoneLocalizerSelector = (local: Localization): LocalLabels => {
+export const DropzoneLocalizerSelector = (local: Localization | undefined): LocalLabels => {
     switch (local) {
         case "ES-es": return DropzoneLocalizer["ES-es"];
         case "EN-en": return DropzoneLocalizer["EN-en"];

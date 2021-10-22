@@ -29,13 +29,13 @@ const Loader: FC<loaderProps> = (props: loaderProps) => {
       <path
         fill="none"
         ng-attr-stroke="{{config.cf}}"
-        stroke-width="2.7928"
+        strokeWidth="2.7928"
         d="M82,63H18c-7.2,0-13-5.8-13-13v0c0-7.2,5.8-13,13-13h64c7.2,0,13,5.8,13,13v0C95,57.2,89.2,63,82,63z"
         stroke="#5d5d5d"
       ></path>
       <g
         ng-attr-clip-path="url(#{{config.cpid}})"
-        clip-path="url(#lds-colorbar-cpid-9d2a9cfa91489)"
+        clipPath="url(#lds-colorbar-cpid-9d2a9cfa91489)"
       >
         <g transform="translate(10 0)">
           <rect

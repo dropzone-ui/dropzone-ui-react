@@ -160,7 +160,7 @@ export const DropzonePropsDefault: DropzoneProps = {
   disableRipple: false,
   clickable: true,
   view: "grid",
-  maxHeight: "500px",
+  maxHeight: "450px",
   footer: true,
   header: true,
   config:

@@ -23,7 +23,7 @@ const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps> = (
     localization,
   } = props;
   const FileItemFullInfoLocalizer: LocalLabels = FileItemLocalizerSelector(
-    localization,
+    localization as Localization,
   ).fullInfoLayer as LocalLabels;
   const handleCloseInfo = () => {
     onClose?.();
@@ -48,12 +48,12 @@ const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps> = (
           <div className={"file-status"}>
             <FileItemStatus
               uploadStatus={uploadStatus}
-              localization={localization}
+              localization={localization as Localization}
             />
           </div>
         ) : (
           <div className="file-status">
-            <FileItemStatus valid={valid} localization={localization} />
+            <FileItemStatus valid={valid} localization={localization as Localization} />
           </div>
         )}
       </span>
@@ -101,5 +101,5 @@ export interface FileItemFullInfoLayerProps {
    * for now
    * only English and Spanish is supported
    */
-  localization: Localization;
+  localization?: Localization;
 }
