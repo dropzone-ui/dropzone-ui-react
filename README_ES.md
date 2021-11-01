@@ -22,6 +22,8 @@
 
 Dropzone UI es un pequeño set de componentes [React](https://reactjs.org/) para manejar cargas de archivo y vista previa de imágenes en la interfaz gráfica. Ya existen algunas buenas librerías; Sin embargo, **inspirados** en aquellas, hemos creado algo **nuevo** y más **potente**. Los principios de Google Material Design fueron considerados en el desarrollo. De hecho, todos los iconos vienen de [Material design icons](https://fonts.google.com/icons).
 
+## Nota
+Es posible que, eventualmente, este archivo no tenga las últimas actualizaciones. De ser así, por favor revisa la version en [inglés](https://github.com/dropzone-ui/dropzone-ui#readme).
 ## Ejemplo de resultado:
 
 En operaciones `Drag`, `Drop` ,`Upload`, y vista previa en pantalla completa. (también cambiando el modo de vista de `grid` a `list`).
@@ -39,7 +41,7 @@ En operaciones `Drag`, `Drop` ,`Upload`, y vista previa en pantalla completa. (t
 <img align="center" width=70%" src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5wxk14o6zhloz2z3zypy.png" alt="dropone-ui-logo">
 </p>
 
-## Installación
+## Instalación
 
 @dropzone-ui/react está disponible como un [paquete npm](https://www.npmjs.com/package/@dropzone-ui/react).
 Para subir archivos a un servidor, la dependencia peer [axios](https://www.npmjs.com/package/axios) debe ser instalada en conjunto con `dropzone-ui`
