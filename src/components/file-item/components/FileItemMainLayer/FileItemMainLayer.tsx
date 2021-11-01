@@ -34,14 +34,12 @@ export interface FileItemMainLayerProps {
 }
 
 const FileItemMainLayer: FC<FileItemMainLayerProps> = (
-  props: FileItemMainLayerProps,
+  props: FileItemMainLayerProps
 ) => {
   const {
     showInfo,
     onDelete,
     info,
-    //fileName,
-    //fileNamePosition,
     valid,
     isImage,
     onlyImage,
@@ -70,10 +68,18 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
   }, [uploadStatus]);
   return (
     <div className="info-container">
-      <div className={showInfo ? "status-close hide" : "status-close"}>
+      <div
+        className={
+          uploadStatus === "uploading"
+            ? "status-close uploading"
+            : showInfo
+            ? "status-close hide"
+            : "status-close"
+        }
+      >
         <Cancel
           color="rgba(255,255,255,0.8)"
-          onClick={handleDelete}
+          onClick={uploadStatus === "uploading" ? undefined : handleDelete}
           colorFill="black"
         />
       </div>
@@ -103,7 +109,10 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
           </div>
         ) : (
           <div className={showInfo ? "file-status hide" : "file-status"}>
-            <FileItemStatus valid={valid} localization={localization as Localization} />
+            <FileItemStatus
+              valid={valid}
+              localization={localization as Localization}
+            />
           </div>
         )}
 

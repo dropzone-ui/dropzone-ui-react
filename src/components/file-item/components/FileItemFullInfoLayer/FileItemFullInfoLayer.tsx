@@ -9,7 +9,7 @@ import { Cancel } from "../../../icons";
 import FileItemStatus from "../FileItemStatus/FileItemStatus";
 
 const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps> = (
-  props: FileItemFullInfoLayerProps,
+  props: FileItemFullInfoLayerProps
 ) => {
   const {
     showInfo,
@@ -21,9 +21,10 @@ const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps> = (
     uploadStatus,
     uploadMessage,
     localization,
+    errors,
   } = props;
   const FileItemFullInfoLocalizer: LocalLabels = FileItemLocalizerSelector(
-    localization as Localization,
+    localization as Localization
   ).fullInfoLayer as LocalLabels;
   const handleCloseInfo = () => {
     onClose?.();
@@ -53,35 +54,44 @@ const FileItemFullInfoLayer: FC<FileItemFullInfoLayerProps> = (
           </div>
         ) : (
           <div className="file-status">
-            <FileItemStatus valid={valid} localization={localization as Localization} />
+            <FileItemStatus
+              valid={valid}
+              localization={localization as Localization}
+            />
           </div>
         )}
       </span>
-      {uploadMessage && <div className="name">{uploadMessage}</div>}
+      {!uploadMessage && errors && errors.length > 0 && (
+        <div className={`name error`}>
+          {errors.map((error, index) => (
+            <div key={index + 1}>{`- ${error}.\n`}</div>
+          ))}
+        </div>
+      )}
+      {uploadMessage && (
+        <div className={`name ${uploadStatus}`}>{uploadMessage}</div>
+      )}
       <div className="name">
         <span className="sub-label">
           {FileItemFullInfoLocalizer.name as string}
           {/* localization === "ES-es" ? "Nombre: " : "Name: " */}
         </span>
-        {fileName}
       </div>
-
+      <div className="name">{fileName}</div>
+      {/** FILE SIZE */}
       <div className="size">
         <span className="sub-label">
           {FileItemFullInfoLocalizer.size as string}
-
-          {/* localization === "ES-es" ? "Tamaño: " : "Size: " */}
-        </span>{" "}
-        {fileSize}
+        </span>
       </div>
+      <div className="name">{fileSize}</div>
+      {/** FILE TYPE */}
       <div className="mime">
         <span className="sub-label">
           {FileItemFullInfoLocalizer.type as string}
-
-          {/* localization === "ES-es" ? "Tipo: " : "Type: " */}
-        </span>{" "}
-        {fileType}
+        </span>
       </div>
+      <div className="mime">{fileType}</div>
     </div>
   );
 };
@@ -102,4 +112,5 @@ export interface FileItemFullInfoLayerProps {
    * only English and Spanish is supported
    */
   localization?: Localization;
+  errors?: string[];
 }

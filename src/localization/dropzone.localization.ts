@@ -1,83 +1,8 @@
 import { ComponentLocalizer, LocalLabels, Localization } from "./localization";
-/**
- * English translation for Dropzone component
- */
-
-export const DropzoneEnglish: LocalLabels = {
-    defaultLabel: "Drop your files here",
-    uploadingMessage: (amountOfFiles) => { return `Uploading ${amountOfFiles} files`; },
-    uploadFinished: (uploaded, rejected) => `Uploaded files: ${uploaded}, Rejected files: ${rejected}`,
-    noFilesMessage: `No valid file is missing for uploading`,
-    footer: {
-        acceptAll: `All file types accepted`,
-        acceptCustom: (accept) => `Allowed types: ${accept}`
-    },
-    header: {
-        uploadFilesMessage: "Upload files",
-        maxSizeMessage: (maxFileSize) => `Max file size: ${maxFileSize} | `,
-        validFilesMessage: (numberOfValidFiles, maxFiles) => `Files ${numberOfValidFiles}/${maxFiles} | Valid: ${numberOfValidFiles} | `
-    },
-    fakeuploadsuccess: "File was successfully uploaded",
-    fakeUploadError: "Error on uploading",
-}
-
-export const DropzonePortuguese: LocalLabels = {
-    defaultLabel: "Solte seus arquivos aqui ",
-
-    uploadingMessage: (amountOfFiles) => { return `Enviando ${amountOfFiles} arquivos`; },
-    uploadFinished: (uploaded, rejected) => `Arquivos enviados: ${uploaded}, Arquivos rejeitados: ${rejected}`,
-    noFilesMessage: `Nenhum arquivo válido está faltando para enviar`,
-    footer: {
-        acceptAll: `Todos os tipos de arquivo são aceitos`,
-        acceptCustom: (accept) => `Tipos permitidos: ${accept}`
-    },
-    header: {
-        uploadFilesMessage: "Enviar arquivos",
-        maxSizeMessage: (maxFileSize) => `Tamanho máximo do arquivo: ${maxFileSize} | `,
-        validFilesMessage: (numberOfValidFiles, maxFiles) => `Arquivos ${numberOfValidFiles}/${maxFiles} | Válidos: ${numberOfValidFiles} | `
-    },
-    fakeuploadsuccess: "O arquivo foi enviado com sucesso",
-    fakeUploadError: "Erro ao enviar",
-}
-
-export const DropzoneSpanish: LocalLabels = {
-    defaultLabel: "Suelta tus archivos aquí",
-
-    uploadingMessage: (amountOfFiles) => { return `Subiendo ${amountOfFiles} archivos`; },
-    uploadFinished: (uploaded, rejected) => `Archivos subidos: ${uploaded}, Archivos rechazados: ${rejected}`,
-    noFilesMessage: `No hay archivos válidos pendientes por subir`,
-    footer: {
-        acceptAll: `Todos los tipos de archivo aceptados`,
-        acceptCustom: (accept) => `File types: ${accept}`
-    },
-    header: {
-        uploadFilesMessage: "Subir Archivos",
-        maxSizeMessage: (maxFileSize) => `Tam. máximo de archivo ${maxFileSize} | `,
-        validFilesMessage: (numberOfValidFiles, maxFiles) => `Archivos ${numberOfValidFiles}/${maxFiles} | Válidos: ${numberOfValidFiles} | `
-    },
-    fakeuploadsuccess: "El archivo se subió correctamente",
-    fakeUploadError: "Error al subir el archivo",
-}
-
-export const DropzoneFrench: LocalLabels = {
-    defaultLabel: "Déposez vos fichiers ici",
-
-    uploadingMessage: (amountOfFiles) => { return `Envoi de ${amountOfFiles} fichiers`; },
-    uploadFinished: (uploaded, rejected) => `Fichiers téléchargés : ${uploaded}, Fichiers rejetés: ${rejected}`,
-    noFilesMessage: `Aucun fichier valide ne manque`,
-    footer: {
-        acceptAll: `Tous types de fichiers acceptés `,
-        acceptCustom: (accept) => `Types de fichier: ${accept}`
-    },
-    header: {
-        uploadFilesMessage: "Envoyer les fichiers",
-        maxSizeMessage: (maxFileSize) => `Taille maximale du fichier  ${maxFileSize} | `,
-        validFilesMessage: (numberOfValidFiles, maxFiles) => `Fichiers  ${numberOfValidFiles}/${maxFiles} | Valides: ${numberOfValidFiles} | `
-    },
-    fakeuploadsuccess: "Le fichier a été téléchargé avec succès",
-    fakeUploadError: "Erreur lors du téléchargement ",
-}
-
+import { DropzoneEnglish } from "./localization.english";
+import { DropzoneFrench } from "./localization.french";
+import { DropzonePortuguese } from "./localization.portuguese";
+import { DropzoneSpanish } from "./localization.spanish";
 
 export const DropzoneLocalizer: ComponentLocalizer = {
     "ES-es": DropzoneSpanish,

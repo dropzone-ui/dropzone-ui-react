@@ -13,7 +13,7 @@ import {
     octet, odp, ods, odt, opus, otf,
     pdf, php, png, pptx, psd, python,
     rar, react, rtf,
-    sass, sevenzip, sh, swf,
+    sass, sevenzip, sh,  swf,
     tar, text, tiff, ttf, typescript,
     vsd, vue,
     wav, weba, webm, webp, wma, wmv, woff,
@@ -67,8 +67,8 @@ export const imageSelector = (tailMime: string): string => {
         case "jpg": return "jpeg";
         case "jpeg": return "jpeg";
         case "png": return "png";
-        // case "svg+xml": return "svg";
-        // case "svg": return "svg";
+        //case "svg+xml": return "svg";
+        //case "svg": return "svg";
         case "tiff": return "tiff";
         case "webp": return "webp";
         default: return DEF_GEN_MIME;
@@ -93,7 +93,7 @@ export const videoSelector = (tailMime: string): string => {
         case "mp4": return "mp4";
         case "mpeg": return "mpeg";
         // case "ogg": return "ogv";
-        // case "mp2t": return "ts";
+        case "mp2t": return "mp2t";
         case "wmv": return "wmv";
 
         case "webm": return "webm";
@@ -123,6 +123,7 @@ export const applicationSelector = (tailMime: string): string => {
         case "x-cdf": return "cda";
         case "msaccess": return "accdb";
         case "csh": return "csh";
+        case "x-csh": return "csh";
         case "vnd.ms-fontobject": return "eot";
         case "epub+zip": return "epub";
         case "gzip": return "gzip";
@@ -138,6 +139,7 @@ export const applicationSelector = (tailMime: string): string => {
         case "sh": return "sh";
         case "x-shockwave-flash": return "swf";
         case "x-tar": return "tar";
+        case "x-httpd-php": return "php";
         case "vnd.visio": return "vsd";
         case "xhtml+xml": return "xhtml";
         case "xml": return "xml";
@@ -173,7 +175,7 @@ export const mimeSelector = (mimeType?: string): string => {
      * Every mimetype that 
      * starts with: "application/...."
      */
-    
+
     switch (headerMime) {
         case "application": return applicationSelector(tailMime);
         case "audio": return audioSelector(tailMime);
@@ -241,10 +243,14 @@ export const checkIsCode = (extension?: string): string => {
             genericMime = "vue";
         } else if (extension === "java") {
             genericMime = "java";
-        } else if (extension === "ts") {
+        } else if (extension === "ts" || extension === "tsx") {
             genericMime = "typescript";
-        }else if (extension === "js") {
+        } else if (extension === "js") {
             genericMime = "javascript";
+        } else if (extension === "xml") {
+            genericMime = "xml";
+        } else if (extension === "php") {
+            genericMime = "php";
         }
     }
     return genericMime;
@@ -272,7 +278,7 @@ export const getURLFileIco = (file: File | undefined): ResultFileIco => {
 
     if (result === "text") {
         result = checkIsCode(extention);
-    //console.log("got checkIsCode:",result);
+        //console.log("got checkIsCode:",result);
 
     }
     //If octet stream result, second chance: file extention
@@ -333,6 +339,7 @@ const mimeUrlList: MimeSelector = {
     mp4: mp4,
     mpeg: mpeg,
     mpkg: mpkg,
+    mp2t: octet,
     odp: odp,
     ods: ods,
     odt: odt,

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+//@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900");
 /* .file-item-full-list {
   display: inline-flex;
 } */
@@ -9,7 +10,7 @@
   font-family: "Poppins", sans-serif;
   margin: 8px;
   height: 157px;
-  width: 120px;
+  width: 120;
   word-break: break-all;
 
   .file-item-icon-container {
@@ -75,13 +76,29 @@
           //height: 0%;
           display: none;
         }
+        &.uploading {
+          opacity: 0;
+          //cursor: none;
+        }
       }
     }
-
+    ::-webkit-scrollbar {
+      width: 9px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #757a86e8;
+      border-radius: 20px;
+      border: transparent;
+    }
     .full-info {
+      text-align: left;
       position: absolute;
       left: 0;
       top: 0;
+
       scrollbar-width: thin;
       line-height: 1.5;
       letter-spacing: 0.02857em;
@@ -104,9 +121,24 @@
       .name {
         //margin: -7px 0 0 0;
         padding: 0 5px;
-        font-weight: 500;
+        font-weight: 399;
+     // text-align: center;
+
         .sub-label {
+          
           font-weight: 600;
+        }
+        &.success {
+          border: 1px dashed rgb(126, 218, 126);
+          background-color: #3e6e3e;
+          margin: 0 2px;
+          border-radius: 4px;
+        }
+        &.error {
+          background-color: rgb(134, 41, 41);
+          border: 1px dashed red;
+          margin: 0 2px;
+          border-radius: 4px;
         }
       }
       .size {
@@ -119,8 +151,10 @@
       }
       .mime {
         //display: none;
+      //text-align: left;
+
         padding: 0 5px;
-        font-weight: 400;
+        font-weight: 399;
         .sub-label {
           font-weight: 600;
         }
@@ -190,7 +224,7 @@
     color: black;
     font-size: 0.95rem;
     line-height: 0.85rem;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.125em;
     word-break: break-all;
     padding: 0.5px;

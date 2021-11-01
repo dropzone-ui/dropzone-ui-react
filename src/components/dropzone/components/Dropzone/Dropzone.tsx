@@ -6,6 +6,7 @@ import {
   customValidateFile,
   FileValidated,
   FileValidator,
+  UPLOADSTATUS,
   validateFile,
 } from "../utils/validation.utils";
 import { DropzoneProps, DropzonePropsDefault } from "./DropzoneProps";
@@ -15,8 +16,15 @@ import DropzoneFooter from "../DropzoneFooter.tsx/DropzoneFooter";
 import { FileItemContainer } from "../../../../components/file-item";
 import { FileItemContainerProps } from "../../../file-item/components/FileItemContainer/FileItemContainerProps";
 import DropzoneLabel from "../DropzoneLabel/DropzoneLabel";
-import { uploadPromiseAxios } from "../utils/dropzone-ui.upload.utils";
-import { DropzoneLocalizerSelector } from "../../../../localization";
+import {
+  FileDuiResponse,
+  uploadPromiseAxios,
+  UploadPromiseAxiosResponse,
+} from "../utils/dropzone-ui.upload.utils";
+import {
+  DropzoneLocalizerSelector,
+  ValidateErrorLocalizerSelector,
+} from "../../../../localization";
 import {
   FunctionLabel,
   LocalLabels,
@@ -47,6 +55,8 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     url,
     config,
     value,
+    onUploadStart,
+    onUploadFinish,
     // onUploading,
     uploadingMessage,
     onChange,
@@ -58,6 +68,8 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
 
   const DropzoneLocalizer: LocalLabels =
     DropzoneLocalizerSelector(localization);
+  const ValidationErrorLocalizer: LocalLabels =
+    ValidateErrorLocalizerSelector(localization);
   //console.log("color:", color);
   //ref to the hidden input tag
   const inputRef = useRef<HTMLInputElement>(null);
@@ -70,12 +82,12 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   const [localMessage, setLocalMessage] = useState<string>("");
   //const [filesUploading, setFilesUploading] = useState<FileValidated[]>([]);
   //ClassName for dynamic style
-  const [onUploadStart, setOnUploadStart] = useState<boolean>(false);
+  const [onUploadingStart, setOnUploadingStart] = useState<boolean>(false);
   // const [queueFiles, setQueueFiles] = useState<FileValidated[]>([]);
   const classNameCreated: string = useDropzoneStyles(
     color,
     backgroundColor,
-    maxHeight,
+    maxHeight
   );
   const finalClassName: string = `dropzone-ui${classNameCreated}${
     isDragging ? ` drag` : ``
@@ -106,29 +118,44 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
 
   /**
    * Method for uploading Files
-   * It will set all odd file id's as valid
+   * It will set valid or not valid in a radom way
    * @param files
    */
-  const fakeUpload = (file: FileValidated): Promise<FileValidated> => {
+  const fakeUpload = (
+    file: FileValidated
+  ): Promise<UploadPromiseAxiosResponse> => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (file.id % 2 === 0) {
+        const randomNumber = Math.floor(Math.random()*10);
+        if (randomNumber % 2 === 0) {
+          const status = true;
+          const message = DropzoneLocalizer.fakeuploadsuccess as string;
+          const payload = { url: "" };
           resolve({
-            ...file,
-            uploadStatus: "success",
-            uploadMessage: DropzoneLocalizer.fakeuploadsuccess as string,
-            /*  localization === "ES-es"
-                ? "EL archivo se subió correctamente"
-                : "File was succesfully uploaded", */
+            uploadedFile: {
+              ...file,
+              uploadStatus: UPLOADSTATUS.success,
+              uploadMessage: message,
+            },
+            serverResponse: {
+              id: file.id,
+              serverResponse: { status, message, payload },
+            },
           });
         } else {
+          const status = false;
+          const message = DropzoneLocalizer.fakeUploadError as string;
+          const payload = {};
           resolve({
-            ...file,
-            uploadStatus: "error",
-            uploadMessage: DropzoneLocalizer.fakeUploadError as string,
-            /* localization === "ES-es"
-                ? "Erro al subir el archivo"
-                : "Error on Uploading", */
+            uploadedFile: {
+              ...file,
+              uploadStatus: UPLOADSTATUS.error,
+              uploadMessage: message,
+            },
+            serverResponse: {
+              id: file.id,
+              serverResponse: { status, message, payload },
+            },
           });
         }
       }, 1500);
@@ -141,25 +168,25 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   const uploadFiles = async (files: FileValidated[]) => {
     const totalNumber = files.length;
     const missingUpload = files.filter(
-      (x) => x.valid && x.uploadStatus !== "success",
+      (x) => x.valid && x.uploadStatus !== "success"
     ).length;
     let totalRejected: number = 0;
     let currentCountUpload: number = 0;
     const uploadingMessenger: FunctionLabel =
       DropzoneLocalizer.uploadingMessage as FunctionLabel;
 
-    setOnUploadStart(true);
+    setOnUploadingStart(true);
     if (missingUpload > 0 && url) {
       setLocalMessage(
-        uploadingMessenger(`${missingUpload}/${totalNumber}`),
+        uploadingMessenger(`${missingUpload}/${totalNumber}`)
         /* localization === "ES-es"
           ? `Subiendo ${missingUpload}/${totalNumber} archivos`
           : `uploading ${missingUpload}/${totalNumber} files`, */
       );
 
       let uploadStartFiles: FileValidated[] = files.map((f: FileValidated) => {
-        if (f.uploadStatus !== "success" && f.valid) {
-          return { ...f, uploadStatus: "uploading" };
+        if (f.uploadStatus !== UPLOADSTATUS.success && f.valid) {
+          return { ...f, uploadStatus: UPLOADSTATUS.uploading };
         } else return f;
       });
 
@@ -167,21 +194,26 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       onChange?.(uploadStartFiles);
       ///////
       let updatedList: FileValidated[] = uploadStartFiles;
+      let serverResponses: FileDuiResponse[] = [];
+      onUploadStart?.(
+        uploadStartFiles.filter(
+          (f) => f.uploadStatus === UPLOADSTATUS.uploading
+        )
+      );
       for (let i = 0; i < uploadStartFiles.length; i++) {
         let currentFile: FileValidated = uploadStartFiles[i];
-        if (currentFile.uploadStatus === "uploading") {
+        if (currentFile.uploadStatus === UPLOADSTATUS.uploading) {
           setLocalMessage(
-            uploadingMessenger(`${++currentCountUpload}/${missingUpload}`),
-
-            /*  localization === "ES-es"
-              ? `Subiendo ${++currentCountUpload}/${missingUpload} archivos`
-              : `Uploading ${++currentCountUpload}/${missingUpload} files...`, */
+            uploadingMessenger(`${++currentCountUpload}/${missingUpload}`)
           );
-          //  const uploadedFile = await fakeUpload(currentFile);
 
-          const uploadedFile: FileValidated = fakeUploading
-            ? await fakeUpload(currentFile)
-            : await uploadPromiseAxios(currentFile, url, method, config);
+          const { serverResponse, uploadedFile }: UploadPromiseAxiosResponse =
+            fakeUploading
+              ? await fakeUpload(currentFile)
+              : await uploadPromiseAxios(currentFile, url, method, config);
+
+          serverResponses.push(serverResponse);
+
           if (uploadedFile.uploadStatus === "error") {
             totalRejected++;
           }
@@ -195,29 +227,31 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
           onChange?.(updatedList);
         }
       }
+
       // upload group finished :D
+      onUploadFinish?.(serverResponses);
       const finishUploadMessenger: FunctionLabel =
         DropzoneLocalizer.uploadFinished as FunctionLabel;
       setLocalMessage(
-        finishUploadMessenger(missingUpload - totalRejected, totalRejected),
+        finishUploadMessenger(missingUpload - totalRejected, totalRejected)
         /*   localization === "ES-es"
           ? `Archivos subidos: ${missingUpload - totalRejected}, Rechazados: ${totalRejected}`
           : `Uloaded files: ${missingUpload - totalRejected}, Rejected: ${totalRejected}`,
       */
       );
       setTimeout(() => {
-        setOnUploadStart(false);
+        setOnUploadingStart(false);
       }, 2300);
       //console.log("queueFiles files:", queueFiles);
     } else {
       setLocalMessage(
-        DropzoneLocalizer.noFilesMessage as string,
+        DropzoneLocalizer.noFilesMessage as string
         /* localization === "ES-es"
           ? `No hay archivos válidos pendientes por subir`
           : `There is not any missing valid file for uploading`, */
       );
       setTimeout(() => {
-        setOnUploadStart(false);
+        setOnUploadingStart(false);
       }, 2300);
     }
   };
@@ -238,11 +272,11 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
    * @param evt
    */
   const kamui: React.DragEventHandler<HTMLDivElement> = async (
-    evt: React.DragEvent<HTMLDivElement>,
+    evt: React.DragEvent<HTMLDivElement>
   ): Promise<void> => {
     evt.stopPropagation();
     evt.preventDefault();
-    if (onUploadStart) {
+    if (onUploadingStart) {
       setIsDragging(false);
       return;
     }
@@ -250,7 +284,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     const remainingValids: number = (maxFiles || 7) - numberOfValidFiles;
     const output: FileValidated[] = fileListvalidator(
       fileList,
-      remainingValids,
+      remainingValids
     );
     if (!disableRipple) {
       createRipple(evt, color as string);
@@ -260,16 +294,16 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   };
 
   const handleOnChangeInput: React.ChangeEventHandler<HTMLInputElement> = (
-    evt: React.ChangeEvent<HTMLInputElement>,
+    evt: React.ChangeEvent<HTMLInputElement>
   ): void => {
-    if (onUploadStart) {
+    if (onUploadingStart) {
       return;
     }
     let fileList: FileList = evt.target.files as FileList;
     const remainingValids: number = (maxFiles || 7) - numberOfValidFiles;
     const output: FileValidated[] = fileListvalidator(
       fileList,
-      remainingValids,
+      remainingValids
     );
     handleFilesChange(output);
   };
@@ -277,17 +311,27 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   //local function validator
   const fileListvalidator = (
     preValidatedFiles: FileList,
-    remainingValids: number,
+    remainingValids: number
   ): FileValidated[] => {
     const output: FileValidated[] = [];
     let countdown: number = remainingValids;
     for (let i = 0, f: File; (f = preValidatedFiles[i]); i++) {
       let validatedFile: FileValidated = validator
         ? customValidateFile(f, validator)
-        : validateFile(f, localValidator);
-
+        : validateFile(f, localValidator, ValidationErrorLocalizer);
+      //console.log("=>", validateFile);
       if (validatedFile.valid) {
-        validatedFile.valid = countdown > 0;
+        //not valid due to file count limit
+        const valid = countdown > 0;
+        validatedFile.valid = valid;
+        //add error about amount
+        if (!valid) {
+          const MaxFileErrorMessenger: FunctionLabel =
+            ValidationErrorLocalizer.maxFileCount as FunctionLabel;
+          validatedFile.errors = validatedFile.errors
+            ? [...validatedFile.errors, MaxFileErrorMessenger(maxFiles || 7)]
+            : [MaxFileErrorMessenger(maxFiles || 7)];
+        }
         countdown--;
       }
       output.push(validatedFile);
@@ -301,7 +345,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     }
   };
   const handleDragEnter: React.DragEventHandler<HTMLDivElement> = (
-    evt: React.DragEvent<HTMLDivElement>,
+    evt: React.DragEvent<HTMLDivElement>
   ): void => {
     evt.stopPropagation();
     evt.preventDefault();
@@ -309,7 +353,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     setIsDragging(true);
   };
   const handleDragLeave: React.DragEventHandler<HTMLDivElement> = (
-    evt: React.DragEvent<HTMLDivElement>,
+    evt: React.DragEvent<HTMLDivElement>
   ): void => {
     evt.stopPropagation();
     evt.preventDefault();
@@ -317,7 +361,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     setIsDragging(false);
   };
   function handleClick<T extends HTMLDivElement>(
-    e: React.MouseEvent<T, MouseEvent>,
+    e: React.MouseEvent<T, MouseEvent>
   ): void {
     let referenceInput = inputRef.current;
     referenceInput?.click();
@@ -371,7 +415,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       {footer && (
         <DropzoneFooter
           accept={accept}
-          message={onUploadStart ? localMessage : undefined}
+          message={onUploadingStart ? localMessage : undefined}
           localization={localization}
         />
       )}

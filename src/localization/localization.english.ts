@@ -1,0 +1,53 @@
+
+import { fileSizeFormater } from "../components/file-item/utils";
+import { LocalLabels } from "./localization";
+
+/**
+ * English translation for Dropzone component
+ */
+export const DropzoneEnglish: LocalLabels = {
+    defaultLabel: "Drop your files here",
+    uploadingMessage: (amountOfFiles) => { return `Uploading ${amountOfFiles} files`; },
+    uploadFinished: (uploaded, rejected) => `Uploaded files: ${uploaded}, Rejected files: ${rejected}`,
+    noFilesMessage: `No valid file is missing for uploading`,
+    footer: {
+        acceptAll: `All file types accepted`,
+        acceptCustom: (accept) => `Allowed types: ${accept}`
+    },
+    header: {
+        uploadFilesMessage: "Upload files",
+        maxSizeMessage: (maxFileSize) => `Max file size: ${maxFileSize} | `,
+        validFilesMessage: (numberOfValidFiles, maxFiles) => ` Files ${numberOfValidFiles}/${maxFiles} | Valid: ${numberOfValidFiles} | `
+    },
+    fakeuploadsuccess: "File was successfully uploaded",
+    fakeUploadError: "Error on uploading",
+}
+
+/**
+ * English translation for FileItem component
+ */
+export const FileItemEnglish: LocalLabels = {
+    fullInfoLayer: {
+        name: `Name: `,
+        size: "Size: ",
+        type: "Type: "
+    },
+    status: {
+        uploading: "Uploading",
+        success: "success",
+        valid: "valid",
+        denied: "not valid",
+        error: "error"
+    },
+}
+
+/**
+ * English translation for Validation Errors
+ */
+export const ValidateErrorEnglish: LocalLabels = {
+    maxSizeError: (maxSize) =>
+        `File is too big. Max file size allowed is ${fileSizeFormater(maxSize as number)}`,
+    acceptError: `File's type is not allowed`,
+    maxFileCount: (maxFiles) =>
+        `Max amount of files (${maxFiles}) has been reached`
+}

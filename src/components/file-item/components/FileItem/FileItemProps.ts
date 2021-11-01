@@ -32,15 +32,15 @@ export interface FileItemProps extends PaperProps {
     /**
      * A function of what to do when close button is pressed or clicked
      */
-    onDelete?: Function;
+    onDelete?: (imageUrl: number | string | undefined) => void;
     /**
      * A function of what to do when "see" button is pressed or clicked
      */
-    onSee?: Function;
+    onSee?: (imageUrl: string) => void;
     /**
      * Whether to see as grid or inline (horizontal list)
      */
-    //view?: "inline" | "grid";
+    errors?: string[];
     /**
      * individual validator for each file
      */
@@ -63,8 +63,8 @@ export interface FileItemProps extends PaperProps {
     */
     valid?: boolean;
     /**
-    * This feature is hidden, it is not present on documentation
-    * because is experimental. If you found this prop, you can test it 
+    * This feature is hidden, it is not present on the documentation
+    * because it's experimental. If you found this prop, you can test it 
     * and comment us if any issue is found. Thanks in advance.
     * 
     * Make file name, info layer, size and "valid message"
@@ -77,6 +77,12 @@ export interface FileItemProps extends PaperProps {
      * Only works when given a image file
      */
     info?: boolean;
+    /**
+     * A string representation or web url of the image
+     * that will be set to the "src" prop of an <img/> tag
+     * <img src={`${url}`} />
+     */
+    imageUrl?: string;
     /**
      * The message from server
      */
@@ -115,6 +121,8 @@ export const FileItemPropsDefault: FileItemProps = {
     info: false,
     hd: undefined
     , localization: "EN-en",
-    onlyImage: false
+    onlyImage: false,
+    imageUrl: undefined,
+    errors: undefined
     //fileName: "bottom"
 }

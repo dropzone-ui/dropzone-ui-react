@@ -146,6 +146,7 @@ export const rtf = "https://user-images.githubusercontent.com/43678736/132086693
 export const sass = "https://user-images.githubusercontent.com/43678736/132086694-4e661d6a-1118-441e-8bc3-c52fcb2133b6.png";
 export const settings = "https://user-images.githubusercontent.com/43678736/132086696-0dd21f83-b9fc-490c-9ed5-bd88151dc9bb.png";
 export const sh = "https://user-images.githubusercontent.com/43678736/132086697-1d82d724-35b6-4f06-847a-3c59a5deda6e.png";
+
 export const swf = "https://user-images.githubusercontent.com/43678736/132086698-19384230-dbd7-4e05-bc69-ef4537b6aae3.png";
 export const text = "https://user-images.githubusercontent.com/43678736/132086699-5993a482-04f4-4915-b105-9037f527cf61.png";
 export const tiff = "https://user-images.githubusercontent.com/43678736/132086700-c23461c8-6819-46e1-aecd-0a1f8d3507bb.png";

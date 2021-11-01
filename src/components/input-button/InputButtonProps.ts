@@ -1,4 +1,6 @@
 import { MaterialButtonDefaultProps, MaterialButtonProps } from "@unlimited-react-components/material-button";
+import { Localization } from "../../localization/localization";
+import { CustomValidateFileResponse } from "../dropzone/components/utils/validation.utils";
 
 export interface InputButtonProps extends MaterialButtonProps {
     /**
@@ -29,7 +31,7 @@ export interface InputButtonProps extends MaterialButtonProps {
    * must be a function that recieves as first parameter a File Object
    * and must return a boolean value
    */
-    validator?: (f: File) => boolean;
+    validator?: (f: File) => CustomValidateFileResponse;
     /**
      * Max number of files to be accepted.
      */
@@ -38,6 +40,12 @@ export interface InputButtonProps extends MaterialButtonProps {
      * max file size allowed in bytes
      */
     maxFileSize?: number;
+    /**
+  * language to be used
+  * for now
+  * only English, French , Portuguese and Spanish are supported
+  */
+    localization?: Localization;
 }
 
 /**
@@ -57,5 +65,7 @@ export const InputButtonDefaultProps: InputButtonProps = {
         label: "Browse ...",
         onChange: () => { },
         //maxFiles: 7, 
+        localization: "EN-en"
+
     }
 }

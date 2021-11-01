@@ -96,7 +96,7 @@ const MAX_SIZE_WORD = 30;
  * @param word 
  * @returns 
  */
-export const shrinkWord = (word: string): string => {
+export const shrinkWord = (word=""): string => {
     let newWord = word;
     if (word.length >= MAX_SIZE_WORD) {
         newWord = word.slice(0, 13) + "..." + word.slice(-8);

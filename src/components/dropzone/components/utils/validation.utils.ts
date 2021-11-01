@@ -1,14 +1,18 @@
+import { FunctionLabel, LocalLabels } from "../../../../localization/localization";
 import { getExt } from "../../../file-item/utils";
-import { ERROR_ACCEPT, ERROR_MAX_SIZE } from "./errors.utils";
 
-
+export enum UPLOADSTATUS {
+    uploading = "uploading",
+    success = "success",
+    error = "error"
+}
 export interface FileValidated {
     file: File;
     valid: boolean;
-    id: number;
+    id: number | string | undefined;
     errors?: string[];
     uploadMessage?: string;
-    uploadStatus?:undefined | "uploading" | "success" | "error";
+    uploadStatus?: undefined | UPLOADSTATUS;
     // messageKey?:string | ""
 }
 export interface FileValidator {
@@ -76,7 +80,12 @@ export const validateAccept = (accept: string[], file: File): boolean => {
  * @param validator the validator object 
  * @returns a FileValidated object
  */
-export const validateFile = (file: File, validator: FileValidator): FileValidated => {
+export const validateFile = (
+    file: File,
+    validator: FileValidator, 
+    localErrors: LocalLabels
+): FileValidated => {
+
     const idGenerated = FileIdGenerator.getNextId();
     let errors: string[] = [];
 
@@ -84,13 +93,14 @@ export const validateFile = (file: File, validator: FileValidator): FileValidate
 
     //check file size
     if (maxFileSize && file.size > maxFileSize) {
-        errors.push(ERROR_MAX_SIZE(maxFileSize));
+        const maxFileSizeErrorMessenger: FunctionLabel = localErrors.maxSizeError as FunctionLabel;
+        errors.push(maxFileSizeErrorMessenger(maxFileSize));
     }
 
     //check file type
     // const allowedTypes = accept.filter((type) => (file.type === type))
     if (accept && !validateAccept(separateAccept(accept), file)) {
-        errors.push(ERROR_ACCEPT);
+        errors.push(localErrors.acceptError as string);
     }
 
 
@@ -103,6 +113,10 @@ export const validateFile = (file: File, validator: FileValidator): FileValidate
     // logic here
     return fileResult;
 };
+export interface CustomValidateFileResponse {
+    valid: boolean,
+    errors?: string[]
+}
 /**
  * Function that validate whether  afile is valid or not
  * according to the Filevalidator properties
@@ -110,21 +124,87 @@ export const validateFile = (file: File, validator: FileValidator): FileValidate
  * @param validator 
  * @returns 
  */
-export const customValidateFile = (file: File, validator: (f: File) => boolean): FileValidated => {
+export const customValidateFile = (
+    file: File, 
+    validator: (f: File) => CustomValidateFileResponse
+    ): FileValidated => {
     const idGenerated = FileIdGenerator.getNextId();
+    const { valid, errors } = validator(file);
     let fileResult: FileValidated = {
         id: idGenerated,
         file: file,
-        valid: validator(file)
+        valid: valid,
+        errors: errors
     };
     // logic here
     return fileResult;
 };
+
+/**
+ * An id generaor
+ */
 export abstract class FileIdGenerator {
     static nextId = 0;
+    /**
+     * INcreases the id conter and returns the next id available.
+     * @returns the next integer id available
+     */
     static getNextId(): number {
         FileIdGenerator.nextId++;
         return FileIdGenerator.nextId;
+    }
+}
+/**
+ * Random integer between min (included) and max (excluded)
+ * @param min 
+ * @param max 
+ * @returns 
+ */
+function getRandomInt(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+/**
+ * Generates a random number betwen 0 and 3
+ * where
+ * 0 => error
+ * 1 => uploading
+ * 2 => success
+ * 3 => undefined
+ * @returns a random upload status or undefined
+ */
+const getRandomUploadStatus = (): UPLOADSTATUS | undefined => {
+    const result: number = getRandomInt(0, 4);
+    switch (result) {
+        case 0: return UPLOADSTATUS.error;
+        case 1: return UPLOADSTATUS.uploading;
+        case 2: return UPLOADSTATUS.success;
+        default:
+            return undefined;
+    }
+}
+/**
+ * Make a validated file that is ready to use on FileItem component,
+ * if valid is not set, a random operation will decide whether the file is valid or not
+ * @param file The file
+ * @param valid true if it is a valid file, otherwise is false
+ * @param uploadStatus the current upload status. If not given a random upload status will be set
+ * @param uploadMessage the upload message after uploading
+ * @returns a Vaidated File object
+ */
+export const makeSynthticFileValidate = (
+    file: File,
+    valid = (Math.ceil(Math.random() * 28) % 2 === 0),
+    uploadStatus?: UPLOADSTATUS,
+    uploadMessage?: string
+): FileValidated => {
+    const newUpoadStatus = uploadStatus || getRandomUploadStatus();
+    const newUploadMessage = uploadMessage || newUpoadStatus ? "A bit large upload Message" : undefined;
+    return {
+        id: FileIdGenerator.getNextId(),
+        valid: valid,
+        file,
+        uploadStatus: newUpoadStatus,
+        uploadMessage: newUploadMessage
     }
 }
 

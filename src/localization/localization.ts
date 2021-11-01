@@ -1,6 +1,5 @@
 export type Localization = "EN-en" | "ES-es" | "FR-fr" | "PT-pt";
 
-
 export type Components =
     "dropzone" |
     "file-item" |

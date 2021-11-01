@@ -31,6 +31,8 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     uploadMessage,
     hd,
     localization,
+    errors,
+    imageUrl,
   } = mergeProps(props, FileItemPropsDefault);
 
   const sizeFormatted: string = file ? fileSizeFormater(file.size) : "0 KB";
@@ -40,35 +42,45 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
   const [imageSource, setImageSource] = useState<string | undefined>(undefined);
   const [showInfo, setShowInfo] = useState<boolean>(false);
   useEffect(() => {
-    init(file, valid || false, preview || false);
+    init(file, valid || false, preview || false, imageUrl);
+
     return () => {
       setImageSource(undefined);
       setIsImage(false);
     };
-  }, [file, valid, preview]);
+  }, [file, valid, preview, imageUrl]);
 
   const init = async (
     file: File | undefined,
     valid: boolean,
     preview: boolean,
+    imageUrl: string | undefined
   ) => {
+    //////////////////////////////
     if (!file) return;
     const { url } = getURLFileIco(file as File);
-    const headerMime = file.type ? file.type.split("/")[0] : "octet";
-    setIsImage(headerMime === "image");
 
     setUrl(url);
 
-    if (preview && valid && headerMime === "image") {
-      const response = await readImagePromise(file);
-      if (response) {
-        const cutt = await resizeImage(response);
+    if (imageUrl) {
+      setIsImage(true);
+      setImageSource(imageUrl);
+      return;
+    } else {
+      const headerMime = file.type ? file.type.split("/")[0] : "octet";
+      setIsImage(headerMime === "image");
+      if (preview && valid && headerMime === "image") {
+        const response = await readImagePromise(file);
+        if (response) {
+          const cutt = await resizeImage(response);
 
-        setImageSource(cutt as string);
-      } else {
-        setImageSource(undefined);
+          setImageSource(cutt as string);
+        } else {
+          setImageSource(undefined);
+        }
       }
     }
+    //////////////////////////////
   };
 
   const handleDelete = (): void => {
@@ -86,69 +98,67 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     if (imageSource && file) {
       if (hd) {
         const response = await readImagePromise(file);
-        onSee?.(response);
+        onSee?.(response || "");
       } else {
         onSee?.(imageSource);
       }
     }
   };
   function handleClick<T extends HTMLDivElement>(
-    e: React.MouseEvent<T, MouseEvent>,
+    e: React.MouseEvent<T, MouseEvent>
   ): void {
     //avoid children to trigger onClick ripple from parent
     e.stopPropagation();
   }
+  if (file && typeof file.name == "string") {
+    return (
+      <div className="dz-ui-file-item-container" onClick={handleClick}>
+        <div className={`file-item-full-container-container`} style={style}>
+          <Paper
+            className={`file-item-icon-container ${showInfo ? " hide" : ""}`}
+          >
+            <FileItemImage
+              imageSource={imageSource}
+              url={url}
+              fileName={file.name}
+            />
+            <FileItemMainLayer
+              showInfo={showInfo}
+              //fileNamePosition={fileName}
+              fileName={file.name}
+              onDelete={handleDelete}
+              onOpenImage={onSee && preview ? handleOpenImage : undefined}
+              onOpenInfo={handleOpenInfo}
+              info={info || false}
+              valid={valid || false}
+              isImage={isImage}
+              sizeFormatted={sizeFormatted}
+              //fileNamePosition={undefined}
+              uploadStatus={uploadStatus}
+              localization={localization}
+              onlyImage={onlyImage}
+            />
 
-  return (
-    <Fragment>
-      {file && (
-        <div className="dz-ui-file-item-container" onClick={handleClick}>
-          <div className={`file-item-full-container-container`} style={style}>
-            <Paper
-              className={`file-item-icon-container ${showInfo ? " hide" : ""}`}
-            >
-              <FileItemImage
-                imageSource={imageSource}
-                url={url}
-                fileName={file.name}
-              />
-              <FileItemMainLayer
-                showInfo={showInfo}
-                //fileNamePosition={fileName}
-                fileName={file.name}
-                onDelete={handleDelete}
-                onOpenImage={onSee && preview ? handleOpenImage : undefined}
-                onOpenInfo={handleOpenInfo}
-                info={info || false}
-                valid={valid || false}
-                isImage={isImage}
-                sizeFormatted={sizeFormatted}
-                //fileNamePosition={undefined}
-                uploadStatus={uploadStatus}
-                localization={localization}
-                onlyImage={onlyImage}
-              />
-
-              <FileItemFullInfoLayer
-                showInfo={showInfo}
-                fileName={file.name}
-                fileSize={fileSizeFormater(file.size)}
-                fileType={file.type}
-                valid={valid || false}
-                onClose={handleCloseInfo}
-                uploadStatus={uploadStatus}
-                uploadMessage={uploadMessage}
-                localization={localization}
-              />
-            </Paper>
-            {!onlyImage && (
-              <div className="file-item-name">{shrinkWord(file.name)}</div>
-            )}
-          </div>
+            <FileItemFullInfoLayer
+              showInfo={showInfo}
+              errors={errors}
+              fileName={file.name}
+              fileSize={fileSizeFormater(file.size)}
+              fileType={file.type}
+              valid={valid || false}
+              onClose={handleCloseInfo}
+              uploadStatus={uploadStatus}
+              uploadMessage={uploadMessage}
+              localization={localization}
+            />
+          </Paper>
+          {!onlyImage && (
+            <div className="file-item-name">{shrinkWord(file.name)}</div>
+          )}
         </div>
-      )}
-    </Fragment>
-  );
+      </div>
+    );
+  } else return <Fragment></Fragment>;
 };
 export default FileItem;
 

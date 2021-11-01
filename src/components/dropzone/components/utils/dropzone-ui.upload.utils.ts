@@ -1,13 +1,13 @@
 import axios from "axios";
 import { DropzoneProps } from "../Dropzone/DropzoneProps";
-import { FileValidated } from "./validation.utils";
+import { FileValidated, UPLOADSTATUS } from "./validation.utils";
 
 export const uploadPromiseAxios = async (
     file: FileValidated,
     url: string,
     method: DropzoneProps["method"],
     config: any
-): Promise<FileValidated> => {
+): Promise<UploadPromiseAxiosResponse> => {
     return new Promise(async (resolve, reject) => {
 
         try {
@@ -27,24 +27,96 @@ export const uploadPromiseAxios = async (
                 case "POST": response = await axios.post(url, formData, configParams); break;
                 case "PATCH": response = await axios.patch(url, formData, configParams); break;
                 case "PUT": response = await axios.put(url, formData, configParams); break;
-                default: response = await axios.post(url, formData, configParams);
+                default:
+                    response = await axios.post(url, formData, configParams);
             }
-            console.log("uploadValidFiles individual", response);
+
+            //console.log("uploadValidFiles individual", response);
             if (!response || !response.data) {
-                resolve({ ...file, uploadMessage: "unexpectd error", uploadStatus: "error" });
+                // there was a problem on uploading, normally a connexion problem
+                resolve(
+                    {
+                        uploadedFile:
+                        {
+                            ...file, uploadMessage: "Connection error",
+                            uploadStatus: UPLOADSTATUS.error
+                        },
+                        serverResponse:
+                        {
+                            id: file.id,
+                            serverResponse: {}
+                        }
+                    }
+                );
             }
-            if (response.data.status) {
-                console.log("uploadValidFiles individual", response.data);
-                resolve({ ...file, uploadMessage: response.data.message, uploadStatus: "success" });
+            const responseDui: DropzoneUIResponse = response.data as DropzoneUIResponse;
+
+            if (responseDui.status) {
+                // status is true
+                resolve(
+                    {
+                        uploadedFile:
+                        {
+                            ...file,
+                            uploadMessage: responseDui.message,
+                            uploadStatus: UPLOADSTATUS.success
+                        },
+                        serverResponse:
+                        {
+                            id: file.id,
+                            serverResponse: responseDui
+                        }
+                    }
+                );
             } else {
-                resolve({ ...file, uploadMessage: response.data.message, uploadStatus: "error" });
+                // status is false
+                resolve(
+                    {
+                        uploadedFile:
+                        {
+                            ...file,
+                            uploadMessage: responseDui.message,
+                            uploadStatus: UPLOADSTATUS.error
+                        },
+                        serverResponse: {
+                            id: file.id,
+                            serverResponse: responseDui
+                        }
+                    }
+                );
             }
         } catch (error) {
-            resolve({ ...file, uploadMessage: "unexpectd error", uploadStatus: "error" });
+            // on error
+            resolve(
+                {
+                    uploadedFile:
+                    {
+                        ...file,
+                        uploadMessage: "Unexpected error",
+                        uploadStatus: UPLOADSTATUS.error
+                    },
+                    serverResponse: {
+                        id: file.id,
+                        serverResponse: {}
+                    }
+                }
+            );
         }
     });
 };
-
+export interface UploadPromiseAxiosResponse {
+    serverResponse: FileDuiResponse;
+    uploadedFile: FileValidated;
+}
+export interface FileDuiResponse {
+    id: number | string | undefined;
+    serverResponse: DropzoneUIResponse | {};
+}
+export interface DropzoneUIResponse {
+    status: boolean;
+    message: string;
+    payload: any;
+}
 
 /// queue
 /**

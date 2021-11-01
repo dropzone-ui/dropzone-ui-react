@@ -8,6 +8,8 @@ import {
   FileValidator,
   validateFile,
 } from "../dropzone/components/utils/validation.utils";
+import { LocalLabels } from "../../localization/localization";
+import { ValidateErrorLocalizerSelector } from "../../localization";
 
 const InputButton: React.FC<InputButtonProps> = (props: InputButtonProps) => {
   let {
@@ -22,7 +24,7 @@ const InputButton: React.FC<InputButtonProps> = (props: InputButtonProps) => {
     style,
     textColor,
     validator,
-    variant,
+    variant,localization
   } = mergeProps(props, InputButtonDefaultProps);
   const inputRef = useRef<HTMLInputElement>(null);
   const localValidator: FileValidator = {
@@ -30,7 +32,8 @@ const InputButton: React.FC<InputButtonProps> = (props: InputButtonProps) => {
     //accept: accept,
     maxFileSize: maxFileSize,
   };
-
+  const ValidationErrorLocalizer: LocalLabels =
+  ValidateErrorLocalizerSelector(localization);
   const handleOnChange: React.ChangeEventHandler<HTMLInputElement> = (
     evt: React.ChangeEvent<HTMLInputElement>,
   ): void => {
@@ -41,7 +44,7 @@ const InputButton: React.FC<InputButtonProps> = (props: InputButtonProps) => {
       for (let i = 0, f: File; (f = files[i]); i++) {
         let validatedFile: FileValidated = validator
           ? customValidateFile(f, validator)
-          : validateFile(f, localValidator);
+          : validateFile(f, localValidator, ValidationErrorLocalizer);
         output.push(validatedFile);
       }
     }
