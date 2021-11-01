@@ -101,7 +101,7 @@ Bellow, there is an example built in [Express.js](https://www.npmjs.com/package/
 
 The complete code can be found [here](https://github.com/dropzone-ui/file-upload-server-side).
 
-<a href="https://github.com/dropzone-ui/file-upload-server-side/tree/main/expressjs">
+<a href="https://github.com/dropzone-ui/file-upload-server-side">
 <img src="https://i.cloudup.com/zfY6lL7eFa-300x300.png" width="120px" height="35px" alt="server"/>
 </a>
 
