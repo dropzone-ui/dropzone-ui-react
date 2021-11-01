@@ -43,7 +43,7 @@ Did you like the project? Don't forget to give us a :star: star on :octocat: [gi
 
 @dropzone-ui/react is available as an [npm package](https://www.npmjs.com/package/@dropzone-ui/react).
 
-For uploading files, peer dependency [axios](https://www.npmjs.com/package/axios) must be also installed together work with `dropzone-ui`.
+For uploading files, peer dependency [axios](https://www.npmjs.com/package/axios) must be also installed together with `dropzone-ui`.
 
 ```sh
 // with npm
