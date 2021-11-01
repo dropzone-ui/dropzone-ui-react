@@ -1,10 +1,16 @@
+import { LocalLabels } from "../../../../localization/localization";
+export declare enum UPLOADSTATUS {
+    uploading = "uploading",
+    success = "success",
+    error = "error"
+}
 export interface FileValidated {
     file: File;
     valid: boolean;
-    id: number;
+    id: number | string | undefined;
     errors?: string[];
     uploadMessage?: string;
-    uploadStatus?: undefined | "uploading" | "success" | "error";
+    uploadStatus?: undefined | UPLOADSTATUS;
 }
 export interface FileValidator {
     maxFileSize?: number;
@@ -30,7 +36,11 @@ export declare const validateAccept: (accept: string[], file: File) => boolean;
  * @param validator the validator object
  * @returns a FileValidated object
  */
-export declare const validateFile: (file: File, validator: FileValidator) => FileValidated;
+export declare const validateFile: (file: File, validator: FileValidator, localErrors: LocalLabels) => FileValidated;
+export interface CustomValidateFileResponse {
+    valid: boolean;
+    errors?: string[];
+}
 /**
  * Function that validate whether  afile is valid or not
  * according to the Filevalidator properties
@@ -38,8 +48,25 @@ export declare const validateFile: (file: File, validator: FileValidator) => Fil
  * @param validator
  * @returns
  */
-export declare const customValidateFile: (file: File, validator: (f: File) => boolean) => FileValidated;
+export declare const customValidateFile: (file: File, validator: (f: File) => CustomValidateFileResponse) => FileValidated;
+/**
+ * An id generaor
+ */
 export declare abstract class FileIdGenerator {
     static nextId: number;
+    /**
+     * INcreases the id conter and returns the next id available.
+     * @returns the next integer id available
+     */
     static getNextId(): number;
 }
+/**
+ * Make a validated file that is ready to use on FileItem component,
+ * if valid is not set, a random operation will decide whether the file is valid or not
+ * @param file The file
+ * @param valid true if it is a valid file, otherwise is false
+ * @param uploadStatus the current upload status. If not given a random upload status will be set
+ * @param uploadMessage the upload message after uploading
+ * @returns a Vaidated File object
+ */
+export declare const makeSynthticFileValidate: (file: File, valid?: boolean, uploadStatus?: UPLOADSTATUS, uploadMessage?: string) => FileValidated;

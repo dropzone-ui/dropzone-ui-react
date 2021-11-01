@@ -1,13 +1,13 @@
 import { OverridableProps } from "@unlimited-react-components/kernel";
 import { Localization } from "../../../../localization/localization";
 import { FileItemContainerProps } from "../../../file-item/components/FileItemContainer/FileItemContainerProps";
-import { FileValidated } from "../utils/validation.utils";
+import { FileDuiResponse } from "../utils/dropzone-ui.upload.utils";
+import { CustomValidateFileResponse, FileValidated } from "../utils/validation.utils";
 export interface DropzoneProps extends OverridableProps {
     /**
-     * What to do when Drop event is triggered
-     * In most cases is to retrieve the list of files validated
+     * This event is triggered when files are dropped or selected. Returns as first parameter the list of FileValidate files dropped or selected.
      */
-    onDrop?: Function;
+    onDrop?: (filesDropped: FileValidated[]) => void;
     /**
      * Upload Url or endpoint
      */
@@ -76,7 +76,7 @@ export interface DropzoneProps extends OverridableProps {
      * must be a function that recieves as first parameter a File Object
      * and must return a boolean value
      */
-    validator?: (f: File) => boolean;
+    validator?: (f: File) => CustomValidateFileResponse;
     /**
      * The current number of valid files
      */
@@ -115,16 +115,39 @@ export interface DropzoneProps extends OverridableProps {
      */
     value?: FileValidated[];
     /**
-     * In both cases of uploading (onDropUpload, or with clicking upload button)
-     * This event is the result one by one of the uploading process
+     * This event is triggered when upload process starts
+     * also returns the list of files that will be uploaded,
+     * Unlike Onchange, onUploadStart will only return a list of files thta are candidates to be uploaded,
+     * in case they are valid or upload status is "error"
      */
-    onUploading?: (files: FileValidated[]) => void;
+    onUploadStart?: (files: FileValidated[]) => void;
+    /**
+    * This event returns as first aparameter the list of responses for each file following the structure:
+    * responses = [
+    *  {id: <the file id>, serverResponse: the server response}
+    * ]
+    */
+    onUploadFinish?: (responses: FileDuiResponse[]) => void;
     /**
      * A message to show in the footer when the uploading process happens
      */
     uploadingMessage?: string;
     /**
-     * The onChange Event occurs when the value is changed
+     * Probably one of the most important methods.
+     * Onchange returns as first parameter the list of validated files,
+     * following the structure:
+     * file =
+     *  {
+     *      file: File;
+     *      valid: boolean;
+     *      id: number | string | undefined;
+     *      errors?: string[];
+     *      uploadMessage?: string;
+     *      uploadStatus?: undefined | "uploading", success, error;
+     *  }
+     *
+     * This event is also triggered when upload starts and when upload
+     * finishes for each file in order to update the props on very FIleItem
      */
     onChange?: (files: FileValidated[]) => void;
     /**
@@ -143,7 +166,7 @@ export interface DropzoneProps extends OverridableProps {
     /**
     * language to be used
     * for now
-    * only English, French and Spanish are supported
+    * only English, French , Portuguese and Spanish are supported
     */
     localization?: Localization;
 }

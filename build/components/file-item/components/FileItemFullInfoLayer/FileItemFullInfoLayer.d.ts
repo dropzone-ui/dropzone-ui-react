@@ -17,4 +17,5 @@ export interface FileItemFullInfoLayerProps {
      * only English and Spanish is supported
      */
     localization?: Localization;
+    errors?: string[];
 }

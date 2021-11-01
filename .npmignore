@@ -1,6 +1,6 @@
 .github
 .storybook
-example
+examples
 node_modules
 storybook-static
 src

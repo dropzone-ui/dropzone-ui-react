@@ -31,4 +31,4 @@ export declare const getExt: (fileName: string) => string;
  * @param word
  * @returns
  */
-export declare const shrinkWord: (word: string) => string;
+export declare const shrinkWord: (word?: string) => string;
