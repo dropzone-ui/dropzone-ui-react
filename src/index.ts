@@ -1,13 +1,13 @@
-import { createPDF, createWord, createListOfMultiTypeFile } from "./utils/files.utils";
+import { createPDF, createWord, createListOfMultiTypeFile, createSyntheticFile } from "./utils/files.utils";
 import { makeSynthticFileValidate } from "./components/dropzone/components/utils/validation.utils";
 
-import { UploadPromiseAxiosResponse, FileDuiResponse, DropzoneUIResponse } from "./components/dropzone/components/utils/dropzone-ui.upload.utils";
-import { FileValidated, UPLOADSTATUS } from "./components/dropzone/components/utils/validation.utils";
-export type UploadPromiseAxiosResponseType = UploadPromiseAxiosResponse;
-export type FileDuiResponseType = FileDuiResponse;
-export type DropzoneUIResponseType = DropzoneUIResponse;
-export type FileValidatedType = FileValidated;
-export { createPDF, createWord, createListOfMultiTypeFile, makeSynthticFileValidate, UPLOADSTATUS };
+import { UploadPromiseAxiosResponse as UploadPromiseAxiosResponseType, FileDuiResponse as FileDuiResponseType, DropzoneUIResponse as DropzoneUIResponseType } from "./components/dropzone/components/utils/dropzone-ui.upload.utils";
+import { FileValidated as FileValidatedType, UPLOADSTATUS } from "./components/dropzone/components/utils/validation.utils";
+export type UploadPromiseAxiosResponse = UploadPromiseAxiosResponseType;
+export type FileDuiResponse = FileDuiResponseType;
+export type DropzoneUIResponse = DropzoneUIResponseType;
+export type FileValidated = FileValidatedType;
+export { createPDF, createWord, createListOfMultiTypeFile, createSyntheticFile, makeSynthticFileValidate, UPLOADSTATUS };
 
 export { default as Dropzone } from "./components/dropzone/components/Dropzone/Dropzone";
 export * from "./components/dropzone/components/Dropzone/Dropzone";
