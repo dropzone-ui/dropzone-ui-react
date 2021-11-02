@@ -76,6 +76,7 @@ ReactDOM.render(<App />, document.querySelector("#app"));
 ```
 
 Yes, it's really all you need to get started as you can see in these live and interactive demos:
+
 | Name | Codesandbox link |
 |-|-|
 |Dropzone Basic example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/basic-3j01v?file=/src/index.js)|
@@ -86,6 +87,7 @@ Yes, it's really all you need to get started as you can see in these live and in
 |`localización`: multilanguage example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/localization-6ew1i?file=/src/App.js)|
 |File Item `imageUrl` and synthetic files|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/imageurl-to-fileitem-m4801?file=/src/App.js)|
 |Default previews extensive list|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/defautl-preview-extensive-list-hrwm5?file=/src/App.js)|
+
 # Uploading
 
 Dropzone-ui provides a way to upload files to a server. In case you want to make your own upload function, you can take the files that Dropzone `onChange` event returns.
@@ -157,11 +159,11 @@ Dropzone-ui is available in different languages. So far, we only support `Englis
 
 # Dropzone UI react Components API
 
-- [\<Dropzone/>](#dropzone-api)
-- [\<FileItem />](#fileitem-api)
-- [\<FullScreenPreview />](#fullscreenpreview-api)
-- [\<FileItemContainer />](#fileitemcontainer-api)
-- [\<InputButton />](#inputbutton-api)
+- [\< Dropzone />](#dropzone-api)
+- [\< FileItem />](#fileitem-api)
+- [\< FullScreenPreview />](#fullscreenpreview-api)
+- [\< FileItemContainer />](#fileitemcontainer-api)
+- [\< InputButton />](#inputbutton-api)
 - [Special Types](#special-types-api)
 
 ## Dropzone API
