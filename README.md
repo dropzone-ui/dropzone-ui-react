@@ -19,7 +19,7 @@
 [![dependencies Status](https://status.david-dm.org/gh/dropzone-ui/react.svg)](https://david-dm.org/dropzone-ui/react)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/dropzone-ui/react.svg)](http://isitmaintained.com/project/dropzone-ui/react)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-![GitHub Repo stars](https://img.shields.io/github/stars/dropzone-ui/react?label=Star%20the%20repo&style=social)
+[![GitHub Repo stars](https://img.shields.io/github/stars/dropzone-ui/react?label=Star%20me%20:D&style=social)](https://github.com/dropzone-ui/react)
 
 [React](https://reactjs.org/) set of components for a complete file upload management with image previews on user inteface. There already exists some very good libraries; However, **inspired** in those ones, there was created something **new** and **more powerful**. Google's Material design principles were also considered in development. Indeed, icons come from [Material design icons](https://fonts.google.com/icons).
 
