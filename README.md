@@ -36,11 +36,11 @@ Did you like the project? Please don't forget to give us a :star: star on :octoc
 
 - :books: [\<Full Documentation\>](#dropzone-ui-react-components-api)
 
-- :performing_arts: [\<Examples and use cases\>](https://www.npmjs.com/package/@dropzone-ui/react#Usage-and-examples)
+- :performing_arts: [\<Examples and use cases\>](#Usage-and-examples)
 
-- :computer: [\<Server side implementation/>](https://www.npmjs.com/package/@dropzone-ui/react#uploading)
+- :computer: [\<Server side implementation/>](#uploading)
 
-- :earth_americas: [\<Localization\>](https://www.npmjs.com/package/@dropzone-ui/react#localization)
+- :earth_americas: [\<Localization\>](#localization)
 
 ## Installation
 
@@ -85,16 +85,16 @@ ReactDOM.render(<App />, document.querySelector("#app"));
 
 Yes, it's really all you need to get started as you can see in these live and interactive demos:
 
-| Name | Codesandbox link |
-|-|-|
-|Dropzone Basic example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/basic-3j01v?file=/src/index.js)|
-|Dropzone Complete example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/complete-946hz?file=/src/index.js)|
-|File item props|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/fileitem-props-o0w5x)|
-|FileItem with no image preview|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/dropzone-ui-file-item-with-no-image-preview-14i2m) |
-|InputFileButton & FileItemContainer|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/inputbutton-example-poqsn?file=/src/App.js)|
-|`localización`: multilanguage example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/localization-6ew1i?file=/src/App.js)|
-|File Item `imageUrl` and synthetic files|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/imageurl-to-fileitem-m4801?file=/src/App.js)|
-|Default previews extensive list|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/defautl-preview-extensive-list-hrwm5?file=/src/App.js)|
+| Name                                     | Codesandbox link                                                                                                                                         |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dropzone Basic example                   | [![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/basic-3j01v?file=/src/index.js)                        |
+| Dropzone Complete example                | [![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/complete-946hz?file=/src/index.js)                     |
+| File item props                          | [![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/fileitem-props-o0w5x)                                  |
+| FileItem with no image preview           | [![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/dropzone-ui-file-item-with-no-image-preview-14i2m)     |
+| InputFileButton & FileItemContainer      | [![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/inputbutton-example-poqsn?file=/src/App.js)            |
+| `localización`: multilanguage example    | [![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/localization-6ew1i?file=/src/App.js)                   |
+| File Item `imageUrl` and synthetic files | [![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/imageurl-to-fileitem-m4801?file=/src/App.js)           |
+| Default previews extensive list          | [![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/defautl-preview-extensive-list-hrwm5?file=/src/App.js) |
 
 # Uploading
 
