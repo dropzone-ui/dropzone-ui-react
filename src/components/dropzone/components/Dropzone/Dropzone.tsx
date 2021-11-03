@@ -65,7 +65,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     fakeUploading,
     localization,
   } = mergeProps(props, DropzonePropsDefault);
-
+  //localizers
   const DropzoneLocalizer: LocalLabels =
     DropzoneLocalizerSelector(localization);
   const ValidationErrorLocalizer: LocalLabels =

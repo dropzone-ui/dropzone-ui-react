@@ -13,7 +13,6 @@ export interface FileValidated {
     errors?: string[];
     uploadMessage?: string;
     uploadStatus?: undefined | UPLOADSTATUS;
-    // messageKey?:string | ""
 }
 export interface FileValidator {
     maxFileSize?: number;
@@ -82,7 +81,7 @@ export const validateAccept = (accept: string[], file: File): boolean => {
  */
 export const validateFile = (
     file: File,
-    validator: FileValidator, 
+    validator: FileValidator,
     localErrors: LocalLabels
 ): FileValidated => {
 
@@ -118,23 +117,23 @@ export interface CustomValidateFileResponse {
     errors?: string[]
 }
 /**
- * Function that validate whether  afile is valid or not
+ * Function that validates a file
  * according to the Filevalidator properties
  * @param file 
  * @param validator 
- * @returns 
+ * @returns a CustomValidateFileResponse objectthaat contains 2 fields: list of errors and boolean value "valid"
  */
 export const customValidateFile = (
-    file: File, 
+    file: File,
     validator: (f: File) => CustomValidateFileResponse
-    ): FileValidated => {
-    const idGenerated = FileIdGenerator.getNextId();
+): FileValidated => {
+    const id = FileIdGenerator.getNextId();
     const { valid, errors } = validator(file);
     let fileResult: FileValidated = {
-        id: idGenerated,
-        file: file,
-        valid: valid,
-        errors: errors
+        id,
+        file,
+        valid,
+        errors
     };
     // logic here
     return fileResult;
@@ -146,7 +145,7 @@ export const customValidateFile = (
 export abstract class FileIdGenerator {
     static nextId = 0;
     /**
-     * INcreases the id conter and returns the next id available.
+     * Increases the id conter and returns the next id available.
      * @returns the next integer id available
      */
     static getNextId(): number {
@@ -182,9 +181,12 @@ const getRandomUploadStatus = (): UPLOADSTATUS | undefined => {
             return undefined;
     }
 }
+
 /**
- * Make a validated file that is ready to use on FileItem component,
+ * Make a validated file that is ready to be used on FileItem component,
  * if valid is not set, a random operation will decide whether the file is valid or not
+ * If valid is false, then the natural order is not to be uploadable and wont have upload message nor upload status
+ * If valid is true, then file can be uploaded and can have upload message if the status is succes or error
  * @param file The file
  * @param valid true if it is a valid file, otherwise is false
  * @param uploadStatus the current upload status. If not given a random upload status will be set
@@ -197,14 +199,39 @@ export const makeSynthticFileValidate = (
     uploadStatus?: UPLOADSTATUS,
     uploadMessage?: string
 ): FileValidated => {
-    const newUpoadStatus = uploadStatus || getRandomUploadStatus();
-    const newUploadMessage = uploadMessage || newUpoadStatus ? "A bit large upload Message" : undefined;
+    //if valid, naturally, can be uploaded
+    let errors: string[] = [];
+    let newUpoadStatus = uploadStatus || getRandomUploadStatus();
+
+    let customUploadMessage: string = uploadMessage || "";
+    if (valid) {
+        //we can decide according to upload status 
+        if (!uploadMessage) {
+            switch (newUpoadStatus) {
+                case UPLOADSTATUS.error: customUploadMessage = "A message when upload failed"; break;
+                case UPLOADSTATUS.uploading: customUploadMessage = "A message when successfuly upload"; break;
+                case UPLOADSTATUS.success: customUploadMessage = undefined; break;
+                default: uploadMessage = undefined;
+            }
+        }
+        errors = undefined;
+    } else {
+        //if not valid, just show error messages
+        const randInt: number = getRandomInt(0, 3);
+        errors.push(listOfErrors[randInt]);
+        newUpoadStatus = undefined;
+        customUploadMessage = undefined;
+    }
     return {
         id: FileIdGenerator.getNextId(),
-        valid: valid,
+        valid,
         file,
         uploadStatus: newUpoadStatus,
-        uploadMessage: newUploadMessage
+        uploadMessage: customUploadMessage,
+        errors
     }
 }
-
+/**
+ * list of dumy errors in english
+ */
+export const listOfErrors: string[] = ["File is too big. Max file size allowed is 80mb.", "File's type is not allowed", "Max amount of files (28) has been reached"];

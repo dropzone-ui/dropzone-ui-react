@@ -122,10 +122,9 @@
         //margin: -7px 0 0 0;
         padding: 0 5px;
         font-weight: 399;
-     // text-align: center;
+        // text-align: center;
 
         .sub-label {
-          
           font-weight: 600;
         }
         &.success {
@@ -135,7 +134,7 @@
           border-radius: 4px;
         }
         &.error {
-          background-color: rgb(134, 41, 41);
+          background-color: rgb(179, 50, 50);
           border: 1px dashed red;
           margin: 0 2px;
           border-radius: 4px;
@@ -151,7 +150,7 @@
       }
       .mime {
         //display: none;
-      //text-align: left;
+        //text-align: left;
 
         padding: 0 5px;
         font-weight: 399;

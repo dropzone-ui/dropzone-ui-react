@@ -84,6 +84,7 @@ ReactDOM.render(<App />, document.querySelector("#app"));
 ```
 
 Yes, it's really all you need to get started as you can see in these live and interactive demos:
+
 | Name | Codesandbox link |
 |-|-|
 |Dropzone Basic example|[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/basic-3j01v?file=/src/index.js)|
@@ -167,11 +168,11 @@ Dropzone-ui is available in different languages. So far, we only support `Englis
 
 # Dropzone UI react Components API
 
-- [\<Dropzone/>](#dropzone-api)
-- [\<FileItem />](#fileitem-api)
-- [\<FullScreenPreview />](#fullscreenpreview-api)
-- [\<FileItemContainer />](#fileitemcontainer-api)
-- [\<InputButton />](#inputbutton-api)
+- [\< Dropzone />](#dropzone-api)
+- [\< FileItem />](#fileitem-api)
+- [\< FullScreenPreview />](#fullscreenpreview-api)
+- [\< FileItemContainer />](#fileitemcontainer-api)
+- [\< InputButton />](#inputbutton-api)
 - [Special Types](#special-types-api)
 
 ## Dropzone API

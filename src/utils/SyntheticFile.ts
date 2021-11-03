@@ -11,15 +11,15 @@ export abstract class SyntheticFile {
  * @param type the file type
  * @returns 
  */
-static createFile = (name: string, size: number, type: string) => {
-    const file = new File([], name, { type });
-    Object.defineProperty(file, "size", {
-        get() {
-            return size;
-        },
-    });
-    return file;
-};
+    static createFile = (name: string, size: number, type: string) => {
+        const file = new File([], name, { type });
+        Object.defineProperty(file, "size", {
+            get() {
+                return size;
+            },
+        });
+        return file;
+    };
     /**
     * 
     * @param size the file size
@@ -265,7 +265,7 @@ static createFile = (name: string, size: number, type: string) => {
     * @param size the file size
     * @returns a syntetic File object instance
     */
-     static create_x_mid = (size?: number): File => {
+    static create_x_mid = (size?: number): File => {
         return SyntheticFile.createFile("test-file-with-large-name.mid", size ? size : 3516516, "audio/x-midi");
     }
     /**
@@ -281,7 +281,7 @@ static createFile = (name: string, size: number, type: string) => {
     * @param size the file size
     * @returns a syntetic File object instance
     */
-     static create_x_midi = (size?: number): File => {
+    static create_x_midi = (size?: number): File => {
         return SyntheticFile.createFile("test-file-with-large-name.midi", size ? size : 3516516, "audio/x-midi");
     }
     /**
@@ -521,7 +521,7 @@ static createFile = (name: string, size: number, type: string) => {
     * @param size the file size
     * @returns a syntetic File object instance
     */
-     static create_typescript = (size?: number): File => {
+    static create_typescript = (size?: number): File => {
         return SyntheticFile.createFile("typescript-file-with-large-name.ts", size ? size : 3516516, "text/plain");
     }
     /**
@@ -617,7 +617,7 @@ static createFile = (name: string, size: number, type: string) => {
     * @param size the file size
     * @returns a syntetic File object instance
     */
-     static create_xml_txt = (size?: number): File => {
+    static create_xml_txt = (size?: number): File => {
         return SyntheticFile.createFile("xml_plain_text-file-with-large-name.xml", size ? size : 3516516, "application/xml");
     }
     /**
