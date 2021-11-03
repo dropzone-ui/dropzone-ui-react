@@ -130,13 +130,17 @@
         &.success {
           border: 1px dashed rgb(126, 218, 126);
           background-color: #3e6e3e;
-          margin: 0 2px;
+          //margin: 0 2px;
+          font-size: 0.7rem;
+
           border-radius: 4px;
         }
         &.error {
-          background-color: rgb(179, 50, 50);
+          background-color: rgb(218, 126, 126);
           border: 1px dashed red;
-          margin: 0 2px;
+          font-size: 0.7rem;
+
+          //margin: 0 2px;
           border-radius: 4px;
         }
       }
