@@ -208,9 +208,8 @@ export const makeSynthticFileValidate = (
         //we can decide according to upload status 
         if (!uploadMessage) {
             switch (newUpoadStatus) {
-                case UPLOADSTATUS.error: customUploadMessage = "A message when upload failed"; break;
-                case UPLOADSTATUS.uploading: customUploadMessage = "A message when successfuly upload"; break;
-                case UPLOADSTATUS.success: customUploadMessage = undefined; break;
+                case UPLOADSTATUS.error: customUploadMessage = "Upload failed. There was an error"; break;
+                case UPLOADSTATUS.success: customUploadMessage = "File was successfully upload"; break;
                 default: uploadMessage = undefined;
             }
         }
