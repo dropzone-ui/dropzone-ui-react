@@ -15,6 +15,18 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
+- Translation support for `Russian` :ru: and also simplified and traditional `Chinese` :cn: .
+- File Item component can show image directly from url.
+- Minor bugs on Dropzone useStyle hook fixed.
+
+
+
+<a name="3.0.1"></a>
+
+## [3.0.1](https://github.com/dropzone-ui/dropzone-ui/compare/v2.8.1...v3.0.1) (2021-10-11)
+
+### Features
+
 - Translation support for `Portuguese`.
 <a name="2.8.1"></a>
 

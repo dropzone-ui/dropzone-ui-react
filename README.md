@@ -157,7 +157,7 @@ app.post("/upload-my-file", async (req, res) => {
 
 # Localization
 
-Dropzone-ui is available in different languages. So far, we only support `English`, `Spanish`, `French` and `Portuguese`. In next releases this list will be increased.:cn:
+Dropzone-ui is available in different languages. So far, we only support `English`, `Spanish`, `French` and `Portuguese`. In next releases this list will be increased.
 
 | Language                                 | Code    | Example                |
 | ---------------------------------------- | ------- | ---------------------- |
