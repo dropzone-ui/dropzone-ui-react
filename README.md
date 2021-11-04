@@ -165,6 +165,7 @@ Dropzone-ui is available in different languages. So far, we only support `Englis
 | Spanish :peru: :mexico: :argentina: | `ES-es` | localization="`ES-es`" |
 | Fench :fr:                          | `FR-fr` | localization="`FR-fr`" |
 | Portuguese :brazil: :portugal:      | `PT-pt` | localization="`PT-pt`" |
+| Russian :ru:                        | `RU-ru` | localization="`RU-ru`" |
 
 # Dropzone UI react Components API
 
