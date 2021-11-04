@@ -1,13 +1,17 @@
 import { createPDF, createWord, createListOfMultiTypeFile, createSyntheticFile } from "./utils/files.utils";
 import { makeSynthticFileValidate } from "./components/dropzone/components/utils/validation.utils";
 
+import { DropzoneLocalizerSelector, DropzoneLocalizer, DropzoneFrench, DropzoneEnglish, DropzoneSpanish, DropzonePortuguese, DropzoneRussian, DropzoneSimplifiedChinese, DropzoneTraditionalChinese, FileItemLocalizerSelector, FileItemLocalizer, FileItemFrench, FileItemEnglish, FileItemSpanish, FileItemPortuguese, FileItemRussian, FileItemSimplifiedChinese, FileItemTraditionalChinese, ValidateErrorLocalizerSelector, ValidateErrorLocalizer, ValidateErrorFrench, ValidateErrorEnglish, ValidateErrorSpanish, ValidateErrorPortuguese, ValidateErrorRussian, ValidateErrorSimplifiedChinese, ValidateErrorTraditionalChinese} from "./localization";
+
 import { UploadPromiseAxiosResponse as UploadPromiseAxiosResponseType, FileDuiResponse as FileDuiResponseType, DropzoneUIResponse as DropzoneUIResponseType } from "./components/dropzone/components/utils/dropzone-ui.upload.utils";
 import { FileValidated as FileValidatedType, UPLOADSTATUS } from "./components/dropzone/components/utils/validation.utils";
 export type UploadPromiseAxiosResponse = UploadPromiseAxiosResponseType;
 export type FileDuiResponse = FileDuiResponseType;
 export type DropzoneUIResponse = DropzoneUIResponseType;
 export type FileValidated = FileValidatedType;
+
 export { createPDF, createWord, createListOfMultiTypeFile, createSyntheticFile, makeSynthticFileValidate, UPLOADSTATUS };
+export {DropzoneLocalizerSelector, DropzoneLocalizer, DropzoneFrench, DropzoneEnglish, DropzoneSpanish, DropzonePortuguese, DropzoneRussian, DropzoneSimplifiedChinese, DropzoneTraditionalChinese, FileItemLocalizerSelector, FileItemLocalizer, FileItemFrench, FileItemEnglish, FileItemSpanish, FileItemPortuguese, FileItemRussian, FileItemSimplifiedChinese, FileItemTraditionalChinese, ValidateErrorLocalizerSelector, ValidateErrorLocalizer, ValidateErrorFrench, ValidateErrorEnglish, ValidateErrorSpanish, ValidateErrorPortuguese, ValidateErrorRussian, ValidateErrorSimplifiedChinese, ValidateErrorTraditionalChinese, }
 
 export { default as Dropzone } from "./components/dropzone/components/Dropzone/Dropzone";
 export * from "./components/dropzone/components/Dropzone/Dropzone";

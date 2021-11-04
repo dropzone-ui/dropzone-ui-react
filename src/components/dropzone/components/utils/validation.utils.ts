@@ -200,10 +200,10 @@ export const makeSynthticFileValidate = (
     uploadMessage?: string
 ): FileValidated => {
     //if valid, naturally, can be uploaded
-    let errors: string[] = [];
+    let errors: string[]|undefined = [];
     let newUpoadStatus = uploadStatus || getRandomUploadStatus();
 
-    let customUploadMessage: string = uploadMessage || "";
+    let customUploadMessage: string|undefined = uploadMessage || "";
     if (valid) {
         //we can decide according to upload status 
         if (!uploadMessage) {

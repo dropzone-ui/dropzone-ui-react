@@ -157,15 +157,17 @@ app.post("/upload-my-file", async (req, res) => {
 
 # Localization
 
-Dropzone-ui is available in different languages. So far, we only support `English`, `Spanish`, `French` and `Portuguese`. In next releases this list will be increased.
+Dropzone-ui is available in different languages. So far, we only support `English`, `Spanish`, `French` and `Portuguese`. In next releases this list will be increased.:cn:
 
-| Language                            | Code    | Example                |
-| ----------------------------------- | ------- | ---------------------- |
-| English :us: :uk:                   | `EN-en` | localization="`EN-en`" |
+| Language                                 | Code    | Example                |
+| ---------------------------------------- | ------- | ---------------------- |
+| English :us: :uk:                        | `EN-en` | localization="`EN-en`" |
 | Spanish :peru: :mexico: :argentina: :es: | `ES-es` | localization="`ES-es`" |
-| Fench :fr:                          | `FR-fr` | localization="`FR-fr`" |
-| Portuguese :brazil: :portugal:      | `PT-pt` | localization="`PT-pt`" |
-| Russian :ru:                        | `RU-ru` | localization="`RU-ru`" |
+| Fench :fr:                               | `FR-fr` | localization="`FR-fr`" |
+| Portuguese :brazil: :portugal:           | `PT-pt` | localization="`PT-pt`" |
+| Russian :ru:                             | `RU-ru` | localization="`RU-ru`" |
+| Chinese(simplified) :cn:                 | `ZH-cn` | localization="`ZH-cn`" |
+| Chinese(traditional) :cn:                | `ZH-hk` | localization="`ZH-hk`" |
 
 # Dropzone UI react Components API
 

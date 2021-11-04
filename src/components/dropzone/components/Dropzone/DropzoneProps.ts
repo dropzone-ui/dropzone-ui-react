@@ -8,7 +8,7 @@ export interface DropzoneProps extends OverridableProps {
   /**
    * This event is triggered when files are dropped or selected. Returns as first parameter the list of FileValidate files dropped or selected.
    */
-  onDrop?: (filesDropped: FileValidated[])=> void;
+  onDrop?: (filesDropped: FileValidated[]) => void;
   /**
    * Upload Url or endpoint
    */
@@ -104,6 +104,18 @@ export interface DropzoneProps extends OverridableProps {
    */
   maxHeight?: string;
   /**
+ * The max height of the container
+ * in string format
+ * by default "500px"
+ * 
+ * examples: 
+ *    "50vh"
+ *    "20%"
+ *    "40em"
+ *    "1rem"
+ */
+  minHeight?: string;
+  /**
    * if true, shows the dropzone footer
    */
   footer?: boolean;
@@ -179,12 +191,13 @@ export const DropzonePropsDefault: DropzoneProps = {
   uploadOnDrop: false,
   maxFiles: 7,
   style: {},
-  backgroundColor: "linear-gradient(to bottom, aliceblue,#b7a8a8)",
+  //backgroundColor: "linear-gradient(to bottom, aliceblue,#b7a8a8)",
   //numberOfValidFiles: 0,
   disableRipple: false,
   clickable: true,
   view: "grid",
   maxHeight: "450px",
+  minHeight:"280px",
   footer: true,
   header: true,
   config:

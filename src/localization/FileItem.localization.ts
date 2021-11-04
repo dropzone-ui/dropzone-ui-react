@@ -1,9 +1,11 @@
-import { FileItemRussian } from "./localization.russian";
+import { FileItemRussian } from "./Russian/localization.russian";
 import { ComponentLocalizer, LocalLabels, Localization } from "./localization";
-import { FileItemEnglish } from "./localization.english";
-import { FileItemFrench } from "./localization.french";
-import { FileItemPortuguese } from "./localization.portuguese";
-import { FileItemSpanish } from "./localization.spanish";
+import { FileItemEnglish } from "./English/localization.english";
+import { FileItemFrench } from "./French/localization.french";
+import { FileItemPortuguese } from "./Portuguese/localization.portuguese";
+import { FileItemSpanish } from "./Spanish/localization.spanish";
+import { FileItemSimplifiedChinese } from "./Chinese-simplified/localization.simplifiedChinese";
+import { FileItemTraditionalChinese } from "./Chinese-traditional/localization.traditionalChinese";
 
 export const FileItemLocalizer: ComponentLocalizer = {
     "ES-es": FileItemSpanish,
@@ -11,6 +13,8 @@ export const FileItemLocalizer: ComponentLocalizer = {
     "FR-fr": FileItemFrench,
     "PT-pt": FileItemPortuguese,
     "RU-ru": FileItemRussian,
+    "ZH-cn": FileItemSimplifiedChinese,
+    "ZH-hk": FileItemTraditionalChinese
 }
 
 /**
@@ -25,6 +29,8 @@ export const FileItemLocalizerSelector = (local: Localization): LocalLabels => {
         case "FR-fr": return FileItemLocalizer["FR-fr"];
         case "PT-pt": return FileItemLocalizer["PT-pt"];
         case "RU-ru": return FileItemLocalizer["RU-ru"];
+        case "ZH-cn": return FileItemLocalizer["ZH-cn"];
+        case "ZH-hk": return FileItemLocalizer["ZH-hk"];
         default: return FileItemLocalizer["EN-en"];
     }
 }

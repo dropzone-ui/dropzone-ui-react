@@ -7,24 +7,32 @@ import { DropzoneProps } from "../Dropzone/DropzoneProps";
  * 
  * @param color The color theme
  * @param backgroundColor the background Color
- * @param maxHeight the max heith for dropzone container
+ * @param maxHeight the max heigth for dropzone container
+ * @param minHeight the min heigth for dropzone container
  * @returns a valid classnname for the component
  */
-const useDropzoneStyles = (color: string | undefined, backgroundColor: string | undefined, maxHeight: string | undefined): string => {
+const useDropzoneStyles = (
+    color: string | undefined,
+    backgroundColor: string | undefined,
+    maxHeight: string | undefined,
+    minHeight: string | undefined
+): string => {
     const [idStyles, setIdStyles] = useState<string>("");
     const [styleInjected, setStyleInjected] = useState<boolean>(false);
     const [classNameCreated, setClassNameCreated] = useState<string>("");
 
     useEffect(() => {
-        const removeStyle = () => {
+       /*  const removeStyle = () => {
             if (styleInjected) {
                 DynamiCSS.removeStyleSheet(idStyles);
                 setStyleInjected(false);
                 setIdStyles("");
             }
-        };
-        const handleInserStyle = async (
-            color: DropzoneProps["color"],
+        }; */
+        const handleInserStyle = (
+            color: DropzoneProps["color"],backgroundColor: string | undefined,
+            maxHeight: string | undefined,
+            minHeight: string | undefined
         ) => {
             let styleSheet: DynamicSheet = {
                 id: "dropzone-ui-styles",
@@ -37,7 +45,8 @@ const useDropzoneStyles = (color: string | undefined, backgroundColor: string | 
                                 1
                             )}`,
                             backgroundColor: backgroundColor,
-                            maxHeight: maxHeight
+                            maxHeight: maxHeight,
+                            minHeight: minHeight
                         },
                     },
                     {
@@ -74,12 +83,12 @@ const useDropzoneStyles = (color: string | undefined, backgroundColor: string | 
         };
 
 
-        handleInserStyle(color);
-        return () => {
+        handleInserStyle(color,backgroundColor, maxHeight,minHeight);
+      /*   return () => {
             removeStyle();
-        }
+        } */
         // eslint-disable-next-line
-    }, [color, backgroundColor, maxHeight]);
+    }, [color, backgroundColor, maxHeight,minHeight]);
 
     return classNameCreated;
 }

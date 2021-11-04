@@ -1,4 +1,4 @@
-import { LocalLabels } from "./localization";
+import { LocalLabels } from "../localization";
 /**
  * Portuguese translation for Dropzone
  */

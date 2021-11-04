@@ -1,5 +1,5 @@
-import { fileSizeFormater } from "../components/file-item/utils";
-import { LocalLabels } from "./localization";
+import { fileSizeFormater } from "../../components/file-item/utils";
+import { LocalLabels } from "../localization";
 
 /**
  * Portuguese translation for Dropzone

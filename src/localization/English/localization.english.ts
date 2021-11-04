@@ -1,6 +1,6 @@
 
-import { fileSizeFormater } from "../components/file-item/utils";
-import { LocalLabels } from "./localization";
+import { fileSizeFormater } from "../../components/file-item/utils";
+import { LocalLabels } from "../localization";
 
 /**
  * English translation for Dropzone component
@@ -9,7 +9,7 @@ export const DropzoneEnglish: LocalLabels = {
     defaultLabel: "Drop your files here",
     uploadingMessage: (amountOfFiles) => { return `Uploading ${amountOfFiles} files`; },
     uploadFinished: (uploaded, rejected) => `Uploaded files: ${uploaded}, Rejected files: ${rejected}`,
-    noFilesMessage: `No valid file is missing for uploading`,
+    noFilesMessage: `There is no missing valid file to upload`,
     footer: {
         acceptAll: `All file types accepted`,
         acceptCustom: (accept) => `Allowed types: ${accept}`
@@ -47,7 +47,7 @@ export const FileItemEnglish: LocalLabels = {
 export const ValidateErrorEnglish: LocalLabels = {
     maxSizeError: (maxSize) =>
         `File is too big. Max file size allowed is ${fileSizeFormater(maxSize as number)}`,
-    acceptError: `File's type is not allowed`,
+    acceptError: `File type is not allowed`,
     maxFileCount: (maxFiles) =>
         `Max amount of files (${maxFiles}) has been reached`
 }
