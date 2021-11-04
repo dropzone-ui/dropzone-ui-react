@@ -4,7 +4,7 @@ import { LocalLabels } from "./localization";
 /**
  * Russian translation for Dropzone component
  */
-export const DropzoneEnglish: LocalLabels = {
+export const DropzoneRussian: LocalLabels = {
     defaultLabel: "Перетащите сюда свои файлы.",
     uploadingMessage: (amountOfFiles) => { return `Выгрузка ${amountOfFiles} файлов`; },
     uploadFinished: (uploaded, rejected) => `Загружено файлов: ${uploaded}, отклоненных файлов: ${rejected}`,
@@ -26,7 +26,7 @@ export const DropzoneEnglish: LocalLabels = {
  * Russian translation for FileItem component
  *
  */
-export const FileItemEnglish: LocalLabels = {
+export const FileItemRussian: LocalLabels = {
     fullInfoLayer: {
         name: `Имя: `,
         size: "Размер: ",
@@ -44,7 +44,7 @@ export const FileItemEnglish: LocalLabels = {
 /**
  * Russian translation for Validation Errors
  */
-export const ValidateErrorEnglish: LocalLabels = {
+export const ValidateErrorRussian: LocalLabels = {
     maxSizeError: (maxSize) =>
         `Файл слишком большой. Максимально допустимый размер файла - ${fileSizeFormater(maxSize as number)}`,
     acceptError: `Тип файла не разрешен`,

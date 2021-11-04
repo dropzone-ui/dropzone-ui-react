@@ -1,3 +1,4 @@
+import { ValidateErrorRussian } from "./localization.russian";
 import { ComponentLocalizer, LocalLabels, Localization } from "./localization";
 import { ValidateErrorEnglish } from "./localization.english";
 import { ValidateErrorFrench } from "./localization.french";
@@ -8,7 +9,8 @@ export const ValidateErrorLocalizer: ComponentLocalizer = {
     "ES-es": ValidateErrorSpanish,
     "EN-en": ValidateErrorEnglish,
     "FR-fr": ValidateErrorFrench,
-    "PT-pt": ValidateErrorPortuguese
+    "PT-pt": ValidateErrorPortuguese,
+    "RU-ru": ValidateErrorRussian,
 }
 /**
  * Secure translation through a selector
@@ -22,6 +24,7 @@ export const ValidateErrorLocalizerSelector = (local: Localization | undefined):
         case "EN-en": return ValidateErrorLocalizer["EN-en"];
         case "FR-fr": return ValidateErrorLocalizer["FR-fr"];
         case "PT-pt": return ValidateErrorLocalizer["PT-pt"];
+        case "RU-ru": return ValidateErrorLocalizer["RU-ru"];
         default: return ValidateErrorLocalizer["EN-en"];
     }
 }

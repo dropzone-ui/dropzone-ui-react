@@ -1,3 +1,4 @@
+import { FileItemRussian } from "./localization.russian";
 import { ComponentLocalizer, LocalLabels, Localization } from "./localization";
 import { FileItemEnglish } from "./localization.english";
 import { FileItemFrench } from "./localization.french";
@@ -8,7 +9,8 @@ export const FileItemLocalizer: ComponentLocalizer = {
     "ES-es": FileItemSpanish,
     "EN-en": FileItemEnglish,
     "FR-fr": FileItemFrench,
-    "PT-pt": FileItemPortuguese
+    "PT-pt": FileItemPortuguese,
+    "RU-ru": FileItemRussian,
 }
 
 /**
@@ -22,6 +24,7 @@ export const FileItemLocalizerSelector = (local: Localization): LocalLabels => {
         case "EN-en": return FileItemLocalizer["EN-en"];
         case "FR-fr": return FileItemLocalizer["FR-fr"];
         case "PT-pt": return FileItemLocalizer["PT-pt"];
+        case "RU-ru": return FileItemLocalizer["RU-ru"];
         default: return FileItemLocalizer["EN-en"];
     }
 }

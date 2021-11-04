@@ -1,4 +1,4 @@
-export type Localization = "EN-en" | "ES-es" | "FR-fr" | "PT-pt";
+export type Localization = "EN-en" | "ES-es" | "FR-fr" | "PT-pt" | "RU-ru";
 
 export type Components =
     "dropzone" |
