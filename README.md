@@ -162,7 +162,7 @@ Dropzone-ui is available in different languages. So far, we only support `Englis
 | Language                            | Code    | Example                |
 | ----------------------------------- | ------- | ---------------------- |
 | English :us: :uk:                   | `EN-en` | localization="`EN-en`" |
-| Spanish :peru: :mexico: :argentina: | `ES-es` | localization="`ES-es`" |
+| Spanish :peru: :mexico: :argentina: :es: | `ES-es` | localization="`ES-es`" |
 | Fench :fr:                          | `FR-fr` | localization="`FR-fr`" |
 | Portuguese :brazil: :portugal:      | `PT-pt` | localization="`PT-pt`" |
 | Russian :ru:                        | `RU-ru` | localization="`RU-ru`" |
