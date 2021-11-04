@@ -221,7 +221,8 @@ export const makeSynthticFileValidate = (
         newUpoadStatus = undefined;
         customUploadMessage = undefined;
     }
-    return {
+    //now make a File Validated instance 
+    const newFileValidated: FileValidated = {
         id: FileIdGenerator.getNextId(),
         valid,
         file,
@@ -229,6 +230,7 @@ export const makeSynthticFileValidate = (
         uploadMessage: customUploadMessage,
         errors
     }
+    return newFileValidated;
 }
 /**
  * list of dumy errors in english
