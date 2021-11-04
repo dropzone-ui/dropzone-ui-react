@@ -15,7 +15,7 @@
 [![install size](https://packagephobia.com/badge?p=@dropzone-ui/react)](https://packagephobia.com/result?p=@dropzone-ui/react)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/dropzone-ui/react.svg)](http://isitmaintained.com/project/dropzone-ui/react)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-![GitHub Repo stars](https://img.shields.io/github/stars/dropzone-ui/react?label=Star%20me%20please%20:D&style=social)
+[![GitHub Repo stars](https://img.shields.io/github/stars/dropzone-ui/react?label=Star%20me%20please%20:D&style=social)](https://github.com/dropzone-ui/react)
 
 The most complete and most powerful [React](https://reactjs.org/) library for managing file uploads.
 
@@ -32,7 +32,7 @@ On `Drag`, `Drop`, `Upload` and full screen `preview`. (also changing view mode 
 
 Did you like the project? Please don't forget to give us a :star: star on :octocat: [github](https://github.com/dropzone-ui/dropzone-ui) :D
 
-## Content
+## Main Content
 
 - :books: [\<Full Documentation\>](#dropzone-ui-react-components-api)
 
