@@ -16,8 +16,8 @@ export const DropzoneTraditionalChinese: LocalLabels = {
     },
     header: {
         uploadFilesMessage: "上傳文件",
-        maxSizeMessage: (maxFileSize) => `最大文件大小：${maxFileSize} | `,
-        validFilesMessage: (numberOfValidFiles, maxFiles) => ` 文件 ${numberOfValidFiles}/${maxFiles} | 有效證件 : ${numberOfValidFiles} | `
+        maxSizeMessage: (maxFileSize) => `最大文件大小：${maxFileSize}`,
+        validFilesMessage: (numberOfValidFiles, maxFiles) => ` 文件 ${numberOfValidFiles}/${maxFiles}`
     },
     fakeuploadsuccess: "文件已成功上傳",
     fakeUploadError: "上傳時出錯",

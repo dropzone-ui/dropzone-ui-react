@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, Fragment } from "react";
 import { DropzoneLocalizerSelector } from "../../../../localization";
 import {
   FunctionLabel,
@@ -7,18 +7,25 @@ import {
 } from "../../../../localization/localization";
 import { FileItemContainerProps } from "../../../file-item/components/FileItemContainer/FileItemContainerProps";
 import { fileSizeFormater } from "../../../file-item/utils";
-import { Cancel, ViewGrid, ViewList } from "../../../icons";
+import {
+  Cancel,
+  Clean,
+  UploadingProcess,
+  ViewGrid,
+  ViewList,
+} from "../../../icons";
 import Upload from "../../../icons/Upload/Upload";
 export interface DropzoneHeaderProps {
   maxFileSize?: number;
   numberOfValidFiles?: number;
   maxFiles?: number;
   onReset?: Function;
-  handleReset: Function;
   view: FileItemContainerProps["view"];
   onChangeView?: Function;
   onUploadStart?: Function;
   urlPresent?: boolean;
+  onClean?: Function;
+  onUploadingStart?: boolean;
   /**
    * language to be used
    * for now
@@ -34,11 +41,12 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
     maxFileSize,
     numberOfValidFiles,
     onReset,
+    onClean,
     maxFiles,
-    handleReset,
     view,
     onChangeView,
     onUploadStart,
+    onUploadingStart,
     urlPresent,
     localization,
   } = props;
@@ -47,20 +55,29 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
     localization
   ).header as LocalLabels;
 
+  const handleClean = () => {
+    onClean?.();
+  };
   const handleStartUploading = () => {
     onUploadStart?.();
   };
   const makeHeader = (): React.ReactNode[] => {
     let result: React.ReactNode[] = [];
     if (onUploadStart && urlPresent && numberOfValidFiles) {
-      result.push(
-        <>
-          {DropzoneHeaderLocalizer.uploadFilesMessage}
-          {/* localization === "ES-es" ? `Subir archivos` : "Upload files" */}
-          <Upload color="#646c7f" onClick={handleStartUploading} />
-          {", "}
-        </>
-      );
+      if (onUploadingStart) {
+        result.push(<UploadingProcess spin={true} color="#646c7f" />);
+      } else {
+        result.push(
+          <Fragment>
+            {DropzoneHeaderLocalizer.uploadFilesMessage}
+            {/* localization === "ES-es" ? `Subir archivos` : "Upload files" */}
+
+            <Upload color="#646c7f" onClick={handleStartUploading} />
+          </Fragment>
+        );
+      }
+
+      result.push(<Fragment>{","}&nbsp;</Fragment>);
     }
 
     const maxFileSizeMessenger: FunctionLabel =
@@ -73,6 +90,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
           ? `Tam. máximo de archivo ${fileSizeFormater(maxFileSize)} | `
           : `Max File size: ${fileSizeFormater(maxFileSize)} | `, */
       );
+      result.push(<Fragment>{","}&nbsp;</Fragment>);
     }
     const validFileSizeMessenger: FunctionLabel =
       DropzoneHeaderLocalizer.validFilesMessage as FunctionLabel;
@@ -83,6 +101,13 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
         /*  localization === "ES-es"
           ? `Archivos ${numberOfValidFiles}/${maxFiles} | Válidos: ${numberOfValidFiles} | `
           : `Files ${numberOfValidFiles}/${maxFiles} | Valid: ${numberOfValidFiles} | `, */
+      );
+      result.push(<Fragment>{","}&nbsp;</Fragment>);
+    }
+    //clean not valid files on click
+    if (onClean) {
+      result.push(
+        <Clean color="#646c7f" onClick={handleClean} size="semi-medium" />
       );
     }
 
@@ -113,7 +138,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
         <Cancel
           color="#646c7f"
           //color="rgba(255,255,255,0.8)"
-          onClick={handleReset}
+          onClick={() => onReset?.()}
           colorFill="rgba(255,255,255,0.8)"
         />
       );
@@ -128,9 +153,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
       }}
     >
       {makeHeader().map((HeaderItem, index) => (
-        <span key={index} 
-        style={{ display: "flex" }}
-        >
+        <span key={index} style={{ display: "flex" }}>
           {HeaderItem}
         </span>
       ))}

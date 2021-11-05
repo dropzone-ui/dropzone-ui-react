@@ -16,8 +16,8 @@ export const DropzoneEnglish: LocalLabels = {
     },
     header: {
         uploadFilesMessage: "Upload files",
-        maxSizeMessage: (maxFileSize) => `Max file size: ${maxFileSize} | `,
-        validFilesMessage: (numberOfValidFiles, maxFiles) => ` Files ${numberOfValidFiles}/${maxFiles} | Valid: ${numberOfValidFiles} | `
+        maxSizeMessage: (maxFileSize) => `Max file size: ${maxFileSize}`,
+        validFilesMessage: (numberOfValidFiles, maxFiles) => `Files ${numberOfValidFiles}/${maxFiles}`
     },
     fakeuploadsuccess: "File was successfully uploaded",
     fakeUploadError: "Error on uploading",

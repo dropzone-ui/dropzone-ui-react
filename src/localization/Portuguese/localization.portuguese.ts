@@ -15,9 +15,9 @@ export const DropzonePortuguese: LocalLabels = {
         acceptCustom: (accept) => `Tipos permitidos: ${accept}`
     },
     header: {
-        uploadFilesMessage: "Enviar arquivos",
-        maxSizeMessage: (maxFileSize) => `Tamanho máximo do arquivo: ${maxFileSize} | `,
-        validFilesMessage: (numberOfValidFiles, maxFiles) => ` Arquivos ${numberOfValidFiles}/${maxFiles} | Válidos: ${numberOfValidFiles} | `
+        uploadFilesMessage: "Enviar",
+        maxSizeMessage: (maxFileSize) => `Tamanho máximo: ${maxFileSize}`,
+        validFilesMessage: (numberOfValidFiles, maxFiles) => `Arquivos ${numberOfValidFiles}/${maxFiles}`
     },
     fakeuploadsuccess: "O arquivo foi enviado com sucesso",
     fakeUploadError: "Erro ao enviar",

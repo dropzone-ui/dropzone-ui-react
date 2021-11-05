@@ -14,9 +14,9 @@ export const DropzoneRussian: LocalLabels = {
         acceptCustom: (accept) => `Допустимые типы: ${accept}`
     },
     header: {
-        uploadFilesMessage: "Отправить файлы",
-        maxSizeMessage: (maxFileSize) => `Максимальный размер файла: ${maxFileSize} | `,
-        validFilesMessage: (numberOfValidFiles, maxFiles) => ` Файлы ${numberOfValidFiles}/${maxFiles} | Действительно: ${numberOfValidFiles} | `
+        uploadFilesMessage: "Отправить",
+        maxSizeMessage: (maxFileSize) => `макс размер: ${maxFileSize}`,
+        validFilesMessage: (numberOfValidFiles, maxFiles) => `Файлы ${numberOfValidFiles}/${maxFiles}`
     },
     fakeuploadsuccess: "Файл был успешно загружен",
     fakeUploadError: "Ошибка при загрузке",

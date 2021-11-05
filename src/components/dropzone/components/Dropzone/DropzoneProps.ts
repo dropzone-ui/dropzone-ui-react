@@ -166,6 +166,11 @@ export interface DropzoneProps extends OverridableProps {
    */
   onChange?: (files: FileValidated[]) => void;
   /**
+   * This event is triggered when "clean button is clicked"
+   * Retuns as first parameter the list of files without not valid files
+   */
+   onClean?: (files: FileValidated[]) => void;
+  /**
    * The behaviuor on drop files
    */
   behaviour?: "add" | "replace";
@@ -209,6 +214,7 @@ export const DropzonePropsDefault: DropzoneProps = {
   value: undefined,
   onUploadFinish: undefined,
   uploadingMessage: undefined,
+  onClean:undefined,
   behaviour: "add",
   label: undefined,
   localization: "EN-en"

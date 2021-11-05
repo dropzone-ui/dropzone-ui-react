@@ -17,7 +17,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![GitHub Repo stars](https://img.shields.io/github/stars/dropzone-ui/react?label=Star%20me%20please%20:D&style=social)](https://github.com/dropzone-ui/react)
 
-The most complete and most powerful [React](https://reactjs.org/) library for managing file uploads.
+The most complete and most powerful library for managing file uploads [React](https://reactjs.org/) apps.
 
 ## Sample result:
 

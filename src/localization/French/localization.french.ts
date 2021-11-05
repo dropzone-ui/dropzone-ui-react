@@ -15,9 +15,9 @@ export const DropzoneFrench: LocalLabels = {
         acceptCustom: (accept) => `Types de fichier: ${accept}`
     },
     header: {
-        uploadFilesMessage: "Envoyer les fichiers",
-        maxSizeMessage: (maxFileSize) => `Taille maximale du fichier  ${maxFileSize} | `,
-        validFilesMessage: (numberOfValidFiles, maxFiles) => ` Fichiers  ${numberOfValidFiles}/${maxFiles} | Valides: ${numberOfValidFiles} | `
+        uploadFilesMessage: "Envoyer",
+        maxSizeMessage: (maxFileSize) => `Taille maximale ${maxFileSize}`,
+        validFilesMessage: (numberOfValidFiles, maxFiles) => `Fichiers  ${numberOfValidFiles}/${maxFiles}`
     },
     fakeuploadsuccess: "Le fichier a été téléchargé avec succès",
     fakeUploadError: "Erreur lors du téléchargement ",

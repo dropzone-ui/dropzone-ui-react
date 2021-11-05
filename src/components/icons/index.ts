@@ -27,3 +27,11 @@ export * from "./UploadDone/UploadDone";
 
 export { default as UploadError } from "./UploadError/UploadError";
 export * from "./UploadError/UploadError";
+
+
+export { default as Clean } from "./Clean/Clean";
+export * from "./Clean/Clean";
+
+
+export { default as UploadingProcess } from "./UploadingProcess/UploadingProcess";
+export * from "./UploadingProcess/UploadingProcess";
