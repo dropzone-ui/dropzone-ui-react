@@ -224,11 +224,11 @@ export const makeSynthticFileValidate = (
     //now make a File Validated instance 
     const newFileValidated: FileValidated = {
         id: FileIdGenerator.getNextId(),
-        valid,
-        file,
+        valid:valid,
+        file:file,
         uploadStatus: newUpoadStatus,
         uploadMessage: customUploadMessage,
-        errors
+        errors:errors
     }
     return newFileValidated;
 }
