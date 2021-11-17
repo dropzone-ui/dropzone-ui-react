@@ -31,10 +31,11 @@ export const separateAccept = (accept: string | undefined): string[] => {
     return commaSeparatedAccpet;
 }
 /**
- * 
+ * Checks whether a file is valid or not given an array of file extentions and mime types
+ * e.g. accept =  [".doc", ".docx", ".xml", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"]
  * @param accept the array of strings accept items
  * @param file a File object to be evaluated
- * @returns 
+ * @returns true if the mime type file is included in the accept param
  */
 export const validateAccept = (accept: string[], file: File): boolean => {
     let valid: boolean = false;
@@ -157,7 +158,7 @@ export abstract class FileIdGenerator {
  * Random integer between min (included) and max (excluded)
  * @param min 
  * @param max 
- * @returns 
+ * @returns a random number between min (included) and max (excluded)
  */
 function getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -200,10 +201,10 @@ export const makeSynthticFileValidate = (
     uploadMessage?: string
 ): FileValidated => {
     //if valid, naturally, can be uploaded
-    let errors: string[]|undefined = [];
+    let errors: string[] | undefined = [];
     let newUpoadStatus = uploadStatus || getRandomUploadStatus();
 
-    let customUploadMessage: string|undefined = uploadMessage || "";
+    let customUploadMessage: string | undefined = uploadMessage || "";
     if (valid) {
         //we can decide according to upload status 
         if (!uploadMessage) {
@@ -224,12 +225,12 @@ export const makeSynthticFileValidate = (
     //now make a File Validated instance 
     const newFileValidated: FileValidated = {
         id: FileIdGenerator.getNextId(),
-        valid:valid,
-        file:file,
+        valid: valid,
+        file: file,
         uploadStatus: newUpoadStatus,
         uploadMessage: customUploadMessage,
-        errors:errors
-    }
+        errors: errors
+    };
     return newFileValidated;
 }
 /**
