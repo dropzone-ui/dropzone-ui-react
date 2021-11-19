@@ -71,7 +71,7 @@
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-jest": "^25.2.4",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react": "^7.27.1",
     "fork-ts-checker-webpack-plugin": "^6.4.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.4.2",
