@@ -58,7 +58,7 @@
     "@storybook/testing-react": "^0.0.22",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.0.0",
-    "@types/jest": "^27.0.0",
+    "@types/jest": "^27.0.3",
     "@types/node": "^16.11.7",
     "@types/testing-library__jest-dom": "^5.9.3",
     "@types/testing-library__react": "^10.2.0",
