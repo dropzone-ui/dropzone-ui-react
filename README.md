@@ -1,8 +1,12 @@
 :rocket: [Spanish](./README_ES.md)
 
+# Dropzone UI
+The best and most complete file upload library for [React](https://reactjs.org/) apps.
+
 <p align="center">
-  <h1 align="center"><img src="https://user-images.githubusercontent.com/43678736/132112022-0ca409ae-cca2-43c8-be89-110376260a3f.png" alt="dropone-ui-logo" width="172" height="172" align="center">Dropzone-UI</h1>  
+  <h1 align="center"><img src="https://user-images.githubusercontent.com/43678736/132112022-0ca409ae-cca2-43c8-be89-110376260a3f.png" alt="dropone-ui-logo" width="172" height="172" align="center"> Dropzone UI</h1>  
 </p>
+
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/react/blob/HEAD/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/@dropzone-ui/react.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/@dropzone-ui/react)
@@ -17,7 +21,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![GitHub Repo stars](https://img.shields.io/github/stars/dropzone-ui/react?label=Star%20me%20please%20:D&style=social)](https://github.com/dropzone-ui/react)
 
-The most complete and most powerful library for managing file uploads on [React](https://reactjs.org/) apps.
+
 
 ## Sample result:
 
@@ -39,7 +43,7 @@ Did you like the project? Please don't forget to give us a :star: star on :octoc
 - :performing_arts: [\<Examples and use cases\>](#Usage-and-examples)
 
 - :computer: [\<Server side implementation/>](#uploading)
-
+ 
 - :earth_americas: [\<Localization\>](#localization)
 
 ## Installation

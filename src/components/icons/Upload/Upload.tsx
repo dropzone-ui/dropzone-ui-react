@@ -18,6 +18,7 @@ const Upload: FC<UploadProps> = (props: UploadProps) => {
       fill={color ? color : "#000000"}
       className={className || ""}
     >
+      
       <g>
         <rect
           fill={colorFill || "none"}

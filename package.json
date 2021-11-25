@@ -1,6 +1,6 @@
 {
   "name": "@dropzone-ui/react",
-  "version": "5.8.4",
+  "version": "6.0.1",
   "description": "The most complete React library for managing file uploads. Multilanguage support. Server side support. Material design styles.",
   "main": "./build/index.js",
   "module": "./build/index.es.js",
@@ -22,6 +22,7 @@
     "react",
     "drag",
     "drop",
+    "mui",
     "typescript",
     "front-end",
     "framework",
@@ -58,7 +59,7 @@
     "@storybook/testing-react": "^0.0.22",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.0.0",
-    "@types/jest": "^27.0.0",
+    "@types/jest": "^27.0.3",
     "@types/node": "^16.11.7",
     "@types/testing-library__jest-dom": "^5.9.3",
     "@types/testing-library__react": "^10.2.0",
@@ -71,7 +72,7 @@
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-jest": "^25.2.4",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react": "^7.27.1",
     "fork-ts-checker-webpack-plugin": "^6.4.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.4.2",
@@ -90,7 +91,7 @@
     "set-value": "^4.0.1",
     "ts-loader": "^9.2.5",
     "tslib": "^2.1.0",
-    "typescript": "^4.4.4",
+    "typescript": "^4.5.2",
     "rollup-plugin-json": "^4.0.0"
   },
   "scripts": {
