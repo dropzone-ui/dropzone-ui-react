@@ -12,7 +12,7 @@ export const DropzoneSpanish: LocalLabels = {
     noFilesMessage: `No hay archivos válidos pendientes por subir`,
     footer: {
         acceptAll: `Todos los tipos de archivo aceptados`,
-        acceptCustom: (accept) => `File types: ${accept}`
+        acceptCustom: (accept) => `Tipo(s) de archivo permitidos: ${accept}`
     },
     header: {
         uploadFilesMessage: "Subir",
@@ -34,10 +34,10 @@ export const FileItemSpanish: LocalLabels = {
     },
     status: {
         uploading: "Subiendo",
-        success: "éxito",
-        valid: "válido",
-        denied: "no válido",
-        error: "error"
+        success: "Éxito",
+        valid: "Válido",
+        denied: "No válido",
+        error: "Error"
 
     },
 }
