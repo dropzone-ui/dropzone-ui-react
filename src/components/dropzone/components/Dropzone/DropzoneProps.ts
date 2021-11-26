@@ -6,11 +6,12 @@ import { CustomValidateFileResponse, FileValidated } from "../utils/validation.u
 
 export interface DropzoneProps extends OverridableProps {
   /**
-   * This event is triggered when files are dropped or selected. Returns as first parameter the list of FileValidate files dropped or selected.
+   * This event is triggered when files are dropped or selected. 
+   * Returns as first parameter the list of FileValidate files dropped or selected.
    */
   onDrop?: (filesDropped: FileValidated[]) => void;
   /**
-   * Upload Url or endpoint
+   * server Url or endpoint to upload the files
    */
   url?: string;
   /**
@@ -19,7 +20,14 @@ export interface DropzoneProps extends OverridableProps {
   method?: "POST" | "PUT" | "PATCH";
   /**
    * Extra configuration for uploading
-   * e.g. headers or token bearer
+   * e.g. headers or bearer token
+   * default:
+   * config = {
+   *   headers: { 
+   *     "content-type": "multipart/form-data", 
+   *   }, 
+   * } 
+   * 
    */
   config?: Object;
   /**
@@ -169,7 +177,7 @@ export interface DropzoneProps extends OverridableProps {
    * This event is triggered when "clean button is clicked"
    * Retuns as first parameter the list of files without not valid files
    */
-   onClean?: (files: FileValidated[]) => void;
+  onClean?: (files: FileValidated[]) => void;
   /**
    * The behaviuor on drop files
    */
@@ -200,9 +208,9 @@ export const DropzonePropsDefault: DropzoneProps = {
   //numberOfValidFiles: 0,
   disableRipple: false,
   clickable: true,
-  view: "grid",
+  view: undefined,
   maxHeight: "450px",
-  minHeight:"280px",
+  minHeight: "280px",
   footer: true,
   header: true,
   config:
@@ -214,7 +222,7 @@ export const DropzonePropsDefault: DropzoneProps = {
   value: undefined,
   onUploadFinish: undefined,
   uploadingMessage: undefined,
-  onClean:undefined,
+  onClean: undefined,
   behaviour: "add",
   label: undefined,
   localization: "EN-en"

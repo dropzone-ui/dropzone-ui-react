@@ -46,7 +46,7 @@ const useDropzoneStyles = (
                             )}`,
                             backgroundColor: backgroundColor,
                             maxHeight: maxHeight,
-                            minHeight: minHeight
+                            minHeight: `calc(${minHeight} + 50px)`
                         },
                     },
                     {

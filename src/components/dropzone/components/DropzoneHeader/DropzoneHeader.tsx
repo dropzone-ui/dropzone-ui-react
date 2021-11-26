@@ -32,11 +32,13 @@ export interface DropzoneHeaderProps {
    * only English and Spanish is supported
    */
   localization?: Localization;
+  hideViewIcon?:boolean;
 }
 
 const DropzoneHeader: FC<DropzoneHeaderProps> = (
   props: DropzoneHeaderProps
 ) => {
+  console.log("hideViewIcon",props.hideViewIcon);
   const {
     maxFileSize,
     numberOfValidFiles,
@@ -49,6 +51,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
     onUploadingStart,
     urlPresent,
     localization,
+    hideViewIcon,
   } = props;
 
   const DropzoneHeaderLocalizer: LocalLabels = DropzoneLocalizerSelector(
@@ -111,7 +114,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
       );
     }
 
-    if (onChangeView) {
+    if (onChangeView && !hideViewIcon) {
       result.push(
         <>
           {view !== "grid" ? (

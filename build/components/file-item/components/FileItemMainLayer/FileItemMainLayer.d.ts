@@ -4,7 +4,7 @@ export interface FileItemMainLayerProps {
     showInfo: boolean;
     onOpenInfo: Function;
     onOpenImage: Function | undefined;
-    onDelete: Function;
+    onDelete: Function | undefined;
     fileName: string;
     info: boolean;
     valid: boolean;
@@ -26,6 +26,7 @@ export interface FileItemMainLayerProps {
      * only English and Spanish is supported
      */
     localization?: Localization;
+    hovering?: boolean;
 }
 declare const FileItemMainLayer: FC<FileItemMainLayerProps>;
 export default FileItemMainLayer;

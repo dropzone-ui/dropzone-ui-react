@@ -18,6 +18,7 @@ export interface DropzoneHeaderProps {
      * only English and Spanish is supported
      */
     localization?: Localization;
+    hideViewIcon?: boolean;
 }
 declare const DropzoneHeader: FC<DropzoneHeaderProps>;
 export default DropzoneHeader;

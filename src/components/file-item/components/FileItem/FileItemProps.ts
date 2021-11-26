@@ -105,6 +105,17 @@ export interface FileItemProps extends PaperProps {
      * only English and Spanish is supported
      */
     localization?: Localization;
+    /**
+     * The elevation or shadow of container
+     * range of shadows is from 0 to 4,
+     * other number o values are considered as 0
+     */
+    elevation?: "1" | "2" | "3" | "4" | 1 | 2 | 3 | 4 | false;
+    /**
+     * Flag that determines whether actions are visible always, or only on hover event
+     */
+    alwaysActive?: boolean;
+
 }
 /**
  * Base default props
@@ -123,6 +134,8 @@ export const FileItemPropsDefault: FileItemProps = {
     , localization: "EN-en",
     onlyImage: false,
     imageUrl: undefined,
-    errors: undefined
+    errors: undefined,
+    elevation: false,
+    alwaysActive:undefined,
     //fileName: "bottom"
 }

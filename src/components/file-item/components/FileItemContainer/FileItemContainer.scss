@@ -1,15 +1,16 @@
-::-webkit-scrollbar {
-  width: 9px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #646c7fa9;
-  border-radius: 20px;
-  border: transparent;
-}
 .file-item-list-container {
+  &::-webkit-scrollbar {
+    width: 9px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #646c7fa9;
+    border-radius: 20px;
+    border: transparent;
+  }
+  //margin: 25px 0;
   //background-color: rgba(255, 255, 255, 0.596);
   background-color: transparent;
   color: black;

@@ -33,13 +33,32 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     localization,
     errors,
     imageUrl,
+    elevation,
+    alwaysActive,
   } = mergeProps(props, FileItemPropsDefault);
+  //actionOnHover
+  const [hovering, setHOvering] = useState<boolean>(false);
+  const handleOnHoverEnter = () => {
+    if (!alwaysActive) {
+      setHOvering(true);
+    }
+  };
+  const handleOnHoverLeave = () => {
+    if (!alwaysActive) {
+      setHOvering(false);
+    }
+  };
+  useEffect(() => {
+    setHOvering(alwaysActive || false);
+  }, [alwaysActive]);
 
+  //size
   const sizeFormatted: string = file ? fileSizeFormater(file.size) : "0 KB";
 
   const [isImage, setIsImage] = useState<boolean>(false);
   const [url, setUrl] = useState<string>("");
   const [imageSource, setImageSource] = useState<string | undefined>(undefined);
+  //alwaysActive
   const [showInfo, setShowInfo] = useState<boolean>(false);
   useEffect(() => {
     init(file, valid || false, preview || false, imageUrl);
@@ -92,6 +111,8 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     setShowInfo(true);
   };
   const handleCloseInfo = () => {
+    setShowInfo(true);
+
     setShowInfo(false);
   };
   const handleOpenImage = async () => {
@@ -112,9 +133,15 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
   }
   if (file && typeof file.name == "string") {
     return (
-      <div className="dz-ui-file-item-container" onClick={handleClick}>
+      <div
+        className="dz-ui-file-item-container"
+        onClick={handleClick}
+        onMouseEnter={handleOnHoverEnter}
+        onMouseLeave={handleOnHoverLeave}
+      >
         <div className={`file-item-full-container-container`} style={style}>
           <Paper
+            shadow={elevation}
             className={`file-item-icon-container ${showInfo ? " hide" : ""}`}
           >
             <FileItemImage
@@ -122,22 +149,26 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
               url={url}
               fileName={file.name}
             />
-            <FileItemMainLayer
-              showInfo={showInfo}
-              //fileNamePosition={fileName}
-              fileName={file.name}
-              onDelete={handleDelete}
-              onOpenImage={onSee && preview ? handleOpenImage : undefined}
-              onOpenInfo={handleOpenInfo}
-              info={info || false}
-              valid={valid || false}
-              isImage={isImage}
-              sizeFormatted={sizeFormatted}
-              //fileNamePosition={undefined}
-              uploadStatus={uploadStatus}
-              localization={localization}
-              onlyImage={onlyImage}
-            />
+            {//hovering && (
+              <FileItemMainLayer
+                showInfo={showInfo}
+                //fileNamePosition={fileName}
+                fileName={file.name}
+                onDelete={onDelete ? handleDelete : undefined}
+                onOpenImage={onSee && preview ? handleOpenImage : undefined}
+                onOpenInfo={handleOpenInfo}
+                info={info || false}
+                valid={valid || false}
+                isImage={isImage}
+                sizeFormatted={sizeFormatted}
+                //fileNamePosition={undefined}
+                uploadStatus={uploadStatus}
+                localization={localization}
+                onlyImage={onlyImage}
+                hovering={hovering}
+              />
+            //)
+          }
 
             <FileItemFullInfoLayer
               showInfo={showInfo}

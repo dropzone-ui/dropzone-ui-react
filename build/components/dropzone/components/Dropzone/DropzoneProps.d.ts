@@ -5,11 +5,12 @@ import { FileDuiResponse } from "../utils/dropzone-ui.upload.utils";
 import { CustomValidateFileResponse, FileValidated } from "../utils/validation.utils";
 export interface DropzoneProps extends OverridableProps {
     /**
-     * This event is triggered when files are dropped or selected. Returns as first parameter the list of FileValidate files dropped or selected.
+     * This event is triggered when files are dropped or selected.
+     * Returns as first parameter the list of FileValidate files dropped or selected.
      */
     onDrop?: (filesDropped: FileValidated[]) => void;
     /**
-     * Upload Url or endpoint
+     * server Url or endpoint to upload the files
      */
     url?: string;
     /**
@@ -18,7 +19,14 @@ export interface DropzoneProps extends OverridableProps {
     method?: "POST" | "PUT" | "PATCH";
     /**
      * Extra configuration for uploading
-     * e.g. headers or token bearer
+     * e.g. headers or bearer token
+     * default:
+     * config = {
+     *   headers: {
+     *     "content-type": "multipart/form-data",
+     *   },
+     * }
+     *
      */
     config?: Object;
     /**
