@@ -17,7 +17,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### New features
 - \<FileItem/\>:  Added `alwaysActive` prop. This prop provides hover interaction. If false (by default), FileItem will hide the main layer with all the buttons except the file validation status and the upload status. If true, main layer will be visible all the time.
 - \<FileItem/\>:  Added `elevation` prop. This prop provides the user to decide about the shadow and border on the `FileItem` container.
-- `Webpage` in beta version was released. You can visit [dropzone-ui.com](https://www.dropzone-ui.com). In there you can find a nice code generator.
+- `Webpage` in beta version was released. You can visit [dropzone-ui.com](http://www.dropzone-ui.com). In there you can find a nice code generator.
  
 ### Fixes or improvements
 - \<Dropzone/\>:  Fixed Spanish translation on footer.
