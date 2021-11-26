@@ -1,13 +1,13 @@
 {
   "name": "@dropzone-ui/react",
-  "version": "6.0.0",
-  "description": "The most complete React library for managing file uploads. Multilanguage support. Server side support. Material design styles.",
+  "version": "6.1.0",
+  "description": "The best and most complete React library for managing file uploads. Multilanguage support. Server side support. Material design styles. Code generator.",
   "main": "./build/index.js",
   "module": "./build/index.es.js",
   "types": "./build/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dropzone-ui/react.git"
+    "url": "git+https://github.com/dropzone-ui/react.git#readme"
   },
   "keywords": [
     "dropzone",
@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/dropzone-ui/react/issues"
   },
-  "homepage": "https://github.com/dropzone-ui/react#readme",
+  "homepage": "http://dropzone-ui.com",
   "dependencies": {
     "@dynamicss/dynamicss": "^2.2.0",
     "@unlimited-react-components/kernel": "^1.0.2",
@@ -47,12 +47,12 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
-    "@storybook/addon-actions": "^6.3.12",
-    "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-links": "^6.3.12",
-    "@storybook/node-logger": "^6.3.12",
+    "@storybook/addon-actions": "^6.4.0",
+    "@storybook/addon-essentials": "^6.4.0",
+    "@storybook/addon-links": "^6.4.0",
+    "@storybook/node-logger": "^6.4.0",
     "@storybook/preset-create-react-app": "^4.0.0",
-    "@storybook/react": "^6.3.12",
+    "@storybook/react": "^6.4.0",
     "@storybook/testing-react": "^0.0.22",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.0.0",
@@ -74,7 +74,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.4.2",
     "json-schema": "0.4.0",
-    "prettier": "^2.3.0",
+    "prettier": "^2.5.0",
     "rollup": "^2.60.1",
     "rollup-plugin-peer-deps-external": "^2.2.3",
     "rollup-plugin-sass": "^1.2.10",
@@ -85,7 +85,7 @@
     "style-loader": "^3.3.1",
     "ts-jest": "^26.4.0",
     "trim": "^1.0.1",
-    "immer": "^9.0.6",
+    "immer": "^9.0.7",
     "set-value": "^4.0.1",
     "ts-loader": "^9.2.5",
     "tslib": "^2.1.0",
