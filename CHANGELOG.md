@@ -9,6 +9,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+
+<a name="6.0.1"></a>
+
+## [6.0.1](https://github.com/dropzone-ui/dropzone-ui/compare/v6.0.1...v5.5.6) (2021-26-11)
+
+### New features
+- \<FileItem/\>:  Added `alwaysActive` prop. This prop provides hover interaction. If false (by default), FileItem will hide the main layer with all the buttons except the file validation status and the upload status. If true, main layer will be visible all the time.
+- \<FileItem/\>:  Added `elevation` prop. This prop provides the user to decide about the shadow and border on the `FileItem` container.
+- `Webpage` in beta version was released. You can visit [dropzone-ui.com](https://www.dropzone-ui.com). In there you can find a nice code generator.
+ 
+### Fixes or improvements
+- \<Dropzone/\>:  Fixed Spanish translation on footer.
+- \<Dropzone/\>:  Hide "view" button when view prop is provided.
+- \<Dropzone/\>:  Fix issue that hides dropzone label when FileItems are outside.
+- \<Dropzone/\>:  Fixed minor issues on minHeight.
+- \<FileItem/\>:  Hide "delete" button when onDelete prop is not provided
+- \<FileItem/\>:  Change `word-break` css propertie from `break-all` to `break-word`;
+
+### Future feature
+- \<FileItem/\>:  Show `upload status` on hover event.
+
 <a name="3.0.1"></a>
 
 ## [3.0.1](https://github.com/dropzone-ui/dropzone-ui/compare/v2.8.1...v3.0.1) (2021-10-11)
