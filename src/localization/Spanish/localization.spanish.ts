@@ -34,10 +34,10 @@ export const FileItemSpanish: LocalLabels = {
     },
     status: {
         uploading: "Subiendo",
-        success: "éxito",
-        valid: "válido",
-        denied: "no válido",
-        error: "error"
+        success: "Éxito",
+        valid: "Válido",
+        denied: "No válido",
+        error: "Error"
 
     },
 }
