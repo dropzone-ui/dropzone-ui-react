@@ -6,7 +6,7 @@ The `best` and most complete, `easy to use`, file upload library for [React](htt
 
 :zap: Live demo and code generator : [dropzone-ui.com](http://www.dropzone-ui.com)
 
-:heart: it ?, :start: it on :octocat: [Github](https://github.com/dropzone-ui/dropzone-ui) :D or :bird: [Tweet](https://twitter.com/intent/tweet?text=With%20@dropzone_ui,%20my%20@reactjs%20%20web%20app%20becomes%20more%20powerful.%20Thanks,%20@JinJoseManuel%20%F0%9F%A4%A9) about it.
+:heart: it ?, :star: it on :octocat: [Github](https://github.com/dropzone-ui/dropzone-ui) :D or :bird: [Tweet](https://twitter.com/intent/tweet?text=With%20@dropzone_ui,%20my%20@reactjs%20%20web%20app%20becomes%20more%20powerful.%20Thanks,%20@JinJoseManuel%20%F0%9F%A4%A9) about it.
 
 <p align="center">
   <h1 align="center"><img src="https://user-images.githubusercontent.com/43678736/132112022-0ca409ae-cca2-43c8-be89-110376260a3f.png" alt="dropone-ui-logo" width="172" height="172" align="center"> Dropzone UI</h1>  
