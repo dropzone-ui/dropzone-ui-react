@@ -9,10 +9,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="7.0.0"></a>
 
-<a name="6.0.1"></a>
+## [7.0.0](https://github.com/dropzone-ui/dropzone-ui/compare/v7.0.0...v6.2.0) (2021-dd-mm)
 
-## [6.0.1](https://github.com/dropzone-ui/dropzone-ui/compare/v6.0.1...v5.5.6) (2021-26-11)
+### New features
+- \<ToolTip/\>:  New component added for displaying message for non valid files and upload status on a tooltip when user hovers FileItem. Idea was suggested by [mateusmx](https://github.com/mateusmx).
+- \<FileItem/\>:  Added resultOnLayer prop that allows keep the behaviour thta makes FileItem show the result of validation and upload on the FullInfoLayer when user pressed the `info` button. If not presnt or false, the default behaviour will be to show that info when user hovers the FileItem on a ToolTip. If true, the tooltip won´t be displayed.
+
+
+<a name="6.2.0"></a>
+
+## [6.2.0](https://github.com/dropzone-ui/dropzone-ui/compare/v6.2.0...v5.5.6) (2021-26-11)
 
 ### New features
 - \<FileItem/\>:  Added `alwaysActive` prop. This prop provides hover interaction. If false (by default), FileItem will hide the main layer with all the buttons except the file validation status and the upload status. If true, main layer will be visible all the time.

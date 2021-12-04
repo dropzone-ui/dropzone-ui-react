@@ -202,7 +202,7 @@ export interface DropzoneProps extends OverridableProps {
 export const DropzonePropsDefault: DropzoneProps = {
   children: undefined,
   uploadOnDrop: false,
-  maxFiles: 7,
+  maxFiles: undefined,
   style: {},
   //backgroundColor: "linear-gradient(to bottom, aliceblue,#b7a8a8)",
   //numberOfValidFiles: 0,

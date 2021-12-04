@@ -1,3 +1,4 @@
+import { UPLOADSTATUS } from "../../../../components/dropzone/components/utils/validation.utils";
 import { Localization } from "../../../../localization/localization";
 import { PaperProps } from "../../../paper/components/PaperProps";
 
@@ -92,8 +93,10 @@ export interface FileItemProps extends PaperProps {
      * [in construction]
      */
     //fileName?: "bottom" | "inside";
-
-    uploadStatus?: undefined | "uploading" | "success" | "error";
+    /**
+     * The current upload status of the file
+     */
+    uploadStatus?: undefined | UPLOADSTATUS;
     /**
      * If present, preview on full screen will
      * be presented in the real image resolution
@@ -115,7 +118,10 @@ export interface FileItemProps extends PaperProps {
      * Flag that determines whether actions are visible always, or only on hover event
      */
     alwaysActive?: boolean;
-
+    /**
+     * Whether to display result of validation on InfoLayer or in tooltip on Hover FileItem
+     */
+     resultOnLayer?:boolean;
 }
 /**
  * Base default props
