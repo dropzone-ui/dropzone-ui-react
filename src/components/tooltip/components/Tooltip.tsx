@@ -5,8 +5,8 @@ import { UPLOADSTATUS } from "../../../components/dropzone/components/utils/vali
 const Tooltip: FC<TooltipProps> = (props: TooltipProps) => {
   const {
     //message,
-    style,
-    children,
+    //style,
+    //children,
     //color,
     uploadStatus,
     valid,
@@ -15,7 +15,6 @@ const Tooltip: FC<TooltipProps> = (props: TooltipProps) => {
     uploadMessage,
     open,
   } = props;
-  console.log("Tooltip props", props);
   const [statusClassName, setSatusClassName] = useState<string | undefined>(
     undefined
   );
@@ -71,7 +70,7 @@ const Tooltip: FC<TooltipProps> = (props: TooltipProps) => {
               ? errors?.map((error, index) => (
                   <div key={index + 1}>{`- ${error}.\n`}</div>
                 ))
-              :  */ message || ""
+              :  */ message
           }
         </span>
       )}

@@ -184,19 +184,21 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
               resultOnTooltip={resultOnTooltip}
             />
           </Paper>
-        
+
           {!onlyImage && (
             <div className="file-item-name">{shrinkWord(file.name)}</div>
           )}
-        </div> 
-         <Tooltip
-             open={resultOnTooltip && hovering}
-            //open={true}
+        </div>
+        {resultOnTooltip && (
+          <Tooltip
+            //open={resultOnTooltip && hovering}
+            open={true}
             uploadStatus={uploadStatus}
             valid={valid}
             errors={errors}
             uploadMessage={uploadMessage}
           ></Tooltip>
+        )}
       </div>
     );
   } else return <Fragment></Fragment>;

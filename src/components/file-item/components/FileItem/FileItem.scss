@@ -300,29 +300,32 @@
 //////////////////   TOOLTIP
 .dz-ui-file-item-container{
   &.dz-ui-tooltip{
+    cursor: default;
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
+   // border-bottom: 1px dotted black;
     &:hover {
-      z-index: 10000;
+      z-index: 2;
       .dropzone-ui-tooltiptext {
         visibility: visible;
         opacity: 1;
-        z-index: 10000;
+       z-index: 2;
       }
     }
     .dropzone-ui-tooltiptext {
+      font-size: 0.8rem;
       visibility: hidden;
-      width: 120px;
+      width: 133px;
       // background-color: green;
       color: #fff;
       text-align: center;
       border-radius: 6px;
-      padding: 5px 5px;
+      padding: 2px 2px;
       position: absolute;
-      z-index: 1;
-      bottom: 0%;
-      left: 50%;
+      //z-index: 2;
+      //top: 190px;
+      top: 178px;
+      left: 66px;
       margin-left: -60px;
   
       /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
@@ -330,15 +333,16 @@
       transition: opacity 1s;
   
       &.not-valid-error {
-        background-color: red;
+        background: linear-gradient(to top,#c62828,#d32f2f,);
         &::after {
-          border-color: transparent transparent red transparent;
+          border-color: transparent transparent #d32f2f transparent;
         }
       }
       &.success {
-        background-color: green;
+        //background-color: green;
+        background: linear-gradient(to top, #1b5e20, #2e7d32);
         &::after {
-          border-color: transparent transparent green transparent;
+          border-color: transparent transparent #2e7d32 transparent;
         }
       }
       &::after {

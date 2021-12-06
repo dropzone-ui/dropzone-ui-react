@@ -1,4 +1,6 @@
 .file-item-list-container {
+  padding: 5px;
+  //z-index: 1;
   &::-webkit-scrollbar {
     width: 9px;
   }
@@ -18,17 +20,26 @@
   width: 100%;
   //margin: 100px 0;
   //width: inherit;
-  overflow: auto;
+  
   // padding: 2%;
   align-items: center;
   scrollbar-width: thin;
   &.file-item-list-grid {
+    overflow: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
   }
+  &.file-item-list-no-scroll{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: unset;
+  }
   &.file-item-list-list {
+    overflow: auto;
     //flex-wrap: wrap;
     align-items: center;
     //justify-content: center;

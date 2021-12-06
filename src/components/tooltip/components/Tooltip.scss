@@ -3,12 +3,12 @@
   display: inline-block;
   border-bottom: 1px dotted black;
   &:hover {
-    .dropzone-ui-tooltiptext {
+    .dropzosne-ui-toolatiptext {
       visibility: visible;
       opacity: 1;
     }
   }
-  .dropzone-ui-tooltiptext {
+  .dropzaone-ui-tooltiptsext {
     visibility: hidden;
     width: 120px;
     // background-color: green;
@@ -26,13 +26,13 @@
     opacity: 0;
     transition: opacity 1s;
 
-    &.not-valid-error {
+    &.not-valisd-error {
       background-color: red;
       &::after {
         border-color: transparent transparent red transparent;
       }
     }
-    &.success {
+    &.successs {
       background-color: green;
       &::after {
         border-color: transparent transparent green transparent;
