@@ -6,4 +6,9 @@ export interface FileItemContainerProps extends OverridableProps {
      * Convenient for saving space in page.
      */
     view?: "grid" | "list";
+    /**
+   * if present or true, removes scrolls
+   * and sets the Dropzone in a grid view
+   */
+    disableScroll?: boolean;
 }
