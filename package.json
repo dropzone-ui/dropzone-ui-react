@@ -1,7 +1,7 @@
 {
   "name": "@dropzone-ui/react",
   "version": "6.3.0",
-  "description": "The best and most complete React library for managing file uploads. Multilanguage support. Server side support. Material design styles. Code generator.",
+  "description": "The best and most complete React library for managing file uploads. Multilanguage support. Server side support. Material design styles. Code generator on webpage.",
   "main": "./build/index.js",
   "module": "./build/index.es.js",
   "types": "./build/index.d.ts",
@@ -26,7 +26,8 @@
     "typescript",
     "front-end",
     "framework",
-    "kamui"
+    "kamui",
+    "react"
   ],
   "author": "JinSSJ3",
   "license": "MIT",
