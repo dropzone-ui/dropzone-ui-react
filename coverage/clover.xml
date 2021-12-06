@@ -1,0 +1,1969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1638809888058" clover="3.2.0">
+  <project timestamp="1638809888058" name="All files">
+    <metrics statements="1651" coveredstatements="536" conditionals="1054" coveredconditionals="2" methods="472" coveredmethods="5" elements="3177" coveredelements="543" complexity="0" loc="1651" ncloc="1651" packages="45" files="59" classes="59"/>
+    <package name="src">
+      <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="40" coveredmethods="1"/>
+      <file name="index.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\index.ts">
+        <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="40" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="35" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.dropzone.components.Dropzone">
+      <metrics statements="217" coveredstatements="16" conditionals="147" coveredconditionals="0" methods="33" coveredmethods="0"/>
+      <file name="Dropzone.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\dropzone\components\Dropzone\Dropzone.tsx">
+        <metrics statements="216" coveredstatements="15" conditionals="147" coveredconditionals="0" methods="33" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="36" count="5" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="78" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="81" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="91" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="104" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="107" count="0" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="109" count="0" type="stmt"/>
+        <line num="112" count="0" type="stmt"/>
+        <line num="114" count="0" type="stmt"/>
+        <line num="120" count="0" type="stmt"/>
+        <line num="125" count="0" type="stmt"/>
+        <line num="126" count="0" type="stmt"/>
+        <line num="127" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="128" count="0" type="stmt"/>
+        <line num="129" count="0" type="stmt"/>
+        <line num="132" count="0" type="stmt"/>
+        <line num="133" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="134" count="0" type="stmt"/>
+        <line num="135" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="136" count="0" type="stmt"/>
+        <line num="139" count="0" type="stmt"/>
+        <line num="140" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="141" count="0" type="stmt"/>
+        <line num="145" count="0" type="stmt"/>
+        <line num="146" count="0" type="stmt"/>
+        <line num="147" count="0" type="stmt"/>
+        <line num="148" count="0" type="stmt"/>
+        <line num="149" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="151" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="152" count="0" type="stmt"/>
+        <line num="156" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="163" count="0" type="stmt"/>
+        <line num="166" count="0" type="stmt"/>
+        <line num="167" count="0" type="stmt"/>
+        <line num="168" count="0" type="stmt"/>
+        <line num="169" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="170" count="0" type="stmt"/>
+        <line num="171" count="0" type="stmt"/>
+        <line num="172" count="0" type="stmt"/>
+        <line num="173" count="0" type="stmt"/>
+        <line num="185" count="0" type="stmt"/>
+        <line num="186" count="0" type="stmt"/>
+        <line num="187" count="0" type="stmt"/>
+        <line num="188" count="0" type="stmt"/>
+        <line num="207" count="0" type="stmt"/>
+        <line num="208" count="0" type="stmt"/>
+        <line num="209" count="0" type="stmt"/>
+        <line num="210" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="212" count="0" type="stmt"/>
+        <line num="213" count="0" type="stmt"/>
+        <line num="214" count="0" type="stmt"/>
+        <line num="217" count="0" type="stmt"/>
+        <line num="218" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="219" count="0" type="stmt"/>
+        <line num="226" count="0" type="stmt"/>
+        <line num="227" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="228" count="0" type="stmt"/>
+        <line num="229" count="0" type="stmt"/>
+        <line num="233" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="235" count="0" type="stmt"/>
+        <line num="236" count="0" type="stmt"/>
+        <line num="237" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="239" count="0" type="stmt"/>
+        <line num="242" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="243" count="0" type="stmt"/>
+        <line num="244" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="245" count="0" type="stmt"/>
+        <line num="249" count="0" type="stmt"/>
+        <line num="250" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="251" count="0" type="stmt"/>
+        <line num="252" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="254" count="0" type="stmt"/>
+        <line num="256" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="257" count="0" type="stmt"/>
+        <line num="259" count="0" type="stmt"/>
+        <line num="260" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="261" count="0" type="stmt"/>
+        <line num="263" count="0" type="stmt"/>
+        <line num="266" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="271" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="272" count="0" type="stmt"/>
+        <line num="274" count="0" type="stmt"/>
+        <line num="277" count="0" type="stmt"/>
+        <line num="278" count="0" type="stmt"/>
+        <line num="281" count="0" type="stmt"/>
+        <line num="287" count="0" type="stmt"/>
+        <line num="288" count="0" type="stmt"/>
+        <line num="292" count="0" type="stmt"/>
+        <line num="294" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="295" count="0" type="cond" truecount="0" falsecount="6"/>
+        <line num="297" count="0" type="stmt"/>
+        <line num="299" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="300" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="308" count="0" type="stmt"/>
+        <line num="309" count="0" type="stmt"/>
+        <line num="311" count="0" type="stmt"/>
+        <line num="312" count="0" type="stmt"/>
+        <line num="313" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="314" count="0" type="stmt"/>
+        <line num="315" count="0" type="stmt"/>
+        <line num="317" count="0" type="stmt"/>
+        <line num="318" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="319" count="0" type="stmt"/>
+        <line num="323" count="0" type="stmt"/>
+        <line num="328" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="329" count="0" type="stmt"/>
+        <line num="333" count="0" type="stmt"/>
+        <line num="334" count="0" type="stmt"/>
+        <line num="337" count="0" type="stmt"/>
+        <line num="340" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="341" count="0" type="stmt"/>
+        <line num="343" count="0" type="stmt"/>
+        <line num="344" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="345" count="0" type="stmt"/>
+        <line num="349" count="0" type="stmt"/>
+        <line num="354" count="0" type="stmt"/>
+        <line num="359" count="0" type="stmt"/>
+        <line num="364" count="0" type="stmt"/>
+        <line num="365" count="0" type="stmt"/>
+        <line num="366" count="0" type="stmt"/>
+        <line num="367" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="371" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="373" count="0" type="stmt"/>
+        <line num="374" count="0" type="stmt"/>
+        <line num="376" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="378" count="0" type="stmt"/>
+        <line num="379" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="386" count="0" type="stmt"/>
+        <line num="388" count="0" type="stmt"/>
+        <line num="390" count="0" type="stmt"/>
+        <line num="392" count="0" type="stmt"/>
+        <line num="393" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="395" count="0" type="stmt"/>
+        <line num="398" count="0" type="stmt"/>
+        <line num="401" count="0" type="stmt"/>
+        <line num="402" count="0" type="stmt"/>
+        <line num="403" count="0" type="stmt"/>
+        <line num="404" count="0" type="stmt"/>
+        <line num="406" count="0" type="stmt"/>
+        <line num="409" count="0" type="stmt"/>
+        <line num="410" count="0" type="stmt"/>
+        <line num="411" count="0" type="stmt"/>
+        <line num="412" count="0" type="stmt"/>
+        <line num="417" count="0" type="stmt"/>
+        <line num="418" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="419" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="420" count="0" type="stmt"/>
+        <line num="423" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="425" count="0" type="stmt"/>
+        <line num="426" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="427" count="0" type="stmt"/>
+        <line num="428" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="431" count="0" type="stmt"/>
+        <line num="432" count="0" type="stmt"/>
+        <line num="433" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="436" count="0" type="stmt"/>
+        <line num="448" count="0" type="stmt"/>
+        <line num="503" count="5" type="stmt"/>
+      </file>
+      <file name="DropzoneProps.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\dropzone\components\Dropzone\DropzoneProps.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="207" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.dropzone.components.DropzoneFooter.tsx">
+      <metrics statements="8" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="DropzoneFooter.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\dropzone\components\DropzoneFooter.tsx\DropzoneFooter.tsx">
+        <metrics statements="8" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.dropzone.components.DropzoneHeader">
+      <metrics statements="41" coveredstatements="7" conditionals="35" coveredconditionals="0" methods="9" coveredmethods="0"/>
+      <file name="DropzoneHeader.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\dropzone\components\DropzoneHeader\DropzoneHeader.tsx">
+        <metrics statements="41" coveredstatements="7" conditionals="35" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="68" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="69" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="87" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="100" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="101" count="0" type="stmt"/>
+        <line num="107" count="0" type="stmt"/>
+        <line num="110" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="111" count="0" type="stmt"/>
+        <line num="116" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="117" count="0" type="stmt"/>
+        <line num="122" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="129" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="138" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="139" count="0" type="stmt"/>
+        <line num="143" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="148" count="0" type="stmt"/>
+        <line num="150" count="0" type="stmt"/>
+        <line num="154" count="0" type="stmt"/>
+        <line num="157" count="0" type="stmt"/>
+        <line num="165" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.dropzone.components.DropzoneLabel">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="DropzoneLabel.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\dropzone\components\DropzoneLabel\DropzoneLabel.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.dropzone.components.hooks">
+      <metrics statements="21" coveredstatements="5" conditionals="5" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="useDropzoneStyles.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\dropzone\components\hooks\useDropzoneStyles.ts">
+        <metrics statements="21" coveredstatements="5" conditionals="5" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="79" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="93" count="0" type="stmt"/>
+        <line num="95" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.dropzone.components.utils">
+      <metrics statements="138" coveredstatements="22" conditionals="57" coveredconditionals="2" methods="18" coveredmethods="2"/>
+      <file name="dropzone-ui.upload.utils.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\dropzone\components\utils\dropzone-ui.upload.utils.ts">
+        <metrics statements="23" coveredstatements="3" conditionals="16" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="7"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="53" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+      </file>
+      <file name="dropzone-ui.utils.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\dropzone\components\utils\dropzone-ui.utils.ts">
+        <metrics statements="36" coveredstatements="3" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+      </file>
+      <file name="validation.utils.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\dropzone\components\utils\validation.utils.ts">
+        <metrics statements="79" coveredstatements="16" conditionals="38" coveredconditionals="2" methods="11" coveredmethods="2"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="4" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="40" count="5" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="47" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="49" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="50" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="56" count="0" type="cond" truecount="0" falsecount="5"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="63" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="65" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="83" count="5" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="95" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="102" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="103" count="0" type="stmt"/>
+        <line num="107" count="0" type="stmt"/>
+        <line num="114" count="0" type="stmt"/>
+        <line num="127" count="5" type="stmt"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="132" count="0" type="stmt"/>
+        <line num="133" count="0" type="stmt"/>
+        <line num="140" count="0" type="stmt"/>
+        <line num="146" count="5" type="stmt"/>
+        <line num="147" count="5" type="stmt"/>
+        <line num="152" count="5" type="stmt"/>
+        <line num="153" count="0" type="stmt"/>
+        <line num="154" count="0" type="stmt"/>
+        <line num="156" count="5" type="stmt"/>
+        <line num="164" count="0" type="stmt"/>
+        <line num="175" count="5" type="stmt"/>
+        <line num="176" count="0" type="stmt"/>
+        <line num="177" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="178" count="0" type="stmt"/>
+        <line num="179" count="0" type="stmt"/>
+        <line num="180" count="0" type="stmt"/>
+        <line num="182" count="0" type="stmt"/>
+        <line num="197" count="5" type="stmt"/>
+        <line num="199" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="204" count="0" type="stmt"/>
+        <line num="205" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="207" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="208" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="210" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="211" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="212" count="0" type="stmt"/>
+        <line num="213" count="0" type="stmt"/>
+        <line num="214" count="0" type="stmt"/>
+        <line num="217" count="0" type="stmt"/>
+        <line num="220" count="0" type="stmt"/>
+        <line num="221" count="0" type="stmt"/>
+        <line num="222" count="0" type="stmt"/>
+        <line num="223" count="0" type="stmt"/>
+        <line num="226" count="0" type="stmt"/>
+        <line num="234" count="0" type="stmt"/>
+        <line num="239" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.file-item">
+      <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="69" coveredmethods="0"/>
+      <file name="index.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\file-item\index.ts">
+        <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="69" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.file-item.components.FileItem">
+      <metrics statements="82" coveredstatements="13" conditionals="56" coveredconditionals="0" methods="12" coveredmethods="0"/>
+      <file name="FileItem.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\file-item\components\FileItem\FileItem.tsx">
+        <metrics statements="81" coveredstatements="12" conditionals="56" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="81" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="86" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="91" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="93" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="95" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="107" count="0" type="stmt"/>
+        <line num="108" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="109" count="0" type="stmt"/>
+        <line num="112" count="0" type="stmt"/>
+        <line num="113" count="0" type="stmt"/>
+        <line num="115" count="0" type="stmt"/>
+        <line num="116" count="0" type="stmt"/>
+        <line num="118" count="0" type="stmt"/>
+        <line num="120" count="0" type="stmt"/>
+        <line num="121" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="122" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="123" count="0" type="stmt"/>
+        <line num="124" count="0" type="cond" truecount="0" falsecount="6"/>
+        <line num="126" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="134" count="0" type="stmt"/>
+        <line num="136" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="137" count="0" type="stmt"/>
+        <line num="204" count="0" type="stmt"/>
+        <line num="206" count="5" type="stmt"/>
+      </file>
+      <file name="FileItemProps.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\file-item\components\FileItem\FileItemProps.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="129" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.file-item.components.FileItemContainer">
+      <metrics statements="7" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="FileItemContainer.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\file-item\components\FileItemContainer\FileItemContainer.tsx">
+        <metrics statements="7" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.file-item.components.FileItemFullInfoLayer">
+      <metrics statements="12" coveredstatements="6" conditionals="18" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="FileItemFullInfoLayer.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\file-item\components\FileItemFullInfoLayer\FileItemFullInfoLayer.tsx">
+        <metrics statements="12" coveredstatements="6" conditionals="18" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="100" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.file-item.components.FileItemImage">
+      <metrics statements="5" coveredstatements="3" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="FileItemImage.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\file-item\components\FileItemImage\FileItemImage.tsx">
+        <metrics statements="5" coveredstatements="3" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.file-item.components.FileItemMainLayer">
+      <metrics statements="18" coveredstatements="5" conditionals="70" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="FileItemMainLayer.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\file-item\components\FileItemMainLayer\FileItemMainLayer.tsx">
+        <metrics statements="18" coveredstatements="5" conditionals="70" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="37" count="5" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="208" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.file-item.components.FileItemStatus">
+      <metrics statements="9" coveredstatements="6" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="FileItemStatus.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\file-item\components\FileItemStatus\FileItemStatus.tsx">
+        <metrics statements="9" coveredstatements="6" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="83" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.file-item.utils">
+      <metrics statements="276" coveredstatements="40" conditionals="181" coveredconditionals="0" methods="45" coveredmethods="0"/>
+      <file name="index.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\file-item\utils\index.ts">
+        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="19" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+      </file>
+      <file name="mime.files.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\file-item\utils\mime.files.ts">
+        <metrics statements="174" coveredstatements="14" conditionals="149" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="9"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="48" count="0" type="cond" truecount="0" falsecount="9"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="61" count="5" type="stmt"/>
+        <line num="62" count="0" type="cond" truecount="0" falsecount="9"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="78" count="5" type="stmt"/>
+        <line num="79" count="0" type="cond" truecount="0" falsecount="5"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="89" count="5" type="stmt"/>
+        <line num="90" count="0" type="cond" truecount="0" falsecount="8"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="93" count="0" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="103" count="0" type="stmt"/>
+        <line num="111" count="5" type="stmt"/>
+        <line num="112" count="0" type="cond" truecount="0" falsecount="45"/>
+        <line num="113" count="0" type="stmt"/>
+        <line num="114" count="0" type="stmt"/>
+        <line num="115" count="0" type="stmt"/>
+        <line num="116" count="0" type="stmt"/>
+        <line num="117" count="0" type="stmt"/>
+        <line num="118" count="0" type="stmt"/>
+        <line num="119" count="0" type="stmt"/>
+        <line num="120" count="0" type="stmt"/>
+        <line num="121" count="0" type="stmt"/>
+        <line num="122" count="0" type="stmt"/>
+        <line num="123" count="0" type="stmt"/>
+        <line num="124" count="0" type="stmt"/>
+        <line num="125" count="0" type="stmt"/>
+        <line num="126" count="0" type="stmt"/>
+        <line num="127" count="0" type="stmt"/>
+        <line num="128" count="0" type="stmt"/>
+        <line num="129" count="0" type="stmt"/>
+        <line num="130" count="0" type="stmt"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="132" count="0" type="stmt"/>
+        <line num="133" count="0" type="stmt"/>
+        <line num="134" count="0" type="stmt"/>
+        <line num="136" count="0" type="stmt"/>
+        <line num="137" count="0" type="stmt"/>
+        <line num="138" count="0" type="stmt"/>
+        <line num="139" count="0" type="stmt"/>
+        <line num="140" count="0" type="stmt"/>
+        <line num="141" count="0" type="stmt"/>
+        <line num="142" count="0" type="stmt"/>
+        <line num="143" count="0" type="stmt"/>
+        <line num="144" count="0" type="stmt"/>
+        <line num="145" count="0" type="stmt"/>
+        <line num="146" count="0" type="stmt"/>
+        <line num="147" count="0" type="stmt"/>
+        <line num="148" count="0" type="stmt"/>
+        <line num="149" count="0" type="stmt"/>
+        <line num="150" count="0" type="stmt"/>
+        <line num="151" count="0" type="stmt"/>
+        <line num="152" count="0" type="stmt"/>
+        <line num="153" count="0" type="stmt"/>
+        <line num="154" count="0" type="stmt"/>
+        <line num="155" count="0" type="stmt"/>
+        <line num="156" count="0" type="stmt"/>
+        <line num="157" count="0" type="stmt"/>
+        <line num="158" count="0" type="stmt"/>
+        <line num="167" count="5" type="stmt"/>
+        <line num="169" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="170" count="0" type="stmt"/>
+        <line num="172" count="0" type="stmt"/>
+        <line num="173" count="0" type="stmt"/>
+        <line num="179" count="0" type="cond" truecount="0" falsecount="7"/>
+        <line num="180" count="0" type="stmt"/>
+        <line num="181" count="0" type="stmt"/>
+        <line num="182" count="0" type="stmt"/>
+        <line num="183" count="0" type="stmt"/>
+        <line num="184" count="0" type="stmt"/>
+        <line num="185" count="0" type="stmt"/>
+        <line num="187" count="0" type="stmt"/>
+        <line num="197" count="5" type="stmt"/>
+        <line num="198" count="0" type="stmt"/>
+        <line num="200" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="201" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="202" count="0" type="stmt"/>
+        <line num="203" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="204" count="0" type="stmt"/>
+        <line num="205" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="206" count="0" type="stmt"/>
+        <line num="207" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="208" count="0" type="stmt"/>
+        <line num="209" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="210" count="0" type="stmt"/>
+        <line num="211" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="212" count="0" type="stmt"/>
+        <line num="213" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="214" count="0" type="stmt"/>
+        <line num="215" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="216" count="0" type="stmt"/>
+        <line num="217" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="218" count="0" type="stmt"/>
+        <line num="219" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="220" count="0" type="stmt"/>
+        <line num="221" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="222" count="0" type="stmt"/>
+        <line num="223" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="224" count="0" type="stmt"/>
+        <line num="227" count="0" type="stmt"/>
+        <line num="235" count="5" type="stmt"/>
+        <line num="236" count="0" type="stmt"/>
+        <line num="237" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="238" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="239" count="0" type="stmt"/>
+        <line num="240" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="241" count="0" type="stmt"/>
+        <line num="242" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="243" count="0" type="stmt"/>
+        <line num="244" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="245" count="0" type="stmt"/>
+        <line num="246" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="247" count="0" type="stmt"/>
+        <line num="248" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="249" count="0" type="stmt"/>
+        <line num="250" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="251" count="0" type="stmt"/>
+        <line num="252" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="253" count="0" type="stmt"/>
+        <line num="256" count="0" type="stmt"/>
+        <line num="264" count="5" type="stmt"/>
+        <line num="266" count="0" type="stmt"/>
+        <line num="268" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="269" count="0" type="stmt"/>
+        <line num="270" count="0" type="stmt"/>
+        <line num="272" count="0" type="stmt"/>
+        <line num="275" count="0" type="stmt"/>
+        <line num="277" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="278" count="0" type="stmt"/>
+        <line num="282" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="283" count="0" type="stmt"/>
+        <line num="286" count="0" type="stmt"/>
+        <line num="301" count="5" type="stmt"/>
+      </file>
+      <file name="reader.files.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\file-item\utils\reader.files.ts">
+        <metrics statements="46" coveredstatements="3" conditionals="13" coveredconditionals="0" methods="8" coveredmethods="0"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="41" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="44" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="50" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="82" count="5" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+      </file>
+      <file name="utils.files.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\file-item\utils\utils.files.ts">
+        <metrics statements="41" coveredstatements="8" conditionals="19" coveredconditionals="0" methods="8" coveredmethods="0"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="41" count="5" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="46" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="50" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="67" count="5" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="84" count="5" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="93" count="5" type="stmt"/>
+        <line num="99" count="5" type="cond" truecount="0" falsecount="1"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="101" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="104" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.file-item.utils.IconFiles">
+      <metrics statements="86" coveredstatements="86" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\file-item\utils\IconFiles\index.ts">
+        <metrics statements="86" coveredstatements="86" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="82" count="5" type="stmt"/>
+        <line num="83" count="5" type="stmt"/>
+        <line num="84" count="5" type="stmt"/>
+        <line num="85" count="5" type="stmt"/>
+        <line num="86" count="5" type="stmt"/>
+        <line num="87" count="5" type="stmt"/>
+        <line num="88" count="5" type="stmt"/>
+        <line num="89" count="5" type="stmt"/>
+        <line num="90" count="5" type="stmt"/>
+        <line num="91" count="5" type="stmt"/>
+        <line num="92" count="5" type="stmt"/>
+        <line num="93" count="5" type="stmt"/>
+        <line num="94" count="5" type="stmt"/>
+        <line num="95" count="5" type="stmt"/>
+        <line num="97" count="5" type="stmt"/>
+        <line num="98" count="5" type="stmt"/>
+        <line num="99" count="5" type="stmt"/>
+        <line num="100" count="5" type="stmt"/>
+        <line num="101" count="5" type="stmt"/>
+        <line num="102" count="5" type="stmt"/>
+        <line num="103" count="5" type="stmt"/>
+        <line num="104" count="5" type="stmt"/>
+        <line num="105" count="5" type="stmt"/>
+        <line num="106" count="5" type="stmt"/>
+        <line num="107" count="5" type="stmt"/>
+        <line num="108" count="5" type="stmt"/>
+        <line num="109" count="5" type="stmt"/>
+        <line num="110" count="5" type="stmt"/>
+        <line num="111" count="5" type="stmt"/>
+        <line num="112" count="5" type="stmt"/>
+        <line num="113" count="5" type="stmt"/>
+        <line num="114" count="5" type="stmt"/>
+        <line num="115" count="5" type="stmt"/>
+        <line num="116" count="5" type="stmt"/>
+        <line num="117" count="5" type="stmt"/>
+        <line num="118" count="5" type="stmt"/>
+        <line num="119" count="5" type="stmt"/>
+        <line num="120" count="5" type="stmt"/>
+        <line num="121" count="5" type="stmt"/>
+        <line num="122" count="5" type="stmt"/>
+        <line num="123" count="5" type="stmt"/>
+        <line num="124" count="5" type="stmt"/>
+        <line num="125" count="5" type="stmt"/>
+        <line num="126" count="5" type="stmt"/>
+        <line num="127" count="5" type="stmt"/>
+        <line num="128" count="5" type="stmt"/>
+        <line num="129" count="5" type="stmt"/>
+        <line num="130" count="5" type="stmt"/>
+        <line num="131" count="5" type="stmt"/>
+        <line num="132" count="5" type="stmt"/>
+        <line num="133" count="5" type="stmt"/>
+        <line num="134" count="5" type="stmt"/>
+        <line num="135" count="5" type="stmt"/>
+        <line num="136" count="5" type="stmt"/>
+        <line num="137" count="5" type="stmt"/>
+        <line num="138" count="5" type="stmt"/>
+        <line num="139" count="5" type="stmt"/>
+        <line num="140" count="5" type="stmt"/>
+        <line num="141" count="5" type="stmt"/>
+        <line num="142" count="5" type="stmt"/>
+        <line num="143" count="5" type="stmt"/>
+        <line num="144" count="5" type="stmt"/>
+        <line num="145" count="5" type="stmt"/>
+        <line num="146" count="5" type="stmt"/>
+        <line num="147" count="5" type="stmt"/>
+        <line num="148" count="5" type="stmt"/>
+        <line num="150" count="5" type="stmt"/>
+        <line num="151" count="5" type="stmt"/>
+        <line num="152" count="5" type="stmt"/>
+        <line num="153" count="5" type="stmt"/>
+        <line num="154" count="5" type="stmt"/>
+        <line num="155" count="5" type="stmt"/>
+        <line num="156" count="5" type="stmt"/>
+        <line num="157" count="5" type="stmt"/>
+        <line num="158" count="5" type="stmt"/>
+        <line num="159" count="5" type="stmt"/>
+        <line num="160" count="5" type="stmt"/>
+        <line num="161" count="5" type="stmt"/>
+        <line num="162" count="5" type="stmt"/>
+        <line num="163" count="5" type="stmt"/>
+        <line num="164" count="5" type="stmt"/>
+        <line num="165" count="5" type="stmt"/>
+        <line num="166" count="5" type="stmt"/>
+        <line num="167" count="5" type="stmt"/>
+        <line num="168" count="5" type="stmt"/>
+        <line num="169" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons">
+      <metrics statements="24" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
+      <file name="index.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\index.ts">
+        <metrics statements="24" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="33" count="5" type="stmt"/>
+        <line num="36" count="5" type="stmt"/>
+        <line num="37" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.Cancel">
+      <metrics statements="9" coveredstatements="4" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="Cancel.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\Cancel\Cancel.tsx">
+        <metrics statements="9" coveredstatements="4" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="30" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.CheckCircle">
+      <metrics statements="9" coveredstatements="4" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="CheckCircle.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\CheckCircle\CheckCircle.tsx">
+        <metrics statements="9" coveredstatements="4" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="26" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.Clean">
+      <metrics statements="9" coveredstatements="4" conditionals="20" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="Clean.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\Clean\Clean.tsx">
+        <metrics statements="9" coveredstatements="4" conditionals="20" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="43" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.Close">
+      <metrics statements="9" coveredstatements="4" conditionals="20" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="Close.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\Close\Close.tsx">
+        <metrics statements="9" coveredstatements="4" conditionals="20" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="37" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.DoDisturb">
+      <metrics statements="9" coveredstatements="4" conditionals="16" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="DoDisturb.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\DoDisturb\DoDisturb.tsx">
+        <metrics statements="9" coveredstatements="4" conditionals="16" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="38" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.Info">
+      <metrics statements="8" coveredstatements="4" conditionals="10" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="Info.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\Info\Info.tsx">
+        <metrics statements="8" coveredstatements="4" conditionals="10" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="28" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.Upload">
+      <metrics statements="9" coveredstatements="4" conditionals="18" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="Upload.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\Upload\Upload.tsx">
+        <metrics statements="9" coveredstatements="4" conditionals="18" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="34" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.UploadDone">
+      <metrics statements="9" coveredstatements="4" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="UploadDone.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\UploadDone\UploadDone.tsx">
+        <metrics statements="9" coveredstatements="4" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="37" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.UploadError">
+      <metrics statements="9" coveredstatements="4" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="UploadError.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\UploadError\UploadError.tsx">
+        <metrics statements="9" coveredstatements="4" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="29" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.UploadingProcess">
+      <metrics statements="12" coveredstatements="5" conditionals="18" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="UploadingProcess.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\UploadingProcess\UploadingProcess.tsx">
+        <metrics statements="12" coveredstatements="5" conditionals="18" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="37" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.ViewGrid">
+      <metrics statements="9" coveredstatements="4" conditionals="12" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="ViewGrid.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\ViewGrid\ViewGrid.tsx">
+        <metrics statements="9" coveredstatements="4" conditionals="12" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="32" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.ViewList">
+      <metrics statements="9" coveredstatements="4" conditionals="18" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="ViewList.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\ViewList\ViewList.tsx">
+        <metrics statements="9" coveredstatements="4" conditionals="18" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="30" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.Visibility">
+      <metrics statements="9" coveredstatements="4" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="Visibility.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\Visibility\Visibility.tsx">
+        <metrics statements="9" coveredstatements="4" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="31" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons.utils">
+      <metrics statements="8" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="utils.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\icons\utils\utils.ts">
+        <metrics statements="8" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="0" type="cond" truecount="0" falsecount="6"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.image-preview">
+      <metrics statements="9" coveredstatements="5" conditionals="9" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="FullScreenPreview.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\image-preview\FullScreenPreview.tsx">
+        <metrics statements="9" coveredstatements="5" conditionals="9" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.input-button">
+      <metrics statements="40" coveredstatements="10" conditionals="12" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="InputButton.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\input-button\InputButton.tsx">
+        <metrics statements="38" coveredstatements="8" conditionals="12" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="52" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="88" count="5" type="stmt"/>
+      </file>
+      <file name="InputButtonProps.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\input-button\InputButtonProps.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="54" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.paper">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\paper\index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.paper.components">
+      <metrics statements="28" coveredstatements="7" conditionals="13" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="Paper.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\paper\components\Paper.tsx">
+        <metrics statements="27" coveredstatements="6" conditionals="13" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="71" count="5" type="stmt"/>
+      </file>
+      <file name="PaperProps.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\paper\components\PaperProps.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="27" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.tooltip.components">
+      <metrics statements="24" coveredstatements="4" conditionals="16" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="Tooltip.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\components\tooltip\components\Tooltip.tsx">
+        <metrics statements="24" coveredstatements="4" conditionals="16" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="80" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.localization">
+      <metrics statements="67" coveredstatements="40" conditionals="24" coveredconditionals="0" methods="30" coveredmethods="0"/>
+      <file name="FileItem.localization.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\localization\FileItem.localization.ts">
+        <metrics statements="18" coveredstatements="9" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="8"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+      </file>
+      <file name="dropzone.localization.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\localization\dropzone.localization.ts">
+        <metrics statements="18" coveredstatements="9" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="8"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+      </file>
+      <file name="index.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\localization\index.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="27" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+      </file>
+      <file name="validationError.localization.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\localization\validationError.localization.ts">
+        <metrics statements="18" coveredstatements="9" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="8"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.localization.Chinese-simplified">
+      <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="localization.simplifiedChinese.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\localization\Chinese-simplified\localization.simplifiedChinese.ts">
+        <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.localization.Chinese-traditional">
+      <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="localization.traditionalChinese.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\localization\Chinese-traditional\localization.traditionalChinese.ts">
+        <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.localization.English">
+      <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="localization.english.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\localization\English\localization.english.ts">
+        <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.localization.French">
+      <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="localization.french.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\localization\French\localization.french.ts">
+        <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.localization.Portuguese">
+      <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="localization.portuguese.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\localization\Portuguese\localization.portuguese.ts">
+        <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.localization.Russian">
+      <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="localization.russian.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\localization\Russian\localization.russian.ts">
+        <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.localization.Spanish">
+      <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="localization.spanish.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\localization\Spanish\localization.spanish.ts">
+        <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="287" coveredstatements="99" conditionals="183" coveredconditionals="0" methods="95" coveredmethods="1"/>
+      <file name="SyntheticFile.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\utils\SyntheticFile.ts">
+        <metrics statements="263" coveredstatements="90" conditionals="172" coveredconditionals="0" methods="90" coveredmethods="1"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="36" count="5" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="44" count="5" type="stmt"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="52" count="5" type="stmt"/>
+        <line num="53" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="60" count="5" type="stmt"/>
+        <line num="61" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="68" count="5" type="stmt"/>
+        <line num="69" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="76" count="5" type="stmt"/>
+        <line num="77" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="84" count="5" type="stmt"/>
+        <line num="85" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="92" count="5" type="stmt"/>
+        <line num="93" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="100" count="5" type="stmt"/>
+        <line num="101" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="108" count="5" type="stmt"/>
+        <line num="109" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="116" count="5" type="stmt"/>
+        <line num="117" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="124" count="5" type="stmt"/>
+        <line num="125" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="132" count="5" type="stmt"/>
+        <line num="133" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="140" count="5" type="stmt"/>
+        <line num="141" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="148" count="5" type="stmt"/>
+        <line num="149" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="156" count="5" type="stmt"/>
+        <line num="157" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="164" count="5" type="stmt"/>
+        <line num="165" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="172" count="5" type="stmt"/>
+        <line num="173" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="180" count="5" type="stmt"/>
+        <line num="181" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="188" count="5" type="stmt"/>
+        <line num="189" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="196" count="5" type="stmt"/>
+        <line num="197" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="204" count="5" type="stmt"/>
+        <line num="205" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="212" count="5" type="stmt"/>
+        <line num="213" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="220" count="5" type="stmt"/>
+        <line num="221" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="228" count="5" type="stmt"/>
+        <line num="229" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="236" count="5" type="stmt"/>
+        <line num="237" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="244" count="5" type="stmt"/>
+        <line num="245" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="252" count="5" type="stmt"/>
+        <line num="253" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="260" count="5" type="stmt"/>
+        <line num="261" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="268" count="5" type="stmt"/>
+        <line num="269" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="276" count="5" type="stmt"/>
+        <line num="277" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="284" count="5" type="stmt"/>
+        <line num="285" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="292" count="5" type="stmt"/>
+        <line num="293" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="300" count="5" type="stmt"/>
+        <line num="301" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="308" count="5" type="stmt"/>
+        <line num="309" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="316" count="5" type="stmt"/>
+        <line num="317" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="324" count="5" type="stmt"/>
+        <line num="325" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="332" count="5" type="stmt"/>
+        <line num="333" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="340" count="5" type="stmt"/>
+        <line num="341" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="348" count="5" type="stmt"/>
+        <line num="349" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="356" count="5" type="stmt"/>
+        <line num="357" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="364" count="5" type="stmt"/>
+        <line num="365" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="372" count="5" type="stmt"/>
+        <line num="373" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="380" count="5" type="stmt"/>
+        <line num="381" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="388" count="5" type="stmt"/>
+        <line num="389" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="396" count="5" type="stmt"/>
+        <line num="397" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="404" count="5" type="stmt"/>
+        <line num="405" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="412" count="5" type="stmt"/>
+        <line num="413" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="420" count="5" type="stmt"/>
+        <line num="421" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="428" count="5" type="stmt"/>
+        <line num="429" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="436" count="5" type="stmt"/>
+        <line num="437" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="444" count="5" type="stmt"/>
+        <line num="445" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="452" count="5" type="stmt"/>
+        <line num="453" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="460" count="5" type="stmt"/>
+        <line num="461" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="468" count="5" type="stmt"/>
+        <line num="469" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="476" count="5" type="stmt"/>
+        <line num="477" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="484" count="5" type="stmt"/>
+        <line num="485" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="492" count="5" type="stmt"/>
+        <line num="493" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="500" count="5" type="stmt"/>
+        <line num="501" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="508" count="5" type="stmt"/>
+        <line num="509" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="516" count="5" type="stmt"/>
+        <line num="517" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="524" count="5" type="stmt"/>
+        <line num="525" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="532" count="5" type="stmt"/>
+        <line num="533" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="540" count="5" type="stmt"/>
+        <line num="541" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="548" count="5" type="stmt"/>
+        <line num="549" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="556" count="5" type="stmt"/>
+        <line num="557" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="564" count="5" type="stmt"/>
+        <line num="565" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="572" count="5" type="stmt"/>
+        <line num="573" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="580" count="5" type="stmt"/>
+        <line num="581" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="588" count="5" type="stmt"/>
+        <line num="589" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="596" count="5" type="stmt"/>
+        <line num="597" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="604" count="5" type="stmt"/>
+        <line num="605" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="612" count="5" type="stmt"/>
+        <line num="613" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="620" count="5" type="stmt"/>
+        <line num="621" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="628" count="5" type="stmt"/>
+        <line num="629" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="636" count="5" type="stmt"/>
+        <line num="637" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="644" count="5" type="stmt"/>
+        <line num="645" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="652" count="5" type="stmt"/>
+        <line num="653" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="660" count="5" type="stmt"/>
+        <line num="661" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="668" count="5" type="stmt"/>
+        <line num="669" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="676" count="5" type="stmt"/>
+        <line num="677" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="684" count="5" type="stmt"/>
+        <line num="685" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="692" count="5" type="stmt"/>
+        <line num="693" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="700" count="5" type="stmt"/>
+        <line num="701" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="708" count="5" type="stmt"/>
+        <line num="709" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="716" count="5" type="stmt"/>
+        <line num="718" count="0" type="stmt"/>
+        <line num="720" count="0" type="stmt"/>
+        <line num="721" count="0" type="stmt"/>
+        <line num="722" count="0" type="stmt"/>
+        <line num="723" count="0" type="stmt"/>
+        <line num="724" count="0" type="stmt"/>
+        <line num="725" count="0" type="stmt"/>
+        <line num="726" count="0" type="stmt"/>
+        <line num="727" count="0" type="stmt"/>
+        <line num="728" count="0" type="stmt"/>
+        <line num="729" count="0" type="stmt"/>
+        <line num="730" count="0" type="stmt"/>
+        <line num="731" count="0" type="stmt"/>
+        <line num="732" count="0" type="stmt"/>
+        <line num="733" count="0" type="stmt"/>
+        <line num="734" count="0" type="stmt"/>
+        <line num="735" count="0" type="stmt"/>
+        <line num="736" count="0" type="stmt"/>
+        <line num="737" count="0" type="stmt"/>
+        <line num="738" count="0" type="stmt"/>
+        <line num="739" count="0" type="stmt"/>
+        <line num="740" count="0" type="stmt"/>
+        <line num="741" count="0" type="stmt"/>
+        <line num="742" count="0" type="stmt"/>
+        <line num="743" count="0" type="stmt"/>
+        <line num="744" count="0" type="stmt"/>
+        <line num="745" count="0" type="stmt"/>
+        <line num="746" count="0" type="stmt"/>
+        <line num="747" count="0" type="stmt"/>
+        <line num="748" count="0" type="stmt"/>
+        <line num="749" count="0" type="stmt"/>
+        <line num="750" count="0" type="stmt"/>
+        <line num="751" count="0" type="stmt"/>
+        <line num="752" count="0" type="stmt"/>
+        <line num="753" count="0" type="stmt"/>
+        <line num="754" count="0" type="stmt"/>
+        <line num="755" count="0" type="stmt"/>
+        <line num="756" count="0" type="stmt"/>
+        <line num="757" count="0" type="stmt"/>
+        <line num="758" count="0" type="stmt"/>
+        <line num="759" count="0" type="stmt"/>
+        <line num="760" count="0" type="stmt"/>
+        <line num="761" count="0" type="stmt"/>
+        <line num="762" count="0" type="stmt"/>
+        <line num="763" count="0" type="stmt"/>
+        <line num="764" count="0" type="stmt"/>
+        <line num="765" count="0" type="stmt"/>
+        <line num="766" count="0" type="stmt"/>
+        <line num="767" count="0" type="stmt"/>
+        <line num="768" count="0" type="stmt"/>
+        <line num="769" count="0" type="stmt"/>
+        <line num="770" count="0" type="stmt"/>
+        <line num="771" count="0" type="stmt"/>
+        <line num="772" count="0" type="stmt"/>
+        <line num="773" count="0" type="stmt"/>
+        <line num="774" count="0" type="stmt"/>
+        <line num="775" count="0" type="stmt"/>
+        <line num="776" count="0" type="stmt"/>
+        <line num="777" count="0" type="stmt"/>
+        <line num="778" count="0" type="stmt"/>
+        <line num="779" count="0" type="stmt"/>
+        <line num="780" count="0" type="stmt"/>
+        <line num="781" count="0" type="stmt"/>
+        <line num="782" count="0" type="stmt"/>
+        <line num="783" count="0" type="stmt"/>
+        <line num="784" count="0" type="stmt"/>
+        <line num="785" count="0" type="stmt"/>
+        <line num="786" count="0" type="stmt"/>
+        <line num="787" count="0" type="stmt"/>
+        <line num="788" count="0" type="stmt"/>
+        <line num="789" count="0" type="stmt"/>
+        <line num="790" count="0" type="stmt"/>
+        <line num="791" count="0" type="stmt"/>
+        <line num="792" count="0" type="stmt"/>
+        <line num="793" count="0" type="stmt"/>
+        <line num="794" count="0" type="stmt"/>
+        <line num="795" count="0" type="stmt"/>
+        <line num="796" count="0" type="stmt"/>
+        <line num="802" count="0" type="stmt"/>
+        <line num="803" count="0" type="stmt"/>
+        <line num="804" count="0" type="stmt"/>
+        <line num="805" count="0" type="stmt"/>
+        <line num="807" count="0" type="stmt"/>
+        <line num="809" count="5" type="stmt"/>
+      </file>
+      <file name="files.utils.ts" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\utils\files.utils.ts">
+        <metrics statements="18" coveredstatements="5" conditionals="9" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="49" count="5" type="stmt"/>
+        <line num="50" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="51" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="52" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="54" count="0" type="stmt"/>
+      </file>
+      <file name="loader.tsx" path="F:\Jinma\Documents\REACT\MODULOS\unlimited-react-components\mega-dropzone-ui\src\utils\loader.tsx">
+        <metrics statements="6" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="120" count="5" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
