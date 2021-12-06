@@ -119,9 +119,9 @@ export interface FileItemProps extends PaperProps {
      */
     alwaysActive?: boolean;
     /**
-     * Whether to display result of validation on InfoLayer or in tooltip on Hover FileItem
+     * Where to display result of validation: on InfoLayer or in Tooltip when user hovers the FileItem
      */
-     resultOnLayer?:boolean;
+    resultOnTooltip?: boolean;
 }
 /**
  * Base default props
@@ -136,12 +136,12 @@ export const FileItemPropsDefault: FileItemProps = {
     preview: false,
     valid: false,
     info: false,
-    hd: undefined
-    , localization: "EN-en",
+    hd: undefined,
+    localization: "EN-en",
     onlyImage: false,
     imageUrl: undefined,
     errors: undefined,
     elevation: false,
-    alwaysActive:undefined,
+    alwaysActive: undefined,
     //fileName: "bottom"
 }

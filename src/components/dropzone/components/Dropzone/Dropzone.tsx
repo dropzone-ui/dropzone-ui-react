@@ -67,9 +67,9 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     fakeUploading,
     localization,
   } = mergeProps(props, DropzonePropsDefault);
-  //console.log("heiight", maxHeight);
-  
-  ////  re-validation
+
+
+  //re-validation: for development purposes and for preventing clean fileList in web page code generator
   useEffect(() => {
     if (files.length > 0) {
       let fileList: FileList = files.map((x) => x.file) as unknown as FileList;
@@ -93,7 +93,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     DropzoneLocalizerSelector(localization);
   const ValidationErrorLocalizer: LocalLabels =
     ValidateErrorLocalizerSelector(localization);
-  //console.log("color:", color);
+
   //ref to the hidden input tag
   const inputRef = useRef<HTMLInputElement>(null);
   // whether is draggin or not
@@ -103,7 +103,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   const [localView, setLocalView] =
     useState<FileItemContainerProps["view"]>("grid");
   const [localMessage, setLocalMessage] = useState<string>("");
-  //const [filesUploading, setFilesUploading] = useState<FileValidated[]>([]);
+  
   //ClassName for dynamic style
   const [onUploadingStart, setOnUploadingStart] = useState<boolean>(false);
   // const [queueFiles, setQueueFiles] = useState<FileValidated[]>([]);
@@ -267,15 +267,12 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
         DropzoneLocalizer.uploadFinished as FunctionLabel;
       setLocalMessage(
         finishUploadMessenger(missingUpload - totalRejected, totalRejected)
-        /*   localization === "ES-es"
-          ? `Archivos subidos: ${missingUpload - totalRejected}, Rechazados: ${totalRejected}`
-          : `Uloaded files: ${missingUpload - totalRejected}, Rejected: ${totalRejected}`,
-      */
+
       );
       setTimeout(() => {
         setOnUploadingStart(false);
       }, 2300);
-      //console.log("queueFiles files:", queueFiles);
+      
     } else {
       setLocalMessage(
         DropzoneLocalizer.noFilesMessage as string
@@ -364,7 +361,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       let validatedFile: FileValidated = validator
         ? customValidateFile(f, validator)
         : validateFile(f, localValidator, ValidationErrorLocalizer);
-      //console.log("=>", validateFile);
+
       if (validatedFile.valid) {
         //not valid due to file count limit
         const valid = countdown > 0;
@@ -425,7 +422,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     //onDrop?.([]);
   };
   const handleChangeView = (newView: "grid" | "list") => {
-    // console.log("new View", newView);
+  
     setLocalView(newView);
     onChangeView?.(newView);
   };
@@ -483,7 +480,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
         type="file"
         accept={accept}
         style={{ display: "none" }}
-        multiple={(maxFiles && maxFiles > 1) || undefined}
+        multiple={maxFiles ? maxFiles > 1 : true}
       />
     </div>
   );

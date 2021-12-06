@@ -31,7 +31,6 @@ export const uploadPromiseAxios = async (
                     response = await axios.post(url, formData, configParams);
             }
 
-            //console.log("uploadValidFiles individual", response);
             if (!response || !response.data) {
                 // there was a problem on uploading, normally a connexion problem
                 resolve(

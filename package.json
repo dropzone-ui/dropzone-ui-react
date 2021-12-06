@@ -45,10 +45,6 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    
-    "axios": "^0.24.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@storybook/addon-actions": "^6.4.5",
@@ -67,6 +63,7 @@
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.3.0",
     "ansi-regex": "^6.0.1",
+    "ansi-html": "^0.0.7",
     "babel-loader": "^8.2.3",
     "coveralls": "^3.1.0",
     "css-loader": "^6.5.1",

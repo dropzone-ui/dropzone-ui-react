@@ -271,14 +271,11 @@ export const getURLFileIco = (file: File | undefined): ResultFileIco => {
     } else {
         result = mimeSelector(file.type);
     }
-    //console.log("got result:",result);
     //If plain text
     const extention: string = getExt(file.name);
-    //console.log("got extention:",extention);
 
     if (result === "text") {
         result = checkIsCode(extention);
-        //console.log("got checkIsCode:",result);
 
     }
     //If octet stream result, second chance: file extention

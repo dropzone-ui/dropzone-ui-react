@@ -38,7 +38,6 @@ export interface DropzoneHeaderProps {
 const DropzoneHeader: FC<DropzoneHeaderProps> = (
   props: DropzoneHeaderProps
 ) => {
-  console.log("hideViewIcon",props.hideViewIcon);
   const {
     maxFileSize,
     numberOfValidFiles,

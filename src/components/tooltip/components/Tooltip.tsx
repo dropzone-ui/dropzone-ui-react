@@ -13,10 +13,11 @@ const Tooltip: FC<TooltipProps> = (props: TooltipProps) => {
     errors,
     //className,
     uploadMessage,
-    open
+    open,
   } = props;
-  const [statusClassName, setSattusClassName] = useState<string | undefined>(
-    undefined,
+  console.log("Tooltip props", props);
+  const [statusClassName, setSatusClassName] = useState<string | undefined>(
+    undefined
   );
   const [message, setMessage] = useState<undefined | string>(undefined);
   const handleChangeStatus = (uploadStatus?: UPLOADSTATUS, valid?: boolean) => {
@@ -25,24 +26,31 @@ const Tooltip: FC<TooltipProps> = (props: TooltipProps) => {
       // upload status
       //setSattusClassName("success");
       if (!uploadStatus) {
-        //when uploadStatus is undefined, File was not uploaded yet
+        //when uploadStatus is undefined, File have not been uploaded yet
         //setSattusClassName(undefined);
         setMessage(undefined);
       } else {
         //otherwise is only needed to check error or success
         setMessage(uploadMessage);
         if (uploadStatus === "success") {
-          setSattusClassName("success");
+          setSatusClassName("success");
         } else if (uploadStatus === "error") {
-          setSattusClassName("not-valid-error");
+          setSatusClassName("not-valid-error");
         } else {
-          setSattusClassName(undefined);
+          setSatusClassName(undefined);
         }
       }
     } else {
       // not valid has errors
-      setSattusClassName("not-valid-error");
-      // setMessage();
+      setSatusClassName("not-valid-error");
+      setMessage(
+        errors
+          ? errors.reduce((acum: string, curr: string) => {
+              acum += curr;
+              return acum;
+            }, "")
+          : ""
+      );
     }
   };
   useEffect(() => {
@@ -50,32 +58,22 @@ const Tooltip: FC<TooltipProps> = (props: TooltipProps) => {
   }, [uploadStatus, valid]);
   return (
     <Fragment>
-      {open && message && statusClassName ? (
-        <div
+      {open && message && statusClassName && (
+        <span
           className={
             statusClassName
-              ? `dropzone-ui-tooltip ${statusClassName}`
-              : "dropzone-ui-tooltip"
+              ? `dropzone-ui-tooltiptext ${statusClassName}`
+              : "dropzone-ui-tooltiptext"
           }
-          style={style}
         >
-          {children}
-          <span
-            className={
-              statusClassName
-                ? `dropzone-ui-tooltiptext ${statusClassName}`
-                : "dropzone-ui-tooltiptext"
-            }
-          >
-            {!valid
-              ? errors.map((error, index) => (
+          {
+            /* !valid
+              ? errors?.map((error, index) => (
                   <div key={index + 1}>{`- ${error}.\n`}</div>
                 ))
-              : message || ""}
-          </span>
-        </div>
-      ) : (
-        <Fragment>{children}</Fragment>
+              :  */ message || ""
+          }
+        </span>
       )}
     </Fragment>
   );

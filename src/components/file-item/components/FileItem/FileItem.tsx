@@ -36,23 +36,23 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     imageUrl,
     elevation,
     alwaysActive,
-    resultOnLayer,
+    resultOnTooltip,
   } = mergeProps(props, FileItemPropsDefault);
   //actionOnHover
   const [hovering, setHOvering] = useState<boolean>(false);
   const handleOnHoverEnter = () => {
-    if (!alwaysActive) {
-      setHOvering(true);
-    }
+    //if (!alwaysActive) {
+    setHOvering(true);
+    //}
   };
   const handleOnHoverLeave = () => {
-    if (!alwaysActive) {
-      setHOvering(false);
-    }
+    //if (!alwaysActive) {
+    setHOvering(false);
+    //}
   };
-  useEffect(() => {
+  /*   useEffect(() => {
     setHOvering(alwaysActive || false);
-  }, [alwaysActive]);
+  }, [alwaysActive]); */
 
   //size
   const sizeFormatted: string = file ? fileSizeFormater(file.size) : "0 KB";
@@ -75,7 +75,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     file: File | undefined,
     valid: boolean,
     preview: boolean,
-    imageUrl: string | undefined,
+    imageUrl: string | undefined
   ) => {
     //////////////////////////////
     if (!file) return;
@@ -128,72 +128,76 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     }
   };
   function handleClick<T extends HTMLDivElement>(
-    e: React.MouseEvent<T, MouseEvent>,
+    e: React.MouseEvent<T, MouseEvent>
   ): void {
     //avoid children to trigger onClick ripple from parent
     e.stopPropagation();
   }
   if (file && typeof file.name == "string") {
     return (
-      <Tooltip open={!resultOnLayer && hovering}>
-        <div
-          className="dz-ui-file-item-container"
-          onClick={handleClick}
-          onMouseEnter={handleOnHoverEnter}
-          onMouseLeave={handleOnHoverLeave}
-        >
-          <div className={`file-item-full-container-container`} style={style}>
-            <Paper
-              shadow={elevation}
-              className={`file-item-icon-container ${showInfo ? " hide" : ""}`}
-            >
-              <FileItemImage
-                imageSource={imageSource}
-                url={url}
-                fileName={file.name}
-              />
-              {
-                //hovering && (
-                <FileItemMainLayer
-                  showInfo={showInfo}
-                  //fileNamePosition={fileName}
-                  fileName={file.name}
-                  onDelete={onDelete ? handleDelete : undefined}
-                  onOpenImage={onSee && preview ? handleOpenImage : undefined}
-                  onOpenInfo={handleOpenInfo}
-                  info={info || false}
-                  valid={valid || false}
-                  isImage={isImage}
-                  sizeFormatted={sizeFormatted}
-                  //fileNamePosition={undefined}
-                  uploadStatus={uploadStatus}
-                  localization={localization}
-                  onlyImage={onlyImage}
-                  hovering={hovering}
-                />
-                //)
-              }
-
-              <FileItemFullInfoLayer
-                showInfo={showInfo}
-                errors={errors}
-                fileName={file.name}
-                fileSize={fileSizeFormater(file.size)}
-                fileType={file.type}
-                valid={valid || false}
-                onClose={handleCloseInfo}
-                uploadStatus={uploadStatus}
-                uploadMessage={uploadMessage}
-                localization={localization}
-                resultOnLayer={resultOnLayer}
-              />
-            </Paper>
-            {!onlyImage && (
-              <div className="file-item-name">{shrinkWord(file.name)}</div>
-            )}
-          </div>
-        </div>
-      </Tooltip>
+      <div
+        className={`dz-ui-file-item-container${
+          resultOnTooltip ? " dz-ui-tooltip" : ""
+        }`}
+        onClick={handleClick}
+        onMouseEnter={handleOnHoverEnter}
+        onMouseLeave={handleOnHoverLeave}
+      >
+        <div className={`file-item-full-container-container`} style={style}>
+          <Paper
+            shadow={elevation}
+            className={`file-item-icon-container ${showInfo ? " hide" : ""}`}
+          >
+            <FileItemImage
+              imageSource={imageSource}
+              url={url}
+              fileName={file.name}
+            />
+            <FileItemMainLayer
+              showInfo={showInfo}
+              //fileNamePosition={fileName}
+              fileName={file.name}
+              onDelete={onDelete ? handleDelete : undefined}
+              onOpenImage={onSee && preview ? handleOpenImage : undefined}
+              onOpenInfo={handleOpenInfo}
+              info={info || false}
+              valid={valid || false}
+              isImage={isImage}
+              sizeFormatted={sizeFormatted}
+              //fileNamePosition={undefined}
+              uploadStatus={uploadStatus}
+              localization={localization}
+              onlyImage={onlyImage}
+              hovering={alwaysActive || hovering}
+            />
+            <FileItemFullInfoLayer
+              showInfo={showInfo}
+              errors={errors}
+              fileName={file.name}
+              fileSize={fileSizeFormater(file.size)}
+              fileType={file.type}
+              valid={valid || false}
+              onClose={handleCloseInfo}
+              uploadStatus={uploadStatus}
+              uploadMessage={uploadMessage}
+              localization={localization}
+              resultOnTooltip={resultOnTooltip}
+            />
+          </Paper>
+        
+          {!onlyImage && (
+            <div className="file-item-name">{shrinkWord(file.name)}</div>
+          )}
+        </div> 
+         <Tooltip
+             open={resultOnTooltip && hovering}
+            //open={true}
+            uploadStatus={uploadStatus}
+            valid={valid}
+            errors={errors}
+            uploadMessage={uploadMessage}
+          ></Tooltip>
+      </div>
     );
   } else return <Fragment></Fragment>;
 };
