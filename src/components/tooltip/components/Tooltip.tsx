@@ -16,7 +16,7 @@ const Tooltip: FC<TooltipProps> = (props: TooltipProps) => {
     open,
   } = props;
   const [statusClassName, setSatusClassName] = useState<string | undefined>(
-    undefined
+    undefined,
   );
   const [message, setMessage] = useState<undefined | string>(undefined);
   const handleChangeStatus = (uploadStatus?: UPLOADSTATUS, valid?: boolean) => {
@@ -45,10 +45,10 @@ const Tooltip: FC<TooltipProps> = (props: TooltipProps) => {
       setMessage(
         errors
           ? errors.reduce((acum: string, curr: string) => {
-              acum += curr;
+              acum += `${curr}. `;
               return acum;
             }, "")
-          : ""
+          : "",
       );
     }
   };
