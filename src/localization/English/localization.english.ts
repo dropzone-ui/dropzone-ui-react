@@ -20,7 +20,7 @@ export const DropzoneEnglish: LocalLabels = {
         validFilesMessage: (numberOfValidFiles, maxFiles) => `Files ${numberOfValidFiles}/${maxFiles}`
     },
     fakeuploadsuccess: "File was successfully uploaded",
-    fakeUploadError: "Error on uploading. PLease try again later.",
+    fakeUploadError: "Error on uploading. Please try again later.",
 }
 
 /**
