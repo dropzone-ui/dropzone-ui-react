@@ -54,17 +54,12 @@ const Tooltip: FC<TooltipProps> = (props: TooltipProps) => {
   };
   useEffect(() => {
     handleChangeStatus(uploadStatus, valid);
+    // eslint-disable-next-line
   }, [uploadStatus, valid]);
   return (
     <Fragment>
       {open && message && statusClassName && (
-        <span
-          className={
-            statusClassName
-              ? `dropzone-ui-tooltiptext ${statusClassName}`
-              : "dropzone-ui-tooltiptext"
-          }
-        >
+        <span className={`dropzone-ui-tooltiptext ${statusClassName}`}>
           {
             /* !valid
               ? errors?.map((error, index) => (

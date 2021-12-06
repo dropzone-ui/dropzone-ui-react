@@ -31,7 +31,9 @@ export function createRipple<
 }
 
 
-export function createRippleFromElement(element: HTMLDivElement | null, color: string) {
+export function createRippleFromElement<
+T extends HTMLButtonElement | HTMLAnchorElement | HTMLDivElement
+>(element: HTMLDivElement | null, event: React.MouseEvent<T, MouseEvent>,color: string) {
   if (!element) {
     return;
   }
@@ -46,9 +48,9 @@ export function createRippleFromElement(element: HTMLDivElement | null, color: s
   const radius: number = diameter / 2;
 
   circle.style.width = circle.style.height = `${diameter}px`;
-  circle.style.left = `${buttonAnchorDiv.offsetLeft - radius
+  circle.style.left = `${event.clientX - buttonAnchorDiv.offsetLeft - radius
     }px`;
-  circle.style.top = `${buttonAnchorDiv.offsetTop - radius}px`;
+  circle.style.top = `${event.clientY - buttonAnchorDiv.offsetTop - radius}px`;
   circle.classList.add("ripple");
 
   circle.style.backgroundColor = hexColorToRGB(

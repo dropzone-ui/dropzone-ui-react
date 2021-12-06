@@ -11,7 +11,7 @@ import {
 } from "../utils/validation.utils";
 import { DropzoneProps, DropzonePropsDefault } from "./DropzoneProps";
 import {
-  createRipple,
+  //createRipple,
   createRippleFromElement,
 } from "../utils/dropzone-ui.utils";
 import DropzoneHeader from "../DropzoneHeader/DropzoneHeader";
@@ -326,7 +326,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       localValidator
     );
     if (!disableRipple) {
-      createRippleFromElement(dz_ui_ripple_ref.current, color as string);
+      createRippleFromElement(dz_ui_ripple_ref.current, evt,color as string);
 
      // createRipple(evt, color as string);
     }
@@ -417,7 +417,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     let referenceInput = inputRef.current;
     referenceInput?.click();
     if (!disableRipple) {
-      createRippleFromElement(dz_ui_ripple_ref.current, color as string);
+      createRippleFromElement(dz_ui_ripple_ref.current,e, color as string);
       //createRipple(e, color as string);
     }
     onClick?.(e);
