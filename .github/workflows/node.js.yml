@@ -26,6 +26,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install --no-optional
-    - run: npm i axios react react-dom
-    - run: npm run test:coveralls
+    - run: npm ci
+    - run: npm run test
