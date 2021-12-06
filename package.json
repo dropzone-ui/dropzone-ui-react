@@ -1,6 +1,6 @@
 {
   "name": "@dropzone-ui/react",
-  "version": "6.3.1",
+  "version": "6.3.2",
   "description": "The best and most complete React library for managing file uploads. Multilanguage support. Server side support. Material design styles. Code generator on webpage.",
   "main": "./build/index.js",
   "module": "./build/index.es.js",
