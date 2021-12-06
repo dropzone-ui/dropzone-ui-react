@@ -194,9 +194,14 @@ export interface DropzoneProps extends OverridableProps {
   /**
   * language to be used
   * for now
-  * only English, French , Portuguese and Spanish are supported
+  * only English, French , Portuguese, Chinnese (traditional and simplyfied) and Spanish are supported
   */
   localization?: Localization;
+  /**
+   * if present or true, removes scrolls
+   * and sets the Dropzone in a grid view
+   */
+  disableScroll?: boolean;
 }
 
 export const DropzonePropsDefault: DropzoneProps = {
@@ -225,7 +230,8 @@ export const DropzonePropsDefault: DropzoneProps = {
   onClean: undefined,
   behaviour: "add",
   label: undefined,
-  localization: "EN-en"
+  localization: "EN-en",
+  disableScroll:undefined
 };
 
 

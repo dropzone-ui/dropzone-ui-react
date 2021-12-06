@@ -3,6 +3,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
 
 .dropzone-ui {
+  .dropzone-ui-ripple {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    //background-color: aqua;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    //padding-left: 15px;
+    //z-index: -1;
+    span.ripple {
+      // width: 100%;
+      //height: 100%;
+      // overflow: hidden;
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      animation: ripple 500ms linear;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+  }
   color: #646c7f;
   position: relative;
   min-height: 280px;
@@ -16,7 +44,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  //overflow: hidden;
   padding: 24px 0;
   &.drag {
     border: none;
@@ -24,7 +52,7 @@
   &.clickable {
     cursor: pointer;
   }
-  span.ripple {
+/*   span.ripple {
     // width: 100%;
     //height: 100%;
     // overflow: hidden;
@@ -40,7 +68,7 @@
       transform: scale(4);
       opacity: 0;
     }
-  }
+  } */
 
   //verflow: hidden;
   .dz-ui-header {

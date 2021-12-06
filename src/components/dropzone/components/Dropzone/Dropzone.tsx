@@ -10,7 +10,10 @@ import {
   validateFile,
 } from "../utils/validation.utils";
 import { DropzoneProps, DropzonePropsDefault } from "./DropzoneProps";
-import { createRipple } from "../utils/dropzone-ui.utils";
+import {
+  createRipple,
+  createRippleFromElement,
+} from "../utils/dropzone-ui.utils";
 import DropzoneHeader from "../DropzoneHeader/DropzoneHeader";
 import DropzoneFooter from "../DropzoneFooter.tsx/DropzoneFooter";
 import { FileItemContainer } from "../../../../components/file-item";
@@ -66,9 +69,10 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     label,
     fakeUploading,
     localization,
+    disableScroll,
   } = mergeProps(props, DropzonePropsDefault);
-
-
+  //ref for ripple
+  const dz_ui_ripple_ref = useRef<HTMLDivElement>(null);
   //re-validation: for development purposes and for preventing clean fileList in web page code generator
   useEffect(() => {
     if (files.length > 0) {
@@ -103,14 +107,14 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   const [localView, setLocalView] =
     useState<FileItemContainerProps["view"]>("grid");
   const [localMessage, setLocalMessage] = useState<string>("");
-  
+
   //ClassName for dynamic style
   const [onUploadingStart, setOnUploadingStart] = useState<boolean>(false);
   // const [queueFiles, setQueueFiles] = useState<FileValidated[]>([]);
   const classNameCreated: string = useDropzoneStyles(
     color,
     backgroundColor,
-    maxHeight,
+    disableScroll ? undefined : maxHeight,
     minHeight
   );
   const finalClassName: string = `dropzone-ui${classNameCreated}${
@@ -126,10 +130,12 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     }
   }, [value]);
   useEffect(() => {
-    if (view) {
+    if (disableScroll) {
+      setLocalView("grid");
+    } else if (view) {
       setLocalView(view);
     }
-  }, [view]);
+  }, [view, disableScroll]);
   useEffect(() => {
     if (uploadingMessage) {
       setLocalMessage(uploadingMessage);
@@ -267,12 +273,10 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
         DropzoneLocalizer.uploadFinished as FunctionLabel;
       setLocalMessage(
         finishUploadMessenger(missingUpload - totalRejected, totalRejected)
-
       );
       setTimeout(() => {
         setOnUploadingStart(false);
       }, 2300);
-      
     } else {
       setLocalMessage(
         DropzoneLocalizer.noFilesMessage as string
@@ -322,7 +326,9 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       localValidator
     );
     if (!disableRipple) {
-      createRipple(evt, color as string);
+      createRippleFromElement(dz_ui_ripple_ref.current, color as string);
+
+     // createRipple(evt, color as string);
     }
     setIsDragging(false);
     handleFilesChange(output);
@@ -411,7 +417,8 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     let referenceInput = inputRef.current;
     referenceInput?.click();
     if (!disableRipple) {
-      createRipple(e, color as string);
+      createRippleFromElement(dz_ui_ripple_ref.current, color as string);
+      //createRipple(e, color as string);
     }
     onClick?.(e);
   }
@@ -422,7 +429,6 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     //onDrop?.([]);
   };
   const handleChangeView = (newView: "grid" | "list") => {
-  
     setLocalView(newView);
     onChangeView?.(newView);
   };
@@ -435,6 +441,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       onClick={clickable ? handleClick : () => {}}
       // onDragLeave={handleDragLeave}
     >
+      <div className="dropzone-ui-ripple" ref={dz_ui_ripple_ref}></div>
       {header && (
         <DropzoneHeader
           maxFileSize={maxFileSize}
@@ -444,7 +451,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
           //handleReset={handleReset}
           onUploadingStart={onUploadingStart}
           view={localView}
-          hideViewIcon={view ? true : false}
+          hideViewIcon={view || disableScroll ? true : false}
           onChangeView={handleChangeView}
           onUploadStart={!uploadOnDrop ? handleUploadStart : undefined}
           onClean={onClean && !onUploadingStart ? handleCleanFiles : undefined}
@@ -453,7 +460,14 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
         />
       )}
       {children && value && files && files.length > 0 ? (
-        <FileItemContainer view={localView} style={{ minHeight, maxHeight }}>
+        <FileItemContainer
+          view={localView}
+          style={{
+            minHeight: minHeight,
+            maxHeight: disableScroll ? undefined : maxHeight,
+          }}
+          disableScroll={disableScroll}
+        >
           {children}
         </FileItemContainer>
       ) : (
