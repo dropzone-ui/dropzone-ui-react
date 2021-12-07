@@ -82,18 +82,19 @@
         }
       }
     }
-    &::-webkit-scrollbar {
-      width: 9px;
-    }
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: #757a86e8;
-      border-radius: 20px;
-      border: transparent;
-    }
+   
     .full-info {
+      &::-webkit-scrollbar {
+        width: 9px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #646c7fa9;
+        border-radius: 20px;
+        border: transparent;
+      }
       text-align: left;
       position: absolute;
       left: 0;
