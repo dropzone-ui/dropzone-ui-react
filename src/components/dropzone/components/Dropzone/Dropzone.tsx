@@ -111,11 +111,14 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   //ClassName for dynamic style
   const [onUploadingStart, setOnUploadingStart] = useState<boolean>(false);
   // const [queueFiles, setQueueFiles] = useState<FileValidated[]>([]);
+  // const offset:number= header && footer? 50: (!header && footer?23:(header && !footer?22:0)) ;
+
   const classNameCreated: string = useDropzoneStyles(
     color,
     backgroundColor,
     disableScroll ? undefined : maxHeight,
-    minHeight
+    minHeight,
+    header && footer ? 50 : !header && footer ? 23 : header && !footer ? 22 : 0
   );
   const finalClassName: string = `dropzone-ui${classNameCreated}${
     isDragging ? ` drag` : ``
@@ -326,9 +329,9 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       localValidator
     );
     if (!disableRipple) {
-      createRippleFromElement(dz_ui_ripple_ref.current, evt,color as string);
+      createRippleFromElement(dz_ui_ripple_ref.current, evt, color as string);
 
-     // createRipple(evt, color as string);
+      // createRipple(evt, color as string);
     }
     setIsDragging(false);
     handleFilesChange(output);
@@ -417,7 +420,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     let referenceInput = inputRef.current;
     referenceInput?.click();
     if (!disableRipple) {
-      createRippleFromElement(dz_ui_ripple_ref.current,e, color as string);
+      createRippleFromElement(dz_ui_ripple_ref.current, e, color as string);
       //createRipple(e, color as string);
     }
     onClick?.(e);
@@ -465,6 +468,8 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
           style={{
             minHeight: minHeight,
             maxHeight: disableScroll ? undefined : maxHeight,
+            marginBottom: footer ? "23px" : undefined,
+            marginTop: header ? "22px" : undefined,
           }}
           disableScroll={disableScroll}
         >

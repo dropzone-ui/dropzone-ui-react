@@ -15,25 +15,30 @@ const useDropzoneStyles = (
     color: string | undefined,
     backgroundColor: string | undefined,
     maxHeight: string | undefined,
-    minHeight: string | undefined
+    minHeight: string | undefined,
+    offset: number
 ): string => {
     const [idStyles, setIdStyles] = useState<string>("");
     const [styleInjected, setStyleInjected] = useState<boolean>(false);
     const [classNameCreated, setClassNameCreated] = useState<string>("");
 
     useEffect(() => {
-       /*  const removeStyle = () => {
-            if (styleInjected) {
-                DynamiCSS.removeStyleSheet(idStyles);
-                setStyleInjected(false);
-                setIdStyles("");
-            }
-        }; */
+        /*  const removeStyle = () => {
+             if (styleInjected) {
+                 DynamiCSS.removeStyleSheet(idStyles);
+                 setStyleInjected(false);
+                 setIdStyles("");
+             }
+         }; */
         const handleInserStyle = (
-            color: DropzoneProps["color"],backgroundColor: string | undefined,
+            color: DropzoneProps["color"], backgroundColor: string | undefined,
             maxHeight: string | undefined,
-            minHeight: string | undefined
+            minHeight: string | undefined, 
+            offset: number
         ) => {
+            console.log("offset: ", offset);
+            console.log("result",(offset === 0 || offset === 50) ? "center" : "flex-start");
+            console.log("minHeight",`calc(${minHeight} + ${offset}px)`);
             let styleSheet: DynamicSheet = {
                 id: "dropzone-ui-styles",
                 sheetRules: [
@@ -46,7 +51,9 @@ const useDropzoneStyles = (
                             )}`,
                             backgroundColor: backgroundColor,
                             maxHeight: maxHeight,
-                            minHeight: `calc(${minHeight} + 50px)`
+                            //minHeight: `calc(${minHeight} + 50px)`
+                            minHeight: `calc(${minHeight} + ${offset}px)`,
+                            //justifyContent: (offset === 0 || offset === 50) ? "center" : "flex-start",
                         },
                     },
                     {
@@ -83,12 +90,12 @@ const useDropzoneStyles = (
         };
 
 
-        handleInserStyle(color,backgroundColor, maxHeight,minHeight);
-      /*   return () => {
-            removeStyle();
-        } */
+        handleInserStyle(color, backgroundColor, maxHeight, minHeight, offset);
+        /*   return () => {
+              removeStyle();
+          } */
         // eslint-disable-next-line
-    }, [color, backgroundColor, maxHeight,minHeight]);
+    }, [color, backgroundColor, maxHeight, minHeight, offset]);
 
     return classNameCreated;
 }
