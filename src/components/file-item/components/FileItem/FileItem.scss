@@ -128,16 +128,16 @@
           font-weight: 600;
         }
         &.success {
-          border: 1px dashed rgb(126, 218, 126);
-          background-color: #3e6e3e;
+          border: 1px dashed #2e7d32;
+          background-color: #1b5e20;
           //margin: 0 2px;
           font-size: 0.7rem;
 
           border-radius: 4px;
         }
         &.error {
-          background-color: #911e1e;
-          border: 1px dashed red;
+          background-color: #c62828;
+          border: 1px dashed #d32f2f;
           font-size: 0.7rem;
 
           //margin: 0 2px;
