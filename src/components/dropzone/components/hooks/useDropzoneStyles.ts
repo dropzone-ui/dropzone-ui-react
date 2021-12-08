@@ -36,9 +36,9 @@ const useDropzoneStyles = (
             minHeight: string | undefined, 
             offset: number
         ) => {
-            console.log("offset: ", offset);
-            console.log("result",(offset === 0 || offset === 50) ? "center" : "flex-start");
-            console.log("minHeight",`calc(${minHeight} + ${offset}px)`);
+            //console.log("offset: ", offset);
+            //console.log("result",(offset === 0 || offset === 50) ? "center" : "flex-start");
+            //console.log("minHeight",`calc(${minHeight} + ${offset}px)`);
             let styleSheet: DynamicSheet = {
                 id: "dropzone-ui-styles",
                 sheetRules: [

@@ -8,6 +8,8 @@ stories
 test
 .eslintrc
 .gitignore
+.coveralls.yml
+DEV-part2.MD
 
 postinstallSSJ.js
 process.md
