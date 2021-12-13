@@ -45,7 +45,7 @@ Did you like the project? Please don't forget to give us a :star: star on :octoc
 - :white_check_mark: File validation: Validate files before uploading.
 - :art: File Image previews: See a thumbnail preview
 - :framed_picture: Full screen image previews: Add more interacion with a full screen preview of images
-- :movie_camera: Full screen video previews. Play the video befor uploading. [![new-feature](https://img.shields.io/badge/new-feature-green.svg)](http://www.dropzone-ui.com)
+- :movie_camera: Full screen video previews. Play the video before uploading. [![new-feature](https://img.shields.io/badge/new-feature-green.svg)](http://www.dropzone-ui.com)
 - :eyes: status visualization: validation and upload status is shown on a [Tooltip](https://codesandbox.io/s/dropzone-ui-fileitem-resultontooltip-h6hu7) or on [Info Layer](https://codesandbox.io/s/dropzone-ui-fileitem-resultontooltip-h6hu7).
 - :airplane: File upload: Upload valid files to a server.
 - :performing_arts: Out of the box design and style.
