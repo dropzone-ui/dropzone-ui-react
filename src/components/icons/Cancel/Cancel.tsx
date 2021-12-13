@@ -1,9 +1,9 @@
-import React,{ FC } from "react";
+import React, { FC } from "react";
 import { parseSize } from "../utils/utils";
 import { CancelProps } from "./CancelProps";
 
 const Cancel: FC<CancelProps> = (props: CancelProps) => {
-  const { size, color, colorFill, onClick, style,className } = props;
+  const { size, color, colorFill, onClick, style, className } = props;
   const finalSize = parseSize(size);
   const finalStyle = style ? style : {};
   return (
