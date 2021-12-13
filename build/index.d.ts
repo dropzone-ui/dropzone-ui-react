@@ -21,5 +21,7 @@ export { default as FileItemContainer } from "./components/file-item/components/
 export * from "./components/file-item/components/FileItemContainer/FileItemContainer";
 export { default as FullScreenPreview } from "./components/image-preview/FullScreenPreview";
 export * from "./components/image-preview/FullScreenPreview";
+export { default as VideoPreview } from "./components/video-preview/VideoPreview";
+export * from "./components/video-preview/VideoPreview";
 export { default as InputButton } from "./components/input-button/InputButton";
 export * from "./components/input-button/InputButton";

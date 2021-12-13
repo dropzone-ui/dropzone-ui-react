@@ -4,11 +4,13 @@ export interface FileItemMainLayerProps {
     showInfo: boolean;
     onOpenInfo: Function;
     onOpenImage: Function | undefined;
+    onOpenVideo: Function | undefined;
     onDelete: Function | undefined;
     fileName: string;
     info: boolean;
     valid: boolean;
     isImage: boolean;
+    isVideo: boolean;
     uploadStatus?: undefined | "uploading" | "success" | "error";
     sizeFormatted: string;
     /**

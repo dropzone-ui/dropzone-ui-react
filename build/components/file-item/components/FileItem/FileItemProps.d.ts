@@ -31,11 +31,15 @@ export interface FileItemProps extends PaperProps {
     /**
      * A function of what to do when close button is pressed or clicked
      */
-    onDelete?: (imageUrl: number | string | undefined) => void;
+    onDelete?: (fileId: number | string | undefined) => void;
     /**
-     * A function of what to do when "see" button is pressed or clicked
+     * A function that return a file object when "see" button is pressed or clicked
      */
     onSee?: (imageUrl: string) => void;
+    /**
+     * A function that return a file object when "play" button is presssed or clicked
+     */
+    onWatch?: (videoUrl: File) => void;
     /**
      * Whether to see as grid or inline (horizontal list)
      */
