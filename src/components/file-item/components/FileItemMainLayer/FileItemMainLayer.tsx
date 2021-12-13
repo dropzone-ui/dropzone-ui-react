@@ -55,7 +55,8 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
     localization,
     hovering,
   } = props;
-
+  console.log("FileItemMainLayer onOpenVideo", onOpenVideo);
+  console.log("FileItemMainLayer isVideo", isVideo);
   const handleDelete = () => {
     onDelete?.();
   };

@@ -10,10 +10,10 @@ import {
     html, icalendar,
     jar, java, javascript, jpeg, json, jsonld,
     midi, mp3, mp4, mpeg, mpkg,
-    octet, odp, ods, odt, opus, otf,
+    octet, odp, ods, odt, oga, ogv, ogx, opus, otf,
     pdf, php, png, pptx, psd, python,
     rar, react, rtf,
-    sass, sevenzip, sh,  swf,
+    sass, sevenzip, sh, swf,
     tar, text, tiff, ttf, typescript,
     vsd, vue,
     wav, weba, webm, webp, wma, wmv, woff,
@@ -33,7 +33,7 @@ export const audioSelector = (tailMime: string): string => {
         case "midi": return "midi";
         case "x-midi": return "midi";
         case "mpeg": return "mpeg";//mp3
-        // case "ogg": return "oga";
+        case "ogg": return "oga";
         case "opus": return "opus";
         case "wav": return "wav";
         case "webm": return "webm";
@@ -90,9 +90,10 @@ export const videoSelector = (tailMime: string): string => {
     switch (tailMime) {
         case "x-msvideo": return "avi";
         case "msvideo": return "avi";
+        case "avi": return "avi";
         case "mp4": return "mp4";
         case "mpeg": return "mpeg";
-        // case "ogg": return "ogv";
+        case "ogg": return "ogv";
         case "mp2t": return "mp2t";
         case "wmv": return "wmv";
 
@@ -132,7 +133,7 @@ export const applicationSelector = (tailMime: string): string => {
         case "json": return "json";
         case "ld+json": return "jsonld";
         case "vnd.apple.installer+xml": return "mpkg";
-        //case "ogg": return "ogx";
+        case "ogg": return "ogx";
         case "vnd.rar": return "rar";
         case "rtf": return "rtf";
         case "x-sh": return "sh";
@@ -340,9 +341,9 @@ const mimeUrlList: MimeSelector = {
     odp: odp,
     ods: ods,
     odt: odt,
-    // oga: oga,
-    //ogv: ogv,
-    // ogx: ogx,
+    oga: oga,
+    ogv: ogv,
+    ogx: ogx,
     opus: opus,
     otf: otf,
     png: png,

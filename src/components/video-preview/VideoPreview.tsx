@@ -6,19 +6,29 @@ import { Cancel } from "../icons";
 import { VideoPreviewProps } from "./VideoPreviewProps";
 import "./VideoPreview.scss";
 const VideoPreview: FC<VideoPreviewProps> = (props: VideoPreviewProps) => {
-  const { videoSrc, openVideo, onClose, autoplay, controls , style} = props;
+  const { videoSrc, openVideo, onClose, autoplay, controls, style } = props;
   const videoRef = useRef<HTMLVideoElement>(null);
   const [source, setSource] = useState<string | undefined>(undefined);
 
   useEffect(() => {
+    //if not undefined
     if (!videoSrc) {
       return;
     }
+
     if (typeof videoSrc === "string") {
+      //if a url string is given, assign it directly
       setSource(videoSrc);
     } else {
-      const newVideoSrc = URL.createObjectURL(videoSrc);
-      setSource(newVideoSrc);
+      //if a File object is given, check if is a supported format
+      const headerMime = videoSrc.type ? videoSrc.type.split("/")[0] : "octet";
+      const tailMime = videoSrc.type ? videoSrc.type.split("/")[1] : "octet";
+
+      if (headerMime === "video" && ["mp4", "ogg", "webm"].includes(tailMime)) {
+        //set the video source and create the uri string if is a supported video format
+        const newVideoSrc = URL.createObjectURL(videoSrc);
+        setSource(newVideoSrc);
+      }
     }
   }, [videoSrc]);
   useEffect(() => {
@@ -27,10 +37,8 @@ const VideoPreview: FC<VideoPreviewProps> = (props: VideoPreviewProps) => {
     }
   }, [source]);
 
- 
-
   function handleClose<T extends HTMLDivElement>(
-    e: React.MouseEvent<T, MouseEvent>
+    e: React.MouseEvent<T, MouseEvent>,
   ): void {
     e.stopPropagation();
     onClose?.();
@@ -41,7 +49,8 @@ const VideoPreview: FC<VideoPreviewProps> = (props: VideoPreviewProps) => {
         className={openVideo ? "video-container show" : "video-container"}
         onClick={handleClose}
       >
-        {videoSrc && openVideo && (
+        {//videoSrc && 
+        openVideo && (
           <div
             className="vid-rel-container"
             onClick={(evt) => {

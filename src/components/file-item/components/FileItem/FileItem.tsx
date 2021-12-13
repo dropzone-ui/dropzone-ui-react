@@ -92,8 +92,9 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
       return;
     } else {
       const headerMime = file.type ? file.type.split("/")[0] : "octet";
+      const tailMime = file.type ? file.type.split("/")[1] : "octet";
       setIsImage(headerMime === "image");
-      setIsVideo(headerMime === "video");
+      setIsVideo(headerMime === "video" && ["mp4","ogg","webm"].includes(tailMime));
       if (preview && valid && headerMime === "image") {
         const response = await readImagePromise(file);
         if (response) {
