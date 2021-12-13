@@ -45,7 +45,7 @@ Did you like the project? Please don't forget to give us a :star: star on :octoc
 - :white_check_mark: File validation: Validate files before uploading.
 - :art: File Image previews: See a thumbnail preview
 - :framed_picture: Full screen image previews: Add more interacion with a full screen preview of images
-- :movie_camera: Full screen video previews. Play the video before uploading. [![new-feature](https://img.shields.io/badge/new-feature-green.svg)](http://www.dropzone-ui.com)
+- :movie_camera: Full screen video previews. Play the video before uploading. [![new-feature](https://img.shields.io/badge/new-feature-green.svg)](https://github.com/dropzone-ui/react-dropzone/releases/tag/v6.4.0)
 - :eyes: status visualization: validation and upload status is shown on a [Tooltip](https://codesandbox.io/s/dropzone-ui-fileitem-resultontooltip-h6hu7) or on [Info Layer](https://codesandbox.io/s/dropzone-ui-fileitem-resultontooltip-h6hu7).
 - :airplane: File upload: Upload valid files to a server.
 - :performing_arts: Out of the box design and style.
@@ -287,13 +287,13 @@ Dropzone-ui is available in different languages. So far, we only support `Englis
 
 ### Props
 
-| Name        | Type       | Default     | Description                                                                                                    |
-| ----------- | ---------- | ----------- | -------------------------------------------------------------------------------------------------------------- |
-| videoSource | `string`   | `undefined` | The video source in string format or File object. `FileItem` component returns this value in `onWatch` handler |
-| onClose     | `Function` | `undefined` | A function that describes the close behaviour                                                                  |
-| openVideo   | `boolean`  | `undefined` | Flag that indicates whether to open the video preview or close it                                              |
-| autoplay    | `boolean`  | `undefined` | Flag that indicates whether to play automatically the video or not.                                            |
-| controls    | `boolean`  | `undefined` | Flag that indicates whether to display the controls in the video player or not.                                |
+| Name        | Type       | Default     | Description                                                                                                                                                                                                                                                                                               |
+| ----------- | ---------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| videoSource | `string`   | `undefined` | The video source in `string` format or `File` object. When a File object is given `VideoPreview` component will check if video type is included in the supported formats. (`video/mp4`, `video/ogg`, `video/webm`). Normally used with `FileItem` component when returns this value in `onWatch` handler. |
+| onClose     | `Function` | `undefined` | A function that describes the close behaviour                                                                                                                                                                                                                                                             |
+| openVideo   | `boolean`  | `undefined` | Flag that indicates whether to open the video preview or close it                                                                                                                                                                                                                                         |
+| autoplay    | `boolean`  | `undefined` | Flag that indicates whether to play automatically the video or not.                                                                                                                                                                                                                                       |
+| controls    | `boolean`  | `undefined` | Flag that indicates whether to display the controls in the video player or not.                                                                                                                                                                                                                           |
 
 ## FileItemContainer API
 
