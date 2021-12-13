@@ -1,19 +1,21 @@
 import React, { FC, Fragment, useEffect, useState } from "react";
 //import { FileItemProps } from "../FileItem/FileItemProps";
 import FileItemStatus from "../FileItemStatus/FileItemStatus";
-import { Cancel, Visibility, Info } from "../../../icons";
+import { PlayIcon,Cancel, Visibility, Info } from "../../../icons";
 import { Localization } from "../../../../localization/localization";
 //import {shrinkWord} from "./../../utils";
 export interface FileItemMainLayerProps {
   showInfo: boolean;
   onOpenInfo: Function;
   onOpenImage: Function | undefined;
+  onOpenVideo: Function | undefined;
   onDelete: Function | undefined;
   //fileNamePosition: FileItemProps["fileName"];
   fileName: string;
   info: boolean;
   valid: boolean;
   isImage: boolean;
+  isVideo: boolean;
   uploadStatus?: undefined | "uploading" | "success" | "error";
   sizeFormatted: string;
   /**
@@ -43,14 +45,17 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
     info,
     valid,
     isImage,
+    isVideo,
     onlyImage,
     onOpenInfo,
     onOpenImage,
+    onOpenVideo,
     sizeFormatted,
     uploadStatus,
     localization,
     hovering,
   } = props;
+
   const handleDelete = () => {
     onDelete?.();
   };
@@ -60,6 +65,9 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
   const handleOpenImage = () => {
     onOpenImage?.();
   };
+  const handleOpenVideo =()=>{
+    onOpenVideo?.();
+  }
   const [uploadComplete, setUploadComplete] = useState<boolean>(false);
   useEffect(() => {
     if (uploadStatus === "success") {
@@ -134,6 +142,14 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
                   size="small"
                 />
               )}
+              {isVideo && onOpenVideo && valid && (
+                <PlayIcon
+                  className="view-in-image-file-item"
+                  color="rgba(255,255,255,0.9)"
+                  onClick={handleOpenVideo}
+                  size="small"
+                />
+              )}
               {!onlyImage && info && (
                 <Info
                   color="rgba(255,255,255,0.8)"
@@ -144,64 +160,69 @@ const FileItemMainLayer: FC<FileItemMainLayerProps> = (
             </div>
           </div>
         </div>
-      ): <Fragment>
-         <div className="info-container">
-          <div
-            className={
-              uploadStatus === "uploading" || !onDelete
-                ? "status-close uploading"
-                : showInfo
-                ? "status-close hide"
-                : "status-close"
-            }
-          >
-            {/* <Cancel
+      ) : (
+        <Fragment>
+          <div className="info-container">
+            <div
+              className={
+                uploadStatus === "uploading" || !onDelete
+                  ? "status-close uploading"
+                  : showInfo
+                  ? "status-close hide"
+                  : "status-close"
+              }
+            >
+              {/* <Cancel
               color="rgba(255,255,255,0.8)"
               onClick={uploadStatus === "uploading" ? undefined : handleDelete}
               colorFill="black"
             /> */}
-          </div>
-
-          {uploadStatus && !showInfo && (
-            <div
-              className={uploadComplete ? "file-status hide" : "file-status"}
-            >
-              <FileItemStatus
-                uploadStatus={uploadStatus}
-                localization={localization as Localization}
-              />
             </div>
-          )}
 
-          <div className={"file-item-footer"}>
-            {!onlyImage && uploadStatus && uploadComplete ? (
-              <div className={showInfo ? "file-status hide" : "file-status"}>
-                <div className="file-status-ok" style={{marginBottom:"1px"}}>
-                  <FileItemStatus
-                    uploadStatus={uploadStatus}
-                    //message={localization==="ES-es"?"subido":"uploaded"}
-                    localization={localization as Localization}
-                  />
-                </div>
-              </div>
-            ) : (
-              <div className={showInfo ? "file-status hide" : "file-status"} style={{marginBottom:"1px"}}>
+            {uploadStatus && !showInfo && (
+              <div
+                className={uploadComplete ? "file-status hide" : "file-status"}
+              >
                 <FileItemStatus
-                  valid={valid}
+                  uploadStatus={uploadStatus}
                   localization={localization as Localization}
                 />
               </div>
             )}
 
-            <div
-              className={showInfo ? "size-open-info hide" : "size-open-info"}
-            >
-              
+            <div className={"file-item-footer"}>
+              {!onlyImage && uploadStatus && uploadComplete ? (
+                <div className={showInfo ? "file-status hide" : "file-status"}>
+                  <div
+                    className="file-status-ok"
+                    style={{ marginBottom: "1px" }}
+                  >
+                    <FileItemStatus
+                      uploadStatus={uploadStatus}
+                      //message={localization==="ES-es"?"subido":"uploaded"}
+                      localization={localization as Localization}
+                    />
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className={showInfo ? "file-status hide" : "file-status"}
+                  style={{ marginBottom: "1px" }}
+                >
+                  <FileItemStatus
+                    valid={valid}
+                    localization={localization as Localization}
+                  />
+                </div>
+              )}
+
+              <div
+                className={showInfo ? "size-open-info hide" : "size-open-info"}
+              ></div>
             </div>
           </div>
-        </div>
-        
-        </Fragment>}
+        </Fragment>
+      )}
     </Fragment>
   );
 };
