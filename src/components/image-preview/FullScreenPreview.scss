@@ -18,12 +18,16 @@
 .img-rel-container {
   position: relative;
   height: 80%;
-   //width: 60%;
-   @media (max-width: 600px) {
+  max-width: 95%;
+  //width: 60%;
+  @media (max-width: 600px) {
     width: 80%;
     height: auto;
-
-   }
+  }
+  @media (max-width: 960px) {
+    width: 90%;
+    height: auto;
+  }
 }
 .image-full-screen {
   //width: 100%;
