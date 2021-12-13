@@ -22,6 +22,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     file,
     onDelete,
     onSee,
+    onWatch,
     style,
     preview,
     onlyImage,
@@ -58,6 +59,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
   const sizeFormatted: string = file ? fileSizeFormater(file.size) : "0 KB";
 
   const [isImage, setIsImage] = useState<boolean>(false);
+  const [isVideo, setIsVideo] = useState<boolean>(false);
   const [url, setUrl] = useState<string>("");
   const [imageSource, setImageSource] = useState<string | undefined>(undefined);
   //alwaysActive
@@ -68,6 +70,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     return () => {
       setImageSource(undefined);
       setIsImage(false);
+      setIsVideo(false);
     };
   }, [file, valid, preview, imageUrl]);
 
@@ -90,6 +93,7 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     } else {
       const headerMime = file.type ? file.type.split("/")[0] : "octet";
       setIsImage(headerMime === "image");
+      setIsVideo(headerMime === "video");
       if (preview && valid && headerMime === "image") {
         const response = await readImagePromise(file);
         if (response) {
@@ -116,6 +120,11 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
     setShowInfo(true);
 
     setShowInfo(false);
+  };
+  const handleOpenVideo = async () => {
+    if (file) {
+      onWatch?.(file);
+    }
   };
   const handleOpenImage = async () => {
     if (imageSource && file) {
@@ -159,6 +168,8 @@ const FileItem: FC<FileItemProps> = (props: FileItemProps) => {
               fileName={file.name}
               onDelete={onDelete ? handleDelete : undefined}
               onOpenImage={onSee && preview ? handleOpenImage : undefined}
+              onOpenVideo={onWatch && preview ? handleOpenVideo : undefined}
+              isVideo={isVideo}
               onOpenInfo={handleOpenInfo}
               info={info || false}
               valid={valid || false}
