@@ -392,9 +392,22 @@ export interface CustomValidateFileResponse {
 }
 ```
 
+## Suporters
+
+### :clap: Stargazers
+
+[![Stargazers repo roster for @dropzone-ui/react-dropzone](https://reporoster.com/stars/dropzone-ui/react-dropzone)](https://github.com/dropzone-ui/react-dropzone/stargazers)
+
+### :clap: Forkers
+
+[![Forkers repo roster for @dropzone-ui/react-dropzone](https://reporoster.com/forks/dropzone-ui/react-dropzone)](https://github.com/dropzone-ui/react-dropzone/network/members)
+
+<p align="center"><a href="https://github.com/dropzone-ui/react-dropzone#"><img src="http://randojs.com/images/barsSmallTransparentBackground.gif" alt="Animated footer bars" width="100%"/></a></p>
+
+<br/>
+<p align="center"><a href="https://github.com/dropzone-ui/react-dropzone#"><img src="http://randojs.com/images/backToTopButtonTransparentBackground.png" alt="Back to top" height="28"/></a></p>
+
 ## License
 
 This project is licensed under the terms of the
 [MIT license](/LICENSE).
-
-Did you like the project? Please don't forget to give us a :star: star on :octocat: [github](https://github.com/dropzone-ui/dropzone-ui) :D
