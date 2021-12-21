@@ -15,8 +15,8 @@ The `best` and most complete, `easy to use`, file upload library for [React](htt
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/react/blob/HEAD/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/@dropzone-ui/react.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/@dropzone-ui/react)
 [![Rate on Openbase](https://badges.openbase.com/js/rating/@dropzone-ui/react.svg)](https://openbase.com/js/@dropzone-ui/react?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
-[![Node.js CI](https://github.com/dropzone-ui/react-dropzone/actions/workflows/node.js.yml/badge.svg)](https://github.com/dropzone-ui/react-dropzone)
-[![Build Status](https://app.travis-ci.com/dropzone-ui/react-dropzone.svg?branch=master)](https://app.travis-ci.com/dropzone-ui/react-dropzone)
+[![Node.js CI](https://github.com/dropzone-ui/react-dropzone/actions/workflows/node.js.yml/badge.svg)](https://github.com/dropzone-ui/dropzone-ui-react)
+[![Build Status](https://app.travis-ci.com/dropzone-ui/dropzone-ui-react.svg?branch=master)](https://app.travis-ci.com/dropzone-ui/dropzone-ui-react)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/context:javascript)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/alerts/)
 [![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/react/badge.svg)](https://snyk.io/test/github/dropzone-ui/react)
@@ -396,11 +396,11 @@ export interface CustomValidateFileResponse {
 
 ### :clap: Stargazers
 
-[![Stargazers repo roster for @dropzone-ui/react-dropzone](https://reporoster.com/stars/dropzone-ui/react-dropzone)](https://github.com/dropzone-ui/react-dropzone/stargazers)
+[![Stargazers repo roster for @dropzone-ui/dropzone-ui-react](https://reporoster.com/stars/dropzone-ui/dropzone-ui-react)](https://github.com/dropzone-ui/dropzone-ui-react/stargazers)
 
 ### :clap: Forkers
 
-[![Forkers repo roster for @dropzone-ui/react-dropzone](https://reporoster.com/forks/dropzone-ui/react-dropzone)](https://github.com/dropzone-ui/react-dropzone/network/members)
+[![Forkers repo roster for @dropzone-ui/dropzone-ui-react](https://reporoster.com/forks/dropzone-ui/dropzone-ui-react)](https://github.com/dropzone-ui/dropzone-ui-react/network/members)
 
 ## License
 
