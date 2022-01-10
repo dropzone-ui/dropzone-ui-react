@@ -28,16 +28,16 @@ export const DropzoneItalian: LocalLabels = {
  */
 export const FileItemItalian: LocalLabels = {
     fullInfoLayer: {
-        name: `Le nom: `,
-        size: "Le taille: ",
-        type: "Le type: "
+        name: `Nome: `,
+        size: "Dimensione: ",
+        type: "Tipo: "
     },
     status: {
-        uploading: "En cours",
-        success: "Succès",
-        valid: "Valide",
-        denied: "Refusé",
-        error: "Erreur"
+        uploading: "In corso",
+        success: "Successo",
+        valid: "Valido",
+        denied: "Non válido",
+        error: "Errore"
 
     },
 }
