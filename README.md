@@ -73,7 +73,7 @@ Want to generate the code that fits your needs? Just interact with the code gene
 
 `@dropzone-ui/react` is based on [React Hooks](https://reactjs.org/docs/hooks-intro.html). It requires `react v16.8+`.
 
-`@dropzone-ui/react` uses [axios](https://reactjs.org/docs/hooks-intro.html) for uploading files. It requires `axios v0.24.0+`.
+`@dropzone-ui/react` uses [axios](https://www.npmjs.com/package/axios) for uploading files. It requires `axios v0.24.0+`.
 
 ## Installation
 
@@ -96,11 +96,11 @@ yarn add @dropzone-ui/react axios
 Here is a quick example to get you started, **it's all you need**:
 
 ```jsx
-import React from "react";
+import * as React from "react";
 import ReactDOM from "react-dom";
 import { Dropzone, FileItem } from "@dropzone-ui/react";
 Function App() {
-  const [files, setFiles] = useState([]);
+  const [files, setFiles] = React.useState([]);
   const updateFiles = (incommingFiles) => {
     setFiles(incommingFiles);
   };
@@ -200,6 +200,7 @@ Dropzone-ui is available in different languages. So far, we only support `Englis
 | English :us: :uk:                        | `EN-en` | localization="`EN-en`" |
 | Spanish :peru: :mexico: :argentina: :es: | `ES-es` | localization="`ES-es`" |
 | Fench :fr:                               | `FR-fr` | localization="`FR-fr`" |
+| Italian :it:                             | `IT-it` | localization="`IT-it`" |
 | Portuguese :brazil: :portugal:           | `PT-pt` | localization="`PT-pt`" |
 | Russian :ru:                             | `RU-ru` | localization="`RU-ru`" |
 | Chinese(simplified) :cn:                 | `ZH-cn` | localization="`ZH-cn`" |
