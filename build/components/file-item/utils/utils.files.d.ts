@@ -16,7 +16,7 @@ export declare const createWord: (size?: number) => File;
  */
 export declare const createListOfPDF: (amount?: number) => File[];
 /**
- * Gives a XX.XX format in Bytes KB, MB or GB
+ * Gives a XX.XX format in Bytes KB, MB, GB or TB
  * @param fileSize file size to give format in Bytes
  */
 export declare const fileSizeFormater: (fileSize?: number) => string;
