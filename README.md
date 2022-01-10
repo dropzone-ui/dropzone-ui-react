@@ -6,7 +6,7 @@ The `best`, most complete and `easy to use`, [React](https://reactjs.org/) file 
 
 :zap: Live demo and code generator : [dropzone-ui.com](http://www.dropzone-ui.com)
 
-:heart: it ?, :star: it on :octocat: [Github](https://github.com/dropzone-ui/dropzone-ui) :D
+:heart: it ?, support us by giving a :star: on :octocat: [Github](https://github.com/dropzone-ui/dropzone-ui) :D
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/react/blob/HEAD/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/@dropzone-ui/react.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/@dropzone-ui/react)
@@ -51,6 +51,8 @@ Ordered by use:
 - :earth_americas: [\<Localization\>](#localization)
 
 - [Code generator](#code-generator)
+
+- [Supporters](#supporters)
 
 ## Sample result:
 
@@ -397,6 +399,7 @@ export interface CustomValidateFileResponse {
 
 ## Supporters
 
+Special thanks to these amazing people :star: :
 ### :clap: Stargazers
 
 [![Stargazers repo roster for @dropzone-ui/dropzone-ui-react](https://reporoster.com/stars/dropzone-ui/dropzone-ui-react)](https://github.com/dropzone-ui/dropzone-ui-react/stargazers)
