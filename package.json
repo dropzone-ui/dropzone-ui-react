@@ -1,13 +1,13 @@
 {
   "name": "@dropzone-ui/react",
-  "version": "6.4.2",
+  "version": "6.5.2",
   "description": "The best and most complete React library for managing file uploads. Multilanguage support. Server side support. Material design styles. Code generator on webpage.",
   "main": "./build/index.js",
   "module": "./build/index.es.js",
   "types": "./build/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dropzone-ui/react.git"
+    "url": "git+https://github.com/dropzone-ui/dropzone-ui-react.git"
   },
   "keywords": [
     "dropzone",
@@ -32,9 +32,9 @@
   "author": "JinSSJ3",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dropzone-ui/react/issues"
+    "url": "https://github.com/dropzone-ui/dropzone-ui-react/issues"
   },
-  "homepage": "http://dropzone-ui.com",
+  "homepage": "http://www.dropzone-ui.com",
   "dependencies": {
     "@dynamicss/dynamicss": "^2.2.0",
     "@unlimited-react-components/kernel": "^1.0.2",
@@ -45,9 +45,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "devDependencies": {  "axios": "^0.24.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+  "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.1.1",
     "@storybook/addon-actions": "^6.4.9",

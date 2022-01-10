@@ -35,7 +35,7 @@ export const createListOfPDF = (amount?: number): File[] => {
     return listFile;
 }
 /**
- * Gives a XX.XX format in Bytes KB, MB or GB
+ * Gives a XX.XX format in Bytes KB, MB, GB or TB
  * @param fileSize file size to give format in Bytes
  */
 export const fileSizeFormater = (fileSize?: number): string => {

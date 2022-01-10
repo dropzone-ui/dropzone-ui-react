@@ -32,14 +32,14 @@ export function createRipple<
 
 
 export function createRippleFromElement<
-T extends HTMLButtonElement | HTMLAnchorElement | HTMLDivElement
->(element: HTMLDivElement | null, event: React.MouseEvent<T, MouseEvent>,color: string) {
+  T extends HTMLButtonElement | HTMLAnchorElement | HTMLDivElement
+>(element: HTMLDivElement | null, event: React.MouseEvent<T, MouseEvent>, color: string) {
   if (!element) {
     return;
   }
   const buttonAnchorDiv = element;
-  buttonAnchorDiv.style.height="100%";
-  buttonAnchorDiv.style.width="100%";
+  buttonAnchorDiv.style.height = "100%";
+  buttonAnchorDiv.style.width = "100%";
   const circle: HTMLSpanElement = document.createElement("span");
   const diameter = Math.max(
     buttonAnchorDiv.clientWidth,
@@ -63,8 +63,8 @@ T extends HTMLButtonElement | HTMLAnchorElement | HTMLDivElement
     ripple.remove();
   }
   buttonAnchorDiv.appendChild(circle);
-  setTimeout(()=>{
-    buttonAnchorDiv.style.height="0%";
-    buttonAnchorDiv.style.width="0%";
-  },500);
+  setTimeout(() => {
+    buttonAnchorDiv.style.height = "0%";
+    buttonAnchorDiv.style.width = "0%";
+  }, 500);
 }

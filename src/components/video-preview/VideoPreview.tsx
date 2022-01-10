@@ -49,41 +49,43 @@ const VideoPreview: FC<VideoPreviewProps> = (props: VideoPreviewProps) => {
         className={openVideo ? "video-container show" : "video-container"}
         onClick={handleClose}
       >
-        {//videoSrc && 
-        openVideo && (
-          <div
-            className="vid-rel-container"
-            onClick={(evt) => {
-              evt.preventDefault();
-            }}
-          >
-            <video
+        {
+          //videoSrc &&
+          openVideo && (
+            <div
+              className="vid-rel-container"
               onClick={(evt) => {
                 evt.preventDefault();
               }}
-              //onLoadedMetadata={handleLoaded}
-              id="dropzone-ui-video"
-              controls={controls}
-              ref={videoRef}
-              className={"video-full-screen show-video"}
-              autoPlay={autoplay}
-              src={source}
-              width={"100%"}
-              height={"100%"}
-              style={style}
             >
-              <source type="video/webm" />
-              <source type="video/ogg" />
-              <source type="video/mp4" />
-            </video>
-            <Cancel
-              color="rgba(255,255,255,0.8)"
-              onClick={handleClose}
-              colorFill="black"
-              className="button-full-screen"
-            />
-          </div>
-        )}
+              <video
+                onClick={(evt) => {
+                  evt.preventDefault();
+                }}
+                //onLoadedMetadata={handleLoaded}
+                id="dropzone-ui-video"
+                controls={controls}
+                ref={videoRef}
+                className={"video-full-screen show-video"}
+                autoPlay={autoplay}
+                src={source}
+                width={"100%"}
+                height={"100%"}
+                style={style}
+              >
+                <source type="video/webm" />
+                <source type="video/ogg" />
+                <source type="video/mp4" />
+              </video>
+              <Cancel
+                color="rgba(255,255,255,0.8)"
+                onClick={handleClose}
+                colorFill="black"
+                className="button-full-screen"
+              />
+            </div>
+          )
+        }
       </div>
     );
   } else {
