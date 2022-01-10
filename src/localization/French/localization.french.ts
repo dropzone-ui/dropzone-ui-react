@@ -45,7 +45,7 @@ export const FileItemFrench: LocalLabels = {
  * French translation for Validation Errors
  */
  export const ValidateErrorFrench: LocalLabels = {
-    maxSizeError: (maxSize) => `File is too big. Max file size allowed is ${fileSizeFormater(maxSize as number)}`,
-    acceptError: `Le type de fichier n'est pas autorisé`,
-    maxFileCount: (maxFiles) => `Le nombre maximum de fichiers (${maxFiles}) a été atteint`
+    maxSizeError: (maxSize) => `Le fichier est très volumineux. Le tam. le maximum est de ${fileSizeFormater(maxSize as number)}`,
+    acceptError: `Type de fichier illégal `,
+    maxFileCount: (maxFiles) => `Limite de fichiers atteinte (${maxFiles})`
 }

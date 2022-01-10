@@ -6,11 +6,13 @@ import { ValidateErrorPortuguese } from "./Portuguese/localization.portuguese";
 import { ValidateErrorSpanish } from "./Spanish/localization.spanish";
 import { ValidateErrorSimplifiedChinese } from "./Chinese-simplified/localization.simplifiedChinese";
 import { ValidateErrorTraditionalChinese } from "./Chinese-traditional/localization.traditionalChinese";
+import { ValidateErrorItalian } from "./Italian/localization.italian";
 
 export const ValidateErrorLocalizer: ComponentLocalizer = {
     "ES-es": ValidateErrorSpanish,
     "EN-en": ValidateErrorEnglish,
     "FR-fr": ValidateErrorFrench,
+    "IT-it": ValidateErrorItalian,
     "PT-pt": ValidateErrorPortuguese,
     "RU-ru": ValidateErrorRussian,
     "ZH-cn": ValidateErrorSimplifiedChinese,
@@ -27,6 +29,7 @@ export const ValidateErrorLocalizerSelector = (local: Localization | undefined):
         case "ES-es": return ValidateErrorLocalizer["ES-es"];
         case "EN-en": return ValidateErrorLocalizer["EN-en"];
         case "FR-fr": return ValidateErrorLocalizer["FR-fr"];
+        case "IT-it": return ValidateErrorLocalizer["IT-it"];
         case "PT-pt": return ValidateErrorLocalizer["PT-pt"];
         case "RU-ru": return ValidateErrorLocalizer["RU-ru"];
         case "ZH-cn": return ValidateErrorLocalizer["ZH-cn"];

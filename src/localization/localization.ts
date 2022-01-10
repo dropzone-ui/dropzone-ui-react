@@ -2,6 +2,7 @@ export type Localization =
     "EN-en"
     | "ES-es"
     | "FR-fr"
+    | "IT-it"
     | "PT-pt"
     | "RU-ru"
     | "ZH-cn"

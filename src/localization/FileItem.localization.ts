@@ -6,11 +6,13 @@ import { FileItemPortuguese } from "./Portuguese/localization.portuguese";
 import { FileItemSpanish } from "./Spanish/localization.spanish";
 import { FileItemSimplifiedChinese } from "./Chinese-simplified/localization.simplifiedChinese";
 import { FileItemTraditionalChinese } from "./Chinese-traditional/localization.traditionalChinese";
+import { FileItemItalian } from "./Italian/localization.italian";
 
 export const FileItemLocalizer: ComponentLocalizer = {
     "ES-es": FileItemSpanish,
     "EN-en": FileItemEnglish,
     "FR-fr": FileItemFrench,
+    "IT-it": FileItemItalian,
     "PT-pt": FileItemPortuguese,
     "RU-ru": FileItemRussian,
     "ZH-cn": FileItemSimplifiedChinese,
@@ -27,6 +29,7 @@ export const FileItemLocalizerSelector = (local: Localization): LocalLabels => {
         case "ES-es": return FileItemLocalizer["ES-es"];
         case "EN-en": return FileItemLocalizer["EN-en"];
         case "FR-fr": return FileItemLocalizer["FR-fr"];
+        case "IT-it": return FileItemLocalizer["IT-it"];
         case "PT-pt": return FileItemLocalizer["PT-pt"];
         case "RU-ru": return FileItemLocalizer["RU-ru"];
         case "ZH-cn": return FileItemLocalizer["ZH-cn"];
