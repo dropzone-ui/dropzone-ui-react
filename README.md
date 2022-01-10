@@ -1,12 +1,12 @@
 :rocket: [Spanish README](./README_ES.md)
 
 # Dropzone UI
+
 The `best`, most complete and `easy to use`, [React](https://reactjs.org/) file upload library.
 
 :zap: Live demo and code generator : [dropzone-ui.com](http://www.dropzone-ui.com)
 
-:heart: it ?, :star: it on :octocat: [Github](https://github.com/dropzone-ui/dropzone-ui) :D 
-
+:heart: it ?, :star: it on :octocat: [Github](https://github.com/dropzone-ui/dropzone-ui) :D
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/react/blob/HEAD/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/@dropzone-ui/react.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/@dropzone-ui/react)
@@ -22,31 +22,17 @@ The `best`, most complete and `easy to use`, [React](https://reactjs.org/) file 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![GitHub Repo stars](https://img.shields.io/github/stars/dropzone-ui/react?label=Star%20me%20please%20:D&style=social)](https://github.com/dropzone-ui/react)
 [![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fwellyshen%2Freact-cool-img)](https://twitter.com/intent/tweet?text=With%20@dropzone_ui,%20my%20@reactjs%20%20web%20app%20becomes%20more%20powerful.%20Thanks,%20@JinJoseManuel%20%F0%9F%A4%A9)
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/43678736/148801752-954fa819-023d-4596-b557-56f7a38f4745.png"  align="center">   
 </p>
-
-## Sample result:
-
-On `Drag`, `Drop`, `Upload` and full screen `preview`. (also changing view mode from `grid` to `list`).
-
-<p align="center">
-<a href="https://github.com/dropzone-ui/react#readme">
-<img align="center" width="100%" src="https://user-images.githubusercontent.com/43678736/139614260-602b512c-cf78-48fe-ae57-1057e7ec8135.gif" alt="dropone-ui-preview">
-</a>
-
-</p>
-
-More previews [here](#more-reviews).
-
-Did you like the project? Please don't forget to give us a :star: star on :octocat: [GitHub](https://github.com/dropzone-ui/dropzone-ui) :D
 
 ## Key Features
 
 - :white_check_mark: File validation: Validate files before uploading.
 - :art: File Image previews: See a thumbnail preview
-- :framed_picture: [Full screen image previews](#full-screen-image-preview): Add more interacion with a full screen preview of images
-- :movie_camera: [Full screen video previews](#full-screen-video-preview). Play the video before uploading. [![new-feature](https://img.shields.io/badge/new-feature-green.svg)](https://github.com/dropzone-ui/react-dropzone/releases/tag/v6.4.0)
+- :framed_picture: [Full screen image previews](#image-full-screen-preview): Add more interacion with a full screen preview of images
+- :movie_camera: [Full screen video previews](#video-full-screen-preview). Play the video before uploading. [![new-feature](https://img.shields.io/badge/new-feature-green.svg)](https://github.com/dropzone-ui/react-dropzone/releases/tag/v6.4.0)
 - :eyes: status visualization: validation and upload status is shown on a [Tooltip](https://codesandbox.io/s/dropzone-ui-fileitem-resultontooltip-h6hu7) or on [Info Layer](https://codesandbox.io/s/dropzone-ui-fileitem-resultontooltip-h6hu7).
 - :airplane: File upload: Upload valid files to a server.
 - :performing_arts: Out of the box design and style.
@@ -65,6 +51,21 @@ Ordered by use:
 - :earth_americas: [\<Localization\>](#localization)
 
 - [Code generator](#code-generator)
+
+## Sample result:
+
+On `Drag`, `Drop`, `Upload` and full screen `preview`. (also changing view mode from `grid` to `list`).
+
+<p align="center">
+<a href="https://github.com/dropzone-ui/react#readme">
+<img align="center" width="100%" src="https://user-images.githubusercontent.com/43678736/139614260-602b512c-cf78-48fe-ae57-1057e7ec8135.gif" alt="dropone-ui-preview">
+</a>
+
+</p>
+
+- More previews [here](#more-previews).
+
+- Did you like the project? Please don't forget to give us a :star: star on :octocat: [GitHub](https://github.com/dropzone-ui/dropzone-ui) :D
 
 ## Code generator
 
@@ -404,7 +405,6 @@ export interface CustomValidateFileResponse {
 
 [![Forkers repo roster for @dropzone-ui/dropzone-ui-react](https://reporoster.com/forks/dropzone-ui/dropzone-ui-react)](https://github.com/dropzone-ui/dropzone-ui-react/network/members)
 
-
 ## More Previews
 
 ### Image full screen preview
@@ -412,6 +412,7 @@ export interface CustomValidateFileResponse {
 <p align="center"><img src="https://camo.githubusercontent.com/58e1d2e245bdd8a4eb7302bc0749ce9fd39bfade9838c4ed7fe9272d94e54eb4/68747470733a2f2f6465762d746f2d75706c6f6164732e73332e616d617a6f6e6177732e636f6d2f75706c6f6164732f61727469636c65732f3577786b31346f367a686c6f7a327a337a7970792e706e67" alt="Image full screen preview" width="100%"/></p>
 
 ### Video full screen preview
+
 <p align="center"><img src="https://user-images.githubusercontent.com/43678736/148802895-9a5349a7-224d-44df-854b-19d6a1f2d30e.png" alt="Video full screen preview" width="100%"/></p>
 
 ## License
