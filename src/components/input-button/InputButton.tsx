@@ -48,7 +48,10 @@ const InputButton: React.FC<InputButtonProps> = (props: InputButtonProps) => {
         output.push(validatedFile);
       }
     }
-
+    let element: HTMLInputElement | null = inputRef.current;
+    if (element) {
+      element.value = "";
+    }
     onChange?.(output);
   };
   function clickInput(e: React.MouseEvent<MouseEvent>): void {
