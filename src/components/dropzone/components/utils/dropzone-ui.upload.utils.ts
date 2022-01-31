@@ -1,7 +1,11 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { DropzoneProps } from "../Dropzone/DropzoneProps";
 import { FileValidated, UPLOADSTATUS } from "./validation.utils";
-
+export const DEFAULT_CONFIG = {
+    headers: {
+        "content-type": "multipart/form-data;",
+    },
+};
 export const uploadPromiseAxios = async (
     file: FileValidated,
     url: string,
@@ -13,16 +17,15 @@ export const uploadPromiseAxios = async (
         try {
             const localMethod: DropzoneProps["method"] = method || "POST";
             const fileToUpload: File = file.file;
-            const formData = new FormData();
+            const formData: FormData = new FormData();
             formData.append("file", fileToUpload);
+
             const configParams =
-                config ||
-                {
-                    headers: {
-                        "content-type": "multipart/form-data;",
-                    },
-                };
-            let response;//= { data: {} };// await axios.post(url, formData, configParams);
+                config ? {
+                    ...config, ...DEFAULT_CONFIG
+                } : DEFAULT_CONFIG;
+            let response: AxiosResponse<any, any>;//= { data: {} };// await axios.post(url, formData, configParams);
+
             switch (localMethod) {
                 case "POST": response = await axios.post(url, formData, configParams); break;
                 case "PATCH": response = await axios.patch(url, formData, configParams); break;
