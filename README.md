@@ -71,7 +71,7 @@ On `Drag`, `Drop`, `Upload` and full screen `preview`. (also changing view mode 
 
 ## Code generator
 
-Want to generate the code that fits your needs? Just interact with the code generator [here](http://dropzone-ui.com/).
+Want to generate the code that fits your needs? Just interact with the code generator [here](http://www.dropzone-ui.com/).
 
 ## Requirement
 
