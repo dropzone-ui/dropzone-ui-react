@@ -354,6 +354,11 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       remainingValids,
       localValidator
     );
+    // Clean input element to trigger onChange event on input
+    let element: HTMLInputElement | null = inputRef.current;
+    if (element) {
+      element.value = "";
+    }
     handleFilesChange(output);
   };
   // validator
