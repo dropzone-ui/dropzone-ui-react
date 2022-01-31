@@ -81,7 +81,7 @@ Want to generate the code that fits your needs? Just interact with the code gene
 
 ## Installation
 
-@dropzone-ui/react is available as an [npm package](https://www.npmjs.com/package/axios).
+@dropzone-ui/react is available as an [npm package](https://www.npmjs.com/package/@dropzone-ui/react).
 
 For uploading files, peer dependency [axios](https://www.npmjs.com/package/axios) must be also installed together with `dropzone-ui`.
 
@@ -139,7 +139,7 @@ Yes, it's really all you need to get started as you can see in these live and in
 # Uploading
 
 Dropzone-ui provides a way to upload files to a server. However, in case you want to make your own upload function, you can take the files that Dropzone `onChange` event returns.
-
+  
 For uploading files through dropzone-ui, you should follow at least this guidelines:
 
 - Server Endpoint should get the file from `req.files.file`.
