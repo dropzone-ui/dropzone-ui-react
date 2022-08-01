@@ -22,7 +22,11 @@ export const uploadPromiseAxios = async (
 
             const configParams =
                 config ? {
-                    ...config, ...DEFAULT_CONFIG
+                    ...config, ...DEFAULT_CONFIG,
+                    headers: {
+                        ...config?.headers,
+                        ...DEFAULT_CONFIG?.headers
+                    }
                 } : DEFAULT_CONFIG;
             let response: AxiosResponse<any, any>;//= { data: {} };// await axios.post(url, formData, configParams);
 
