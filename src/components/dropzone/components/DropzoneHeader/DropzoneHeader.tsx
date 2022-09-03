@@ -32,7 +32,7 @@ export interface DropzoneHeaderProps {
    * only English and Spanish is supported
    */
   localization?: Localization;
-  hideViewIcon?:boolean;
+  hideViewIcon?: boolean;
 }
 
 const DropzoneHeader: FC<DropzoneHeaderProps> = (
@@ -71,10 +71,12 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
       } else {
         result.push(
           <Fragment>
-            {DropzoneHeaderLocalizer.uploadFilesMessage}
-            {/* localization === "ES-es" ? `Subir archivos` : "Upload files" */}
+            <>
+              {DropzoneHeaderLocalizer.uploadFilesMessage}
+              {/* localization === "ES-es" ? `Subir archivos` : "Upload files" */}
 
-            <Upload color="#646c7f" onClick={handleStartUploading} />
+              <Upload color="#646c7f" onClick={handleStartUploading} />
+            </>
           </Fragment>
         );
       }

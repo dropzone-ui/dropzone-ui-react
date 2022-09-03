@@ -293,8 +293,14 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     }
   };
   const handleFilesChange = (output: FileValidated[]) => {
+    //console.log("handleFilesChange:", output);
     //setNumberOfValidFiles(output.filter((x:FileValidated) => x.valid).length);
     onDrop?.(output);
+
+    // onChange fix: when adding more files when max amount was reached
+    // and behaviour is set to  "replace", prevent replacing the current selection
+    // with a list of non valid files
+
     onChange?.(behaviour === "replace" ? output : [...files, ...output]);
 
     setFiles(output);
@@ -318,6 +324,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       return;
     }
     let fileList: FileList = evt.dataTransfer.files;
+
     const remainingValids: number = (maxFiles || Infinity) - numberOfValidFiles;
     const localValidator: FileValidator = {
       accept: accept,
@@ -325,12 +332,11 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     };
     const output: FileValidated[] = fileListvalidator(
       fileList,
-      remainingValids,
+      behaviour === "replace" ? maxFiles || Infinity : remainingValids,
       localValidator
     );
     if (!disableRipple) {
       createRippleFromElement(dz_ui_ripple_ref.current, evt, color as string);
-
       // createRipple(evt, color as string);
     }
     setIsDragging(false);
@@ -351,7 +357,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     };
     const output: FileValidated[] = fileListvalidator(
       fileList,
-      remainingValids,
+      behaviour === "replace" ? maxFiles || Infinity : remainingValids,
       localValidator
     );
     // Clean input element to trigger onChange event on input
@@ -467,6 +473,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
           localization={localization}
         />
       )}
+
       {children && value && files && files.length > 0 ? (
         <FileItemContainer
           view={localView}
@@ -481,9 +488,15 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
           {children}
         </FileItemContainer>
       ) : (
-        <DropzoneLabel>
-          {label || (DropzoneLocalizer.defaultLabel as string)}
-        </DropzoneLabel>
+        <>
+          {children ? (
+            <>{children}</>
+          ) : (
+            <DropzoneLabel>
+              {label || (DropzoneLocalizer.defaultLabel as string)}
+            </DropzoneLabel>
+          )}
+        </>
       )}
 
       {footer && (

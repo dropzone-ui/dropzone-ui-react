@@ -1,6 +1,7 @@
 import { OverridableProps } from "@unlimited-react-components/kernel";
 
 
+
 export interface PaperProps extends OverridableProps {
     /**
      * The elevation of the paper to produce a shadow
@@ -25,7 +26,7 @@ export interface PaperProps extends OverridableProps {
     component?: "div" | "span";
 }
 export const PaperPropsDefault: PaperProps = {
-    children: () => { },
+    children: undefined,
     shadow: 2,
     className: "",
     style: {},
