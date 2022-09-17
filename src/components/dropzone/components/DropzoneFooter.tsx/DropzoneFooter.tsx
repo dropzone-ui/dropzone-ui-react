@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import * as React from "react";
 import { DropzoneLocalizerSelector } from "../../../../localization";
 import {
   FunctionLabel,
@@ -6,7 +6,7 @@ import {
 } from "../../../../localization/localization";
 import { DropzoneFooterProps } from "./DropzoneFooterProps";
 
-const DropzoneFooter: FC<DropzoneFooterProps> = (
+const DropzoneFooter: React.FC<DropzoneFooterProps> = (
   props: DropzoneFooterProps
 ) => {
   const { accept, message, localization } = props;

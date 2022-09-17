@@ -1,9 +1,9 @@
 import { hexColorToRGB } from "@unlimited-react-components/kernel";
-import React, { FC } from "react";
+import * as React from "react";
 interface loaderProps{
   color?:string ;
 }
-const Loader: FC<loaderProps> = (props: loaderProps) => {
+const Loader: React.FC<loaderProps> = (props: loaderProps) => {
   const {color="#8b6b10"}=props;
   return (
     <svg

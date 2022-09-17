@@ -1,4 +1,4 @@
-import { FC } from "react";
+import * as React from "react";
 import { InfoProps } from "./InfoProps";
-declare const Info: FC<InfoProps>;
+declare const Info: React.FC<InfoProps>;
 export default Info;

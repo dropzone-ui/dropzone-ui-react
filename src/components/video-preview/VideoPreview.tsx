@@ -1,16 +1,14 @@
-import React, { FC, Fragment } from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import { useRef } from "react";
+import * as React from "react";
+
 import { Cancel } from "../icons";
 import { VideoPreviewProps } from "./VideoPreviewProps";
 import "./VideoPreview.scss";
-const VideoPreview: FC<VideoPreviewProps> = (props: VideoPreviewProps) => {
+const VideoPreview: React.FC<VideoPreviewProps> = (props: VideoPreviewProps) => {
   const { videoSrc, openVideo, onClose, autoplay, controls, style } = props;
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [source, setSource] = useState<string | undefined>(undefined);
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+  const [source, setSource] = React.useState<string | undefined>(undefined);
 
-  useEffect(() => {
+  React.useEffect(() => {
     //if not undefined
     if (!videoSrc) {
       return;
@@ -31,7 +29,7 @@ const VideoPreview: FC<VideoPreviewProps> = (props: VideoPreviewProps) => {
       }
     }
   }, [videoSrc]);
-  useEffect(() => {
+  React.useEffect(() => {
     if (source && videoRef.current) {
       videoRef.current.load();
     }
@@ -89,7 +87,7 @@ const VideoPreview: FC<VideoPreviewProps> = (props: VideoPreviewProps) => {
       </div>
     );
   } else {
-    return <Fragment></Fragment>;
+    return <React.Fragment></React.Fragment>;
   }
 };
 export default VideoPreview;

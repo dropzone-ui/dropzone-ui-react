@@ -1,5 +1,5 @@
 import { mergeProps } from "@unlimited-react-components/kernel";
-import React, { useEffect, useRef, useState } from "react";
+import * as React from "react";
 import "./Dropzone.scss";
 import useDropzoneStyles from "../hooks/useDropzoneStyles";
 import {
@@ -72,9 +72,9 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     disableScroll,
   } = mergeProps(props, DropzonePropsDefault);
   //ref for ripple
-  const dz_ui_ripple_ref = useRef<HTMLDivElement>(null);
+  const dz_ui_ripple_ref = React.useRef<HTMLDivElement>(null);
   //re-validation: for development purposes and for preventing clean fileList in web page code generator
-  useEffect(() => {
+  React.useEffect(() => {
     if (files.length > 0) {
       let fileList: FileList = files.map((x) => x.file) as unknown as FileList;
       const remainingValids: number =
@@ -99,18 +99,18 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     ValidateErrorLocalizerSelector(localization);
 
   //ref to the hidden input tag
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = React.useRef<HTMLInputElement>(null);
   // whether is draggin or not
-  const [isDragging, setIsDragging] = useState<boolean>(false);
+  const [isDragging, setIsDragging] = React.useState<boolean>(false);
   // list of files (local)
-  const [files, setFiles] = useState<FileValidated[]>([]);
+  const [files, setFiles] = React.useState<FileValidated[]>([]);
   const [localView, setLocalView] =
-    useState<FileItemContainerProps["view"]>("grid");
-  const [localMessage, setLocalMessage] = useState<string>("");
+    React.useState<FileItemContainerProps["view"]>("grid");
+  const [localMessage, setLocalMessage] = React.useState<string>("");
 
   //ClassName for dynamic style
-  const [onUploadingStart, setOnUploadingStart] = useState<boolean>(false);
-  // const [queueFiles, setQueueFiles] = useState<FileValidated[]>([]);
+  const [onUploadingStart, setOnUploadingStart] = React.useState<boolean>(false);
+  // const [queueFiles, setQueueFiles] = React.useState<FileValidated[]>([]);
   // const offset:number= header && footer? 50: (!header && footer?23:(header && !footer?22:0)) ;
 
   const classNameCreated: string = useDropzoneStyles(
@@ -125,21 +125,21 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   }${clickable ? ` clickable` : ``}`;
 
   //number of files
-  const [numberOfValidFiles, setNumberOfValidFiles] = useState<number>(0);
-  useEffect(() => {
+  const [numberOfValidFiles, setNumberOfValidFiles] = React.useState<number>(0);
+  React.useEffect(() => {
     if (value) {
       setFiles(value);
       setNumberOfValidFiles(value.filter((x: FileValidated) => x.valid).length);
     }
   }, [value]);
-  useEffect(() => {
+  React.useEffect(() => {
     if (disableScroll) {
       setLocalView("grid");
     } else if (view) {
       setLocalView(view);
     }
   }, [view, disableScroll]);
-  useEffect(() => {
+  React.useEffect(() => {
     if (uploadingMessage) {
       setLocalMessage(uploadingMessage);
     }

@@ -1,6 +1,6 @@
-import { FC } from "react";
+import * as React from "react";
 interface loaderProps {
     color?: string;
 }
-declare const Loader: FC<loaderProps>;
+declare const Loader: React.FC<loaderProps>;
 export default Loader;

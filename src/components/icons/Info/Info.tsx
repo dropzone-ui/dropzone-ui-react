@@ -1,8 +1,8 @@
-import React,{ FC } from "react";
+import * as React from "react";
 import { InfoProps } from "./InfoProps";
 import { parseSize } from "../utils/utils";
 
-const Info: FC<InfoProps> = (props: InfoProps) => {
+const Info: React.FC<InfoProps> = (props: InfoProps) => {
   const { size, color, colorFill, onClick } = props;
   const finalSize = parseSize(size);
   return (
