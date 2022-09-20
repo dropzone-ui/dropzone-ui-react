@@ -11,6 +11,7 @@ The `best`, most complete and `easy to use`, [React](https://reactjs.org/) file 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/react/blob/HEAD/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/@dropzone-ui/react.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/@dropzone-ui/react)
 [![Rate on Openbase](https://badges.openbase.com/js/rating/@dropzone-ui/react.svg)](https://openbase.com/js/@dropzone-ui/react?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
+[![kandi X-Ray](https://kandi.openweaver.com/badges/xray.svg)](https://kandi.openweaver.com/typescript/dropzone-ui/dropzone-ui-react)
 [![Node.js CI](https://github.com/dropzone-ui/react-dropzone/actions/workflows/node.js.yml/badge.svg)](https://github.com/dropzone-ui/dropzone-ui-react)
 [![Build Status](https://app.travis-ci.com/dropzone-ui/dropzone-ui-react.svg?branch=master)](https://app.travis-ci.com/dropzone-ui/dropzone-ui-react)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/context:javascript)
