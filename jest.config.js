@@ -6,9 +6,9 @@ const config = {
   preset: "ts-jest",
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node", "d.ts"],
-  "moduleNameMapper": {
-    "^.+\\.(css|less|scss)$": "identity-obj-proxy"
+  moduleNameMapper: {
+    "^.+\\.(css|less|scss)$": "identity-obj-proxy",
   },
-  testEnvironment: "jsdom"
+  testEnvironment: "jsdom",
 };
-module.exports =config;
+module.exports = config;

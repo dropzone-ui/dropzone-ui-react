@@ -1,6 +1,6 @@
 {
   "name": "@dropzone-ui/react",
-  "version": "6.7.12",
+  "version": "6.7.14",
   "description": "The best and most complete React library for managing file uploads. Multilanguage support. Server side support. Material design styles. Code generator on webpage.",
   "main": "./build/index.js",
   "module": "./build/index.es.js",
@@ -37,7 +37,7 @@
   },
   "homepage": "https://dropzone-ui.herokuapp.com/",
   "dependencies": {
-    "@dynamicss/dynamicss": "^2.2.2",
+    "@dynamicss/dynamicss": "^2.2.8",
     "@unlimited-react-components/kernel": "^1.0.2",
     "@unlimited-react-components/material-button": "^1.2.8"
   },
@@ -72,7 +72,8 @@
     "eslint-plugin-jest": "^25.3.4",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
-    "jest": "^27.4.7",
+    "jest": "^29.0.3",
+    "jest-environment-jsdom": "^29.0.3",
     "json-schema": "0.4.0",
     "prettier": "^2.5.1",
     "rollup": "^2.63.0",
@@ -84,7 +85,7 @@
     "rollup-plugin-typescript2": "^0.31.1",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
-    "ts-jest": "^27.1.2",
+    "ts-jest": "^29.0.2",
     "ts-loader": "^9.2.5",
     "tslib": "^2.1.0",
     "typescript": "^4.5.4"
