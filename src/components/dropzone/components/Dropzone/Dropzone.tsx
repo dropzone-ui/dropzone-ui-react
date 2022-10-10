@@ -71,7 +71,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     localization,
     disableScroll,
     footerClassName,
-    headerClassName
+    headerClassName,
   } = mergeProps(props, DropzonePropsDefault);
   //ref for ripple
   const dz_ui_ripple_ref = React.useRef<HTMLDivElement>(null);
@@ -88,7 +88,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       const output: FileValidated[] = fileListvalidator(
         fileList,
         remainingValids,
-        localValidator
+        localValidator,
       );
       onChange?.(output);
     }
@@ -111,7 +111,8 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   const [localMessage, setLocalMessage] = React.useState<string>("");
 
   //ClassName for dynamic style
-  const [onUploadingStart, setOnUploadingStart] = React.useState<boolean>(false);
+  const [onUploadingStart, setOnUploadingStart] =
+    React.useState<boolean>(false);
   // const [queueFiles, setQueueFiles] = React.useState<FileValidated[]>([]);
   // const offset:number= header && footer? 50: (!header && footer?23:(header && !footer?22:0)) ;
 
@@ -120,7 +121,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     backgroundColor,
     disableScroll ? undefined : maxHeight,
     minHeight,
-    header && footer ? 50 : !header && footer ? 23 : header && !footer ? 22 : 0
+    header && footer ? 50 : !header && footer ? 23 : header && !footer ? 22 : 0,
   );
   const finalClassName: string = `dropzone-ui${classNameCreated}${
     isDragging ? ` drag` : ``
@@ -166,7 +167,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
    * @param files
    */
   const fakeUpload = (
-    file: FileValidated
+    file: FileValidated,
   ): Promise<UploadPromiseAxiosResponse> => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -212,7 +213,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   const uploadFiles = async (files: FileValidated[]) => {
     const totalNumber = files.length;
     const missingUpload = files.filter(
-      (x) => x.valid && x.uploadStatus !== "success"
+      (x) => x.valid && x.uploadStatus !== "success",
     ).length;
     let totalRejected: number = 0;
     let currentCountUpload: number = 0;
@@ -222,7 +223,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     setOnUploadingStart(true);
     if (missingUpload > 0 && url) {
       setLocalMessage(
-        uploadingMessenger(`${missingUpload}/${totalNumber}`)
+        uploadingMessenger(`${missingUpload}/${totalNumber}`),
         /* localization === "ES-es"
           ? `Subiendo ${missingUpload}/${totalNumber} archivos`
           : `uploading ${missingUpload}/${totalNumber} files`, */
@@ -241,14 +242,14 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       let serverResponses: FileDuiResponse[] = [];
       onUploadStart?.(
         uploadStartFiles.filter(
-          (f) => f.uploadStatus === UPLOADSTATUS.uploading
-        )
+          (f) => f.uploadStatus === UPLOADSTATUS.uploading,
+        ),
       );
       for (let i = 0; i < uploadStartFiles.length; i++) {
         let currentFile: FileValidated = uploadStartFiles[i];
         if (currentFile.uploadStatus === UPLOADSTATUS.uploading) {
           setLocalMessage(
-            uploadingMessenger(`${++currentCountUpload}/${missingUpload}`)
+            uploadingMessenger(`${++currentCountUpload}/${missingUpload}`),
           );
 
           const { serverResponse, uploadedFile }: UploadPromiseAxiosResponse =
@@ -277,14 +278,14 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       const finishUploadMessenger: FunctionLabel =
         DropzoneLocalizer.uploadFinished as FunctionLabel;
       setLocalMessage(
-        finishUploadMessenger(missingUpload - totalRejected, totalRejected)
+        finishUploadMessenger(missingUpload - totalRejected, totalRejected),
       );
       setTimeout(() => {
         setOnUploadingStart(false);
       }, 2300);
     } else {
       setLocalMessage(
-        DropzoneLocalizer.noFilesMessage as string
+        DropzoneLocalizer.noFilesMessage as string,
         /* localization === "ES-es"
           ? `No hay archivos válidos pendientes por subir`
           : `There is not any missing valid file for uploading`, */
@@ -317,7 +318,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
    * @param evt
    */
   const kamui: React.DragEventHandler<HTMLDivElement> = async (
-    evt: React.DragEvent<HTMLDivElement>
+    evt: React.DragEvent<HTMLDivElement>,
   ): Promise<void> => {
     evt.stopPropagation();
     evt.preventDefault();
@@ -335,7 +336,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     const output: FileValidated[] = fileListvalidator(
       fileList,
       behaviour === "replace" ? maxFiles || Infinity : remainingValids,
-      localValidator
+      localValidator,
     );
     if (!disableRipple) {
       createRippleFromElement(dz_ui_ripple_ref.current, evt, color as string);
@@ -346,7 +347,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   };
 
   const handleOnChangeInput: React.ChangeEventHandler<HTMLInputElement> = (
-    evt: React.ChangeEvent<HTMLInputElement>
+    evt: React.ChangeEvent<HTMLInputElement>,
   ): void => {
     if (onUploadingStart) {
       return;
@@ -360,7 +361,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     const output: FileValidated[] = fileListvalidator(
       fileList,
       behaviour === "replace" ? maxFiles || Infinity : remainingValids,
-      localValidator
+      localValidator,
     );
     // Clean input element to trigger onChange event on input
     let element: HTMLInputElement | null = inputRef.current;
@@ -375,7 +376,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
   const fileListvalidator = (
     preValidatedFiles: FileList,
     remainingValids: number,
-    localValidator: FileValidator
+    localValidator: FileValidator,
   ): FileValidated[] => {
     const output: FileValidated[] = [];
     let countdown: number = remainingValids;
@@ -412,7 +413,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     }
   };
   const handleDragEnter: React.DragEventHandler<HTMLDivElement> = (
-    evt: React.DragEvent<HTMLDivElement>
+    evt: React.DragEvent<HTMLDivElement>,
   ): void => {
     evt.stopPropagation();
     evt.preventDefault();
@@ -420,7 +421,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     setIsDragging(true);
   };
   const handleDragLeave: React.DragEventHandler<HTMLDivElement> = (
-    evt: React.DragEvent<HTMLDivElement>
+    evt: React.DragEvent<HTMLDivElement>,
   ): void => {
     evt.stopPropagation();
     evt.preventDefault();
@@ -428,7 +429,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     setIsDragging(false);
   };
   function handleClick<T extends HTMLDivElement>(
-    e: React.MouseEvent<T, MouseEvent>
+    e: React.MouseEvent<T, MouseEvent>,
   ): void {
     let referenceInput = inputRef.current;
     referenceInput?.click();
@@ -460,6 +461,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
       <div className="dropzone-ui-ripple" ref={dz_ui_ripple_ref}></div>
       {header && (
         <DropzoneHeader
+          headerClassName={headerClassName}
           maxFileSize={maxFileSize}
           numberOfValidFiles={files.filter((x) => x.valid).length}
           onReset={!onUploadingStart ? handleReset : undefined}
@@ -503,6 +505,7 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
 
       {footer && (
         <DropzoneFooter
+          footerClassName={footerClassName}
           accept={accept}
           message={onUploadingStart ? localMessage : undefined}
           localization={localization}
