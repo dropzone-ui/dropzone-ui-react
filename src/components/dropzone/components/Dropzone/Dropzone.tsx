@@ -70,6 +70,8 @@ const Dropzone: React.FC<DropzoneProps> = (props: DropzoneProps) => {
     fakeUploading,
     localization,
     disableScroll,
+    footerClassName,
+    headerClassName
   } = mergeProps(props, DropzonePropsDefault);
   //ref for ripple
   const dz_ui_ripple_ref = React.useRef<HTMLDivElement>(null);

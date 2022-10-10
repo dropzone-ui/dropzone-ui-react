@@ -33,10 +33,15 @@ export interface DropzoneHeaderProps {
    */
   localization?: Localization;
   hideViewIcon?: boolean;
+  /**
+   * The classname to override the header css styles
+   * on .css or .sass files
+   */
+  headerClassName?: string;
 }
 
 const DropzoneHeader: FC<DropzoneHeaderProps> = (
-  props: DropzoneHeaderProps
+  props: DropzoneHeaderProps,
 ) => {
   const {
     maxFileSize,
@@ -51,10 +56,11 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
     urlPresent,
     localization,
     hideViewIcon,
+    headerClassName,
   } = props;
 
   const DropzoneHeaderLocalizer: LocalLabels = DropzoneLocalizerSelector(
-    localization
+    localization,
   ).header as LocalLabels;
 
   const handleClean = () => {
@@ -77,7 +83,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
 
               <Upload color="#646c7f" onClick={handleStartUploading} />
             </>
-          </Fragment>
+          </Fragment>,
         );
       }
 
@@ -88,7 +94,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
       DropzoneHeaderLocalizer.maxSizeMessage as FunctionLabel;
     if (maxFileSize) {
       result.push(
-        maxFileSizeMessenger(fileSizeFormater(maxFileSize))
+        maxFileSizeMessenger(fileSizeFormater(maxFileSize)),
 
         /* localization === "ES-es"
           ? `Tam. máximo de archivo ${fileSizeFormater(maxFileSize)} | `
@@ -101,7 +107,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
 
     if (maxFiles) {
       result.push(
-        validFileSizeMessenger(numberOfValidFiles as number, maxFiles)
+        validFileSizeMessenger(numberOfValidFiles as number, maxFiles),
         /*  localization === "ES-es"
           ? `Archivos ${numberOfValidFiles}/${maxFiles} | Válidos: ${numberOfValidFiles} | `
           : `Files ${numberOfValidFiles}/${maxFiles} | Valid: ${numberOfValidFiles} | `, */
@@ -111,7 +117,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
     //clean not valid files on click
     if (onClean) {
       result.push(
-        <Clean color="#646c7f" onClick={handleClean} size="semi-medium" />
+        <Clean color="#646c7f" onClick={handleClean} size="semi-medium" />,
       );
     }
 
@@ -133,7 +139,7 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
               color="#646c7f"
             />
           )}
-        </>
+        </>,
       );
     }
 
@@ -144,14 +150,16 @@ const DropzoneHeader: FC<DropzoneHeaderProps> = (
           //color="rgba(255,255,255,0.8)"
           onClick={() => onReset?.()}
           colorFill="rgba(255,255,255,0.8)"
-        />
+        />,
       );
     }
     return result;
   };
   return (
     <div
-      className="dz-ui-header"
+      className={
+        headerClassName ? `dz-ui-header ${headerClassName}` : "dz-ui-header"
+      }
       onClick={(e) => {
         e.stopPropagation();
       }}

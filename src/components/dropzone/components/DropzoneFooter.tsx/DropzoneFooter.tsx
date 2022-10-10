@@ -7,17 +7,22 @@ import {
 import { DropzoneFooterProps } from "./DropzoneFooterProps";
 
 const DropzoneFooter: React.FC<DropzoneFooterProps> = (
-  props: DropzoneFooterProps
+  props: DropzoneFooterProps,
 ) => {
-  const { accept, message, localization } = props;
+  const { accept, message, localization, footerClassName } = props;
 
   const DropzoneFooterLocalizer: LocalLabels = DropzoneLocalizerSelector(
-    localization
+    localization,
   ).footer as LocalLabels;
   const accepCustomMessenger: FunctionLabel =
     DropzoneFooterLocalizer.acceptCustom as FunctionLabel;
   return (
-    <div className="dz-ui-footer" onClick={undefined}>
+    <div
+      className={
+        footerClassName ? `dz-ui-footer ${footerClassName}` : "dz-ui-footer"
+      }
+      onClick={undefined}
+    >
       <>
         {message
           ? message
