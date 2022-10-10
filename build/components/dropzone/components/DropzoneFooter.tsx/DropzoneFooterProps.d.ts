@@ -8,4 +8,9 @@ export interface DropzoneFooterProps {
     * only English and Spanish is supported
     */
     localization?: Localization;
+    /**
+     * The classname to override the footer css styles
+     * on .css or .sass files
+     */
+    footerClassName?: string;
 }

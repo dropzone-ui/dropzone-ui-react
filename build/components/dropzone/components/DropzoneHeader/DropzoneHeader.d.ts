@@ -19,6 +19,11 @@ export interface DropzoneHeaderProps {
      */
     localization?: Localization;
     hideViewIcon?: boolean;
+    /**
+     * The classname to override the header css styles
+     * on .css or .sass files
+     */
+    headerClassName?: string;
 }
 declare const DropzoneHeader: FC<DropzoneHeaderProps>;
 export default DropzoneHeader;

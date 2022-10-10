@@ -199,5 +199,15 @@ export interface DropzoneProps extends OverridableProps {
      * and sets the Dropzone in a grid view
      */
     disableScroll?: boolean;
+    /**
+     * The classname to override the header css styles
+     * on .css or .sass files
+     */
+    headerClassName?: string;
+    /**
+     * The classname to override the footer css styles
+     * on .css or .sass files
+     */
+    footerClassName?: string;
 }
 export declare const DropzonePropsDefault: DropzoneProps;
