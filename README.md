@@ -4,7 +4,7 @@
 
 The `best`, most complete and `easy to use`, [React](https://reactjs.org/) file upload library.
 
-:zap: Live demo and code generator : [dropzone-ui.com](https://dropzone-ui.herokuapp.com/)
+:zap: Live demo and code generator : [dropzone-ui.com](https://dropzone-ui.vercel.app)
 
 :heart: it ?, support us by giving a :star: on :octocat: [Github](https://github.com/dropzone-ui/dropzone-ui) :D
 
