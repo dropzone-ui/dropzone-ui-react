@@ -19,10 +19,10 @@
 
 <p align="center">
   
-  <img src="https://user-images.githubusercontent.com/43678736/148801752-954fa819-023d-4596-b557-56f7a38f4745.png"  align="center">   
+  <img src="https://user-images.githubusercontent.com/43678736/148801752-954fa819-023d-4596-b557-56f7a38f4745.png"  align="center" width="95%">   
 </p>
 
-Thanks for using dropzone-ui/react :heart: ! Dropzone UI has grown very fast and has exceeded its original scope. That's why we find reasonable rebrand it and create a new package taking the best of this package and adding more features and new components. This new package is Files UI :zap:
+Thanks for using dropzone-ui/react :heart: ! Dropzone UI has grown very fast and has exceeded its original scope. That's why we find reasonable to rebrand it and create a new package taking the best of this one and adding more features and new components. This new package is Files UI :zap:
 
 :zap: Live demo and full documentation : [files-ui.com](https://files-ui.vercel.app)
 
