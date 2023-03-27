@@ -8,8 +8,6 @@
 [![kandi X-Ray](https://kandi.openweaver.com/badges/xray.svg)](https://kandi.openweaver.com/typescript/dropzone-ui/dropzone-ui-react)
 [![Node.js CI](https://github.com/dropzone-ui/react-dropzone/actions/workflows/node.js.yml/badge.svg)](https://github.com/dropzone-ui/dropzone-ui-react)
 [![Build Status](https://app.travis-ci.com/dropzone-ui/dropzone-ui-react.svg?branch=master)](https://app.travis-ci.com/dropzone-ui/dropzone-ui-react)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/context:javascript)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/dropzone-ui/dropzone-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dropzone-ui/dropzone-ui/alerts/)
 [![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/react/badge.svg)](https://snyk.io/test/github/dropzone-ui/react)
 [![Package Quality](https://packagequality.com/shield/dropzone-ui.svg)](https://packagequality.com/#?package=dropzone-ui)
 [![install size](https://packagephobia.com/badge?p=@dropzone-ui/react)](https://packagephobia.com/result?p=@dropzone-ui/react)
@@ -17,16 +15,15 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![GitHub Repo stars](https://img.shields.io/github/stars/dropzone-ui/react?label=Star%20me%20please%20:D&style=social)](https://github.com/dropzone-ui/react)
 
-<p align="center">
-  
-  <img src="https://user-images.githubusercontent.com/43678736/148801752-954fa819-023d-4596-b557-56f7a38f4745.png"  align="center" width="95%">   
-</p>
 
-Thanks for using dropzone-ui/react :heart: ! Dropzone UI has grown very fast and has exceeded its original scope. That's why we find reasonable to rebrand it and create a new package taking the best of this one and adding more features and new components. This new package is Files UI :zap:
 
-:zap: Live demo and full documentation : [files-ui.com](https://files-ui.vercel.app)
+Thank you so much for using dropzone-ui/react ❤️ !
+Dropzone UI has grown very fast and has exceeded its original scope. That's why we find reasonable to rebrand it and create a new package taking the best of this one and adding more features and new components. This new package is here and its name is Files UI ⚡
+In an very near future we'll stop giving support to dropzone-ui, so we enforce you to upgrade to this new package. In the meanwhile this package will become a wrapper for files-ui.
 
-:heart: it ?, support us by giving a :star: on :octocat: [Github](https://github.com/files-ui/react-files-ui) :D
+:zap: Live demos and full documentation : [files-ui.com](https://files-ui.vercel.app)
+
+:heart: it ?, support us by giving a :star: on :octocat: [Github](https://github.com/files-ui/files-ui-react) :D
 
 <p align="center">
 <a href="https://www.files-ui.com">
@@ -36,22 +33,18 @@ Thanks for using dropzone-ui/react :heart: ! Dropzone UI has grown very fast and
 
 ## Important
 
-From now on [@files-ui/react]()  is the only dependency.
+From now on [@files-ui/react](https://www.npmjs.com/package/@files-ui/react)  is the only dependency. Check out the changelog file to know what's new.
 
 ## Sample result:
 
-On `Drag`, `Drop`, `Upload` and full screen `preview`. (also changing view mode from `grid` to `list`).
-
+This is a small part of what you can find on files-ui :eyes:
 <p align="center">
-<a href="https://github.com/dropzone-ui/react#readme">
-<img align="center" width="100%" src="https://user-images.githubusercontent.com/43678736/139614260-602b512c-cf78-48fe-ae57-1057e7ec8135.gif" alt="dropone-ui-preview">
+<a href="https://www.files-ui.com">
+<img src="https://user-images.githubusercontent.com/43678736/228052494-99d970c0-1eb7-42c6-b22c-8c2295b8dc4a.gif"  width="80%" alt="fui-logo"/>
 </a>
-
 </p>
 
 - More previews [here](#more-previews).
-
-- Did you like the project? Please don't forget to give us a :star: star on :octocat: [GitHub](https://github.com/dropzone-ui/dropzone-ui) :D
 
 
 ## Requirement
@@ -71,6 +64,9 @@ npm i @dropzone-ui/react
 // with yarn
 yarn add @dropzone-ui/react
 ```
+
+## API documentation
+The complete documentation of every component has been moved to files-ui.com [API page](https://www.files-ui.com/api/dropzone). However if you are still using dropzone-ui version 6 or less you can find the documentation [here](https://www.npmjs.com/package/@dropzone-ui/react/v/6.7.20#dropzone-ui-react-components-api).
 
 ## Supporters
 
