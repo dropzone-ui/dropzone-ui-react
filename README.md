@@ -84,11 +84,22 @@ Special thanks to these amazing people :star: :
 
 ### Image full screen preview
 
-<p align="center"><img src="https://camo.githubusercontent.com/58e1d2e245bdd8a4eb7302bc0749ce9fd39bfade9838c4ed7fe9272d94e54eb4/68747470733a2f2f6465762d746f2d75706c6f6164732e73332e616d617a6f6e6177732e636f6d2f75706c6f6164732f61727469636c65732f3577786b31346f367a686c6f7a327a337a7970792e706e67" alt="Image full screen preview" width="100%"/></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/43678736/228066199-fb7a5bd3-9c7e-4f72-b0ef-7f11d236d38e.png" alt="Image full screen preview" width="100%"/></p>
 
 ### Video full screen preview
 
-<p align="center"><img src="https://user-images.githubusercontent.com/43678736/148802895-9a5349a7-224d-44df-854b-19d6a1f2d30e.png" alt="Video full screen preview" width="100%"/></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/43678736/228066195-62063300-21e0-48fd-80d8-31b566562fde.png" alt="Video full screen preview" width="100%"/></p>
+
+### File Mosaic, FileInputButotn and Avatar preview
+
+<p align="center"><img src="https://user-images.githubusercontent.com/43678736/228063876-5b6d00fe-f0ba-453f-a7ce-c44ba7444417.png" alt="Video full screen preview" width="100%"/></p>
+
+### DarkMode
+
+<p align="center"><img src="https://user-images.githubusercontent.com/43678736/228063883-569ca6f1-6959-45bc-9882-2c447162a00f.png" alt="darkmode 1 preview" width="100%"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/43678736/228066720-e0bb96ac-3c00-4aa6-80b9-e0b4d0c5f947.png" alt="darkmode 2 preview" width="100%"/></p>
+
 
 ## License
 
