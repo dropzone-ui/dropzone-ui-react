@@ -15,10 +15,9 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![GitHub Repo stars](https://img.shields.io/github/stars/dropzone-ui/react?label=Star%20me%20please%20:D&style=social)](https://github.com/dropzone-ui/react)
 
-
-
 Thank you so much for using dropzone-ui/react ❤️ !
-Dropzone UI has grown very fast and has exceeded its original scope. That's why we find reasonable to rebrand it and create a new package taking the best of this one and adding more features and new components. This new package is here and its name is Files UI ⚡
+
+Dropzone UI has grown very fast and has exceeded its original scope. That's why we find reasonable to rebrand it and create a new package taking the best of this one and adding more features and new components. This new package is here and its name is Files UI ⚡.
 In an very near future we'll stop giving support to dropzone-ui, so we enforce you to upgrade to this new package. In the meanwhile this package will become a wrapper for files-ui.
 
 :zap: Live demos and full documentation : [files-ui.com](https://files-ui.vercel.app)
@@ -33,11 +32,12 @@ In an very near future we'll stop giving support to dropzone-ui, so we enforce y
 
 ## Important
 
-From now on [@files-ui/react](https://www.npmjs.com/package/@files-ui/react)  is the only dependency. Check out the changelog file to know what's new.
+From now on [@files-ui/react](https://www.npmjs.com/package/@files-ui/react) is the only dependency. Check out the changelog file to know what's new.
 
 ## Sample result:
 
 This is a small part of what you can find on files-ui :eyes:
+
 <p align="center">
 <a href="https://www.files-ui.com">
 <img src="https://user-images.githubusercontent.com/43678736/228052494-99d970c0-1eb7-42c6-b22c-8c2295b8dc4a.gif"  width="80%" alt="fui-logo"/>
@@ -45,7 +45,6 @@ This is a small part of what you can find on files-ui :eyes:
 </p>
 
 - More previews [here](#more-previews).
-
 
 ## Requirement
 
@@ -66,7 +65,13 @@ yarn add @dropzone-ui/react
 ```
 
 ## API documentation
-The complete documentation of every component has been moved to files-ui.com [API page](https://www.files-ui.com/api/dropzone). However if you are still using dropzone-ui version 6 or less you can find the documentation [here](https://www.npmjs.com/package/@dropzone-ui/react/v/6.7.20#dropzone-ui-react-components-api).
+
+The complete documentation of every component has been moved to files-ui.com [API page](https://www.files-ui.com/api/dropzone).
+
+However if you are still using dropzone-ui version 6.7.0 or lower, you can find the documentation and demos here:
+
+- ⚡ [Samples](https://www.npmjs.com/package/@dropzone-ui/react/v/6.7.20?activeTab=readme#Usage-and-examples)
+- 📚 [Docs](https://www.npmjs.com/package/@dropzone-ui/react/v/6.7.20#dropzone-ui-react-components-api).
 
 ## Supporters
 
@@ -82,24 +87,28 @@ Special thanks to these amazing people :star: :
 
 ## More Previews
 
-### Image full screen preview
+<details>
+  <summary>Image full screen preview 🖼️ </summary>
+  <p align="center"><img src="https://user-images.githubusercontent.com/43678736/228066199-fb7a5bd3-9c7e-4f72-b0ef-7f11d236d38e.png" alt="Image full screen preview" width="100%"/></p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/43678736/228066199-fb7a5bd3-9c7e-4f72-b0ef-7f11d236d38e.png" alt="Image full screen preview" width="100%"/></p>
-
-### Video full screen preview
-
+</details>
+<details>
+ <summary>Video full screen preview 🎞️ </summary>
 <p align="center"><img src="https://user-images.githubusercontent.com/43678736/228066195-62063300-21e0-48fd-80d8-31b566562fde.png" alt="Video full screen preview" width="100%"/></p>
+</details>
 
-### File Mosaic, FileInputButotn and Avatar preview
-
+<details>
+ <summary>FileCard, FileInputButton and Avatar preview 🎴 </summary>
 <p align="center"><img src="https://user-images.githubusercontent.com/43678736/228063876-5b6d00fe-f0ba-453f-a7ce-c44ba7444417.png" alt="Video full screen preview" width="100%"/></p>
 
-### DarkMode
+</details>
 
+<details>
+ <summary>DarkMode 🌙 🌞 </summary> 
 <p align="center"><img src="https://user-images.githubusercontent.com/43678736/228063883-569ca6f1-6959-45bc-9882-2c447162a00f.png" alt="darkmode 1 preview" width="100%"/></p>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/43678736/228066720-e0bb96ac-3c00-4aa6-80b9-e0b4d0c5f947.png" alt="darkmode 2 preview" width="100%"/></p>
-
+</details>
 
 ## License
 
