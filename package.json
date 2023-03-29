@@ -35,21 +35,12 @@
   "bugs": {
     "url": "https://github.com/dropzone-ui/dropzone-ui-react/issues"
   },
-  "homepage": "https://dropzone-ui.herokuapp.com/",
-  "dependencies": {
-    "@dynamicss/dynamicss": "^2.2.8",
-    "@unlimited-react-components/kernel": "^1.0.2",
-    "@unlimited-react-components/material-button": "^1.2.8"
-  },
+  "homepage": "https://www.files-ui.com/",
   "peerDependencies": {
-    "axios": "latest",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
-    "axios": "latest",
-    "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.1.3",
     "@storybook/addon-actions": "^6.4.15",
@@ -79,6 +70,8 @@
     "jest-environment-jsdom": "^29.0.3",
     "json-schema": "0.4.0",
     "prettier": "^2.5.1",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
     "rollup": "^2.63.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-jsx": "^1.0.3",
@@ -100,5 +93,8 @@
     "lint": "eslint src/*.tsx --quiet --fix",
     "test": "jest",
     "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
+  },
+  "dependencies": {
+    "@files-ui/react": "latest"
   }
 }
