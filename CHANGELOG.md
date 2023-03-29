@@ -9,6 +9,52 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [Dropzone-ui(7.0.0) = Files-ui(1.0.0)](https://github.com/files-ui/files-ui-react/releases/tag/v1.0.0) (2023-03-28)
+
+## 🧪 New features and 🐛🔨 Improvements
+
+- [ExtFile](https://www.files-ui.com/types#extfile): Data estructure that "extends" the File Object. This object is designed to allow the information exchange between components. This data type replaces the old "FileValidate" type from dropzone-ui.
+
+- [\<FileMosaic/\>](https://www.files-ui.com/components/filemosaic): This new component replaces the old "FileItem" component.
+
+  - Darkmode: Now component can be adpted to a dark mode pages with the respective prop.
+  - New icons: Icons for delete were changed.
+  - For uploading, the loader can support to display the current progress.
+
+- [\<FileCard/\>](https://www.files-ui.com/components/filecard): This new component is an alternative version of FileMosaic. It displays the file info in a card. Receives the same props as FileMosaic plus `elevation`.
+
+- [\<FileInputButton/\>](https://www.files-ui.com/components/dropzone): This component replaces the old "InputButton" component. The features are the same as the dropzone except the header and footer related features. That means that this component now can trigger the upload progress.
+  Validation is optional, so non valid files can be uploaded.
+
+- [\<Avatar/\>](https://www.files-ui.com/components/avatar): This new component is designed tohandle the selection of images for changing the avatar. Can recieve as source an string url or even a File.
+
+- [\<FullScreen/\>](https://www.files-ui.com/api/fullscreen): The old components "FullScreenImage" and "FullScreenVideo" have been separated into FUllScreen, ImagePreview and VideoPreview.
+
+  - FullScreen: component for display in a fullscreen backdrop other components.
+  - [ImagePreview](https://www.files-ui.com/api/imagepreview): component is an \<img/\> tag enhanced to allow as `src` a string url or a ile object.
+  - [VideoPreview](https://www.files-ui.com/api/videopreview): component is an \<video/\> tag enhanced to allow as `src` a string url or a ile object.
+
+- [\<Dropzone/\>](https://www.files-ui.com/components/dropzone): This component has been refactored to improve the design, colors and internal components such us headeror footer.
+
+  - Header and footer can be handled through 2 new props: `headerConfig` and `footerConfig`
+  - Action buttons: these are external buttons thta can trigger the default operations in dropzone.
+  - Uploading: The upload operation now is completele handled using pure javascript without external libraries wich means `axios` is no longer a dependency.
+
+- `smartImgFit`: This is a special prop for FileMosaic, FileCard and Avatar components that makes someway "smart" the components to fit the images depeding on their orientation ("landscape" or protrait). Square images are hardly afected.
+
+  - How it works?
+
+    - If false, image width will be set to 100%.
+      If present, image will be analized and displayed according to its heigh and width. Image with height greater than its width has a "portrait" orientation. Otherwise it has a "landscape" orientation. .
+
+          - If value is "orientation", image will be displayed complete by giving 100% to width prop if the orientation is "landscape". When orientation is "portrait", height prop will be set to 100%. Some images will show an empty space.
+
+          - If value is "center", image will be centered and will not be displayed complete. This the empty space is avoided. This is achived by giving 100% to width prop if the orientation is "portrait". When orientation is "landscape", height prop will be set to 100%.
+
+## 📚 Improved documentation.
+
+- The complete documentation can be found in files-ui [web page](https://www.files-ui.com).
+
 <a name="6.4.0"></a>
 
 ## [6.4.0](https://github.com/dropzone-ui/react-dropzone/releases/tag/v6.4.0) (2021-12-12)

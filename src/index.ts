@@ -1,39 +1,138 @@
-import { createPDF, createWord, createListOfMultiTypeFile, createSyntheticFile } from "./utils/files.utils";
-import { makeSynthticFileValidate } from "./components/dropzone/components/utils/validation.utils";
 
-import { DropzoneLocalizerSelector, DropzoneLocalizer, DropzoneItalian, DropzoneFrench, DropzoneEnglish, DropzoneSpanish, DropzonePortuguese, DropzoneRussian, DropzoneSimplifiedChinese, DropzoneTraditionalChinese, FileItemLocalizerSelector, FileItemLocalizer, FileItemItalian, FileItemFrench, FileItemEnglish, FileItemSpanish, FileItemPortuguese, FileItemRussian, FileItemSimplifiedChinese, FileItemTraditionalChinese, ValidateErrorLocalizerSelector, ValidateErrorLocalizer, ValidateErrorItalian, ValidateErrorFrench, ValidateErrorEnglish, ValidateErrorSpanish, ValidateErrorPortuguese, ValidateErrorRussian, ValidateErrorSimplifiedChinese, ValidateErrorTraditionalChinese } from "./localization";
 
-import { UploadPromiseAxiosResponse as UploadPromiseAxiosResponseType, FileDuiResponse as FileDuiResponseType, DropzoneUIResponse as DropzoneUIResponseType } from "./components/dropzone/components/utils/dropzone-ui.upload.utils";
-import { FileValidated as FileValidatedType, UPLOADSTATUS } from "./components/dropzone/components/utils/validation.utils";
-export type UploadPromiseAxiosResponse = UploadPromiseAxiosResponseType;
-export type FileDuiResponse = FileDuiResponseType;
-export type DropzoneUIResponse = DropzoneUIResponseType;
-export type FileValidated = FileValidatedType;
+export { default as FileItem } from "./FileItem/FileItem";
+export * from "./FileItem/FileItem";
+export {
+    Dropzone, FileInputButton,
+    FileCard, FileMosaic, Avatar,
+    FullScreen, ImagePreview,
+    VideoPreview, MaterialButton
+} from "@files-ui/react";
 
-export { createPDF, createWord, createListOfMultiTypeFile, createSyntheticFile, makeSynthticFileValidate, UPLOADSTATUS };
-export { DropzoneLocalizerSelector, DropzoneLocalizer, DropzoneItalian, DropzoneFrench, DropzoneEnglish, DropzoneSpanish, DropzonePortuguese, DropzoneRussian, DropzoneSimplifiedChinese, DropzoneTraditionalChinese, FileItemLocalizerSelector, FileItemLocalizer, FileItemItalian, FileItemFrench, FileItemEnglish, FileItemSpanish, FileItemPortuguese, FileItemRussian, FileItemSimplifiedChinese, FileItemTraditionalChinese, ValidateErrorLocalizerSelector, ValidateErrorItalian, ValidateErrorLocalizer, ValidateErrorFrench, ValidateErrorEnglish, ValidateErrorSpanish, ValidateErrorPortuguese, ValidateErrorRussian, ValidateErrorSimplifiedChinese, ValidateErrorTraditionalChinese, }
 
-export { default as Dropzone } from "./components/dropzone/components/Dropzone/Dropzone";
-export * from "./components/dropzone/components/Dropzone/Dropzone";
 
-export { default as DropzoneLabel } from "./components/dropzone/components/DropzoneLabel/DropzoneLabel";
-export * from "./components/dropzone/components/DropzoneLabel/DropzoneLabel";
+export type {
+    FileMosaicProps, DropzoneProps, FileInputButtonProps,
+    FileCardProps, AvatarProps
+} from "@files-ui/react";
 
-export { default as FileItem } from "./components/file-item/components/FileItem/FileItem";
-export * from "./components/file-item/components/FileItem/FileItem";
 
-export { default as FileItemImage } from "./components/file-item/components/FileItemImage/FileItemImage";
-export * from "./components/file-item/components/FileItemImage/FileItemImage";
 
-export { default as FileItemContainer } from "./components/file-item/components/FileItemContainer/FileItemContainer";
-export * from "./components/file-item/components/FileItemContainer/FileItemContainer";
+export { useFakeProgress } from "@files-ui/react";
 
-export { default as FullScreenPreview } from "./components/image-preview/FullScreenPreview";
-export * from "./components/image-preview/FullScreenPreview";
+export {
+    createListOfMultiTypeFile,
+    uploadFile,
+    uploadFormData,
+    uploadExtFile,
+    ExtFileInstance,
+    createUploadConfig,
+    ABORTED_ERROR_RESPONSE,
+    DropzoneEnglish,
+    DropzoneFrench,
+    DropzoneItalian, DropzoneLocalizer, DropzoneLocalizerSelector,
+    DropzonePortuguese, DropzoneRussian, DropzoneSimplifiedChinese,
+    DropzoneSpanish, DropzoneTraditionalChinese, FileIdGenerator,
+    FileItemEnglish, FileItemFrench, FileItemItalian, FileItemLocalizer,
+    FileItemLocalizerSelector, FileItemPortuguese, FileItemRussian,
+    FileItemSimplifiedChinese, FileItemSpanish,
+    FileItemTraditionalChinese,
+    JSON_PARSE_ERROR_RESPONSE,
+    JsonParseResponse,
+    NAMED_COLORS,
+    NO_XHR_PROVIDED_ERROR,
+    NamedColor, SyntheticFile,
+    TIMEOUT_ERROR_RESPONSE,
+    UNEXPECTED_ERROR_RESPONSE,
+    UploadPromiseResponse,
+    ValidateErrorEnglish,
+    ValidateErrorFrench,
+    ValidateErrorItalian,
+    ValidateErrorLocalizer,
+    ValidateErrorLocalizerSelector,
+    ValidateErrorPortuguese,
+    ValidateErrorRussian,
+    ValidateErrorSimplifiedChinese,
+    ValidateErrorSpanish,
+    ValidateErrorTraditionalChinese, aac, abw, accdb,
+    addClassName,
+    addExtraData,
+    addHeaders,
+    asureColor,
+    createSyntheticFile,
+    makeSyntheticExtFile,
+    validateFile,
+    validateExtFileList,
+    validateAccept,
+    validateExtFile,
+    isValidateActive,
+    uploadOne,
+    uploadOneExtFile,
+    isUploadAbleExtFile,
+    toUploadableExtFileList,
+    cleanInput,
+    colourNameToHex,
+    completeAsureColor,
+    completeUploadResult,
+    darkerColor,
+    extFileMock,
+    extFileReconcilation,
+    fakeFuiUpload,
+    fileListToExtFileArray,
+    fileListToExtFileInstanceArray,
+    fileListvalidator,
+    fileSizeFormater,
+    getExt,
+    getImageOrientation,
+    getLocalFileItemData,
+    getRandomInt,
+    getURLFileIco,
+    getURLFileIcoFromNameAndType,
+    hexColorToRGB,
+    hexTodec,
+    instantPreparingToUploadOne,
+    isHexColor,
+    makeErrorUploadResponse,
+    makeServerResponse,
+    makeSuccessUploadResponse,
+    prepToUploadOne,
+    preparingToUploadOne,
+    readAsArrayBuffer,
+    readAsBinaryString,
+    readAsDataURL,
+    readAsText,
+    resizeImage,
+    sanitizeArrExtFile,
+    separateAccept,
+    setNextUploadStatus,
+    setPrepToUploading,
+    shrinkWord,
+    sleepPreparing,
+    sleepTransition,
+    unableToUploadResult,
+    unexpectedErrorUploadResult,
+} from "@files-ui/react";
 
-export { default as VideoPreview } from "./components/video-preview/VideoPreview";
-export * from "./components/video-preview/VideoPreview";
+export type {
+    ExtFile,
+    ExtFileListMap,
+    UPLOADSTATUS,
+    Localization,
+    ServerResponse,
+    UploadResponse,
+    UploadConfig,
+    ValidateFileResponse,
+    IconsMap,
+    Behaviour,
+    ComponentLocalizer,
+    FileValidatorProps,
+    FunctionLabel,
+    LocalLabels,
+    Method
+} from "@files-ui/react";
 
-export { default as InputButton } from "./components/input-button/InputButton";
-export * from "./components/input-button/InputButton";
 
+export { FilesUiProvider } from "@files-ui/react";
+
+
+export type { IconsSet, FilesUIConfig } from "@files-ui/react";

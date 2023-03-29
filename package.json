@@ -1,6 +1,6 @@
 {
   "name": "@dropzone-ui/react",
-  "version": "6.7.20",
+  "version": "7.0.2",
   "description": "The best and most complete React library for managing file uploads. Multilanguage support. Server side support. Material design styles. Code generator on webpage.",
   "main": "./build/index.js",
   "module": "./build/index.es.js",
@@ -35,14 +35,8 @@
   "bugs": {
     "url": "https://github.com/dropzone-ui/dropzone-ui-react/issues"
   },
-  "homepage": "https://dropzone-ui.herokuapp.com/",
-  "dependencies": {
-    "@dynamicss/dynamicss": "^2.2.8",
-    "@unlimited-react-components/kernel": "^1.0.2",
-    "@unlimited-react-components/material-button": "^1.2.8"
-  },
+  "homepage": "https://www.files-ui.com/",
   "peerDependencies": {
-    "axios": "latest",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   },
@@ -97,5 +91,8 @@
     "lint": "eslint src/*.tsx --quiet --fix",
     "test": "jest",
     "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
+  },
+  "dependencies": {
+    "@files-ui/react": "latest"
   }
 }
