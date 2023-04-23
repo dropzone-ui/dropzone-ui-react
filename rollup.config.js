@@ -2,7 +2,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import typescript from "rollup-plugin-typescript2";
-import sass from "rollup-plugin-sass";
+//import sass from "rollup-plugin-sass";
 import packageJson from "./package.json";
 //import jsx from 'rollup-plugin-jsx'
 //import json from "rollup-plugin-json";
@@ -22,7 +22,7 @@ export default {
     },
   ],
   plugins: [
-    sass({ insert: true }),
+   // sass({ insert: true }),
     peerDepsExternal(),
     resolve(
      // { preferBuiltins: true, mainFields: ['browser'] }

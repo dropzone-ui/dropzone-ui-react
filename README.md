@@ -64,6 +64,38 @@ npm i @dropzone-ui/react
 yarn add @dropzone-ui/react
 ```
 
+## Usage and examples
+
+Here is a quick example to get you started, **it's all you need**:
+
+```jsx
+import * as React from "react";
+import ReactDOM from "react-dom";
+import { Dropzone, FileMosaic } from "@dropzone-ui/react";
+
+function App() {
+  const [files, setFiles] = React.useState([]);
+  const updateFiles = (incommingFiles) => {
+    setFiles(incommingFiles);
+  };
+  return (
+    <Dropzone onChange={updateFiles} value={files}>
+      {files.map((file) => (
+        <FileMosaic {...file} preview />
+      ))}
+    </Dropzone>
+  );
+}
+
+ReactDOM.render(<App />, document.querySelector("#app"));
+```
+
+Yes, it's really all you need to get started as you can see in these live and interactive demos:
+
+| Basic Sample :cake:                                                                                                                      | Advanced Sample :hammer:                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/basic-demo-js-blssi1?file=/src/App.js) | [![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/advanced-demo-js-6euo8j?file=/src/App.js) |
+
 ## API documentation
 
 The complete documentation of every component has been moved to files-ui.com [API page](https://www.files-ui.com/api/dropzone).
